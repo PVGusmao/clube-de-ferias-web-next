@@ -1,34 +1,26 @@
-import React, { Fragment } from "react";
-import { Button, Typography } from "@material-tailwind/react";
+import React from "react";
+import { ButtonAtom } from "../../components/atomos/ButtonAtom";
+import { IconAtom } from "../../components/atomos/IconAtom";
+import { TextAtom } from "../../components/atomos/TextAtom";
+import { DiApple } from "react-icons/di";
 
 export default function Home() {
   return (
-    <Fragment>
-      <h1 className="text-3xl  font-bold underline">Hello world!</h1>
-      <Typography variant="h1">Material Tailwind</Typography>
-      <Typography variant="h2">Material Tailwind</Typography>
-      <Typography variant="h3">Material Tailwind</Typography>
-      <Typography variant="h4">Material Tailwind</Typography>
-      <Typography variant="h5">Material Tailwind</Typography>
-      <Typography variant="h6">Material Tailwind</Typography>
-      <Typography variant="lead">
-        Material Tailwind is an easy to use components library for Tailwind CSS
-        and Material Design. It provides a simple way to customize your
-        components, you can change the colors, fonts, breakpoints and everything
-        you need.
-      </Typography>
-      <Typography variant="paragraph">
-        Material Tailwind is an easy to use components library for Tailwind CSS
-        and Material Design. It provides a simple way to customize your
-        components, you can change the colors, fonts, breakpoints and everything
-        you need.
-      </Typography>
-      <Typography variant="small">
-        Material Tailwind is an easy to use components library for Tailwind CSS
-        and Material Design. It provides a simple way to customize your
-        components, you can change the colors, fonts, breakpoints and everything
-        you need.
-      </Typography>
-    </Fragment>
+    <>
+      <TextAtom
+        children
+        className="text-sm text-red-400"
+        text='Meu pau de óculos.'
+      />
+
+      <ButtonAtom
+        children
+        title='Click Me'
+        variant="outlined"
+      />
+
+      <IconAtom icon={DiApple} />
+
+    </>
   );
 }
