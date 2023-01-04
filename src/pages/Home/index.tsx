@@ -21,9 +21,14 @@ export default function Home() {
 
       <CardPlanosMolecule />
 
-      <CardCommentsMolecule />
-
-      <AvatarAtom img="https://avatars.githubusercontent.com/u/81275678?v=4" />
+      <CardCommentsMolecule
+        content="lorem loremloremloremloremlorem
+      loremloremloremlorem
+       loremloremlorems"
+        name="Felipe"
+        ocupation="Dev"
+        img="https://avatars.githubusercontent.com/u/81275678?v=4"
+      />
 
       <PromocaoEspecialOrganismo />
 

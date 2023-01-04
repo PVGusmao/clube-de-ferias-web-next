@@ -15,13 +15,25 @@ import { FaTiktok } from "react-icons/fa";
 import { IconAtom } from "../atomos/IconAtom";
 import { DiApple } from "react-icons/di";
 
-export default function CardCommentsMolecule() {
+type Props = {
+  content: string;
+  name: string;
+  ocupation: string;
+  img: string;
+};
+
+export default function CardCommentsMolecule({
+  content,
+  name,
+  ocupation,
+  img,
+}: Props) {
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
 
   return (
-    <Card className="w-96">
+    <Card className="w-96 h-96 justify-between">
       <CardBody className="">
         <div className="my-6">
           <IconAtom icon={DiApple} size={30} color="black" className="mb-2" />
@@ -32,19 +44,13 @@ export default function CardCommentsMolecule() {
             activeColor="#ffd700"
           />
         </div>
-        <TextAtom
-          className="text-sm"
-          text="Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus..."
-        />
+        <TextAtom className="text-sm" text={content} />
       </CardBody>
       <CardFooter className="flex items-center justify-between py-3">
-        <AvatarAtom img="https://avatars.githubusercontent.com/u/81275678?v=4" />
+        <AvatarAtom img={img} />
         <div className="w-full ml-4 ">
-          <TextAtom
-            className="text-sm font-bold text-black"
-            text="Felipe Nunes"
-          />
-          <TextAtom className="text-sm" text="Photographer" />
+          <TextAtom className="text-sm font-bold text-black" text={name} />
+          <TextAtom className="text-sm" text={ocupation} />
         </div>
       </CardFooter>
     </Card>
