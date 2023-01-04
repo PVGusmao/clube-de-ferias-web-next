@@ -23,8 +23,8 @@ export default function CardCommentsMolecule() {
   return (
     <Card className="w-96">
       <CardBody className="">
-        <IconAtom icon={DiApple} size={30} color="black" />
-        <div className="flex flex-row my-6">
+        <div className="my-6">
+          <IconAtom icon={DiApple} size={30} color="black" className="mb-2" />
           <ReactStars
             count={5}
             onChange={ratingChanged}
