@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { ButtonAtom } from "../../components/atomos/ButtonAtom";
+
+import { DiApple } from "react-icons/di";
+
 import { IconAtom } from "../../components/atomos/IconAtom";
 import { TextAtom } from "../../components/atomos/TextAtom";
-import { DiApple } from "react-icons/di";
 import { InputAtom } from "../../components/atomos/InputAtom";
 import { AlertAtom } from "../../components/atomos/AlertAtom";
+import { ButtonAtom } from "../../components/atomos/ButtonAtom";
 import { NavBarMolecule } from "../../components/moleculas/NavBarMolecule";
 
 export default function Home() {
