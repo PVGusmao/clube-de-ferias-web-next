@@ -15,7 +15,7 @@ export default function CardSimulationMolecule() {
       </CardHeader>
       <CardBody className="">
         <div className="flex flex-row justify-between ">
-          <TextAtom text="Salvador" className="text-xl font-bold text-black" />
+          <TextAtom children text="Salvador" className="text-xl font-bold text-black" />
           <ReactStars
             count={5}
             onChange={ratingChanged}
@@ -24,13 +24,14 @@ export default function CardSimulationMolecule() {
           />
         </div>
         <TextAtom
+          children
           text="Hotel + Transer"
           className="text-ml font-bold text-black"
         />
-        <TextAtom text="Zagaia Eco Resort" className="text-ml text-black" />
-        <TextAtom text="a partir de" className="text-ml" />
-        <TextAtom text="6x R$ 2.000" className="text-xl text-[##F20F0F}" />
-        <TextAtom text="para 2 pessoas" className="text-ml" />
+        <TextAtom children text="Zagaia Eco Resort" className="text-ml text-black" />
+        <TextAtom children text="a partir de" className="text-ml" />
+        <TextAtom children text="6x R$ 2.000" className="text-xl text-[##F20F0F}" />
+        <TextAtom children text="para 2 pessoas" className="text-ml" />
       </CardBody>
     </Card>
   );

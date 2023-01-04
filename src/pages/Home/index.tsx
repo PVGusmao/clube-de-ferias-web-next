@@ -15,47 +15,25 @@ import CardCommentsMolecule from "../../components/moleculas/CardCommentsMolecul
 import CardSimulationMolecule from "../../components/moleculas/CardSimulationMolecule";
 
 export default function Home() {
-  const [value, setValue] = useState(false);
   return (
     <>
       <NavBarMolecule />
 
-      <CardPlanosMolecule />
+      {/* <CardPlanosMolecule /> */}
 
-      <CardCommentsMolecule
-        content="lorem loremloremloremloremlorem
-      loremloremloremlorem
-       loremloremlorems"
+      {/* <CardCommentsMolecule
+        content="lorem loremloremloremloremloremloremloremloremloremloremloremlorems"
         name="Felipe"
         ocupation="Dev"
         img="https://avatars.githubusercontent.com/u/81275678?v=4"
-      />
+      /> */}
 
-      <CardSimulationMolecule />
+      {/* <CardSimulationMolecule /> */}
 
       <PromocaoEspecialOrganismo />
 
-      <TextAtom
-        children
-        className="text-sm text-red-400"
-        text="Meu pau de óculos."
-      />
-
-      <ButtonAtom
-        children
-        title="Click Me"
-        variant="outlined"
-        onClick={() => {
-          setValue(!value);
-        }}
-      />
-
-      <IconAtom icon={DiApple} size={30} color="white" />
-
-      <InputAtom placeholder="Digite seu nome." />
-      {value && (
-        <AlertAtom children message="A mensagem é meramente ilustrativa" />
-      )}
+      <ButtonAtom textClassName="text-black text-lg" className="w-full" children title='Click me!' />
+      
     </>
   );
 }

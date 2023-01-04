@@ -21,6 +21,7 @@ export default function CardMolecule({ icon, text }: Props) {
         color="black"
       />
       <TextAtom
+        children
         className="text-18px text-center justify-center mx-3.5 "
         text={text}
       />

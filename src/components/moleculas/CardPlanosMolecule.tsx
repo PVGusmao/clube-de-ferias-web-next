@@ -4,11 +4,11 @@ import { TextAtom } from "../atomos/TextAtom";
 import { ButtonAtom } from "../atomos/ButtonAtom";
 
 type Planos = {
-  plano: string;
-  desconto: string;
-  content1: string;
-  content2: string;
-  valor: string;
+  plano?: string;
+  desconto?: string;
+  content1?: string;
+  content2?: string;
+  valor?: string;
 };
 
 export default function CardPlanosMolecule({

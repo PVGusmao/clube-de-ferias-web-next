@@ -3,11 +3,12 @@ import React from "react";
 
 type Props = TypographyProps & {
   text: string,
+  className: string,
 }
 
-export function TextAtom({text, ...rest}: Props) {
+export function TextAtom({text, className, ...rest}: Props) {
   return (
-    <Typography {...rest}>
+    <Typography className={className} {...rest}>
       {text}
     </Typography>
   )
