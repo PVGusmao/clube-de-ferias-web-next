@@ -5,26 +5,32 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import React from "react";
 import AvatarAtom from "../atomos/AvatarAtom";
 import { TextAtom } from "../atomos/TextAtom";
+import React from "react";
+import { render } from "react-dom";
+import ReactStars from "react-rating-stars-component";
 
 import { FaTiktok } from "react-icons/fa";
 import { IconAtom } from "../atomos/IconAtom";
 import { DiApple } from "react-icons/di";
 
 export default function CardCommentsMolecule() {
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
+
   return (
     <Card className="w-96">
       <CardBody className="">
         <IconAtom icon={DiApple} size={30} color="black" />
         <div className="flex flex-row my-6">
-          <IconAtom icon={DiApple} size={30} color="black" />
-          <IconAtom icon={DiApple} size={30} color="black" />
-          <IconAtom icon={DiApple} size={30} color="black" />
-          <IconAtom icon={DiApple} size={30} color="black" />
-          <IconAtom icon={DiApple} size={30} color="black" />
-          <IconAtom icon={DiApple} size={30} color="black" />
+          <ReactStars
+            count={5}
+            onChange={ratingChanged}
+            size={24}
+            activeColor="#ffd700"
+          />
         </div>
         <TextAtom
           className="text-sm"
