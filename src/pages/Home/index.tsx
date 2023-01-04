@@ -12,6 +12,7 @@ import CardPlanosMolecule from "../../components/moleculas/CardPlanosMolecule";
 import PromocaoEspecialOrganismo from "../../components/organismos/PromocaoEspecialOrganismo";
 import AvatarAtom from "../../components/atomos/AvatarAtom";
 import CardCommentsMolecule from "../../components/moleculas/CardCommentsMolecule";
+import CardSimulationMolecule from "../../components/moleculas/CardSimulationMolecule";
 
 export default function Home() {
   const [value, setValue] = useState(false);
@@ -29,6 +30,8 @@ export default function Home() {
         ocupation="Dev"
         img="https://avatars.githubusercontent.com/u/81275678?v=4"
       />
+
+      <CardSimulationMolecule />
 
       <PromocaoEspecialOrganismo />
 
