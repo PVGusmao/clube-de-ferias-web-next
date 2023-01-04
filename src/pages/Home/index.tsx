@@ -7,7 +7,7 @@ import { TextAtom } from "../../components/atomos/TextAtom";
 import { InputAtom } from "../../components/atomos/InputAtom";
 import { AlertAtom } from "../../components/atomos/AlertAtom";
 import { ButtonAtom } from "../../components/atomos/ButtonAtom";
-import { NavBarMolecule } from "../../components/moleculas/NavBarMolecule";
+import { NavBarMolecule } from "../../components/organismos/NavBarMolecule";
 
 export default function Home() {
   const [value, setValue] = useState(false);

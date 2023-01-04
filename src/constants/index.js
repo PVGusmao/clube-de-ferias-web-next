@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+
 export const navLinks = [
     {
       id: "quem-somos",
@@ -16,13 +18,13 @@ export const navLinks = [
       title: "Blog",
     },
     {
-        id: "fale-conosco",
-        title: "Fale Conosco",
-      },
-      {
-        id: "baixe-o-app",
-        title: "Baixe O App",
-      },
+      id: "fale-conosco",
+      title: "Fale Conosco",
+    },
+    {
+      id: "baixe-o-app",
+      title: "Baixe O App",
+    },
   ];
 
   export const cards = [
@@ -140,14 +142,14 @@ export const clientes = [
 export const socialMedia = [
   {
     id: "social-media-1",
-    icon: tiktok,
+    icon: FaTiktok,
   },
   {
     id: "social-media-2",
-    icon: facebook,
+    icon: FaFacebook,
   },
   {
     id: "social-media-3",
-    icon: instagram,
+    icon: FaInstagram,
   },
 ];
