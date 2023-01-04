@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { ButtonAtom } from "../../components/atomos/ButtonAtom";
 import { IconAtom } from "../../components/atomos/IconAtom";
 import { TextAtom } from "../../components/atomos/TextAtom";
 import { DiApple } from "react-icons/di";
+import { InputAtom } from "../../components/atomos/InputAtom";
+import { AlertAtom } from "../../components/atomos/AlertAtom";
 
 export default function Home() {
+  const [value, setValue] = useState(false);
   return (
     <>
       <TextAtom
@@ -17,10 +20,23 @@ export default function Home() {
         children
         title='Click Me'
         variant="outlined"
+        onClick={() => {
+          setValue(!value)
+        }}
       />
 
-      <IconAtom icon={DiApple} />
+      <IconAtom
+        icon={DiApple}
+        size={30}
+        color='white'
+      />
 
+      <InputAtom
+        placeholder='Digite seu nome.'
+      />
+      {
+        value && <AlertAtom children message='A mensagem é meramente ilustrativa' />
+      }
     </>
   );
 }
