@@ -37,7 +37,7 @@ export default function CardCommentsMolecule() {
           text="Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus..."
         />
       </CardBody>
-      <CardFooter divider className="flex items-center justify-between py-3">
+      <CardFooter className="flex items-center justify-between py-3">
         <AvatarAtom img="https://avatars.githubusercontent.com/u/81275678?v=4" />
         <div className="w-full ml-4 ">
           <TextAtom
