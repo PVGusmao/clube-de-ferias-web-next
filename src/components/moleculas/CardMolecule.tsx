@@ -9,7 +9,7 @@ type Props = {
   text: string;
 };
 
-export default function CardMolecule({ icon, text }: Props) {
+export function CardMolecule({ icon, text }: Props) {
   return (
     <div
       className={`flex justify-center flex-col h-52 w-52 rounded-2xl bg-white shadow-lg`}

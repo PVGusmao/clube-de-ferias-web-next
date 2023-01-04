@@ -7,7 +7,7 @@ import { TextButtonMolecule } from "../moleculas/TextButtonMolecule";
 import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 
-export function NavBarMolecule() {
+export function NavBarOrganism() {
   return (
     <div
       className="bg-gray flex items-center w-full justify-evenly"

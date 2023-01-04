@@ -6,8 +6,8 @@ import { IconAtom } from "../../components/atomos/IconAtom";
 import { TextAtom } from "../../components/atomos/TextAtom";
 import { InputAtom } from "../../components/atomos/InputAtom";
 import { AlertAtom } from "../../components/atomos/AlertAtom";
-import { ButtonAtom } from "../../components/atomos/ButtonAtom";
-import { NavBarMolecule } from "../../components/organismos/NavBarMolecule";
+import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
+import { NavBarOrganism } from "../../components/organismos/NavBarOrganism";
 import CardPlanosMolecule from "../../components/moleculas/CardPlanosMolecule";
 import PromocaoEspecialOrganismo from "../../components/organismos/PromocaoEspecialOrganismo";
 import AvatarAtom from "../../components/atomos/AvatarAtom";
@@ -17,7 +17,7 @@ import CardSimulationMolecule from "../../components/moleculas/CardSimulationMol
 export default function Home() {
   return (
     <>
-      <NavBarMolecule />
+      <NavBarOrganism />
 
       {/* <CardPlanosMolecule /> */}
 
@@ -32,8 +32,6 @@ export default function Home() {
 
       <PromocaoEspecialOrganismo />
 
-      <ButtonAtom textClassName="text-black text-lg" className="w-full" children title='Click me!' />
-      
     </>
   );
 }

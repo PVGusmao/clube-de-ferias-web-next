@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { TextAtom } from './TextAtom';
+import { TextAtom } from '../atomos/TextAtom';
 
 import { Button, ButtonProps, Typography } from "@material-tailwind/react";
 
@@ -10,7 +10,7 @@ type Props = ButtonProps & {
   textClassName?: string;
 };
 
-export function ButtonAtom({ children, title, textClassName = '', ...rest }: Props) {
+export function ButtonMolecule({ children, title, textClassName = '', ...rest }: Props) {
   return (
   <Button {...rest}>
     <TextAtom className={textClassName} children text={title} />

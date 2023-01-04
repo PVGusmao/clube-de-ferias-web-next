@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles";
-import { ButtonAtom } from "../atomos/ButtonAtom";
+import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 import { TextAtom } from "../atomos/TextAtom";
 
 export default function PromocaoEspecialOrganismo() {
@@ -18,7 +18,7 @@ export default function PromocaoEspecialOrganismo() {
         className="text-center self-center px-4 text-white"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus mattis, pulvinar dapibus leo."
       />
-      <ButtonAtom
+      <ButtonMolecule
         className="bg-white h-11 self-center w-48 text-black"
         children
         title="BAIXE O APP"

@@ -1,7 +1,7 @@
 import React from "react";
 import { TextAtom } from "../atomos/TextAtom";
 
-import { ButtonAtom } from "../atomos/ButtonAtom";
+import { ButtonMolecule } from "./ButtonMolecule";
 
 type Planos = {
   plano?: string;
@@ -47,7 +47,7 @@ export default function CardPlanosMolecule({
         className="text-2xl text-center justify-center font-bold mx-3.5 "
         text={"R$ 199/mês"}
       />
-      <ButtonAtom
+      <ButtonMolecule
         children
         className="text-xs mx-14 bg-red-400 "
         title="Adquira seu Plano"
