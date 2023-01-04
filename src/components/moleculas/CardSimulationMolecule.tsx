@@ -1,17 +1,10 @@
 import React from "react";
 
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Tooltip,
-} from "@material-tailwind/react";
+import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 import { TextAtom } from "../atomos/TextAtom";
 import ReactStars from "react-rating-stars-component";
 
-export default function Example() {
+export default function CardSimulationMolecule() {
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
@@ -36,7 +29,7 @@ export default function Example() {
         />
         <TextAtom text="Zagaia Eco Resort" className="text-ml text-black" />
         <TextAtom text="a partir de" className="text-ml" />
-        <TextAtom text="6x R$ 2.000" className="text-ml" />
+        <TextAtom text="6x R$ 2.000" className="text-xl text-[##F20F0F}" />
         <TextAtom text="para 2 pessoas" className="text-ml" />
       </CardBody>
     </Card>
