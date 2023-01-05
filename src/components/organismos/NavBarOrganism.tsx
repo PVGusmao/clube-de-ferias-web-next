@@ -10,13 +10,15 @@ import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 export function NavBarOrganism() {
   return (
     <div
-      className="bg-gray flex items-center w-full justify-evenly"
+      className="bg-gray flex items-center w-full justify-evenly h-32"
     >
-      <img
-        className="w-36"
-        src={logo}
-        alt="logo"
-      />
+      <a href="http://localhost:5173">
+        <img
+          className="w-36"
+          src={logo}
+          alt="logo"
+        />
+      </a>
 
       <div
         className="flex w-auto"
@@ -24,6 +26,8 @@ export function NavBarOrganism() {
         {
           navLinks.map((element, index) => (
             <TextButtonMolecule
+              textClassName='font-semibold'
+              className='p-2 cursor-pointer text-white hover:text-black'
               key={index}
               text={element.title}
               href="www.facebook.com"

@@ -13,9 +13,15 @@ module.exports = withMT({
       colors: {
         red: "##F20F0F",
       },
+      fontFamily: {
+        'ubuntu': ['ubuntu', 'Open Sans', 'Sans-Serif'],
+      },
       width: {
         128: "78.75rem",
       },
+      height: {
+        '128': '48rem',
+      }
     },
   },
   plugins: [],

@@ -1,4 +1,8 @@
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { TbPig } from "react-icons/tb";
+import { AiOutlineSafety } from 'react-icons/ai';
+import { BsTelephoneInboundFill } from 'react-icons/bs';
+import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 
 export const navLinks = [
     {
@@ -30,22 +34,22 @@ export const navLinks = [
   export const cards = [
     {
     id: 1,
-    icone:"",
+    icon: TbPig,
     content: "Sua assinatura vira crédito para suas viagens"
   },
   {
     id: 2,
-    icone:"",
+    icon: AiOutlineSafety,
     content: "No Clube você garante descontos imperdíveis",
   },
   {
     id: 3,
-    icone:"",
-    content: "Nosso atendimento é  personalizado. ",
+    icon: BsTelephoneInboundFill,
+    content: "Nosso atendimento é  personalizado. Nada de robôs.",
   },
   {
     id: 4,
-    icone:"",
+    icon: RiMoneyDollarCircleFill,
     content: "O dinheiro da sua assinatura está sempre disponível",
   },
 ] 

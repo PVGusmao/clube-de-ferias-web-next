@@ -22,6 +22,7 @@ export default function PromocaoEspecialOrganismo() {
         className="bg-white h-11 self-center w-48 text-black"
         children
         title="BAIXE O APP"
+        textClassName="text-xs"
       />
     </div>
   );
