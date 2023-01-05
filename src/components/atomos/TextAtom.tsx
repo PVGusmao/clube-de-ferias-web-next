@@ -8,7 +8,7 @@ type Props = TypographyProps & {
 
 export function TextAtom({text, className, ...rest}: Props) {
   return (
-    <Typography className={`font-ubuntu ${className}`} {...rest}>
+    <Typography className={`font-ubuntu text-black ${className}`} {...rest}>
       {text}
     </Typography>
   )

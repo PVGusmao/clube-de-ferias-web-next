@@ -23,7 +23,7 @@ export function CardMolecule({ icon, text, className }: Props) {
       />
       <TextAtom
         children
-        className="text-lg text-center justify-center mx-3.5 "
+        className="text-lg text-center justify-center mx-3.5"
         text={text}
       />
     </div>

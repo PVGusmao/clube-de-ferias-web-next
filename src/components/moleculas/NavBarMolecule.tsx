@@ -2,12 +2,12 @@ import React from "react";
 
 import logo from '../../assets/logo.png';
 
-import { TextButtonMolecule } from "../moleculas/TextButtonMolecule";
+import { TextButtonMolecule } from "./TextButtonMolecule";
 
 import { navLinks, socialMedia } from "../../constants";
-import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
+import { IconButtonMolecule } from "./IconButtonMolecule";
 
-export function NavBarOrganism() {
+export function NavBarMolecule() {
   return (
     <div
       className="flex items-center w-full justify-evenly h-32"
