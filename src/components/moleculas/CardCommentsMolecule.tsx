@@ -33,7 +33,7 @@ export default function CardCommentsMolecule({
   };
 
   return (
-    <Card className="w-96 h-96 justify-between">
+    <Card className="w-96 h-96 justify-between my-9">
       <CardBody className="">
         <div className="my-6">
           <IconAtom icon={DiApple} size={30} color="black" className="mb-2" />

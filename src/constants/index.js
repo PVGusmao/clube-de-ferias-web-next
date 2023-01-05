@@ -136,10 +136,25 @@ export const planos = [
 
 export const clientes = [
   {
-    id: 1,
-    content: "Nossos Clientes recomendam!",
-    photo: "",
-    name: "",
+    content:
+      "Blood bank ds canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...",
+    name: "Felipe Nunes",
+    ocupation: "Developer",
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+  },
+  {
+    content:
+      "Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...",
+    name: "Felipe Nunes",
+    ocupation: "Developer",
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+  },
+  {
+    content:
+      "Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...",
+    name: "Felipe Nunes",
+    ocupation: "Developer",
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
   },
 ];
 

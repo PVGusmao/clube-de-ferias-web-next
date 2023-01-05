@@ -13,11 +13,14 @@ import PromocaoEspecialOrganismo from "../../components/organismos/PromocaoEspec
 import AvatarAtom from "../../components/atomos/AvatarAtom";
 import CardCommentsMolecule from "../../components/moleculas/CardCommentsMolecule";
 import CardSimulationMolecule from "../../components/moleculas/CardSimulationMolecule";
+import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 
 export default function Home() {
   return (
     <>
       <NavBarOrganism />
+
+      <ClientsOrganism />
 
       {/* <CardPlanosMolecule /> */}
 
@@ -31,7 +34,6 @@ export default function Home() {
       {/* <CardSimulationMolecule /> */}
 
       <PromocaoEspecialOrganismo />
-
     </>
   );
 }
