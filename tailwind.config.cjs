@@ -15,6 +15,10 @@ module.exports = withMT({
       },
       width: {
         128: "78.75rem",
+        672: "42rem",
+      },
+      height: {
+        559: "34.9375rem",
       },
     },
   },
