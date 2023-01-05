@@ -1,17 +1,13 @@
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
-  Typography,
 } from "@material-tailwind/react";
 import AvatarAtom from "../atomos/AvatarAtom";
 import { TextAtom } from "../atomos/TextAtom";
 import React from "react";
-import { render } from "react-dom";
 import ReactStars from "react-rating-stars-component";
 
-import { FaTiktok } from "react-icons/fa";
 import { IconAtom } from "../atomos/IconAtom";
 import { DiApple } from "react-icons/di";
 
@@ -44,13 +40,13 @@ export default function CardCommentsMolecule({
             activeColor="#ffd700"
           />
         </div>
-        <TextAtom className="text-sm" text={content} />
+        <TextAtom children className="text-sm" text={content} />
       </CardBody>
       <CardFooter className="flex items-center justify-between py-3">
         <AvatarAtom img={img} />
         <div className="w-full ml-4 ">
-          <TextAtom className="text-sm font-bold text-black" text={name} />
-          <TextAtom className="text-sm" text={ocupation} />
+          <TextAtom children className="text-sm font-bold text-black" text={name} />
+          <TextAtom children className="text-sm" text={ocupation} />
         </div>
       </CardFooter>
     </Card>
