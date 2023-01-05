@@ -12,7 +12,7 @@ export function BackgroundImageAtom({ children, image, className }: Props) {
     className={className}
     style={{
       backgroundImage: `url(${image})`,
-      backgroundSize: 'auto 100%',
+      backgroundSize: '100% 100%',
     }}>
       {children}
     </div>
