@@ -12,6 +12,10 @@ module.exports = withMT({
     extend: {
       colors: {
         red: "##F20F0F",
+        gray: "#C0C0C0",
+        yelow: "#F6AB39",
+        darkgray: "#636363",
+        green: "#11C801",
       },
       fontFamily: {
         'ubuntu': ['ubuntu', 'Open Sans', 'Sans-Serif'],
@@ -22,6 +26,7 @@ module.exports = withMT({
       },
       height: {
         559: "34.9375rem",
+        1440: "90rem",
       },
       height: {
         '128': '48rem',

@@ -10,7 +10,7 @@ import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 export function NavBarOrganism() {
   return (
     <div
-      className="bg-gray flex items-center w-full justify-evenly h-32"
+      className="flex items-center w-full justify-evenly h-32"
     >
       <a href="http://localhost:5173">
         <img
