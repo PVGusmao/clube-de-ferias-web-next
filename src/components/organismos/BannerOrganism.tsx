@@ -2,7 +2,7 @@ import React from "react";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 import { TextAtom } from "../atomos/TextAtom";
 
-export default function BannerOrganism() {
+export function BannerOrganism() {
   return (
     <div
       className={`flex flex-col sm:items-stretch sm:w-[78.75rem] h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[red]`}

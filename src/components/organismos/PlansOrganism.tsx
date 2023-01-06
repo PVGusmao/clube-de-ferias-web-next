@@ -7,7 +7,7 @@ import { TextAtom } from "../atomos/TextAtom";
 
 import { planos } from "../../constants";
 
-export default function PlansOrganism({}: PropsPlanos) {
+export function PlansOrganism({}: PropsPlanos) {
   return (
     <div className="bg-[#F20F0F] justify-center p-24">
       <TextAtom
