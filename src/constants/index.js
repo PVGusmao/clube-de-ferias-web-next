@@ -1,14 +1,13 @@
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { TbPig } from "react-icons/tb";
-import { AiOutlineSafety } from 'react-icons/ai';
-import { BsTelephoneInboundFill } from 'react-icons/bs';
-import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import { AiOutlineSafety } from "react-icons/ai";
+import { BsTelephoneInboundFill } from "react-icons/bs";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 import firstButtonBlog from "../assets/firstButtonBlog.png";
 import secondButtonBlog from "../assets/secondButtonBlog.png";
 import thirdButtonBlog from "../assets/thirdButtonBlog.png";
 import forthButtonBlog from "../assets/forthButtonBlog.png";
-
 
 export const navLinks = [
   {
@@ -41,7 +40,7 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: "Sua assinatura vira crédito para suas viagens"
+    content: "Sua assinatura vira crédito para suas viagens",
   },
   {
     id: 2,
@@ -109,8 +108,9 @@ export const cardBlog = {
   id: 1,
   title: "Maldivas",
   subTitle: "Um paraíso possível!",
-  message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
-}
+  message:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+};
 
 export const minorCardBlog = [
   {
@@ -210,5 +210,29 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: FaInstagram,
+  },
+];
+
+export const simulationCard = [
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
+  },
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
+  },
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
   },
 ];
