@@ -9,6 +9,8 @@ import secondButtonBlog from "../assets/secondButtonBlog.png";
 import thirdButtonBlog from "../assets/thirdButtonBlog.png";
 import forthButtonBlog from "../assets/forthButtonBlog.png";
 import { IoIosArrowForward } from "react-icons/io";
+import { HiLocationMarker } from "react-icons/hi";
+import { MdEmail } from "react-icons/md";
 
 export const navLinks = [
   {
@@ -254,5 +256,16 @@ export const simulationCard = [
     modelo: "Hotel + Transer",
     hotel: "Zagaia Eco Resort",
     preco: "6x R$ 2.000",
+  },
+];
+
+export const contato = [
+  {
+    icon: HiLocationMarker,
+    content: "Lumbung Hidup East Java",
+  },
+  {
+    icon: MdEmail,
+    content: "Hello@Homco.com",
   },
 ];
