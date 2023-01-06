@@ -27,7 +27,7 @@ export function SlideShowCardMolecule({ className, children, slideShow, setSlide
   return (
     <div className={className}>
       <BsArrowLeftCircle
-        className='sm:hidden'
+        className='sm:hidden ml-2'
         color={colorIcon}
         size={48}
         onClick={() => {
@@ -38,7 +38,7 @@ export function SlideShowCardMolecule({ className, children, slideShow, setSlide
       {children}
 
       <BsArrowRightCircle
-        className='sm:hidden'
+        className='sm:hidden mr-2'
         size={48}
         color={colorIcon}
         onClick={() => {
