@@ -12,9 +12,9 @@ type Props = {
 
 export function BlogCardMolecule({ className, image}: Props) {
   return (
-    <div className="w-full h-559 flex">
+    <div className="w-full h-559 flex sm:flex-row flex-col">
       <BackgroundImageAtom
-        className={`pl-6 w-672 mr-6 flex flex-col justify-end text-start rounded-xl ${className}`}
+        className={`sm:pl-6 sm:w-672 h-80 sm:px-0 sm:mr-0 px-1 m-2 sm:mr-6 flex flex-col justify-end text-start rounded-xl ${className}`}
         image={image}
       >
         <TextAtom
@@ -40,7 +40,7 @@ export function BlogCardMolecule({ className, image}: Props) {
         {
           minorCardBlog.map((element, index) => (
             <BackgroundImageAtom
-              className={`flex items-center text-center rounded-xl w-40 justify-between h-32 w-auto ${className}`}
+              className={`flex items-center text-center rounded-xl sm:m-0 m-2 justify-between h-32 w-auto ${className}`}
               image={element.image}
               key={index}
             >
