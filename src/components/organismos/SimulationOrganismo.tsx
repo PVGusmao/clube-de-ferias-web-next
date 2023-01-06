@@ -9,7 +9,9 @@ import { TextAtom } from "../atomos/TextAtom";
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
 
 export function SimulationOrganism() {
-  const [value, setValue] = React.useState(0);
+  const [tabValue, setTabValue] = React.useState(199);
+  const [sliderValue, setSliderValue] = React.useState(undefined);
+  const [totalValue, setTotalValue] = React.useState(0);
 
   const marks = [
     { value: 0, label: "0 mêses" },
@@ -31,12 +33,22 @@ export function SimulationOrganism() {
     },
   ];
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    setSliderValue(newValue as number);
+    setTotalValue(tabValue * sliderValue);
   };
 
+  const handleTabsChange = (event: React.SyntheticEvent, newValue: number) => {
+    setTabValue(newValue);
+    setTotalValue(tabValue * sliderValue);
+  };
+
+  React.useEffect(() => {
+    console.log(totalValue);
+  }, [totalValue]);
+
   return (
-    <div className="sm:w-[90rem] sm:h-[70.9375rem] sm:grid content-center">
+    <div className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
       <TextAtom
         text="Simule agora o seu melhor pacote"
         className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-10 px-5"
@@ -46,27 +58,29 @@ export function SimulationOrganism() {
         text="Faça uma simulação das viagens dos seus sonhos e começe a investir agora!"
       />
       <div className="sm:w-[43.625rem] justify-self-center">
-        <div>
+        <div className="justify-center px-2">
           <Tabs
-            value={value}
-            onChange={handleChange}
+            value={tabValue}
+            onChange={handleTabsChange}
             centered
-            className="mb-4 w-full text- "
-            indicatorColor="secondary"
-            variant="scrollable"
+            className="mb-4 w-full"
+            variant="fullWidth"
             scrollButtons
             allowScrollButtonsMobile
+            sx={{}}
           >
-            <Tab label="SILVER" />
-            <Tab label="GOLD" />
-            <Tab label="PLATINUM" />
-            <Tab label="PLANO PROMO" />
+            <Tab value={199} label="SILVER" />
+            <Tab value={499} label="GOLD" />
+            <Tab value={999} label="PLATINUM" />
+            <Tab value={999} label="PLANO PROMO" />
           </Tabs>
         </div>
         <div className="px-12">
           <Slider
             defaultValue={0}
             max={12}
+            value={sliderValue}
+            onChange={handleSliderChange}
             aria-label="Default"
             valueLabelDisplay="auto"
             step={3}

@@ -23,8 +23,8 @@ export default function CardSimulationMolecule({
     console.log(newRating);
   };
   return (
-    <Card className="w-96 h-[12.67125] bg-blue-300">
-      <CardHeader floated={false} className="h-80">
+    <Card className="w-[16.528125rem] h-[23.50625]">
+      <CardHeader floated={false} className="">
         <img src={img} alt="profile-picture" />
       </CardHeader>
       <CardBody className="">
@@ -41,15 +41,29 @@ export default function CardSimulationMolecule({
             activeColor="#ffd700"
           />
         </div>
-        <TextAtom
-          children
-          text={modelo}
-          className="text-ml font-bold text-black"
-        />
-        <TextAtom children text={hotel} className="text-ml text-black" />
-        <TextAtom children text="a partir de" className="text-ml" />
-        <TextAtom children text={preco} className="text-xl text-[##F20F0F}" />
-        <TextAtom children text="para 2 pessoas" className="text-ml" />
+        <div className="flex justify-start flex-col">
+          <TextAtom
+            children
+            text={modelo}
+            className="text-ml font-bold text-left text-black"
+          />
+          <TextAtom
+            children
+            text={hotel}
+            className="text-ml text-black text-left"
+          />
+          <TextAtom children text="a partir de" className="text-ml text-left" />
+          <TextAtom
+            children
+            text={preco}
+            className="text-xl text-[##F20F0F] text-left"
+          />
+          <TextAtom
+            children
+            text="para 2 pessoas"
+            className="text-ml text-left"
+          />
+        </div>
       </CardBody>
     </Card>
   );
