@@ -2,7 +2,7 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withMT({
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -19,19 +19,20 @@ module.exports = withMT({
         green: "#11C801",
       },
       fontFamily: {
-        'ubuntu': ['ubuntu', 'Open Sans', 'Sans-Serif'],
+        ubuntu: ["ubuntu", "Open Sans", "Sans-Serif"],
       },
       width: {
         128: "78.75rem",
         672: "42rem",
       },
       height: {
+        421: "26.313rem",
         559: "34.9375rem",
         1440: "90rem",
       },
       height: {
-        '128': '48rem',
-      }
+        128: "48rem",
+      },
     },
   },
   plugins: [],

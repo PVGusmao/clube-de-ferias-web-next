@@ -1,8 +1,9 @@
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { TbPig } from "react-icons/tb";
-import { AiOutlineSafety } from 'react-icons/ai';
-import { BsTelephoneInboundFill } from 'react-icons/bs';
-import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import { AiOutlineSafety } from "react-icons/ai";
+import { BsTelephoneInboundFill } from "react-icons/bs";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const navLinks = [
   {
@@ -35,7 +36,7 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: "Sua assinatura vira crédito para suas viagens"
+    content: "Sua assinatura vira crédito para suas viagens",
   },
   {
     id: 2,
@@ -51,6 +52,25 @@ export const cards = [
     id: 4,
     icon: RiMoneyDollarCircleFill,
     content: "O dinheiro da sua assinatura está sempre disponível",
+  },
+];
+
+export const navigation = [
+  {
+    icon: IoIosArrowForward,
+    content: "Home",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Planos",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Blog",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Sobre",
   },
 ];
 
