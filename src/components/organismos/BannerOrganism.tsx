@@ -5,7 +5,7 @@ import { TextAtom } from "../atomos/TextAtom";
 export function BannerOrganism() {
   return (
     <div
-      className={`flex flex-col sm:items-stretch sm:w-[78.75rem] h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[red]`}
+      className={`flex flex-col sm:items-stretch sm:w-full h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[red]`}
     >
       <div className="flex flex-col h-full sm:flex-row sm:justify-around">
         <div className="self-center sm:mr-10">
