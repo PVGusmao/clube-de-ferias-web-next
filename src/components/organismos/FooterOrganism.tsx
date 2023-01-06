@@ -4,15 +4,21 @@ import { IconAtom } from "../atomos/IconAtom";
 import { DiApple } from "react-icons/di";
 import { TextAtom } from "../atomos/TextAtom";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
-import { Input } from "@material-tailwind/react";
 
-import { navigation, socialMedia } from "../../constants";
+import logo from "../../assets/logo.png";
+
+import { navigation, socialMedia, contato } from "../../constants";
+import { Input } from "@mui/material";
 
 export function FooterOrganism() {
   return (
-    <div className="sm:h-[26.313rem] sm:w-[90rem] w-full bg-[red] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12	 sm:items-center">
-      <div className="justify-items-start grid content-center sm:w-96 h-full mb-12	">
-        <IconAtom icon={DiApple} size={30} color="black" className="mb-6" />
+    <div className="sm:h-[26.313rem] w-full bg-[red] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
+      <div className="justify-items-start grid content-center sm:w-96 h-full mb-12">
+        <div className="justify-start">
+          <a href="http://localhost:5173">
+            <img className="w-36" src={logo} alt="logo" />
+          </a>
+        </div>
         <TextAtom
           className="font-bold text-white text-2xl mb-4	"
           text="INFORMAÇÕES"
@@ -55,24 +61,22 @@ export function FooterOrganism() {
             className="font-bold text-white text-2xl mb-8	"
             text="CONTATO"
           />
-          <div className="flex flex-row mb-4">
-            <IconAtom
-              icon={DiApple}
-              size={20}
-              color="white"
-              className=" mr-3.5	"
-            />
-            <TextAtom text="Lumbung Hidup East Java" className="text-white" />
-          </div>
-          <div className="flex flex-row mb-4">
-            <IconAtom
-              icon={DiApple}
-              size={20}
-              color="white"
-              className="mr-3.5	"
-            />
-            <TextAtom text="Lumbung Hidup East Java" className="text-white" />
-          </div>
+          {contato.map((element, index) => (
+            <div className="flex flex-row mb-4">
+              <IconAtom
+                icon={element.icon}
+                size={20}
+                color="white"
+                className=" mr-3.5	"
+              />
+              <TextAtom text={element.content} className="text-white" />
+            </div>
+          ))}
+          <Input
+            disableUnderline
+            placeholder="Email Adress"
+            className=" w-48 mb-2 h-12 p-4 opacity-25 bg-white"
+          />
           <ButtonMolecule
             className="w-48 bg-white rounded-none font-semibold	text-[#636363]"
             title="SUBSCRIBE"
