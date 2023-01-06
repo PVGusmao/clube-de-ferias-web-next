@@ -8,6 +8,7 @@ import firstButtonBlog from "../assets/firstButtonBlog.png";
 import secondButtonBlog from "../assets/secondButtonBlog.png";
 import thirdButtonBlog from "../assets/thirdButtonBlog.png";
 import forthButtonBlog from "../assets/forthButtonBlog.png";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const navLinks = [
   {
@@ -56,6 +57,25 @@ export const cards = [
     id: 4,
     icon: RiMoneyDollarCircleFill,
     content: "O dinheiro da sua assinatura está sempre disponível",
+  },
+];
+
+export const navigation = [
+  {
+    icon: IoIosArrowForward,
+    content: "Home",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Planos",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Blog",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Sobre",
   },
 ];
 

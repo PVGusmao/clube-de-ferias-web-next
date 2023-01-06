@@ -27,9 +27,13 @@ module.exports = withMT({
       },
       height: {
         128: "48rem",
+        421: "26.313rem",
         559: "34.9375rem",
         1440: "90rem",
         1023: "63.9375rem",
+      },
+      height: {
+        128: "48rem",
       },
     },
   },
