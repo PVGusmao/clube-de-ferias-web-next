@@ -17,6 +17,8 @@ type Props = {
 
 export function WelcomeMolecule({ className }: Props) {
 
+  const [slideShow, setSlideShow] = useState(0);
+
   return (
     <div className={`${className}`}>
       <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-96 h-full justify-center'>
@@ -66,8 +68,18 @@ export function WelcomeMolecule({ className }: Props) {
         }
 
         <SlideShowCardMolecule
-          className='p-1 flex flex-col items-center justify-center w-52 h-52 shadow-2xl sm:hidden'
+          slideShow={slideShow}
+          setSlideShow={setSlideShow}
+          colorIcon='black'
+          className='p-1 flex mb-10 bg-white rounded-xl items-center justify-center w-full h-52 shadow-2xl sm:hidden'
+        >
+        <CardMolecule
+          className={`${className}`}
+          color='black'
+          icon={cards[slideShow].icon}
+          text={cards[slideShow].content}
         />
+        </SlideShowCardMolecule>
 
       </div>
     </div>
