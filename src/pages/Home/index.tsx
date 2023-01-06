@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <WelcomeOrganism />
 
-      <BlogOrganism />
+      {/* <BlogOrganism /> */}
     </>
   );
 }

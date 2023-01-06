@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 
 import { TextAtom } from '../atomos/TextAtom';
 
-import { Button, ButtonProps, Typography } from "@material-tailwind/react";
+import { Button, ButtonProps } from "@material-tailwind/react";
 
 type Props = ButtonProps & {
-  title:string,
+  title: string | ReactElement,
   children?: ReactNode,
   textClassName?: string;
 };

@@ -11,7 +11,7 @@ export function WelcomeOrganism() {
   return (
       <BackgroundImageAtom
         image={bgImageHome}
-        className='h-128 max-w-7xl'
+        className='h-128 sm:max-w-7xl'
       >
         
         <NavBarMolecule />
