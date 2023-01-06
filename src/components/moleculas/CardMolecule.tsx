@@ -13,7 +13,7 @@ type Props = {
 export function CardMolecule({ icon, text, className }: Props) {
   return (
     <div
-      className={`flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg ${className}`}
+      className={`${className}`}
     >
       <IconAtom
         className=" w-full justify-center mb-4"

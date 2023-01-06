@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 import logo from '../../assets/logo.png';
 
@@ -7,10 +7,14 @@ import { TextButtonMolecule } from "./TextButtonMolecule";
 import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "./IconButtonMolecule";
 
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 
-export function NavBarMolecule() {
+type Props ={
+  setShowMenu: Dispatch<SetStateAction<boolean>>
+  showMenu: boolean;
+}
+
+export function NavBarMolecule({ showMenu, setShowMenu }: Props) {
   return (
     <div
       className="flex items-center w-full justify-evenly sm:justify-evenly h-32"
@@ -41,7 +45,11 @@ export function NavBarMolecule() {
       </div>
 
       <div className='sm:hidden'>
-        <MenuHamburguerMolecule children icon={GiHamburgerMenu} />
+        <MenuHamburguerMolecule
+          children
+          onClick={() => {setShowMenu(!showMenu)}}
+          color='white'
+        />
       </div>
 
       <div

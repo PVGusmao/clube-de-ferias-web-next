@@ -33,7 +33,7 @@ export function SlideShowCardMolecule({ className }: Props) {
       />
 
       <CardMolecule
-        className={`w-52 shadow-2xl sm:hidden ${className}`}
+        className={`${className}`}
         icon={cards[slideShow].icon}
         text={cards[slideShow].content}
       />

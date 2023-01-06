@@ -11,11 +11,14 @@ import { ButtonMolecule } from '../moleculas/ButtonMolecule';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import { SlideShowCardMolecule } from './SlideShowCardMolecule';
 
-export function WelcomeMolecule() {
+type Props = {
+  className: string;
+}
 
+export function WelcomeMolecule({ className }: Props) {
 
   return (
-    <div className='w-full'>
+    <div className={`${className}`}>
       <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-96 h-full justify-center'>
         <div className='flex flex-col items-center sm:items-start sm:text-start justify-between sm:w-96 w-full px-10 sm:px-0'>
           <TextAtom
@@ -54,7 +57,7 @@ export function WelcomeMolecule() {
         {
           cards.map((element, index) => (
             <CardMolecule
-              className='hidden sm:flex block shadow-2xl w-52'
+              className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52'
               key={index}
               icon={element.icon}
               text={element.content}
@@ -62,7 +65,9 @@ export function WelcomeMolecule() {
           ))
         }
 
-        <SlideShowCardMolecule className='p-1' />
+        <SlideShowCardMolecule
+          className='p-1 flex flex-col items-center justify-center w-52 h-52 shadow-2xl sm:hidden'
+        />
 
       </div>
     </div>
