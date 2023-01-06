@@ -11,6 +11,7 @@ export type PropsPlanos = {
   valor?: string;
   btnColor?: string;
   btnTitle?: string;
+  className?: string;
 };
 
 export function CardPlanosMolecule({
@@ -21,10 +22,11 @@ export function CardPlanosMolecule({
   valor,
   btnTitle,
   btnColor,
+  className,
 }: PropsPlanos) {
   return (
     <div
-      className={`flex justify-center flex-col h-[32.8125rem] w-72 space-y-9 rounded-2xl bg-white shadow-lg my-11`}
+      className={`flex justify-center flex-col h-[32.8125rem] w-72 space-y-9 rounded-2xl bg-white shadow-lg my-11 ${className}`}
     >
       <div className={`flex rounded-lg self-center p-2.5 ${btnColor}`}>
         <TextAtom

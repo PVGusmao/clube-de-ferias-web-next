@@ -8,22 +8,23 @@ type Props = {
   icon: IconType;
   text: string;
   className: string;
+  color: string;
 };
 
-export function CardMolecule({ icon, text, className }: Props) {
+export function CardMolecule({ icon, text, className, color = 'black' }: Props) {
   return (
     <div
       className={`${className}`}
     >
       <IconAtom
-        className=" w-full justify-center mb-4"
+        className="w-full justify-center mb-4"
         icon={icon}
         size={36}
-        color="black"
+        color={color}
       />
       <TextAtom
         children
-        className="text-lg text-center justify-center mx-3.5"
+        className="dark:text-white text-lg text-center justify-center mx-3.5"
         text={text}
       />
     </div>

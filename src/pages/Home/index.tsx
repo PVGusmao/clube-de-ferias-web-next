@@ -15,15 +15,15 @@ export default function Home() {
 
       <BlogOrganism />
 
-      <BannerOrganism />
+      {/* <BannerOrganism /> */}
 
-      <SimulationOrganism />
+      {/* <SimulationOrganism /> */}
 
       <PlansOrganism />
 
-      <ClientsOrganism />
+      {/* <ClientsOrganism /> */}
 
-      <FooterOrganism />
+      {/* <FooterOrganism /> */}
     </>
   );
 }
