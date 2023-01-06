@@ -1,26 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-import bgImageHome from '../../assets/homeBgImage.png';
-
-import { NavBarOrganism } from "../../components/organismos/NavBarOrganism";
+import { BlogOrganism } from "../../components/organismos/BlogOrganism";
+import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
+import { FooterOrganism } from "../../components/organismos/FooterOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
-import { BackgroundImageAtom } from "../../components/atomos/BackgroundImageAtom";
 
 export default function Home() {
   return (
     <>
-
-      <BackgroundImageAtom
-        image={bgImageHome}
-        className='h-128 max-w-7xl'
-      >
-        
-        <NavBarOrganism />
-        
-        <WelcomeOrganism />
-      
-      </BackgroundImageAtom>
-
+      <SimulationOrganism />
+      <FooterOrganism />
     </>
   );
 }

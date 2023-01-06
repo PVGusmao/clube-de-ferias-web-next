@@ -1,8 +1,14 @@
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { TbPig } from "react-icons/tb";
-import { AiOutlineSafety } from 'react-icons/ai';
-import { BsTelephoneInboundFill } from 'react-icons/bs';
-import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import { AiOutlineSafety } from "react-icons/ai";
+import { BsTelephoneInboundFill } from "react-icons/bs";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+
+import firstButtonBlog from "../assets/firstButtonBlog.png";
+import secondButtonBlog from "../assets/secondButtonBlog.png";
+import thirdButtonBlog from "../assets/thirdButtonBlog.png";
+import forthButtonBlog from "../assets/forthButtonBlog.png";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const navLinks = [
   {
@@ -35,7 +41,7 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: "Sua assinatura vira crédito para suas viagens"
+    content: "Sua assinatura vira crédito para suas viagens",
   },
   {
     id: 2,
@@ -51,6 +57,25 @@ export const cards = [
     id: 4,
     icon: RiMoneyDollarCircleFill,
     content: "O dinheiro da sua assinatura está sempre disponível",
+  },
+];
+
+export const navigation = [
+  {
+    icon: IoIosArrowForward,
+    content: "Home",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Planos",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Blog",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Sobre",
   },
 ];
 
@@ -96,6 +121,37 @@ export const cardHotel = [
     hotel: "Zagaia Eco Resort",
     data: "06 Abril à 10 de Abril 2023",
     price: "6x R$ 2.000",
+  },
+];
+
+export const cardBlog = {
+  id: 1,
+  title: "Maldivas",
+  subTitle: "Um paraíso possível!",
+  message:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+};
+
+export const minorCardBlog = [
+  {
+    id: 1,
+    title: "Lugares Imperdíveis",
+    image: firstButtonBlog,
+  },
+  {
+    id: 2,
+    title: "Não Perca",
+    image: secondButtonBlog,
+  },
+  {
+    id: 3,
+    title: "Retrospectiva 2022",
+    image: thirdButtonBlog,
+  },
+  {
+    id: 4,
+    title: "Carnaval",
+    image: forthButtonBlog,
   },
 ];
 
@@ -174,5 +230,29 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: FaInstagram,
+  },
+];
+
+export const simulationCard = [
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
+  },
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
+  },
+  {
+    img: "https://avatars.githubusercontent.com/u/81275678?v=4",
+    estado: "Salvador",
+    modelo: "Hotel + Transer",
+    hotel: "Zagaia Eco Resort",
+    preco: "6x R$ 2.000",
   },
 ];
