@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { cards, home } from '../../constants';
 
@@ -8,53 +8,67 @@ import { VideoAtom } from '../atomos/VideoAtom';
 import { CardMolecule } from '../moleculas/CardMolecule';
 import { ButtonMolecule } from '../moleculas/ButtonMolecule';
 
-export function WelcomeMolecule() {
+import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
+import { SlideShowCardMolecule } from './SlideShowCardMolecule';
+
+type Props = {
+  className: string;
+}
+
+export function WelcomeMolecule({ className }: Props) {
+
   return (
-    <div className='w-full'>
-      <div className='mt-16 flex h-96 justify-center'>
-        <div className='flex flex-col text-start justify-between w-96 mr-12'>
+    <div className={`${className}`}>
+      <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-96 h-full justify-center'>
+        <div className='flex flex-col items-center sm:items-start sm:text-start justify-between sm:w-96 w-full px-10 sm:px-0'>
           <TextAtom
             children
             text={home[0].subtitle}
-            className='uppercase font-medium text-white text-lg'
+            className='uppercase mb-4 sm:mb-0 font-medium text-white sm:text-lg text-md'
           />
 
           <TextAtom
             children
             text={home[0].title}
-            className='uppercase font-medium text-white text-5xl' 
+            className='uppercase mb-4 sm:mb-0 font-medium text-white sm:text-5xl text-2xl' 
           />
 
           <TextAtom
             children
             text={home[0].content}
-            className='uppercase font-medium text-black text-sm'
+            className='uppercase mb-4 sm:mb-0 font-medium text-black text-sm'
           />
 
           <ButtonMolecule
-            className='flex items-center justify-center w-48 bg-[#F20F0F] h-12 shadow-2xl'
-            textClassName='text-lg font-medium'
+            className='flex mb-6 sm:mb-0 items-center justify-center w-48 bg-[#F20F0F] h-12 shadow-2xl'
+            textClassName='text-lg font-medium text-white'
             children
             title='OUR PROJETCT'
           />
         </div>
 
         <VideoAtom
-          className='w-96'
+          className='sm:w-96 w-auto sm:h-auto h-80 mx-auto sm:mx-0'
         />
       </div>
 
-      <div className='flex items-center justify-evenly mt-24'>
+      <div className='flex w-full flex-wrap items-center justify-evenly mt-16 sm:mt-24'>
+
         {
           cards.map((element, index) => (
             <CardMolecule
-              className='shadow-2xl'
+              className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52'
               key={index}
               icon={element.icon}
               text={element.content}
             />
           ))
         }
+
+        <SlideShowCardMolecule
+          className='p-1 flex flex-col items-center justify-center w-52 h-52 shadow-2xl sm:hidden'
+        />
+
       </div>
     </div>
   )

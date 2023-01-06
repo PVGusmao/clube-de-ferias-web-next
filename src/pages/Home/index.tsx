@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
