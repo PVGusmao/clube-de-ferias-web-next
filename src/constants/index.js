@@ -4,6 +4,12 @@ import { AiOutlineSafety } from 'react-icons/ai';
 import { BsTelephoneInboundFill } from 'react-icons/bs';
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 
+import firstButtonBlog from "../assets/firstButtonBlog.png";
+import secondButtonBlog from "../assets/secondButtonBlog.png";
+import thirdButtonBlog from "../assets/thirdButtonBlog.png";
+import forthButtonBlog from "../assets/forthButtonBlog.png";
+
+
 export const navLinks = [
   {
     id: "quem-somos",
@@ -96,6 +102,36 @@ export const cardHotel = [
     hotel: "Zagaia Eco Resort",
     data: "06 Abril à 10 de Abril 2023",
     price: "6x R$ 2.000",
+  },
+];
+
+export const cardBlog = {
+  id: 1,
+  title: "Maldivas",
+  subTitle: "Um paraíso possível!",
+  message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
+}
+
+export const minorCardBlog = [
+  {
+    id: 1,
+    title: "Lugares Imperdíveis",
+    image: firstButtonBlog,
+  },
+  {
+    id: 2,
+    title: "Não Perca",
+    image: secondButtonBlog,
+  },
+  {
+    id: 3,
+    title: "Retrospectiva 2022",
+    image: thirdButtonBlog,
+  },
+  {
+    id: 4,
+    title: "Carnaval",
+    image: forthButtonBlog,
   },
 ];
 

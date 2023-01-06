@@ -22,16 +22,13 @@ module.exports = withMT({
         'ubuntu': ['ubuntu', 'Open Sans', 'Sans-Serif'],
       },
       width: {
-        128: "78.75rem",
-        672: "42rem",
-      },
-      height: {
-        559: "34.9375rem",
-        1440: "90rem",
+        '672': '120rem'
       },
       height: {
         '128': '48rem',
-      }
+        '559': "34.9375rem",
+        '1440': "90rem",
+      },
     },
   },
   plugins: [],

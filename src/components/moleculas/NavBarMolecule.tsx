@@ -26,7 +26,7 @@ export function NavBarMolecule() {
         {
           navLinks.map((element, index) => (
             <TextButtonMolecule
-              textClassName='font-semibold'
+              textClassName='font-semibold text-white'
               className='p-2 cursor-pointer text-white hover:text-black'
               key={index}
               text={element.title}
