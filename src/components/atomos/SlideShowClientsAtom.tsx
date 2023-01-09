@@ -5,9 +5,8 @@ import { Slide } from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 
-import { cards, clientes } from '../../constants';
+import { clientes } from '../../constants';
 
-import { CardMolecule } from '../moleculas/CardMolecule';
 import CardCommentsMolecule from '../moleculas/CardCommentsMolecule';
 
 type Props = {

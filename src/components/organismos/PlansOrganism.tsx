@@ -6,7 +6,7 @@ import {
 import { TextAtom } from "../atomos/TextAtom";
 
 import { planos } from "../../constants";
-import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom copy";
+import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom";
 
 export function PlansOrganism({}: PropsPlanos) {
 
