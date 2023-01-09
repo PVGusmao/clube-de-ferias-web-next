@@ -7,6 +7,7 @@ import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
+import { SlideShowBlogAtom } from "../../components/atomos/SlideShowBlogAtom";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <WelcomeOrganism />
 
       <BlogOrganism />
+
+      {/* <SlideShowBlogAtom className="sm:hidden"/> */}
 
       <BannerOrganism />
 

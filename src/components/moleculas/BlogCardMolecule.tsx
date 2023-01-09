@@ -36,7 +36,7 @@ export function BlogCardMolecule({ className, image}: Props) {
         />
       </BackgroundImageAtom>
 
-      <div className="flex w-auto flex-col justify-between">
+      <div className="sm:flex hidden flex-row w-auto sm:flex-col justify-between">
         {
           minorCardBlog.map((element, index) => (
             <BackgroundImageAtom
