@@ -34,7 +34,7 @@ export function PlansOrganism({}: PropsPlanos) {
         }
       </div>
 
-      <SlideShowWelcomeAtom className="w-full" />
+      <SlideShowWelcomeAtom className="w-full sm:hidden" />
     </div>
   );
 }
