@@ -8,8 +8,6 @@ import { VideoAtom } from '../atomos/VideoAtom';
 import { CardMolecule } from '../moleculas/CardMolecule';
 import { ButtonMolecule } from '../moleculas/ButtonMolecule';
 
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
-import { SlideShowCardMolecule } from './SlideShowCardMolecule';
 import { SlideShowWelcomeAtom } from '../atomos/SlideShowWelcomeAtom';
 
 type Props = {

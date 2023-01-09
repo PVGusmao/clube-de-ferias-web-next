@@ -6,7 +6,7 @@ import {
 import { TextAtom } from "../atomos/TextAtom";
 
 import { planos } from "../../constants";
-import { SlideShowWelcomeAtom } from "../atomos/SlideShowPlanosAtom copy";
+import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom copy";
 
 export function PlansOrganism({}: PropsPlanos) {
 
@@ -34,7 +34,7 @@ export function PlansOrganism({}: PropsPlanos) {
         }
       </div>
 
-      <SlideShowWelcomeAtom className="w-full sm:hidden" />
+      <SlideShowPlansAtom className="w-full sm:hidden" />
     </div>
   );
 }
