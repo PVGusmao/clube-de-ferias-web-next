@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { useContext } from "react";
 
 import logo from '../../assets/logo.png';
 
@@ -8,13 +8,12 @@ import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "./IconButtonMolecule";
 
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
+import { MyContext } from "../../context/MyContext";
 
-type Props ={
-  setShowMenu: Dispatch<SetStateAction<boolean>>
-  showMenu: boolean;
-}
+export function NavBarMolecule() {
 
-export function NavBarMolecule({ showMenu, setShowMenu }: Props) {
+  const {showMenu, setShowMenu} = useContext(MyContext);
+
   return (
     <div
       className="flex items-center w-full justify-evenly sm:justify-evenly h-32"
