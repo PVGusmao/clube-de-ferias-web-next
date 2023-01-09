@@ -12,7 +12,6 @@ import { SlideShowBlogAtom } from "../../components/atomos/SlideShowBlogAtom";
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 
 import { SlideShowWelcomeAtom } from "../../components/atomos/SlideShowWelcomeAtom";
--
 
 export default function Home() {
   return (
