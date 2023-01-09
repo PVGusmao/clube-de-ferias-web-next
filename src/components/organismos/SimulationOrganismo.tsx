@@ -7,6 +7,7 @@ import { simulationCard } from "../../constants";
 import { TextAtom } from "../atomos/TextAtom";
 
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
+import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
 
 export function SimulationOrganism() {
   const [tabValue, setTabValue] = React.useState();
@@ -14,7 +15,6 @@ export function SimulationOrganism() {
   const [totalValue, setTotalValue] = React.useState(0);
 
   const marks = [
-    // { value: 0, label: "0 mêses" },
     {
       value: 3,
       label: "3 mêses",
@@ -100,8 +100,9 @@ export function SimulationOrganism() {
         text="Quanto tempo deixaria o seu dinheiro investido?"
         className="mt-14 sm:text-xl mb-10 px-4"
       />
-      <div className="flex flex-row flex-wrap justify-evenly">
-        {simulationCard.map((element, index) => (
+      <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
+        {
+          simulationCard.map((element, index) => (
           <CardSimulationMolecule
             hotel=""
             img={element.img}
@@ -110,8 +111,13 @@ export function SimulationOrganism() {
             modelo={element.modelo}
             preco={element.preco}
           />
-        ))}
+          ))
+        }
+
       </div>
+      
+      <SlideShowSimulationAtom className=" sm:hidden w-full" />
+      
       <div className="py-16">
         <ButtonMolecule
           children

@@ -8,8 +8,7 @@ import { VideoAtom } from '../atomos/VideoAtom';
 import { CardMolecule } from '../moleculas/CardMolecule';
 import { ButtonMolecule } from '../moleculas/ButtonMolecule';
 
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
-import { SlideShowCardMolecule } from './SlideShowCardMolecule';
+import { SlideShowWelcomeAtom } from '../atomos/SlideShowWelcomeAtom';
 
 type Props = {
   className: string;
@@ -59,6 +58,7 @@ export function WelcomeMolecule({ className }: Props) {
         {
           cards.map((element, index) => (
             <CardMolecule
+              color='black'
               className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52'
               key={index}
               icon={element.icon}
@@ -67,20 +67,7 @@ export function WelcomeMolecule({ className }: Props) {
           ))
         }
 
-        <SlideShowCardMolecule
-          slideShow={slideShow}
-          setSlideShow={setSlideShow}
-          colorIcon='black'
-          className='p-1 flex mb-10 bg-white rounded-xl items-center justify-center w-full h-52 shadow-2xl sm:hidden'
-        >
-        <CardMolecule
-          className={`${className}`}
-          color='black'
-          icon={cards[slideShow].icon}
-          text={cards[slideShow].content}
-        />
-        </SlideShowCardMolecule>
-
+        <SlideShowWelcomeAtom className='w-full' />
       </div>
     </div>
   )
