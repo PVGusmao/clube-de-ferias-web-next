@@ -10,6 +10,7 @@ import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
+
 import Sidebar from "../../components/atomos/SideBarAtom";
 
 export default function Home() {
