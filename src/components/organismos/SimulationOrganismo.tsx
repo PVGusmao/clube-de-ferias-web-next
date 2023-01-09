@@ -38,10 +38,12 @@ export function SimulationOrganism() {
   return (
     <div className="sm:w-[90rem] sm:h-[70.9375rem] sm:grid content-center">
       <TextAtom
+        children
         text="Simule agora o seu melhor pacote"
         className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-10 px-5"
       />
       <TextAtom
+        children
         className="sm:text-xl mb-3	mb-10	px-4	"
         text="Faça uma simulação das viagens dos seus sonhos e começe a investir agora!"
       />
@@ -75,13 +77,16 @@ export function SimulationOrganism() {
         </div>
       </div>
       <TextAtom
+        children
         text="Quanto tempo deixaria o seu dinheiro investido?"
         className="mt-14 sm:text-xl mb-10 px-4"
       />
       <div className="flex flex-row flex-wrap justify-evenly">
         {simulationCard.map((element, index) => (
           <CardSimulationMolecule
+            hotel=""
             img={element.img}
+            key={index}
             estado={element.estado}
             modelo={element.modelo}
             preco={element.preco}
@@ -90,6 +95,7 @@ export function SimulationOrganism() {
       </div>
       <div className="py-16">
         <ButtonMolecule
+          children
           className="w-[20.375rem] h-[3.25rem] justify-self-center bg-[#F20F0F]"
           textClassName="text-[#FFFFFF]"
           title="Conheça nossos produtos"
