@@ -9,12 +9,12 @@ import { TextAtom } from "../atomos/TextAtom";
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
 
 export function SimulationOrganism() {
-  const [tabValue, setTabValue] = React.useState(199);
-  const [sliderValue, setSliderValue] = React.useState(undefined);
+  const [tabValue, setTabValue] = React.useState();
+  const [sliderValue, setSliderValue] = React.useState(0);
   const [totalValue, setTotalValue] = React.useState(0);
 
   const marks = [
-    { value: 0, label: "0 mêses" },
+    // { value: 0, label: "0 mêses" },
     {
       value: 3,
       label: "3 mêses",
@@ -33,19 +33,24 @@ export function SimulationOrganism() {
     },
   ];
 
-  const handleSliderChange = (event: Event, newValue: number | number[]) => {
+  function handleSliderChange(event: Event, newValue: number | number[]) {
     setSliderValue(newValue as number);
-    setTotalValue(tabValue * sliderValue);
-  };
+  }
 
-  const handleTabsChange = (event: React.SyntheticEvent, newValue: number) => {
-    setTabValue(newValue);
+  function handleTabsChange(event: React.SyntheticEvent, newValue: number) {
+    setTabValue(newValue as number);
+  }
+
+  function totalSimulation() {
     setTotalValue(tabValue * sliderValue);
-  };
+  }
 
   React.useEffect(() => {
-    console.log(totalValue);
-  }, [totalValue]);
+    totalSimulation();
+    // console.log("Total Value => " + totalValue);
+    // console.log("Tab Value => " + tabValue);
+    console.log("Total Value => " + totalValue);
+  }, [totalValue, tabValue, sliderValue]);
 
   return (
     <div className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
@@ -67,7 +72,6 @@ export function SimulationOrganism() {
             variant="fullWidth"
             scrollButtons
             allowScrollButtonsMobile
-            sx={{}}
           >
             <Tab value={199} label="SILVER" />
             <Tab value={499} label="GOLD" />
@@ -77,8 +81,9 @@ export function SimulationOrganism() {
         </div>
         <div className="px-12">
           <Slider
-            defaultValue={0}
+            defaultValue={3}
             max={12}
+            min={3}
             value={sliderValue}
             onChange={handleSliderChange}
             aria-label="Default"
