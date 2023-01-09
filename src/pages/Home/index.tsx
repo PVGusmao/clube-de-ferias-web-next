@@ -8,6 +8,7 @@ import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
 import { SlideShowBlogAtom } from "../../components/atomos/SlideShowBlogAtom";
+import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
       <PlansOrganism />
 
       <ClientsOrganism />
+
+      <NewsOrganism />
 
       <FooterOrganism />
     </>
