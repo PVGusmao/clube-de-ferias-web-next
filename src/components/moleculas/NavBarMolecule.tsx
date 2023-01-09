@@ -67,7 +67,6 @@ export function NavBarMolecule() {
             />
           ))
         }
-
       </div>
 
     </div>

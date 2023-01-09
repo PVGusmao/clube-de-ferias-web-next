@@ -1,7 +1,6 @@
 import React from "react";
 
-import { GiHamburgerMenu } from 'react-icons/gi';
-
+import { AiOutlineClose } from 'react-icons/ai';
 
 import { IconAtom } from "../atomos/IconAtom";
 
@@ -13,13 +12,13 @@ type Props = ButtonProps & {
   color?: string,
 }
 
-export function MenuHamburguerMolecule({ color, ...rest }: Props) {
+export function CloseButtonMolecule({ color, ...rest }: Props) {
   return (
     <ButtonMolecule
       className="bg-inherit shadow-none border-none bg-none text-inherit border-none"
       title={
         <IconAtom
-          icon={GiHamburgerMenu}
+          icon={AiOutlineClose}
           color={color}
           size={32}
         />

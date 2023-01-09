@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-
 import bgImageHome from '../../assets/homeBgImage.png';
 
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
-import Sidebar from "../atomos/SideBarAtom";
 
 import { NavBarMolecule } from "../moleculas/NavBarMolecule";
 import { WelcomeMolecule } from "../moleculas/WelcomeMolecule";
