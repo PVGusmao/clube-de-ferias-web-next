@@ -12,7 +12,7 @@ import { Input } from "@mui/material";
 
 export function FooterOrganism() {
   return (
-    <div className="sm:h-[26.313rem] w-full bg-[red] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
+    <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
       <div className="justify-items-start grid content-center sm:w-96 h-full mb-12">
         <div className="justify-start">
           <a href="http://localhost:5173">

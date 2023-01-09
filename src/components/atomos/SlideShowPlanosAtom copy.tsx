@@ -13,7 +13,7 @@ type Props = {
     className?: string;
 }
 
-export const SlideShowWelcomeAtom = ({ className }: Props) => {
+export const SlideShowPlansAtom = ({ className }: Props) => {
     return (
         <div className={`${className}`}>
             <Slide transitionDuration={250}>
