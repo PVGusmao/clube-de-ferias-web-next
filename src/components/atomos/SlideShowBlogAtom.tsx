@@ -17,12 +17,12 @@ type Props = {
 export const SlideShowBlogAtom = ({ className }: Props) => {
     return (
         <div className={className}>
-            <Slide transitionDuration={250}>
+            <Slide arrows={false} indicators transitionDuration={250}>
                 {
                     minorCardBlog.map((element, index) => (
                         <div className="each-slide-effect" key={index} >
                             <BackgroundImageAtom
-                                className={`flex items-center text-center rounded-xl m-2 justify-between h-36 w-96`}
+                                className={`flex items-center text-center rounded-xl mx-1 justify-between h-36 w-96`}
                                 image={element.image}
                             >
                             <TextAtom

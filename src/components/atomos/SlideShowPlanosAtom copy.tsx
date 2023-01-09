@@ -16,7 +16,7 @@ type Props = {
 export const SlideShowPlansAtom = ({ className }: Props) => {
     return (
         <div className={`${className}`}>
-            <Slide transitionDuration={250}>
+            <Slide arrows={false} indicators transitionDuration={250}>
                 {
                     planos.map((element, index) => (
                         <div className="h-full flex items-center justify-center" key={index}>
