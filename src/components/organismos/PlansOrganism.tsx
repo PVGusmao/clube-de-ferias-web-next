@@ -21,8 +21,9 @@ export function PlansOrganism({}: PropsPlanos) {
       />
       <div className="sm:flex hidden flex-row flex-wrap justify-evenly">
         {
-          planos.map((element, index) => (
+          planos.map((element, index: number) => (
             <CardPlanosMolecule
+              key={index}
               plano={element.plano}
               desconto={element.desconto}
               content1={element.content1}

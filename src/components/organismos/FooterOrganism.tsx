@@ -30,8 +30,9 @@ export function FooterOrganism() {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
         />
         <div className="flex flex-row">
-          {socialMedia.map((element, index) => (
+          {socialMedia.map((element, index: number) => (
             <IconAtom
+              key={index}
               icon={element.icon}
               size={30}
               color="white"
@@ -47,9 +48,10 @@ export function FooterOrganism() {
             className="font-bold text-white text-2xl mb-3.5"
             text="NAVIGATION"
           />
-          {navigation.map((element, index) => (
+          {navigation.map((element, index:number) => (
             <div className="flex flex-row mb-4">
               <IconAtom
+                key={index}
                 icon={element.icon}
                 size={20}
                 color="white"
@@ -65,9 +67,10 @@ export function FooterOrganism() {
             className="font-bold text-white text-2xl mb-8	"
             text="CONTATO"
           />
-          {contato.map((element, index) => (
+          {contato.map((element, index: number) => (
             <div className="flex flex-row mb-4">
               <IconAtom
+                key={index}
                 icon={element.icon}
                 size={20}
                 color="white"
