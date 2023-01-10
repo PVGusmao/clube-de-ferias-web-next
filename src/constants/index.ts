@@ -82,10 +82,6 @@ export const navigation = [
     icon: IoIosArrowForward,
     content: "Blog",
   },
-  {
-    icon: IoIosArrowForward,
-    content: "Sobre",
-  },
 ];
 
 export const home = [
