@@ -24,7 +24,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
         <div className={`${className}`}>
             <div className="flex flex-col h-screen p-3 bg-white shadow w-full bg-[#F20F0F]">
                 <div className="space-y-3 flex flex-col">
-                    <div className="flex items-center justify-between px-10">
+                    <div className="flex items-center justify-between px-4">
                         <img
                             className="w-36"
                             src={logo}
@@ -47,9 +47,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         icon={MdPeople}
                                         color='white'
                                         className=''
-                                        size={24}
+                                        size={32}
                                     />
-                                    <span>Sobre Nós</span>
+                                    <span className="text-lg font-bold">Sobre Nós</span>
                                 </a>
                             </li>
                             <li className="rounded-sm">
@@ -61,9 +61,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         icon={IoIosAirplane}
                                         color='white'
                                         className=''
-                                        size={24}
+                                        size={32}
                                     />
-                                    <span>Planos</span>
+                                    <span className="text-lg font-bold">Planos</span>
                                 </a>
                             </li>
                             <li className="rounded-sm">
@@ -75,9 +75,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         icon={IoIosCalculator}
                                         color='white'
                                         className=''
-                                        size={24}
+                                        size={32}
                                     />
-                                    <span>Simule sua viagem</span>
+                                    <span className="text-lg font-bold">Simule sua viagem</span>
                                 </a>
                             </li>
                             <li className="rounded-sm">
@@ -89,9 +89,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         icon={FaBloggerB}
                                         color='white'
                                         className=''
-                                        size={24}
+                                        size={32}
                                     />
-                                    <span>Blog</span>
+                                    <span className="text-lg font-bold">Blog</span>
                                 </a>
                             </li>
                             <li className="rounded-sm">
@@ -103,9 +103,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         icon={MdOutlinePhoneCallback}
                                         color='white'
                                         className=''
-                                        size={24}
+                                        size={32}
                                     />
-                                    <span>Fale Conosco</span>
+                                    <span className="text-lg font-bold">Fale Conosco</span>
                                 </a>
                             </li>
                         </ul>
@@ -124,7 +124,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                     target="_blank"
                                     classNameIcon="m-2 sm:block"
                                     color="white"
-                                    size={24}
+                                    size={32}
                                     icon={element.icon}
                                 />
                             ))
