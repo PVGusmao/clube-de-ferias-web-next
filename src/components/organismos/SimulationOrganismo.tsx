@@ -15,7 +15,7 @@ import api from "../../services/api";
 export function SimulationOrganism() {
   const [tabValue, setTabValue] = React.useState(199);
   const [sliderValue, setSliderValue] = React.useState(3);
-  const [totalValue, setTotalValue] = React.useState();
+  const [totalValue, setTotalValue] = React.useState(1194);
   const [packages, setPackages] = React.useState([]);
   let url = `/pacotes?price=${totalValue}`;
 
@@ -41,7 +41,7 @@ export function SimulationOrganism() {
       const response = await api.get(url);
       const total = response.data.packages;
       setPackages(total);
-  
+
       console.log(total);
     } catch (err) {
       console.log(err);
@@ -49,7 +49,10 @@ export function SimulationOrganism() {
   }
 
   return (
-    <div id='simuladr' className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
+    <div
+      id="simuladr"
+      className="sm:w-full sm:h-[70.9375rem] sm:grid content-center"
+    >
       <TextAtom
         children
         text="Simule agora o seu melhor pacote"
