@@ -101,8 +101,7 @@ export function SimulationOrganism() {
         className="mt-14 sm:text-xl mb-10 px-4"
       />
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
-        {
-          simulationCard.map((element, index) => (
+        {simulationCard.map((element, index) => (
           <CardSimulationMolecule
             hotel=""
             img={element.img}
@@ -111,13 +110,11 @@ export function SimulationOrganism() {
             modelo={element.modelo}
             preco={element.preco}
           />
-          ))
-        }
-
+        ))}
       </div>
-      
+
       <SlideShowSimulationAtom className=" sm:hidden w-full" />
-      
+
       <div className="py-16">
         <ButtonMolecule
           children
