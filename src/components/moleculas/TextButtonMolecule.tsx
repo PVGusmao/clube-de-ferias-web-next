@@ -1,18 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { TextAtom } from "../atomos/TextAtom";
 
 type Props = {
   text: string,
-  href: string,
-  target: string,
+  to: string,
   className?: string;
   textClassName?: string;
 }
 
-export function TextButtonMolecule({text, href, target, className, textClassName}: Props) {
+export function TextButtonMolecule({text, to, className, textClassName}: Props) {
   return (
-    <a href={href} target={target} className={className} >
+    <Link rel="noreferrer" to={to} className={className} >
       <TextAtom children className={textClassName} text={text} />
-    </a>
+    </Link>
   )
 }

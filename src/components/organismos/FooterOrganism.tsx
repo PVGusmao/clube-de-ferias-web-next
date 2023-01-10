@@ -20,10 +20,12 @@ export function FooterOrganism() {
           </a>
         </div>
         <TextAtom
+          children
           className="font-bold text-white text-2xl mb-4	"
           text="INFORMAÇÕES"
         />
         <TextAtom
+          children
           className="text-left mb-7 text-base font-normal	text-white	"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
         />
@@ -41,6 +43,7 @@ export function FooterOrganism() {
       <div className="flex sm:flex-row flex-col justify-between sm:w-[42rem] content-center h-full ">
         <div className="grid content-center justify-items-start sm:mb-0 mb-12	">
           <TextAtom
+            children
             className="font-bold text-white text-2xl mb-3.5"
             text="NAVIGATION"
           />
@@ -52,12 +55,13 @@ export function FooterOrganism() {
                 color="white"
                 className=" mr-3.5	"
               />
-              <TextAtom text={element.content} className="text-white" />
+              <TextAtom children text={element.content} className="text-white" />
             </div>
           ))}
         </div>
         <div className="grid content-center justify-items-start sm:w-80	">
           <TextAtom
+            children
             className="font-bold text-white text-2xl mb-8	"
             text="CONTATO"
           />
@@ -69,7 +73,7 @@ export function FooterOrganism() {
                 color="white"
                 className=" mr-3.5	"
               />
-              <TextAtom text={element.content} className="text-white" />
+              <TextAtom children text={element.content} className="text-white" />
             </div>
           ))}
         </div>

@@ -8,11 +8,12 @@ import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "./IconButtonMolecule";
 
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
-import { MyContext } from "../../context/MyContext";
+import { IMyContext, MyContext } from "../../context/MyContext";
+import { IconType } from "react-icons";
 
 export function NavBarMolecule() {
 
-  const {showMenu, setShowMenu} = useContext(MyContext);
+  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
 
   return (
     <div
@@ -30,14 +31,13 @@ export function NavBarMolecule() {
         className="sm:flex hidden w-auto"
       >
         {
-          navLinks.map((element, index) => (
+          navLinks.map((element, index: number) => (
             <TextButtonMolecule
               textClassName='sm:block font-semibold hidden text-white'
               className='p-2 cursor-pointer text-white hover:text-black'
               key={index}
               text={element.title}
-              href="www.facebook.com"
-              target="_blank"
+              to={element.rota}
             />
           ))
         }
@@ -55,7 +55,7 @@ export function NavBarMolecule() {
         className="hidden sm:flex"
       >
         {
-          socialMedia.map((element, index) => (
+          socialMedia.map((element, index: number) => (
             <IconButtonMolecule
               key={index}
               href="www.tiktok.com"

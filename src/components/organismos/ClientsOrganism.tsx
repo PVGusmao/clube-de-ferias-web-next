@@ -10,8 +10,9 @@ export function ClientsOrganism() {
       <h1 className="text-black text-5xl mb-1 text-center">Nossos Clientes recomendam!</h1>
       <div className="hidden sm:flex justify-center flex-row justify-evenly flex-wrap">
         {
-          clientes.map((element, index) => (
+          clientes.map((element, index: number) => (
             <CardCommentsMolecule
+              key={index}
               content={element.content}
               name={element.name}
               ocupation={element.ocupation}

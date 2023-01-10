@@ -12,18 +12,22 @@ export function NewsOrganism() {
     <div className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]">
       <div className="grid content-center">
         <TextAtom
+          children
           className="sm:text-5xl text-3xl	font-bold text-[#F20F0F] sm:text-left"
           text="Quer saber mais sobre"
         />
         <TextAtom
+          children
           className="sm:text-5xl text-3xl	font-bold text-[#F20F0F] sm:text-left mb-5"
           text="o clube de ferias?"
         />
         <TextAtom
+          children
           className="font-light	sm:text-left sm:text-2xl"
           text="Assine nossa news e receba novidades toda semana"
         />
         <TextAtom
+          children
           className="font-light	sm:text-left sm:text-2xl"
           text="novidades toda semana"
         />
@@ -36,7 +40,7 @@ export function NewsOrganism() {
               color="white"
               className="mb-2"
             />
-            <TextAtom className="text-white ml-2 font-bold" text="App Store" />
+            <TextAtom children className="text-white ml-2 font-bold" text="App Store" />
           </div>
           <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg">
             <IconAtom
@@ -45,7 +49,7 @@ export function NewsOrganism() {
               color="white"
               className="mb-2"
             />
-            <TextAtom className="text-white ml-2 font-bold" text="App Store" />
+            <TextAtom children className="text-white ml-2 font-bold" text="App Store" />
           </div>
         </div>
       </div>
@@ -64,18 +68,21 @@ export function NewsOrganism() {
         <div className="mt-10">
           <div className="flex items-center">
             <Checkbox />
-            <TextAtom text="Eu concordo em receber comunicação" />
+            <TextAtom children text="Eu concordo em receber comunicação" />
           </div>
           <TextAtom
+            children
             className="font-light	"
             text="Ao informar meus dados, estou ciente"
           />
           <TextAtom
+            children
             className="font-light	"
             text="das diretrizes da Política de Privacidade"
           />
 
           <ButtonMolecule
+            children
             className="w-[13.375rem] h-[3.5rem] rounded-full bg-[#636363] mt-5"
             textClassName="text-white"
             title={"Enviar"}

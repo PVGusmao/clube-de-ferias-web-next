@@ -9,8 +9,10 @@ import { TextAtom } from "../atomos/TextAtom";
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
 import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
 
+import { SimulationCard } from "../../interfaces/intefaces";
+
 export function SimulationOrganism() {
-  const [tabValue, setTabValue] = React.useState();
+  const [tabValue, setTabValue] = React.useState(0);
   const [sliderValue, setSliderValue] = React.useState(0);
   const [totalValue, setTotalValue] = React.useState(0);
 
@@ -101,7 +103,7 @@ export function SimulationOrganism() {
         className="mt-14 sm:text-xl mb-10 px-4"
       />
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
-        {simulationCard.map((element, index) => (
+        {simulationCard.map((element: SimulationCard, index: number) => (
           <CardSimulationMolecule
             hotel=""
             img={element.img}

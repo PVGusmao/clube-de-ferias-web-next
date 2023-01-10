@@ -11,8 +11,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center w-24">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
           />
@@ -20,8 +19,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
             />
@@ -32,8 +30,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
           />
@@ -42,8 +39,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
           />
@@ -54,8 +50,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
           />
@@ -64,8 +59,7 @@ export function FlatMenuOrganism() {
         <div className="flex items-center">
           <IconAtom icon={MdPeopleAlt} color='white'/>
           <TextButtonMolecule
-            href="www.google.com.br"
-            target="_blank"
+            to="www.google.com.br"
             text="Sobre Nós"
             textClassName="text-sm ml-2 text-white"
           />

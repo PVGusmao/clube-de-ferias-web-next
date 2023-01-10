@@ -16,26 +16,32 @@ export const navLinks = [
   {
     id: "quem-somos",
     title: "Quem Somos",
+    rota: "/sobre"
   },
   {
     id: "planos",
     title: "Planos",
+    rota: "/planos",
   },
   {
     id: "simule-sua-viagem",
     title: "Simule Sua Viagem",
+    rota: ""
   },
   {
     id: "blog",
     title: "Blog",
+    rota: "/blog",
   },
   {
     id: "fale-conosco",
     title: "Fale Conosco",
+    rota: ""
   },
   {
     id: "baixe-o-app",
     title: "Baixe O App",
+    rota: ""
   },
 ];
 

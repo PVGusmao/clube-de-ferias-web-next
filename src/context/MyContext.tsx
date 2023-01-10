@@ -5,11 +5,7 @@ export type IMyContext = {
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export type Void = {
-
-}
-
-export const MyContext = createContext<IMyContext | Void>({});
+export const MyContext = createContext<IMyContext | null>(null);
 
 // -----------------------------xxxxxxx--------------------------------
 
