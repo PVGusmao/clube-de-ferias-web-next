@@ -16,7 +16,7 @@ export function NavBarMolecule() {
 
   return (
     <div
-      className="flex items-center w-full justify-evenly sm:justify-evenly h-32"
+      className="flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-40"
     >
       <a href="http://localhost:5173">
         <img
