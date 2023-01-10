@@ -20,7 +20,7 @@ export function WelcomeMolecule({ className }: Props) {
 
   return (
     <div className={`${className}`}>
-      <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-96 h-full justify-center'>
+      <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-80 h-full justify-center'>
         <div className='flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0'>
           <TextAtom
             children
@@ -49,11 +49,11 @@ export function WelcomeMolecule({ className }: Props) {
         </div>
 
         <VideoAtom
-          className='sm:w-108 w-auto sm:h-auto h-80 mx-auto sm:mx-0'
+          className='sm:w-108 w-auto sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0'
         />
       </div>
 
-      <div className='flex w-full flex-wrap items-center justify-evenly mt-16 sm:mt-24'>
+      <div className='flex w-full flex-wrap items-center justify-evenly mt-16 sm:mt-32'>
 
         {
           cards.map((element, index) => (
