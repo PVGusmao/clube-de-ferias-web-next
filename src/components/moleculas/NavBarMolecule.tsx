@@ -20,7 +20,7 @@ export function NavBarMolecule() {
       id="home"
       className="flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-40"
     >
-      <a href="http://localhost:5173">
+      <a href="." >
         <img
           className="w-36"
           src={logo}
