@@ -57,9 +57,9 @@ export function NavBarMolecule() {
         {
           socialMedia.map((element, index: number) => (
             <IconButtonMolecule
-              key={index}
-              href="www.tiktok.com"
               target="_blank"
+              key={index}
+              to={element.rota}
               classNameIcon="m-2 sm:block hidden"
               color="white"
               size={24}

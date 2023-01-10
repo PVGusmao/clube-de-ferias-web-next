@@ -55,7 +55,7 @@ export function SimulationOrganism() {
   }, [totalValue, tabValue, sliderValue]);
 
   return (
-    <div className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
+    <div id='simulador' className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
       <TextAtom
         children
         text="Simule agora o seu melhor pacote"

@@ -11,7 +11,9 @@ type Props = {
 
 export function TextButtonMolecule({text, to, className, textClassName}: Props) {
   return (
-    <Link rel="noreferrer" to={to} className={className} >
+    <Link rel="noreferrer" to={!to.includes('#') ? to : ''} className={className} onClick={() => {
+      window.location.replace(to.includes('#') ? to : '')
+    }}>
       <TextAtom children className={textClassName} text={text} />
     </Link>
   )
