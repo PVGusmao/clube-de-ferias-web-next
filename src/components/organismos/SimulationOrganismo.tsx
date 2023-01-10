@@ -1,39 +1,23 @@
 import { Slider, Tab, Tabs } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 
-import CardSimulationMolecule from "../../components/moleculas/CardSimulationMolecule";
+import CardSimulationMolecule, {
+  CardSimulationProps,
+} from "../../components/moleculas/CardSimulationMolecule";
 
-import { simulationCard } from "../../constants";
+import { marks } from "../../constants";
 import { TextAtom } from "../atomos/TextAtom";
 
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
 import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
-
-import { SimulationCard } from "../../interfaces/intefaces";
+import api from "../../services/api";
 
 export function SimulationOrganism() {
-  const [tabValue, setTabValue] = React.useState(0);
-  const [sliderValue, setSliderValue] = React.useState(0);
-  const [totalValue, setTotalValue] = React.useState(0);
-
-  const marks = [
-    {
-      value: 3,
-      label: "3 mêses",
-    },
-    {
-      value: 6,
-      label: "6 mêses",
-    },
-    {
-      value: 9,
-      label: "9 mêses",
-    },
-    {
-      value: 12,
-      label: "12 mêses",
-    },
-  ];
+  const [tabValue, setTabValue] = React.useState(199);
+  const [sliderValue, setSliderValue] = React.useState(3);
+  const [totalValue, setTotalValue] = React.useState();
+  const [packages, setPackages] = React.useState([]);
+  let url = `/pacotes?price=${totalValue}`;
 
   function handleSliderChange(event: Event, newValue: number | number[]) {
     setSliderValue(newValue as number);
@@ -49,10 +33,16 @@ export function SimulationOrganism() {
 
   React.useEffect(() => {
     totalSimulation();
-    // console.log("Total Value => " + totalValue);
-    // console.log("Tab Value => " + tabValue);
-    console.log("Total Value => " + totalValue);
-  }, [totalValue, tabValue, sliderValue]);
+    loadPackages();
+  }, [totalValue, tabValue, sliderValue, url]);
+
+  async function loadPackages() {
+    const response = await api.get(url);
+    const total = response.data.packages;
+    setPackages(total);
+
+    console.log(total);
+  }
 
   return (
     <div className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
@@ -85,9 +75,9 @@ export function SimulationOrganism() {
         </div>
         <div className="px-12">
           <Slider
-            defaultValue={3}
-            max={12}
-            min={3}
+            defaultValue={6}
+            max={15}
+            min={6}
             value={sliderValue}
             onChange={handleSliderChange}
             aria-label="Default"
@@ -103,14 +93,14 @@ export function SimulationOrganism() {
         className="mt-14 sm:text-xl mb-10 px-4"
       />
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
-        {simulationCard.map((element: SimulationCard, index: number) => (
+        {packages.map((element: CardSimulationProps, index: number) => (
           <CardSimulationMolecule
-            hotel=""
-            img={element.img}
             key={index}
-            estado={element.estado}
-            modelo={element.modelo}
-            preco={element.preco}
+            subname={element.subname}
+            img={element.img}
+            name={element.name}
+            price={element.latest_information.total_amount_people}
+            date={element.date.display}
           />
         ))}
       </div>

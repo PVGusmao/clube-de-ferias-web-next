@@ -16,7 +16,7 @@ export const navLinks = [
   {
     id: "quem-somos",
     title: "Quem Somos",
-    rota: "/sobre"
+    rota: "/sobre",
   },
   {
     id: "planos",
@@ -26,7 +26,7 @@ export const navLinks = [
   {
     id: "simule-sua-viagem",
     title: "Simule Sua Viagem",
-    rota: ""
+    rota: "",
   },
   {
     id: "blog",
@@ -36,12 +36,12 @@ export const navLinks = [
   {
     id: "fale-conosco",
     title: "Fale Conosco",
-    rota: ""
+    rota: "",
   },
   {
     id: "baixe-o-app",
     title: "Baixe O App",
-    rota: ""
+    rota: "",
   },
 ];
 
@@ -93,7 +93,7 @@ export const home = [
     subtitle: "Quem somos",
     title: "Começa um novo jeito de viajar, criado por quem entende do assunto",
     content:
-      "Da casa de inovações da Stella Barros Turismo, empresa pioneira e com mais de 50 anos de atuação no turismo, nasce o Clube de Férias."
+      "Da casa de inovações da Stella Barros Turismo, empresa pioneira e com mais de 50 anos de atuação no turismo, nasce o Clube de Férias.",
   },
 ];
 
@@ -273,5 +273,24 @@ export const contato = [
   {
     icon: MdEmail,
     content: "Hello@Homco.com",
+  },
+];
+
+export const marks = [
+  {
+    value: 6,
+    label: "6 meses",
+  },
+  {
+    value: 9,
+    label: "9 meses",
+  },
+  {
+    value: 12,
+    label: "12 meses",
+  },
+  {
+    value: 15,
+    label: "15 meses",
   },
 ];
