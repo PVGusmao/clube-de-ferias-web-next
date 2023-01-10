@@ -40,8 +40,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                         <ul className="pt-2 pb-4 space-y-1 text-sm">
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="/sobre"
                                     className="flex items-center text-white p-2 space-x-3 rounded-md"
+                                    onClick={() => {setShowMenu(!showMenu)}}
                                 >
                                     <IconAtom
                                         icon={MdPeople}
@@ -54,8 +55,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="#planos"
                                     className="flex items-center text-white p-2 space-x-3 rounded-md"
+                                    onClick={() => {setShowMenu(!showMenu)}}
                                 >
                                     <IconAtom
                                         icon={IoIosAirplane}
@@ -68,8 +70,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="#simulador"
                                     className="flex items-center text-white p-2 space-x-3 rounded-md"
+                                    onClick={() => {setShowMenu(!showMenu)}}
                                 >
                                     <IconAtom
                                         icon={IoIosCalculator}
@@ -82,8 +85,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="#blog"
                                     className="flex items-center text-white p-2 space-x-3 rounded-md"
+                                    onClick={() => {setShowMenu(!showMenu)}}
                                 >
                                     <IconAtom
                                         icon={FaBloggerB}
@@ -96,8 +100,9 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="/fale-conosco"
                                     className="flex items-center text-white p-2 space-x-3 rounded-md"
+                                    onClick={() => {setShowMenu(!showMenu)}}
                                 >
                                     <IconAtom
                                         icon={MdOutlinePhoneCallback}
@@ -120,8 +125,8 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             socialMedia.map((element, index) => (
                                 <IconButtonMolecule
                                     key={index}
-                                    href="www.tiktok.com"
-                                    target="_blank"
+                                    to={element.rota}
+                                    // target="_blank"
                                     classNameIcon="m-2 sm:block"
                                     color="white"
                                     size={32}

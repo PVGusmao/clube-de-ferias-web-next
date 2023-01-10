@@ -1,14 +1,12 @@
 import React from "react";
 import { IconAtom } from "../atomos/IconAtom";
 
-import { DiApple } from "react-icons/di";
 import { TextAtom } from "../atomos/TextAtom";
-import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 import logo from "../../assets/logo.png";
 
 import { navigation, socialMedia, contato } from "../../constants";
-import { Input } from "@mui/material";
+import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 
 export function FooterOrganism() {
   return (
@@ -31,12 +29,14 @@ export function FooterOrganism() {
         />
         <div className="flex flex-row">
           {socialMedia.map((element, index: number) => (
-            <IconAtom
+            <IconButtonMolecule
+              target="_blank"
               key={index}
-              icon={element.icon}
-              size={30}
+              to={element.rota}
+              classNameIcon="m-2 sm:block hidden"
               color="white"
-              className="ml-2"
+              size={24}
+              icon={element.icon}
             />
           ))}
         </div>
@@ -50,14 +50,16 @@ export function FooterOrganism() {
           />
           {navigation.map((element, index:number) => (
             <div className="flex flex-row mb-4">
-              <IconAtom
-                key={index}
-                icon={element.icon}
-                size={20}
-                color="white"
-                className=" mr-3.5	"
-              />
-              <TextAtom children text={element.content} className="text-white" />
+              <a className="flex" href={`/#${element.content.toLowerCase()}`}>
+                <IconAtom
+                  key={index}
+                  icon={element.icon}
+                  size={20}
+                  color="white"
+                  className="mr-3."
+                />
+                <TextAtom children text={element.content} className="text-white" />
+              </a>
             </div>
           ))}
         </div>

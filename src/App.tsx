@@ -1,13 +1,13 @@
-import React from "react";
-
-import Home from "./pages/Home";
-
 import './App.css';
 
 import { Route, Routes } from "react-router-dom";
-import { AboutUs } from "./pages/AboutUs/AboutUs";
-import { Plans } from "./pages/Plans/Plans";
+
+import Home from "./pages/Home";
 import { Blog } from "./pages/Blog/Blog";
+import { Plans } from "./pages/Plans/Plans";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
+
+import { RedirectPage } from "./components/atomos/RedirectPageAtom";
 
 function App() {
   return (
@@ -16,6 +16,10 @@ function App() {
       <Route path="/sobre" element={<AboutUs />} />
       <Route path="/planos" element={<Plans />} />
       <Route path="/blog" element={<Blog />} />
+
+      <Route path='/tik-tok'  element={<RedirectPage to={'http://www.tiktok.com/@clubedeferias'} />} />
+      <Route path='/facebook' element={<RedirectPage to={'http://www.facebook.com/clubedeferiasstellabarros'} />} />
+      <Route path='/instagram' element={<RedirectPage to={'http://www.instagram.com/oclubedeferias'} />} />
     </Routes>
   );
 }
