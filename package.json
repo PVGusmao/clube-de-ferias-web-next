@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "host": "vite --host"
+    "local": "vite --host --port 80",
+    "host": "vite --host --port 8080"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
