@@ -37,15 +37,19 @@ export function SimulationOrganism() {
   }, [totalValue, tabValue, sliderValue, url]);
 
   async function loadPackages() {
-    const response = await api.get(url);
-    const total = response.data.packages;
-    setPackages(total);
-
-    console.log(total);
+    try {
+      const response = await api.get(url);
+      const total = response.data.packages;
+      setPackages(total);
+  
+      console.log(total);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
-    <div id='simulador' className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
+    <div id='simuladr' className="sm:w-full sm:h-[70.9375rem] sm:grid content-center">
       <TextAtom
         children
         text="Simule agora o seu melhor pacote"
