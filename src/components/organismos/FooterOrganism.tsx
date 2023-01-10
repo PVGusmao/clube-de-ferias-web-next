@@ -72,15 +72,6 @@ export function FooterOrganism() {
               <TextAtom text={element.content} className="text-white" />
             </div>
           ))}
-          <Input
-            disableUnderline
-            placeholder="Email Adress"
-            className=" w-48 mb-2 h-12 p-4 opacity-25 bg-white"
-          />
-          <ButtonMolecule
-            className="w-48 bg-white rounded-none font-semibold	text-[#636363]"
-            title="SUBSCRIBE"
-          />
         </div>
       </div>
     </div>
