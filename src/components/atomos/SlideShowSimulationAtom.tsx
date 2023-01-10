@@ -1,32 +1,33 @@
-import React from 'react';
+import { useContext } from 'react';
 import '../../index.css';
 
 import { Slide } from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 
-import { simulationCard } from '../../constants';
-
 import CardSimulationMolecule from '../moleculas/CardSimulationMolecule';
+import { IMyContext, MyContext } from '../../context/MyContext';
 
 type Props = {
     className?: string;
 }
 
 export const SlideShowSimulationAtom = ({ className }: Props) => {
+    const {packages} = useContext(MyContext) as IMyContext;
+
     return (
         <div className={`${className}`}>
-            <Slide arrows={false} indicators transitionDuration={250}>
+            <Slide arrows={false} indicators transitionDuration={100}>
                 {
-                    simulationCard.map((element, index) => (
+                    packages.map((element, index) => (
                         <div className="h-full flex items-center justify-center" key={index}>
                             <CardSimulationMolecule
-                                hotel=""
-                                img={element.img}
                                 key={index}
-                                estado={element.estado}
-                                modelo={element.modelo}
-                                preco={element.preco}
+                                subname={element.subname}
+                                img={element.img}
+                                name={element.name}
+                                price={element.latest_information.total_amount_people}
+                                date={element.date.display}
                             />
                         </div>
                     ))

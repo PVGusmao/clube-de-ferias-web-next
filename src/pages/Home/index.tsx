@@ -1,6 +1,8 @@
 import { useContext } from "react";
 
-import { MyContext } from "../../context/MyContext";
+import { IMyContext, MyContext } from "../../context/MyContext";
+
+import Sidebar from "../../components/atomos/SideBarAtom";
 
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
@@ -11,13 +13,9 @@ import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
 
-import Sidebar from "../../components/atomos/SideBarAtom";
-
 export default function Home() {
 
-  const {showMenu, setShowMenu} = useContext(MyContext);
-
-  console.log(showMenu);
+  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;;
 
   return (
     <main>

@@ -1,8 +1,6 @@
-import React from "react";
 
 import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 import { TextAtom } from "../atomos/TextAtom";
-import ReactStars from "react-rating-stars-component";
 
 export type CardSimulationProps = {
   img: string;
@@ -19,9 +17,7 @@ export default function CardSimulationMolecule({
   price,
   date,
 }: CardSimulationProps) {
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
+
   return (
     <Card className="w-[16.528125rem] h-[23.50625]">
       <CardHeader floated={false} className="">

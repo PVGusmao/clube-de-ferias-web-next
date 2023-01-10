@@ -1,22 +1,25 @@
 import { Slider, Tab, Tabs } from "@mui/material";
-import React, { useEffect } from "react";
-
-import CardSimulationMolecule, {
-  CardSimulationProps,
-} from "../../components/moleculas/CardSimulationMolecule";
+import React, { useContext, useState } from "react";
 
 import { marks } from "../../constants";
+
 import { TextAtom } from "../atomos/TextAtom";
+import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
 
 import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
-import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
+import CardSimulationMolecule, {CardSimulationProps} from "../../components/moleculas/CardSimulationMolecule";
+
+import { IMyContext, MyContext } from "../../context/MyContext";
+
 import api from "../../services/api";
 
 export function SimulationOrganism() {
+  const {packages, setPackages} = useContext(MyContext) as IMyContext;
+
   const [tabValue, setTabValue] = React.useState(199);
   const [sliderValue, setSliderValue] = React.useState(3);
   const [totalValue, setTotalValue] = React.useState(1194);
-  const [packages, setPackages] = React.useState([]);
+  
   let url = `/pacotes?price=${totalValue}`;
 
   function handleSliderChange(event: Event, newValue: number | number[]) {
@@ -41,8 +44,6 @@ export function SimulationOrganism() {
       const response = await api.get(url);
       const total = response.data.packages;
       setPackages(total);
-
-      console.log(total);
     } catch (err) {
       console.log(err);
     }
@@ -111,8 +112,12 @@ export function SimulationOrganism() {
           />
         ))}
       </div>
-
-      <SlideShowSimulationAtom className=" sm:hidden w-full" />
+      {
+        packages.length && 
+        <SlideShowSimulationAtom
+          className="sm:hidden w-full"
+        />
+      }
 
       <div className="py-16">
         <ButtonMolecule
