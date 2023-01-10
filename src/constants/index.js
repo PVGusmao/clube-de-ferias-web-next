@@ -84,10 +84,10 @@ export const navigation = [
 export const home = [
   {
     id: 1,
-    subtitle: "WELCOME TO HOMCO",
-    title: "BUILD YOUR ELEGAN DREAM HOME INTERIOR",
+    subtitle: "Quem somos",
+    title: "Começa um novo jeito de viajar, criado por quem entende do assunto",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "Da casa de inovações da Stella Barros Turismo, empresa pioneira e com mais de 50 anos de atuação no turismo, nasce o Clube de Férias."
   },
 ];
 

@@ -21,23 +21,23 @@ export function WelcomeMolecule({ className }: Props) {
   return (
     <div className={`${className}`}>
       <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-96 h-full justify-center'>
-        <div className='flex flex-col items-center sm:items-start sm:text-start justify-between sm:w-96 w-full px-10 sm:px-0'>
+        <div className='flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0'>
           <TextAtom
             children
             text={home[0].subtitle}
-            className='uppercase mb-4 sm:mb-0 font-medium text-white sm:text-lg text-md'
+            className='mb-4 sm:mb-0 font-medium text-white sm:text-lg text-md'
           />
 
           <TextAtom
             children
             text={home[0].title}
-            className='uppercase mb-4 sm:mb-0 font-medium text-white sm:text-5xl text-2xl' 
+            className='mb-4 sm:mb-0 font-medium text-white sm:text-5xl text-2xl' 
           />
 
           <TextAtom
             children
             text={home[0].content}
-            className='uppercase mb-4 sm:mb-0 font-medium text-black text-sm'
+            className='mb-4 sm:mb-0 font-medium text-black text-sm'
           />
 
           <ButtonMolecule
@@ -49,7 +49,7 @@ export function WelcomeMolecule({ className }: Props) {
         </div>
 
         <VideoAtom
-          className='sm:w-96 w-auto sm:h-auto h-80 mx-auto sm:mx-0'
+          className='sm:w-108 w-auto sm:h-auto h-80 mx-auto sm:mx-0'
         />
       </div>
 
@@ -58,7 +58,7 @@ export function WelcomeMolecule({ className }: Props) {
         {
           cards.map((element, index) => (
             <CardMolecule
-              color='black'
+              color='red'
               className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52'
               key={index}
               icon={element.icon}

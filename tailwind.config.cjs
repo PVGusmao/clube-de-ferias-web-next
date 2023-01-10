@@ -22,6 +22,7 @@ module.exports = withMT({
         ubuntu: ["ubuntu", "Open Sans", "Sans-Serif"],
       },
       width: {
+        108: "28rem",
         128: "78.75rem",
         672: "42rem",
         543: "33.9375rem",
