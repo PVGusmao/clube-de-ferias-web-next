@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import { cards, home } from '../../constants';
 
 import { TextAtom } from '../atomos/TextAtom';
@@ -15,9 +13,6 @@ type Props = {
 }
 
 export function WelcomeMolecule({ className }: Props) {
-
-  const [slideShow, setSlideShow] = useState(0);
-
   return (
     <div className={`${className}`}>
       <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-80 h-full justify-center'>
