@@ -13,7 +13,7 @@ export function PlansOrganism({}: PropsPlanos) {
   const [slidePlans, setSlidePlans] = useState(0); 
 
   return (
-    <div className="bg-[#F20F0F] justify-center sm:p-24">
+    <div id="planos" className="bg-[#F20F0F] justify-center sm:p-24">
       <TextAtom
         children
         className="text-center sm:text-5xl text-3xl sm:pt-0 pt-4 text-white font-bold"

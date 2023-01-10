@@ -8,6 +8,7 @@ import firstButtonBlog from "../assets/firstButtonBlog.png";
 import secondButtonBlog from "../assets/secondButtonBlog.png";
 import thirdButtonBlog from "../assets/thirdButtonBlog.png";
 import forthButtonBlog from "../assets/forthButtonBlog.png";
+
 import { IoIosArrowForward } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
@@ -21,22 +22,22 @@ export const navLinks = [
   {
     id: "planos",
     title: "Planos",
-    rota: "/planos",
+    rota: "/#planos",
   },
   {
     id: "simule-sua-viagem",
     title: "Simule Sua Viagem",
-    rota: ""
+    rota: "/#simulador"
   },
   {
     id: "blog",
     title: "Blog",
-    rota: "/blog",
+    rota: "/#blog",
   },
   {
     id: "fale-conosco",
     title: "Fale Conosco",
-    rota: ""
+    rota: "/fale-conosco"
   },
   {
     id: "baixe-o-app",
@@ -80,10 +81,6 @@ export const navigation = [
   {
     icon: IoIosArrowForward,
     content: "Blog",
-  },
-  {
-    icon: IoIosArrowForward,
-    content: "Sobre",
   },
 ];
 
@@ -228,17 +225,20 @@ export const clientes = [
 
 export const socialMedia = [
   {
-    id: "social-media-1",
-    icon: FaTiktok,
-  },
-  {
-    id: "social-media-2",
-    icon: FaFacebook,
-  },
-  {
-    id: "social-media-3",
+    id: "instagram",
     icon: FaInstagram,
+    rota: "/instagram",
   },
+  {
+    id: "facebook",
+    icon: FaFacebook,
+    rota: "/facebook"
+  },
+  {
+    id: "tik-tok",
+    icon: FaTiktok,
+    rota: "/tik-tok"
+  }
 ];
 
 export const simulationCard = [

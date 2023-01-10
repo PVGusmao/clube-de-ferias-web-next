@@ -17,6 +17,7 @@ export function NavBarMolecule() {
 
   return (
     <div
+      id="home"
       className="flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-40"
     >
       <a href="http://localhost:5173">
@@ -57,9 +58,9 @@ export function NavBarMolecule() {
         {
           socialMedia.map((element, index: number) => (
             <IconButtonMolecule
-              key={index}
-              href="www.tiktok.com"
               target="_blank"
+              key={index}
+              to={element.rota}
               classNameIcon="m-2 sm:block hidden"
               color="white"
               size={24}
