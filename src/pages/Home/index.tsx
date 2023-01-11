@@ -15,7 +15,7 @@ import { SimulationOrganism } from "../../components/organismos/SimulationOrgani
 
 export default function Home() {
 
-  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;;
+  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
 
   return (
     <main>

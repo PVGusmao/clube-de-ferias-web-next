@@ -5,9 +5,11 @@ export type IMyContext = {
   showMenu: boolean;
   link: string;
   packages: CardSimulationProps[];
+  allSiteTexts: string;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
   setLink: React.Dispatch<React.SetStateAction<string>>;
   setPackages: React.Dispatch<React.SetStateAction<CardSimulationProps[]>>;
+  setAllSiteTexts: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const MyContext = createContext<IMyContext | null>(null);
@@ -23,12 +25,14 @@ export function MyProvider({ children }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [link, setLink] = useState<string>('');
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
+  const [allSiteTexts, setAllSiteTexts] = useState<string>('');
 
   return (
     <MyContext.Provider value={{
       showMenu, setShowMenu,
       link, setLink,
       packages, setPackages,
+      allSiteTexts, setAllSiteTexts,
     } as IMyContext}>
       {children}
     </MyContext.Provider>

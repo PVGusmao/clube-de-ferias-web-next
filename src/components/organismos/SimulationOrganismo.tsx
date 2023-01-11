@@ -51,7 +51,7 @@ export function SimulationOrganism() {
 
   return (
     <div
-      id="simuladr"
+      id="simulador"
       className="sm:w-full sm:h-[70.9375rem] sm:grid content-center"
     >
       <TextAtom

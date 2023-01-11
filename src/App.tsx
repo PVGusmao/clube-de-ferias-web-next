@@ -1,3 +1,7 @@
+import { useContext, useEffect } from 'react';
+
+import { IMyContext, MyContext } from './context/MyContext';
+
 import './App.css';
 
 import { Route, Routes } from "react-router-dom";
@@ -10,7 +14,26 @@ import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { RedirectPage } from "./components/atomos/RedirectPageAtom";
 import { TalkToUs } from './pages/TalkToUs/TalkToUs';
 
+import api from './services/api';
+
 function App() {
+
+  const {setAllSiteTexts} = useContext(MyContext) as IMyContext;
+
+  async function getAllSiteTexts() {
+    try {
+      const response = await api.get('/pages/Home');
+      setAllSiteTexts(response as any);
+      // console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getAllSiteTexts();
+  }, [])
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />

@@ -13,7 +13,7 @@ export function FooterOrganism() {
     <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
       <div className="justify-items-start grid content-center sm:w-96 h-full mb-12">
         <div className="justify-start">
-          <a href="http://localhost:5173">
+          <a href=".">
             <img className="w-36" src={logo} alt="logo" />
           </a>
         </div>
@@ -49,10 +49,9 @@ export function FooterOrganism() {
             text="NAVIGATION"
           />
           {navigation.map((element, index:number) => (
-            <div className="flex flex-row mb-4">
+            <div key={index} className="flex flex-row mb-4">
               <a className="flex" href={`/#${element.content.toLowerCase()}`}>
                 <IconAtom
-                  key={index}
                   icon={element.icon}
                   size={20}
                   color="white"
@@ -70,9 +69,8 @@ export function FooterOrganism() {
             text="CONTATO"
           />
           {contato.map((element, index: number) => (
-            <div className="flex flex-row mb-4">
+            <div key={index} className="flex flex-row mb-4">
               <IconAtom
-                key={index}
                 icon={element.icon}
                 size={20}
                 color="white"

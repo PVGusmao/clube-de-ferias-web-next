@@ -12,6 +12,19 @@ import forthButtonBlog from "../assets/forthButtonBlog.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
+import api from "../services/api";
+
+async function item() {
+  const response = await api.get('/pages/Home');
+  console.log(response);
+  localStorage.setItem("texts", JSON.stringify(response)); 
+}
+
+item();
+
+const data = JSON.parse(localStorage.getItem("texts"));
+
+console.log(data.data.paginas.content.title);
 
 export const navLinks = [
   {
@@ -50,22 +63,22 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: "Sua assinatura vira crédito para suas viagens",
+    content: data.data.paginas.content.textsquare1,
   },
   {
     id: 2,
     icon: AiOutlineSafety,
-    content: "No Clube você garante descontos imperdíveis",
+    content: data.data.paginas.content.textsquare2,
   },
   {
     id: 3,
     icon: BsTelephoneInboundFill,
-    content: "Nosso atendimento é  personalizado. Nada de robôs.",
+    content: data.data.paginas.content.textsquare3,
   },
   {
     id: 4,
     icon: RiMoneyDollarCircleFill,
-    content: "O dinheiro da sua assinatura está sempre disponível",
+    content: data.data.paginas.content.textsquare4,
   },
 ];
 
@@ -87,12 +100,13 @@ export const navigation = [
 export const home = [
   {
     id: 1,
-    subtitle: "Quem somos",
-    title: "Começa um novo jeito de viajar, criado por quem entende do assunto",
-    content:
-      "Da casa de inovações da Stella Barros Turismo, empresa pioneira e com mais de 50 anos de atuação no turismo, nasce o Clube de Férias.",
+    subtitle: data.data.paginas.content.littletext,
+    title: data.data.paginas.content.title,
+    content: data.data.paginas.content.subtitle,
   },
 ];
+
+export const textButtonWelcome = data.data.paginas.content.textbutton;
 
 export const cardHotel = [
   {
@@ -294,3 +308,4 @@ export const marks = [
     label: "15 meses",
   },
 ];
+
