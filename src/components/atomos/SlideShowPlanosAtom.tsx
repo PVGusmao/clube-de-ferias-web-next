@@ -21,12 +21,12 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                     planos.map((element, index) => (
                         <div className="h-full flex items-center justify-center" key={index}>
                             <CardPlanosMolecule
-                                plano={element.plano}
-                                desconto={element.desconto}
+                                plano={element.plan}
+                                desconto={element.discount}
                                 content1={element.content1}
                                 content2={element.content2}
-                                valor={element.valor}
-                                btnColor={element.btnColor}
+                                valor={element.value}
+                                btnColor={element.btn_color}
                             />
                         </div>
                     ))
