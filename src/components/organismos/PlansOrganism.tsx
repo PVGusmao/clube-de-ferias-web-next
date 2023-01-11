@@ -24,12 +24,12 @@ export function PlansOrganism({}: PropsPlanos) {
           planos.map((element, index: number) => (
             <CardPlanosMolecule
               key={index}
-              plano={element.plano}
-              desconto={element.desconto}
+              plano={element.plan}
+              desconto={element.discount}
               content1={element.content1}
               content2={element.content2}
-              valor={element.valor}
-              btnColor={element.btnColor}
+              valor={element.value}
+              btnColor={element.btn_color}
             />
           ))
         }

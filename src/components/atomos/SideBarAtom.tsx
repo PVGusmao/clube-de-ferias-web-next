@@ -12,6 +12,7 @@ import { Button } from "@material-tailwind/react";
 
 import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
+import { TextAtom } from "./TextAtom";
 
 type Props = {
     className: string,
@@ -50,7 +51,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                                         className=''
                                         size={32}
                                     />
-                                    <span className="text-lg font-bold">Sobre Nós</span>
+                                    <span className="text-lg font-bold">Quem somos</span>
                                 </a>
                             </li>
                             <li className="rounded-sm">
@@ -117,9 +118,14 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                     </div>
                 </div>
                 <div className="w-full h-full flex flex-col items-center justify-center">
-                    <Button
-                        className="shadow-none bg-[#F20F0F] border-2 border-white text-xl"
-                    >Baixe o App</Button>
+                    <a href='#baixe-o-app' onClick={() => {setShowMenu(!showMenu)}}>
+                        <TextAtom
+                            text="Baixe o App"
+                            className="text-white font-bold text-xl border-2 p-2 rounded-xl mb-4"
+                        >
+                            Baixe o App
+                        </TextAtom>
+                    </a>
                     <div className="flex">
                         {
                             socialMedia.map((element, index) => (

@@ -37,7 +37,7 @@ export function NavBarMolecule() {
               className='p-2 cursor-pointer text-white hover:text-black'
               key={index}
               text={element.title}
-              to={element.rota}
+              to={element.route}
             />
           ))
         }
