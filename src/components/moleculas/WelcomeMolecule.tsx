@@ -1,4 +1,4 @@
-import { cards, home } from '../../constants';
+import { cards, home, textButtonWelcome } from '../../constants';
 
 import { TextAtom } from '../atomos/TextAtom';
 import { VideoAtom } from '../atomos/VideoAtom';
@@ -39,7 +39,7 @@ export function WelcomeMolecule({ className }: Props) {
             className='flex mb-6 sm:mb-0 items-center justify-center w-48 bg-[#F20F0F] h-12 shadow-2xl'
             textClassName='text-lg font-medium text-white'
             children
-            title='OUR PROJETCT'
+            title={textButtonWelcome}
           />
         </div>
 

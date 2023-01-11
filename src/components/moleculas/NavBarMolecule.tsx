@@ -9,7 +9,6 @@ import { IconButtonMolecule } from "./IconButtonMolecule";
 
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 import { IMyContext, MyContext } from "../../context/MyContext";
-import { IconType } from "react-icons";
 
 export function NavBarMolecule() {
 

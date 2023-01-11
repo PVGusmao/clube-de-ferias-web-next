@@ -23,8 +23,8 @@ function App() {
   async function getAllSiteTexts() {
     try {
       const response = await api.get('/pages/Home');
-      setAllSiteTexts(response);
-      console.log(response);
+      setAllSiteTexts(response as any);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
