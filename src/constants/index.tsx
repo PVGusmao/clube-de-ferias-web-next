@@ -11,7 +11,7 @@ import { MdEmail } from "react-icons/md";
 import api from "../services/api";
 
 async function item() {
-  const response = await api.get('/pages/Home');
+  const response = await api.get('/pages/home2');
   localStorage.setItem("texts", JSON.stringify(response)); 
 }
 
@@ -19,10 +19,11 @@ item();
 
 const data = JSON.parse(localStorage.getItem("texts"));
 
-const { page: { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
-  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } } = data?.data;
+console.log(data)
 
-  console.log(data)
+const { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
+  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } = data?.data;
+
 
 export const navLinks = nav_links;
 
@@ -46,22 +47,22 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: data?.data?.page?.content?.text_square1,
+    content: data?.data?.content?.text_square1,
   },
   {
     id: 2,
     icon: AiOutlineSafety,
-    content: data?.data?.page?.content?.text_square2,
+    content: data?.data?.content?.text_square2,
   },
   {
     id: 3,
     icon: BsTelephoneInboundFill,
-    content: data?.data?.page?.content?.text_square3,
+    content: data?.data?.content?.text_square3,
   },
   {
     id: 4,
     icon: RiMoneyDollarCircleFill,
-    content: data?.data?.page?.content?.text_square4,
+    content: data?.data?.content?.text_square4,
   },
 ];
 
