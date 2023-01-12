@@ -11,7 +11,7 @@ import { MdEmail } from "react-icons/md";
 import api from "../services/api";
 
 async function item() {
-  const response = await api.get('/pages/home2');
+  const response = await api.get('/pages/paulo');
   localStorage.setItem("texts", JSON.stringify(response)); 
 }
 

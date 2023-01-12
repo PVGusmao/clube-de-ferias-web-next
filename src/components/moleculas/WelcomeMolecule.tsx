@@ -44,7 +44,7 @@ export function WelcomeMolecule({ className }: Props) {
         </div>
 
         <VideoAtom
-          className='sm:w-108 w-auto sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0'
+          className='rounded-xl flex items-center justify-center sm:w-108 w-[80%] sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0'
         />
       </div>
 
