@@ -46,7 +46,7 @@ export function BlogCardMolecule({ className, image}: Props) {
             >
               <TextAtom
                 children
-                className="w-full text-white font-bold text-4xl"
+                className="w-full text-white font-bold text-2xl"
                 text={element.title}
               />
             </BackgroundImageAtom>

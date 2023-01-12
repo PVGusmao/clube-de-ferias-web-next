@@ -1,8 +1,10 @@
 import { useContext } from "react";
 
-import { IMyContext, MyContext } from "../../context/MyContext";
+import { bannerContent } from "../../constants";
 
 import Sidebar from "../../components/atomos/SideBarAtom";
+
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
@@ -26,7 +28,9 @@ export default function Home() {
 
             <BlogOrganism />
       
-            <BannerOrganism />
+            {
+              bannerContent[0].enable && <BannerOrganism />
+            }
       
             <SimulationOrganism />
       
@@ -34,6 +38,10 @@ export default function Home() {
       
             <ClientsOrganism />
       
+            {
+              bannerContent[1].enable && <BannerOrganism />
+            }
+
             <NewsOrganism />
       
             <FooterOrganism /> 

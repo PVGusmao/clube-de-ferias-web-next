@@ -4,11 +4,6 @@ import { AiOutlineSafety } from "react-icons/ai";
 import { BsTelephoneInboundFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
-import firstButtonBlog from "../assets/firstButtonBlog.png";
-import secondButtonBlog from "../assets/secondButtonBlog.png";
-import thirdButtonBlog from "../assets/thirdButtonBlog.png";
-import forthButtonBlog from "../assets/forthButtonBlog.png";
-
 import { IoIosArrowForward } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
@@ -24,8 +19,10 @@ item();
 
 const data = JSON.parse(localStorage.getItem("texts"));
 
-const { page: { content: { nav_links, home: homeData, text_button,
-  plans, clients, marks: marksData, card_blog } } } = data?.data;
+const { page: { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
+  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } } = data?.data;
+
+  console.log(data)
 
 export const navLinks = nav_links;
 
@@ -40,6 +37,10 @@ export const clientes = clients;
 export const marks = marksData;
 
 export const cardBlog = card_blog;
+
+export const minorCardBlog = minor_card_blog;
+
+export const bannerContent = banner;
 
 export const cards = [
   {
@@ -79,28 +80,6 @@ export const navigation = [
   },
 ];
 
-export const minorCardBlog = [
-  {
-    id: 1,
-    title: "Lugares Imperdíveis",
-    image: firstButtonBlog,
-  },
-  {
-    id: 2,
-    title: "Não Perca",
-    image: secondButtonBlog,
-  },
-  {
-    id: 3,
-    title: "Retrospectiva 2022",
-    image: thirdButtonBlog,
-  },
-  {
-    id: 4,
-    title: "Carnaval",
-    image: forthButtonBlog,
-  },
-];
 
 export const socialMedia = [
   {

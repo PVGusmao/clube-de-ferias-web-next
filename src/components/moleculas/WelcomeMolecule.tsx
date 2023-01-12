@@ -19,19 +19,19 @@ export function WelcomeMolecule({ className }: Props) {
         <div className='flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0'>
           <TextAtom
             children
-            text={home[0].subtitle}
+            text={home.subtitle}
             className='mb-4 sm:mb-0 font-medium text-white sm:text-lg text-md'
           />
 
           <TextAtom
             children
-            text={home[0].title}
+            text={home.title}
             className='mb-4 sm:mb-0 font-medium text-white sm:text-5xl text-2xl' 
           />
 
           <TextAtom
             children
-            text={home[0].content}
+            text={home.content}
             className='mb-4 sm:mb-0 font-medium text-black text-sm'
           />
 

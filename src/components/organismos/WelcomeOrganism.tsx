@@ -1,4 +1,4 @@
-import bgImageHome from '../../assets/homeBgImage.png';
+import { home } from '../../constants';
 
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 
@@ -10,7 +10,7 @@ export function WelcomeOrganism() {
   return (
     <>
       <BackgroundImageAtom
-        image={bgImageHome}
+        image={home.image}
         className={`h-128 sm:max-w-7xl`}
       >
         

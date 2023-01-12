@@ -1,11 +1,10 @@
-import React from "react";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 import { TextAtom } from "../atomos/TextAtom";
 
 export function BannerOrganism() {
   return (
     <div
-      className={`flex flex-col sm:items-stretch sm:w-full h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[#F20F0F]`}
+      className={`sm:mb-6 flex flex-col sm:items-stretch sm:w-full h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[#F20F0F]`}
     >
       <div className="flex flex-col h-full sm:flex-row sm:justify-around">
         <div className="self-center sm:mr-10">
