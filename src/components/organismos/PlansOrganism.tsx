@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import {
-  CardPlanosMolecule,
-  PropsPlanos,
-} from "../../components/moleculas/CardPlanosMolecule";
-import { TextAtom } from "../atomos/TextAtom";
 
 import { planos } from "../../constants";
+
+import { TextAtom } from "../atomos/TextAtom";
 import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom";
+
+import { CardPlanosMolecule, PropsPlanos } from "../../components/moleculas/CardPlanosMolecule";
 
 export function PlansOrganism({}: PropsPlanos) {
 

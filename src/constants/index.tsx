@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaRegBuilding, FaTiktok } from "react-icons/fa";
 import { TbPig } from "react-icons/tb";
 import { AiOutlineSafety } from "react-icons/ai";
 import { BsTelephoneInboundFill } from "react-icons/bs";
@@ -9,6 +9,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 
 import api from "../services/api";
+import { GiCommercialAirplane } from "react-icons/gi";
 
 async function item() {
   const response = await api.get('/pages/paulo');
@@ -31,7 +32,20 @@ export const home = homeData;
 
 export const textButtonWelcome = text_button;
 
-export const planos = plans; 
+export const planos = plans;
+
+export const planos2 = [
+  {
+    id: 1,
+    firstIcon: GiCommercialAirplane,
+    discount: 6,
+    thirdIcon: TbPig,
+    fourthIcon: FaRegBuilding,
+    priceTag: 199.90,
+    buttonName: 'Associe-se',
+    colorPlan: 'bg-[red]',
+  }
+] 
 
 export const clientes = clients;
 
