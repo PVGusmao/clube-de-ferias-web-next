@@ -1,15 +1,15 @@
 import { FaFacebook, FaInstagram, FaRegBuilding, FaTiktok } from "react-icons/fa";
+
 import { TbPig } from "react-icons/tb";
+import { MdEmail } from "react-icons/md";
 import { AiOutlineSafety } from "react-icons/ai";
+import { HiLocationMarker } from "react-icons/hi";
+import { IoIosArrowForward } from "react-icons/io";
+import { GiCommercialAirplane } from "react-icons/gi";
 import { BsTelephoneInboundFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
-import { IoIosArrowForward } from "react-icons/io";
-import { HiLocationMarker } from "react-icons/hi";
-import { MdEmail } from "react-icons/md";
-
 import api from "../services/api";
-import { GiCommercialAirplane } from "react-icons/gi";
 
 async function item() {
   const response = await api.get('/pages/paulo');
@@ -37,14 +37,64 @@ export const planos = plans;
 export const planos2 = [
   {
     id: 1,
+    planName: 'Silver',
     firstIcon: GiCommercialAirplane,
+    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
     discount: 6,
+    discountText: 'de desconto na compra de Pacotes.',
     thirdIcon: TbPig,
+    thirdText: 'sua mensalidade vira crédito para sua viagem',
     fourthIcon: FaRegBuilding,
-    priceTag: 199.90,
+    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
+    priceTag: 199,
     buttonName: 'Associe-se',
-    colorPlan: 'bg-[red]',
-  }
+    colorPlan: '#B8B8B8',
+  },
+  {
+    id: 2,
+    planName: 'Gold',
+    firstIcon: GiCommercialAirplane,
+    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
+    discount: 8,
+    discountText: 'de desconto na compra de Pacotes.',
+    thirdIcon: TbPig,
+    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    fourthIcon: FaRegBuilding,
+    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
+    priceTag: 499,
+    buttonName: 'Associe-se',
+    colorPlan: '#F6AB39',
+  },
+  {
+    id: 3,
+    planName: 'Platinum',
+    firstIcon: GiCommercialAirplane,
+    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
+    discount: 11,
+    discountText: 'de desconto na compra de Pacotes.',
+    thirdIcon: TbPig,
+    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    fourthIcon: FaRegBuilding,
+    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
+    priceTag: 999,
+    buttonName: 'Associe-se',
+    colorPlan: '#515151',
+  },
+  {
+    id: 4,
+    planName: 'Promo',
+    firstIcon: GiCommercialAirplane,
+    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
+    discount: 11,
+    discountText: 'de desconto na compra de Pacotes.',
+    thirdIcon: TbPig,
+    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    fourthIcon: FaRegBuilding,
+    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
+    priceTag: 999,
+    buttonName: 'Associe-se',
+    colorPlan: '#3F9D3A',
+  },
 ] 
 
 export const clientes = clients;
