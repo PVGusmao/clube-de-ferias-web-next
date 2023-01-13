@@ -47,22 +47,22 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: data?.data?.content?.text_square1,
+    content: data?.data?.content?.text_square?.text_1,
   },
   {
     id: 2,
     icon: AiOutlineSafety,
-    content: data?.data?.content?.text_square2,
+    content: data?.data?.content?.text_square?.text_2,
   },
   {
     id: 3,
     icon: BsTelephoneInboundFill,
-    content: data?.data?.content?.text_square3,
+    content: data?.data?.content?.text_square?.text_3,
   },
   {
     id: 4,
     icon: RiMoneyDollarCircleFill,
-    content: data?.data?.content?.text_square4,
+    content: data?.data?.content?.text_square?.text_4,
   },
 ];
 
