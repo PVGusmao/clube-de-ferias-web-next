@@ -1,14 +1,15 @@
-import { Typography, TypographyProps } from "@material-tailwind/react";
 import React from "react";
+import { Typography, TypographyProps } from "@material-tailwind/react";
 
 type Props = TypographyProps & {
   text: string,
   className?: string,
+  style?: React.CSSProperties;
 }
 
-export function TextAtom({text, className, ...rest}: Props) {
+export function TextAtom({style, text, className, ...rest}: Props) {
   return (
-    <Typography className={`font-ubuntu text-black ${className}`} {...rest}>
+    <Typography style={style} className={`${className} font-ubuntu`} {...rest}>
       {text}
     </Typography>
   )

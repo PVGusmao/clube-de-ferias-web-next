@@ -7,6 +7,7 @@ import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom";
 
 import { CardPlanosMolecule, PropsPlanos } from "../../components/moleculas/CardPlanosMolecule";
 
+
 export function PlansOrganism({}: PropsPlanos) {
 
   const [slidePlans, setSlidePlans] = useState(0); 

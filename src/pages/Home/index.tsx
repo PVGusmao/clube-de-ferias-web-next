@@ -14,6 +14,7 @@ import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
+import { Plans2Organism } from "../../components/organismos/Plans2Organism";
 
 export default function Home() {
 
@@ -34,7 +35,7 @@ export default function Home() {
       
             <SimulationOrganism />
       
-            <PlansOrganism />
+            <Plans2Organism />
       
             <ClientsOrganism />
       

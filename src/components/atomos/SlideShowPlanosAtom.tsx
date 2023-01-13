@@ -5,9 +5,12 @@ import { Slide } from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 
-import { planos } from '../../constants';
+import { planos, planos2 } from '../../constants';
 
 import { CardPlanosMolecule } from '../moleculas/CardPlanosMolecule';
+import { TextAtom } from './TextAtom';
+import { IconAtom } from './IconAtom';
+import { ButtonMolecule } from '../moleculas/ButtonMolecule';
 
 type Props = {
     className?: string;
@@ -15,19 +18,117 @@ type Props = {
 
 export const SlideShowPlansAtom = ({ className }: Props) => {
     return (
-        <div className={`${className}`}>
+        <div className={`px-8 ${className}`}>
             <Slide arrows={false} indicators transitionDuration={250}>
                 {
-                    planos.map((element, index) => (
-                        <div className="h-full flex items-center justify-center" key={index}>
-                            <CardPlanosMolecule
-                                plano={element.plan}
-                                desconto={element.discount}
-                                content1={element.content1}
-                                content2={element.content2}
-                                valor={element.value}
-                                btnColor={element.btn_color}
-                            />
+                    planos2.map((element, index) => (
+                        <div className="flex flex-col items-center h-[650px] bg-white rounded-2xl shadow-lg m-1">
+                            <div className="h-full flex items-center justify-center flex-col" key={index}>
+                                <div
+                                    className={`flex items-center flex-col w-72 space-y-3`}
+                                >
+                                    <TextAtom
+                                        children
+                                        className={`text-4xl font-bold pt-4`}
+                                        text={element.planName}
+                                        style={{
+                                            color: `${element.colorPlan}`,
+                                        }}
+                                    />
+
+                                    <div className="flex items-center justify-evenly w-full py-1">
+                                        <IconAtom className="" color={element.colorPlan} icon={element.firstIcon} size={42} />
+                                        <TextAtom children className="w-40 text-left" text={element.firstText} />
+                                    </div>
+
+                                    <div
+                                        className={`h-1 w-[75%]`}
+                                        style={{
+                                            backgroundColor: `${element.colorPlan}`,
+                                            opacity: 0.4,
+                                        }}
+                                    />
+
+                                    <div className="flex items-center justify-evenly w-full py-1">
+                                        <TextAtom
+                                            className="text-2xl font-bold"
+                                            text={`${element.discount}%`}
+                                            style={{
+                                            color: `${element.colorPlan}`,
+                                            }}
+                                        >
+
+                                        </TextAtom>
+                                        <TextAtom className="w-40 text-left" text={element.discountText}>
+
+                                        </TextAtom>
+                                    </div>
+
+                                    <div
+                                        className={`h-1 bg-[rgba(0,0,0,0.2)] w-[75%]`}
+                                        style={{
+                                            backgroundColor: `${element.colorPlan}`,
+                                            opacity: 0.4,
+                                        }}
+                                    />
+
+                                    <div className="flex items-center justify-evenly w-full py-1">
+                                        <IconAtom color={element.colorPlan} icon={element.thirdIcon} size={42} />
+                                        <TextAtom className="w-40 text-left" text={element.thirdText}>
+
+                                        </TextAtom>
+                                    </div>
+
+                                    <div
+                                        className={`h-1 bg-[rgba(0,0,0,0.2)] w-[75%]`}
+                                        style={{
+                                            backgroundColor: `${element.colorPlan}`,
+                                            opacity: 0.4,
+                                        }}
+                                    />
+
+                                    <div className="flex items-center justify-evenly w-full py-1">
+                                        <IconAtom color={element.colorPlan} icon={element.fourthIcon} size={42} />
+                                        <TextAtom className="w-40 text-left" text={element.fourthText}>
+
+                                        </TextAtom>
+                                    </div>
+
+                                    <div
+                                        className={`h-1 bg-[rgba(0,0,0,0.2)] w-[75%]`}
+                                        style={{
+                                            backgroundColor: `${element.colorPlan}`,
+                                            opacity: 0.4,
+                                        }}
+                                    />
+
+                                    <div className="flex items-center justify-between">
+                                        <TextAtom
+                                            className={`text-4xl font-bold py-1`}
+                                            text={`R$ ${element.priceTag}/mês`}
+                                            style={{
+                                            color: 'black',
+                                            }}
+                                        >
+
+                                        </TextAtom>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <ButtonMolecule
+                                        style={{
+                                            backgroundColor: `${element.colorPlan}`,
+                                            color: 'black',
+                                        }}
+                                        className={`mt-4 flex items-center`}
+                                        textClassName={`font-bold text-white`}
+                                        title={element.buttonName}
+                                    >
+
+                                    </ButtonMolecule>
+                                </div>
+                            </div>
                         </div>
                     ))
                 }
