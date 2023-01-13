@@ -10,10 +10,10 @@ import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 export function Plans2Organism({}) {
 
   return (
-    <div id="planos" className="bg-[#F20F0F] justify-center sm:py-24">
+    <div id="planos" className="bg-[#F4F4F4] justify-center sm:py-24">
       <TextAtom
         children
-        className="text-center sm:text-5xl text-3xl sm:pt-0 pt-4 text-white font-bold"
+        className="text-center sm:text-5xl text-3xl sm:pt-0 pt-4 font-bold"
         text="Assine agora um dos nossos"
       />
       <div className="sm:flex hidden flex-row justify-evenly mt-10 w-full">

@@ -33,9 +33,9 @@ export default function Home() {
               bannerContent[0].enable && <BannerOrganism />
             }
       
-            <SimulationOrganism />
-      
             <Plans2Organism />
+
+            <SimulationOrganism />
       
             <ClientsOrganism />
       
