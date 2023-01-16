@@ -30,13 +30,16 @@ export function HeaderAbout() {
           color: '#9A9A9A',
           size: 24,
         }}
+        burgerMenuProps={{
+          color: "red"
+        }}
       />
 
       <BackgroundImageAtom
-        className='h-[500px] rounded-b-[80px] flex items-center'
+        className='flex pl-10 flex-col sm:flex-row justify-center sm:justify-start bg-auto sm:h-[500px] h-[500px] rounded-b-[80px] sm:items-center'
         image={headerImage}
       >
-        <div className='flex flex-col items-start ml-48 w-[350px]'>
+        <div className='flex flex-col items-start sm:items-start sm:ml-48 w-[250px] sm:w-[350px]'>
           <TextAtom
             className='text-white font-medium text-lg font-ubuntu'
             text={headerTexts[0].title}
@@ -54,7 +57,7 @@ export function HeaderAbout() {
         </div>
 
         <ImageAtom
-          className=''
+          className='absolute sm:relative w-48 sm:w-auto top-80 sm:top-0 left-24 sm:left-0'
           source={marcaDagua}
           alt='Logo stella barros'
         />

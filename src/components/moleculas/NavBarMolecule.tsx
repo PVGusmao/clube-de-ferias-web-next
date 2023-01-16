@@ -24,9 +24,12 @@ type Props = {
     textClassName: string;
     className: string;
   }
+  burgerMenuProps: {
+    color: string;
+  }
 }
 
-export function NavBarMolecule({ className, logoProps, navLinks, socialMediaProps, textLinkProps, pageId }: Props) {
+export function NavBarMolecule({ className, logoProps, navLinks, socialMediaProps, textLinkProps, burgerMenuProps, pageId }: Props) {
 
   const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
 
@@ -63,7 +66,7 @@ export function NavBarMolecule({ className, logoProps, navLinks, socialMediaProp
         <MenuHamburguerMolecule
           children
           onClick={() => {setShowMenu(!showMenu)}}
-          color='white'
+          color={burgerMenuProps.color}
         />
       </div>
 

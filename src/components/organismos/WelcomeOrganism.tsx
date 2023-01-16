@@ -35,6 +35,9 @@ export function WelcomeOrganism() {
             color: 'white',
             size: 24,
           }}
+          burgerMenuProps={{
+            color: 'white'
+          }}
         />
 
         <WelcomeMolecule className="w-full" />

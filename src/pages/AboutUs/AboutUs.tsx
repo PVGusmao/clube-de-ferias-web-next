@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Sidebar from "../../components/atomos/SideBarAtom";
 import { HeaderAbout } from "../../components/organismos/HeaderAbout";
+import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
 import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function AboutUs() {
@@ -12,7 +13,9 @@ export function AboutUs() {
       {
         !showMenu &&
         <div>
-          <HeaderAbout />  
+          <HeaderAbout />
+
+          <NewWayTravelAboutUsOrganism />
         </div>    
       }
 
