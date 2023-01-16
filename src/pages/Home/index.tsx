@@ -8,7 +8,6 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
-import { PlansOrganism } from "../../components/organismos/PlansOrganism";
 import { FooterOrganism } from "../../components/organismos/FooterOrganism";
 import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
@@ -49,7 +48,7 @@ export default function Home() {
 
           </>
       }
-      
+    
       {
         showMenu
         && <Sidebar
