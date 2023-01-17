@@ -11,19 +11,30 @@ import { MdEmail } from "react-icons/md";
 import api from "../services/api";
 
 async function item() {
-  const response = await api.get('/pages/home2');
-  localStorage.setItem("texts", JSON.stringify(response)); 
+  const response = await api.get("/pages/home2");
+  localStorage.setItem("texts", JSON.stringify(response));
 }
 
 item();
 
 const data = JSON.parse(localStorage.getItem("texts"));
 
-console.log(data)
+console.log(data);
 
-const { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
-  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } = data?.data;
-
+const {
+  content: {
+    nav_links,
+    home: homeData,
+    text_button,
+    socialMedia: socialMediaData,
+    plans,
+    clients,
+    marks: marksData,
+    card_blog,
+    minor_card_blog,
+    banner,
+  },
+} = data?.data;
 
 export const navLinks = nav_links;
 
@@ -31,7 +42,7 @@ export const home = homeData;
 
 export const textButtonWelcome = text_button;
 
-export const planos = plans; 
+export const planos = plans;
 
 export const clientes = clients;
 
@@ -81,7 +92,6 @@ export const navigation = [
   },
 ];
 
-
 export const socialMedia = [
   {
     id: "instagram",
@@ -91,13 +101,13 @@ export const socialMedia = [
   {
     id: "facebook",
     icon: FaFacebook,
-    rota: "/facebook"
+    rota: "/facebook",
   },
   {
     id: "tik-tok",
     icon: FaTiktok,
-    rota: "/tik-tok"
-  }
+    rota: "/tik-tok",
+  },
 ];
 
 export const contato = [
@@ -108,5 +118,136 @@ export const contato = [
   {
     icon: MdEmail,
     content: "Hello@Homco.com",
+  },
+];
+
+export const clubPost = [
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+];
+
+export const clubTopPost = [
+  {
+    title: "Mais lidos | Tips",
+    subtitle: "O que levar para as viagens?",
+    text: "Como já falamos por aqui, planejar a sua viagem com antecedência é essencial para que você possa aproveitar ao máximo cada segundo no seu destino",
+  },
+  {
+    title: "Mais lidos | Tips",
+    subtitle: "O que levar para as viagens?",
+    text: "Como já falamos por aqui, planejar a sua viagem com antecedência é essencial para que você possa aproveitar ao máximo cada segundo no seu destino",
   },
 ];
