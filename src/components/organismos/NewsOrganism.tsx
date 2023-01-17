@@ -9,7 +9,7 @@ import { IconAtom } from "../atomos/IconAtom";
 
 export function NewsOrganism() {
   return (
-    <div id='#baixe-o-app' className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]">
+    <div id='baixe-o-app' className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]">
       <div className="grid content-center">
         <TextAtom
           children

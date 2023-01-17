@@ -10,6 +10,7 @@ import { BsTelephoneInboundFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 import api from "../services/api";
+import { IconType } from "react-icons";
 
 async function item() {
   const response = await api.get('/pages/paulo');
@@ -129,18 +130,27 @@ export const cards = [
   },
 ];
 
+export interface Navigation {
+  icon: IconType;
+  content: string;
+  route: string;
+}
+
 export const navigation = [
   {
     icon: IoIosArrowForward,
     content: "Home",
+    route: "#home",
   },
   {
     icon: IoIosArrowForward,
     content: "Planos",
+    route: "#planos",
   },
   {
     icon: IoIosArrowForward,
     content: "Blog",
+    route: "#blog",
   },
 ];
 

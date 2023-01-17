@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { bannerContent } from "../../constants";
+import { bannerContent, navigation } from "../../constants";
 
 import Sidebar from "../../components/atomos/SideBarAtom";
 
@@ -26,7 +26,7 @@ export default function Home() {
           && <>
             <WelcomeOrganism />
 
-            <BlogOrganism />
+            <BlogOrganism className={"flex items-start h-full sm:mt-36 mb-4 mt-56 flex-col"} />
       
             {
               bannerContent[0].enable && <BannerOrganism />
@@ -44,7 +44,7 @@ export default function Home() {
 
             <NewsOrganism />
       
-            <FooterOrganism /> 
+            <FooterOrganism navigation={navigation} /> 
 
           </>
       }

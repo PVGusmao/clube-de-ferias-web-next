@@ -20,7 +20,7 @@ export function WelcomeOrganism() {
         
         <NavBarMolecule
           className='flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20'
-          pageId='Home'
+          pageId='home'
           textLinkProps={{
             textClassName: 'sm:block font-semibold hidden text-white',
             className: 'w-32 cursor-pointer text-white hover:text-black',

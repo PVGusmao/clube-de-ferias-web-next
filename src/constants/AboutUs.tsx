@@ -3,6 +3,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { MdCardTravel } from "react-icons/md"
 import { HiOutlineCheckBadge } from "react-icons/hi2"
 import { AiFillSafetyCertificate } from "react-icons/ai";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const navLinksAboutUs = [
   {
@@ -17,17 +18,17 @@ export const navLinksAboutUs = [
   },
   {
     id: 'Blog',
-    route: '/sobre/#blog',
+    route: '#blog',
     title: 'Blog',
   },
   {
     id: 'Fale Conosco',
-    route: '/sobre/#fale-conosco',
+    route: '/fale-conosco',
     title: 'Fale Conosco',
   },
   {
     id: 'Baixe o App',
-    route: '/sobre/#download',
+    route: '#baixe-o-app',
     title: 'Baixe o App',
   }
 ]
@@ -121,3 +122,27 @@ export const benefits = [
     bodyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor.'
   }
 ]
+
+export interface Navigation {
+  icon: IconType;
+  content: string;
+  route: string;
+}
+
+export const navigation = [
+  {
+    icon: IoIosArrowForward,
+    content: "Home",
+    route: "#home",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Planos",
+    route: "/planos",
+  },
+  {
+    icon: IoIosArrowForward,
+    content: "Blog",
+    route: "#blog",
+  },
+];

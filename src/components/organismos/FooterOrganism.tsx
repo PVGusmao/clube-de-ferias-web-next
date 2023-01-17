@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { IconAtom } from "../atomos/IconAtom";
 
 import { TextAtom } from "../atomos/TextAtom";
 
 import logo from "../../assets/logo.png";
 
-import { navigation, socialMedia, contato } from "../../constants";
+import { socialMedia, contato, Navigation } from "../../constants";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
+import { IconType } from "react-icons";
 
-export function FooterOrganism() {
+type Props = {
+  navigation: Navigation[];
+}
+
+export function FooterOrganism({navigation}: Props) {
+  
+  const [location, setLocation] = useState(window.location.href.split("/")[window.location.href.split("/").length - 1])
+  
   return (
     <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
       <div className="justify-items-start grid content-center sm:w-96 h-full mb-12">
@@ -50,7 +58,7 @@ export function FooterOrganism() {
           />
           {navigation.map((element, index:number) => (
             <div key={index} className="flex flex-row mb-4">
-              <a className="flex" href={`/#${element.content.toLowerCase()}`}>
+              <a className="flex" href={element.route}>
                 <IconAtom
                   icon={element.icon}
                   size={20}

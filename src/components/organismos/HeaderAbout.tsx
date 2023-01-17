@@ -15,7 +15,7 @@ export function HeaderAbout() {
     <>
       <NavBarMolecule
         className={`bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20`}
-        pageId={'sobre'}
+        pageId={'home'}
         textLinkProps={{
           textClassName: 'sm:block w-26 hover:text-[red] hover:border-b-2 font-semibold hidden text-[#9A9A9A]',
           className: 'p-2 w-40 cursor-pointer text-white hover:text-black hover:text-black ',
