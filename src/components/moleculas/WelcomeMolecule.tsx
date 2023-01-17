@@ -15,7 +15,7 @@ type Props = {
 export function WelcomeMolecule({ className }: Props) {
   return (
     <div className={`${className}`}>
-      <div className='sm:mt-16 flex flex-col sm:flex-row sm:h-80 h-full justify-center'>
+      <div className='sm:mt-28 flex flex-col sm:flex-row sm:h-80 h-full justify-center'>
         <div className='flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0'>
           <TextAtom
             children
@@ -50,13 +50,13 @@ export function WelcomeMolecule({ className }: Props) {
         />
       </div>
 
-      <div className='flex w-full flex-wrap items-center justify-evenly mt-16 sm:mt-32'>
+      <div className='flex w-full flex-wrap items-center justify-evenly mt-24 sm:mt-36'>
 
         {
           cards.map((element, index) => (
             <CardMolecule
               color='red'
-              className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52'
+              className='flex justify-center flex-col h-52 rounded-2xl bg-white shadow-lg hidden sm:flex block shadow-2xl w-52 text-black'
               key={index}
               icon={element.icon}
               text={element.content}

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { bannerContent } from "../../constants";
+import { bannerContent, navigation } from "../../constants";
 
 import Sidebar from "../../components/atomos/SideBarAtom";
 
@@ -8,7 +8,6 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
-import { PlansOrganism } from "../../components/organismos/PlansOrganism";
 import { FooterOrganism } from "../../components/organismos/FooterOrganism";
 import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
@@ -27,7 +26,7 @@ export default function Home() {
           && <>
             <WelcomeOrganism />
 
-            <BlogOrganism />
+            <BlogOrganism className={"flex items-start h-full sm:mt-36 mb-4 mt-56 flex-col"} />
       
             {
               bannerContent[0].enable && <BannerOrganism />
@@ -45,11 +44,11 @@ export default function Home() {
 
             <NewsOrganism />
       
-            <FooterOrganism /> 
+            <FooterOrganism navigation={navigation} /> 
 
           </>
       }
-      
+    
       {
         showMenu
         && <Sidebar

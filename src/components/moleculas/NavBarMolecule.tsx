@@ -1,28 +1,47 @@
 import { useContext } from "react";
 
-import logo from '../../assets/logo.png';
-
 import { TextButtonMolecule } from "./TextButtonMolecule";
 
-import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "./IconButtonMolecule";
 
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 import { IMyContext, MyContext } from "../../context/MyContext";
 
-export function NavBarMolecule() {
+type Props = {
+  className: string;
+  pageId: string;
+  logoProps: {
+    logo: string,
+    className: string,
+  }
+  navLinks: any;
+  socialMediaProps: {
+    socialMedia: any,
+    color: string,
+    size: number,
+  };
+  textLinkProps: {
+    textClassName: string;
+    className: string;
+  }
+  burgerMenuProps: {
+    color: string;
+  }
+}
+
+export function NavBarMolecule({ className, logoProps, navLinks, socialMediaProps, textLinkProps, burgerMenuProps, pageId }: Props) {
 
   const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
 
   return (
     <div
-      id="home"
-      className="flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-40"
+      id={pageId}
+      className={`${className}`}
     >
       <a href="." >
         <img
-          className="w-36"
-          src={logo}
+          className={logoProps.className}
+          src={logoProps.logo}
           alt="logo"
         />
       </a>
@@ -33,8 +52,8 @@ export function NavBarMolecule() {
         {
           navLinks.map((element, index: number) => (
             <TextButtonMolecule
-              textClassName='sm:block font-semibold hidden text-white'
-              className='p-2 cursor-pointer text-white hover:text-black'
+              textClassName={`${textLinkProps.textClassName}`}
+              className={`${textLinkProps.className}`}
               key={index}
               text={element.title}
               to={element.route}
@@ -47,7 +66,7 @@ export function NavBarMolecule() {
         <MenuHamburguerMolecule
           children
           onClick={() => {setShowMenu(!showMenu)}}
-          color='white'
+          color={burgerMenuProps.color}
         />
       </div>
 
@@ -55,14 +74,14 @@ export function NavBarMolecule() {
         className="hidden sm:flex"
       >
         {
-          socialMedia.map((element, index: number) => (
+          socialMediaProps.socialMedia.map((element, index: number) => (
             <IconButtonMolecule
               target="_blank"
               key={index}
               to={element.rota}
               classNameIcon="m-2 sm:block hidden"
-              color="white"
-              size={24}
+              color={socialMediaProps.color}
+              size={socialMediaProps.size}
               icon={element.icon}
             />
           ))
