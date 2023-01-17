@@ -15,14 +15,11 @@ import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BackgroundImageAtom } from "../../components/atomos/BackgroundImageAtom";
 import { navigation } from "../../constants/AboutUs";
+import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommentAboutUsOrganism";
 
 export function AboutUs() {
 
-  const {showMenu, setShowMenu, location, setLocation} = useContext(MyContext) as IMyContext;
-
-  useEffect(() => {
-    setLocation(window.location.href.split('/')[window.location.href.split('/').length - 1])
-  }, [])
+  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
 
   return (
     <>
@@ -36,6 +33,8 @@ export function AboutUs() {
           <PlanningAboutUsOrganism />
 
           <BenefitsAboutUsOrganism />
+
+          <BigCommentAboutUsOrganism />
 
           <BlogOrganism className={"flex items-start h-full sm:mt-36 mb-4 flex-col"}/>
 

@@ -4,6 +4,7 @@ import { MdCardTravel } from "react-icons/md"
 import { HiOutlineCheckBadge } from "react-icons/hi2"
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaQuoteLeft } from "react-icons/fa";
 
 export const navLinksAboutUs = [
   {
@@ -146,3 +147,13 @@ export const navigation = [
     route: "#blog",
   },
 ];
+
+export const bigComment = [
+  {
+    icon: FaQuoteLeft,
+    text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Vivamus at augue interdum, blandit arcu quis, laoreet ipsum.',
+    text2: 'Mauris tempor tellus ante, ut fermentum erat gravida vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec justo dui. Ut et consequat dui, a malesuada ipsum.',
+    author: 'Siti Sarah',
+    authorSubtitle: 'Founder ipsum',
+  }
+]
