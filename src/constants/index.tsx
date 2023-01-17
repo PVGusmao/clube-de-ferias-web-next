@@ -13,14 +13,13 @@ import api from "../services/api";
 
 async function item() {
   const response = await api.get('/pages/paulo');
-  localStorage.setItem("texts", JSON.stringify(response)); 
+  localStorage.setItem("texts", JSON.stringify(response));
+  console.log(response);
 }
 
 item();
 
 const data = JSON.parse(localStorage.getItem("texts"));
-
-console.log(data)
 
 const { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
   plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } = data?.data;
