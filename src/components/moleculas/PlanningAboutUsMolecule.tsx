@@ -5,11 +5,12 @@ import { TextAtom } from "../atomos/TextAtom";
 
 type Props = {
   element: PlansDescriptions;
+  className: string;
 }
 
-export function PlanningAboutUsMolecule({ element }: Props) {
+export function PlanningAboutUsMolecule({ element, className }: Props) {
   return (
-    <div className="flex m-6">
+    <div className={`${className}`}>
       
       <div className="my-2 h-24">
         <div className="flex rounded-lg items-center bg-gradient-to-b from-white to-[red] justify-center w-10 h-10 mr-2">

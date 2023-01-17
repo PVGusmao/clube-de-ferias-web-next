@@ -13,7 +13,7 @@ export function Plans2Organism({}) {
     <div id="planos" className="bg-[#F4F4F4] justify-center sm:py-24">
       <TextAtom
         children
-        className="text-center sm:text-5xl text-3xl sm:pt-0 pt-4 font-bold"
+        className="text-center sm:text-5xl text-3xl sm:pt-0 pt-4 font-bold text-black"
         text="Assine agora um dos nossos"
       />
       <div className="sm:flex hidden flex-row justify-evenly mt-10 w-full">
@@ -25,7 +25,7 @@ export function Plans2Organism({}) {
               >
                 <TextAtom
                   children
-                  className={`text-4xl font-bold pt-4`}
+                  className={`text-4xl font-bold pt-4 text-black`}
                   text={element.planName}
                   style={{
                     color: `${element.colorPlan}`,
@@ -34,7 +34,7 @@ export function Plans2Organism({}) {
 
                 <div className="flex items-center justify-evenly w-full py-1">
                   <IconAtom className="" color={element.colorPlan} icon={element.firstIcon} size={42} />
-                  <TextAtom children className="w-40 text-left" text={element.firstText} />
+                  <TextAtom children className="w-40 text-left text-black" text={element.firstText} />
                 </div>
 
                 <div
@@ -55,7 +55,7 @@ export function Plans2Organism({}) {
                   >
 
                   </TextAtom>
-                  <TextAtom className="w-40 text-left" text={element.discountText}>
+                  <TextAtom className="w-40 text-left text-black" text={element.discountText}>
 
                   </TextAtom>
                 </div>
@@ -70,7 +70,7 @@ export function Plans2Organism({}) {
 
                 <div className="flex items-center justify-evenly w-full py-1">
                   <IconAtom color={element.colorPlan} icon={element.thirdIcon} size={42} />
-                  <TextAtom className="w-40 text-left" text={element.thirdText}>
+                  <TextAtom className="w-40 text-left text-black" text={element.thirdText}>
 
                   </TextAtom>
                 </div>
@@ -85,7 +85,7 @@ export function Plans2Organism({}) {
 
                 <div className="flex items-center justify-evenly w-full py-1">
                   <IconAtom color={element.colorPlan} icon={element.fourthIcon} size={42} />
-                  <TextAtom className="w-40 text-left" text={element.fourthText}>
+                  <TextAtom className="w-40 text-left text-black" text={element.fourthText}>
 
                   </TextAtom>
                 </div>
@@ -100,7 +100,7 @@ export function Plans2Organism({}) {
 
                 <div className="flex items-center justify-between">
                   <TextAtom
-                    className={`text-4xl font-bold py-1`}
+                    className={`text-4xl font-bold py-1 text-black`}
                     text={`R$ ${element.priceTag}/mês`}
                     style={{
                       color: 'black',

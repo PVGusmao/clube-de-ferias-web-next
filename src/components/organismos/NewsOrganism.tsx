@@ -23,12 +23,12 @@ export function NewsOrganism() {
         />
         <TextAtom
           children
-          className="font-light	sm:text-left sm:text-2xl"
+          className="font-light	sm:text-left sm:text-2xl text-black"
           text="Assine nossa news e receba novidades toda semana"
         />
         <TextAtom
           children
-          className="font-light	sm:text-left sm:text-2xl"
+          className="font-light	sm:text-left sm:text-2xl text-black"
           text="novidades toda semana"
         />
 
@@ -72,22 +72,22 @@ export function NewsOrganism() {
         <div className="mt-10">
           <div className="flex items-center">
             <Checkbox />
-            <TextAtom children text="Eu concordo em receber comunicação" />
+            <TextAtom children className="text-black" text="Eu concordo em receber comunicação" />
           </div>
           <TextAtom
             children
-            className="font-light	"
+            className="font-light text-black"
             text="Ao informar meus dados, estou ciente"
           />
           <TextAtom
             children
-            className="font-light	"
+            className="font-light text-black"
             text="das diretrizes da Política de Privacidade"
           />
 
           <ButtonMolecule
             children
-            className="w-[13.375rem] h-[3.5rem] rounded-full bg-[#636363] mt-5"
+            className="w-[13.375rem] h-[3.5rem] rounded-full bg-[#636363] mt-5 text-black"
             textClassName="text-white"
             title={"Enviar"}
           />

@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
+
 import Sidebar from "../../components/atomos/SideBarAtom";
-import { HeaderAbout } from "../../components/organismos/HeaderAbout";
-import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
-import { PlanningAboutUsOrganism } from "../../components/organismos/PlanningAboutUsOrganism";
+
 import { IMyContext, MyContext } from "../../context/MyContext";
+
+import { HeaderAbout } from "../../components/organismos/HeaderAbout";
+import { PlanningAboutUsOrganism } from "../../components/organismos/PlanningAboutUsOrganism";
+import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
+import { BenefitsAboutUsOrganism } from "../../components/organismos/BenefitsAboutUsOrganism";
 
 export function AboutUs() {
 
@@ -19,6 +23,8 @@ export function AboutUs() {
           <NewWayTravelAboutUsOrganism />
 
           <PlanningAboutUsOrganism />
+
+          <BenefitsAboutUsOrganism />
         </div>    
       }
 

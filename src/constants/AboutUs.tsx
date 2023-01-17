@@ -1,5 +1,8 @@
 import { IconType } from "react-icons"
+import { BsGraphUp } from "react-icons/bs";
 import { MdCardTravel } from "react-icons/md"
+import { HiOutlineCheckBadge } from "react-icons/hi2"
+import { AiFillSafetyCertificate } from "react-icons/ai";
 
 export const navLinksAboutUs = [
   {
@@ -89,4 +92,32 @@ export const plansDescriptions = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.',
     icon: MdCardTravel,
   },
+]
+
+export interface Benefits {
+  id: number;
+  icon: IconType;
+  title: string;
+  bodyText: string;
+}
+
+export const benefits = [
+  {
+    id: 1,
+    icon: HiOutlineCheckBadge,
+    title: 'Praticidade',
+    bodyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor.'
+  },
+  {
+    id: 2,
+    icon: BsGraphUp,
+    title: 'Planejamento',
+    bodyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor.'
+  },
+  {
+    id: 3,
+    icon: AiFillSafetyCertificate,
+    title: 'Segurança',
+    bodyText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor.'
+  }
 ]
