@@ -13,9 +13,9 @@ import api from "../services/api";
 import { IconType } from "react-icons";
 
 async function item() {
+
   const response = await api.get('/pages/paulo');
   localStorage.setItem("texts", JSON.stringify(response));
-  console.log(response);
 }
 
 item();
@@ -24,7 +24,6 @@ const data = JSON.parse(localStorage.getItem("texts"));
 
 const { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
   plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } = data?.data;
-
 
 export const navLinks = nav_links;
 
@@ -154,7 +153,6 @@ export const navigation = [
   },
 ];
 
-
 export const socialMedia = [
   {
     id: "instagram",
@@ -164,13 +162,13 @@ export const socialMedia = [
   {
     id: "facebook",
     icon: FaFacebook,
-    rota: "/facebook"
+    rota: "/facebook",
   },
   {
     id: "tik-tok",
     icon: FaTiktok,
-    rota: "/tik-tok"
-  }
+    rota: "/tik-tok",
+  },
 ];
 
 export const contato = [
@@ -181,5 +179,64 @@ export const contato = [
   {
     icon: MdEmail,
     content: "Hello@Homco.com",
+  },
+];
+
+export const clubPost = [
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    subTitle: "Perfect | Tips",
+    title: "Travel Stories For Now and the Future",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+];
+
+export const clubTopPost = [
+  {
+    title: "Mais lidos | Tips",
+    subtitle: "O que levar para as viagens?",
+    text: "Como já falamos por aqui, planejar a sua viagem com antecedência é essencial para que você possa aproveitar ao máximo cada segundo no seu destino",
+  },
+  {
+    title: "Mais lidos | Tips",
+    subtitle: "O que levar para as viagens?",
+    text: "Como já falamos por aqui, planejar a sua viagem com antecedência é essencial para que você possa aproveitar ao máximo cada segundo no seu destino",
+  },
+];
+
+export const headerPost = [
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
+  },
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
+  },
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
   },
 ];

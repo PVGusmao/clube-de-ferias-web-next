@@ -3,9 +3,7 @@ import { useContext } from "react";
 import { bannerContent, navigation } from "../../constants";
 
 import Sidebar from "../../components/atomos/SideBarAtom";
-
 import { IMyContext, MyContext } from "../../context/MyContext";
-
 import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { FooterOrganism } from "../../components/organismos/FooterOrganism";
@@ -16,11 +14,11 @@ import { SimulationOrganism } from "../../components/organismos/SimulationOrgani
 import { Plans2Organism } from "../../components/organismos/Plans2Organism";
 
 export default function Home() {
-
-  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
+  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   return (
     <main>
+
       {
         !showMenu
           && <>
@@ -56,7 +54,7 @@ export default function Home() {
           setShowMenu={setShowMenu}
           className="h-96"
         />
-      }
+      )}
     </main>
   );
 }

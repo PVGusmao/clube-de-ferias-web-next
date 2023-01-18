@@ -1,8 +1,8 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect } from "react";
 
-import { IMyContext, MyContext } from './context/MyContext';
+import { IMyContext, MyContext } from "./context/MyContext";
 
-import './App.css';
+import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -12,17 +12,18 @@ import { Plans } from "./pages/Plans/Plans";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 
 import { RedirectPage } from "./components/atomos/RedirectPageAtom";
-import { TalkToUs } from './pages/TalkToUs/TalkToUs';
+import { TalkToUs } from "./pages/TalkToUs/TalkToUs";
 
-import api from './services/api';
+import api from "./services/api";
 
 function App() {
-
-  const {setAllSiteTexts} = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
 
   async function getAllSiteTexts() {
     try {
+
       const response = await api.get('/pages/paulo');
+
       setAllSiteTexts(response as any);
       // console.log(response);
     } catch (error) {
@@ -32,7 +33,7 @@ function App() {
 
   useEffect(() => {
     getAllSiteTexts();
-  }, [])
+  }, []);
 
   return (
     <Routes>
@@ -42,9 +43,24 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/fale-conosco" element={<TalkToUs />} />
 
-      <Route path='/tik-tok'  element={<RedirectPage to={'http://www.tiktok.com/@clubedeferias'} />} />
-      <Route path='/facebook' element={<RedirectPage to={'http://www.facebook.com/clubedeferiasstellabarros'} />} />
-      <Route path='/instagram' element={<RedirectPage to={'http://www.instagram.com/oclubedeferias'} />} />
+      <Route
+        path="/tik-tok"
+        element={<RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />}
+      />
+      <Route
+        path="/facebook"
+        element={
+          <RedirectPage
+            to={"http://www.facebook.com/clubedeferiasstellabarros"}
+          />
+        }
+      />
+      <Route
+        path="/instagram"
+        element={
+          <RedirectPage to={"http://www.instagram.com/oclubedeferias"} />
+        }
+      />
     </Routes>
   );
 }
