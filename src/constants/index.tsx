@@ -147,96 +147,6 @@ export const clubPost = [
     title: "Travel Stories For Now and the Future",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
   },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
-  {
-    subTitle: "Perfect | Tips",
-    title: "Travel Stories For Now and the Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-  },
 ];
 
 export const clubTopPost = [
@@ -249,5 +159,23 @@ export const clubTopPost = [
     title: "Mais lidos | Tips",
     subtitle: "O que levar para as viagens?",
     text: "Como já falamos por aqui, planejar a sua viagem com antecedência é essencial para que você possa aproveitar ao máximo cada segundo no seu destino",
+  },
+];
+
+export const headerPost = [
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
+  },
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
+  },
+  {
+    subtitle: "Home/Blog",
+    title: "Dicas Inesqueciveis",
+    text: "Descubra o que fazer em qualquer lugar do mundo!",
   },
 ];

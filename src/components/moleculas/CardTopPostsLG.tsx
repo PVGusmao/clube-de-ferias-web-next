@@ -9,7 +9,7 @@ type Props = {
 
 export function CardTopPostsLG({ title, subtitle, text }: Props) {
   return (
-    <div className="w-[35.688rem] h-[38.063rem] flex flex-col bg-blue-400">
+    <div className="w-[35.688rem] h-[38.063rem] flex flex-col  shadow-md">
       <div className="w-full h-[23rem] bg-blue-500"></div>
       <div className="p-7">
         <TextAtom children className="text-left text-lg	 mb-1" text={title} />
@@ -19,9 +19,15 @@ export function CardTopPostsLG({ title, subtitle, text }: Props) {
           text={subtitle}
         />
         <TextAtom children className="text-left mb-7 text-sm" text={text} />
-        <Button variant="contained" className="w-[6.938rem] h-[1.808rem]">
-          Leia Mais
-        </Button>
+        <div className="flex justify-start">
+          <Button
+            style={{ backgroundColor: "black", fontSize: "12px" }}
+            variant="contained"
+            className="w-[6.938rem] h-[1.808rem]"
+          >
+            Leia Mais
+          </Button>
+        </div>
       </div>
     </div>
   );

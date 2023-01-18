@@ -1,13 +1,11 @@
-import React from "react";
-import { ClubPostsOrganism } from "../../components/organismos/ClubPostsOrganism";
-import { SliderBlogOrganism } from "../../components/organismos/SliderBlogOrganism";
+import { SliderBlogMolecule } from "../../components/moleculas/SliderBlogMolecule";
+import { ClubPostsMolecule } from "../../components/moleculas/ClubPostsMolecule";
 
 export function Blog() {
   return (
-    <div className="bg-blue-300  w-full h-96">
-      <SliderBlogOrganism />
-      <ClubPostsOrganism />
-      <p>My Blog!!</p>
+    <div className="w-full">
+      <SliderBlogMolecule />
+      <ClubPostsMolecule />
     </div>
   );
 }
