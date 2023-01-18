@@ -15,6 +15,7 @@ import { IconType } from "react-icons";
 async function item() {
 
   const response = await api.get('/pages/paulo');
+  console.log(response);
   localStorage.setItem("texts", JSON.stringify(response));
 }
 
