@@ -57,11 +57,11 @@ export function SimulationOrganism() {
       <TextAtom
         children
         text="Simule agora o seu melhor pacote"
-        className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-10 px-5"
+        className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-10 px-5 text-black"
       />
       <TextAtom
         children
-        className="sm:text-xl mb-3	mb-10	px-4	"
+        className="sm:text-xl mb-3 mb-10 px-4 text-black"
         text="Faça uma simulação das viagens dos seus sonhos e começe a investir agora!"
       />
       <div className="sm:w-[43.625rem] justify-self-center">
@@ -98,7 +98,7 @@ export function SimulationOrganism() {
       <TextAtom
         children
         text="Quanto tempo deixaria o seu dinheiro investido?"
-        className="mt-14 sm:text-xl mb-10 px-4"
+        className="mt-14 sm:text-xl mb-10 px-4 text-black"
       />
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
         {packages.map((element: CardSimulationProps, index: number) => (

@@ -21,7 +21,9 @@ function App() {
 
   async function getAllSiteTexts() {
     try {
-      const response = await api.get("/pages/Home2");
+
+      const response = await api.get('/pages/paulo');
+
       setAllSiteTexts(response as any);
       // console.log(response);
     } catch (error) {

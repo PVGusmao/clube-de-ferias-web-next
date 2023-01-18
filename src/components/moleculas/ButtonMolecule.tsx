@@ -11,7 +11,7 @@ type Props = ButtonProps & {
   textClassName?: string;
 };
 
-export function ButtonMolecule({ children, title, className, textClassName = '', ...rest }: Props) {
+export function ButtonMolecule({ children, title, className, textClassName, ...rest }: Props) {
   return (
   <Button className={className} {...rest}>
     <TextAtom className={textClassName} children text={title} />

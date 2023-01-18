@@ -6,9 +6,12 @@ import { SlideShowBlogAtom } from "../atomos/SlideShowBlogAtom";
 import { TextAtom } from "../atomos/TextAtom";
 import { BlogCardMolecule } from "../moleculas/BlogCardMolecule";
 
-export function BlogOrganism() {
+type Props = {
+  className: string;
+}
+export function BlogOrganism({className}: Props) {
   return (
-    <div id="blog" className="flex items-start h-full mt-64 sm:mt-36 mb-4 flex-col">
+    <div id="blog" className={className}>
       <TextAtom
         className="text-4xl font-semibold uppercase pl-6"
         children
