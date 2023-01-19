@@ -13,7 +13,7 @@ import { ImageAtom } from '../atomos/ImageAtome';
 export function HeaderAbout() {
   return (
     <>
-      <NavBarMolecule
+      {/* <NavBarMolecule
         className={`bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20`}
         pageId={'home'}
         textLinkProps={{
@@ -33,7 +33,7 @@ export function HeaderAbout() {
         burgerMenuProps={{
           color: "red"
         }}
-      />
+      /> */}
 
       <BackgroundImageAtom
         className='flex pl-10 flex-col sm:flex-row justify-center sm:justify-start bg-auto sm:h-[500px] h-[500px] rounded-b-[80px] sm:items-center'

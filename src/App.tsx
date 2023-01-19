@@ -15,6 +15,11 @@ import { RedirectPage } from "./components/atomos/RedirectPageAtom";
 import { TalkToUs } from "./pages/TalkToUs/TalkToUs";
 
 import api from "./services/api";
+import { NavBarMolecule } from "./components/moleculas/NavBarMolecule";
+
+import { navLinks, socialMedia } from "./constants";
+
+import logo from './assets/logo-red.png';
 
 function App() {
   const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
@@ -36,32 +41,55 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/sobre" element={<AboutUs />} />
-      <Route path="/planos" element={<Plans />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/fale-conosco" element={<TalkToUs />} />
+    <>
+      <NavBarMolecule className=' bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20'
+          pageId='home'
+          textLinkProps={{
+            textClassName: 'sm:block hover:text-[red] font-semibold hidden text-[darkgray]',
+            className: 'w-32 cursor-pointer text-white hover:border-2 hover:border-b-[red]',
+          }}
+          logoProps={{
+            logo: logo,
+            className: 'w-32',
+          }}
+          navLinks={navLinks}
+          socialMediaProps={{
+            socialMedia: socialMedia,
+            color: 'red',
+            size: 24,
+          }}
+          burgerMenuProps={{
+            color: 'white'
+          }}
+        />
 
-      <Route
-        path="/tik-tok"
-        element={<RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />}
-      />
-      <Route
-        path="/facebook"
-        element={
-          <RedirectPage
-            to={"http://www.facebook.com/clubedeferiasstellabarros"}
-          />
-        }
-      />
-      <Route
-        path="/instagram"
-        element={
-          <RedirectPage to={"http://www.instagram.com/oclubedeferias"} />
-        }
-      />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<AboutUs />} />
+        <Route path="/planos" element={<Plans />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/fale-conosco" element={<TalkToUs />} />
+
+        <Route
+          path="/tik-tok"
+          element={<RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />}
+        />
+        <Route
+          path="/facebook"
+          element={
+            <RedirectPage
+              to={"http://www.facebook.com/clubedeferiasstellabarros"}
+            />
+          }
+        />
+        <Route
+          path="/instagram"
+          element={
+            <RedirectPage to={"http://www.instagram.com/oclubedeferias"} />
+          }
+        />
+      </Routes>
+    </>
   );
 }
 
