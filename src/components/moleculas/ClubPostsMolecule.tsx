@@ -6,8 +6,26 @@ import { CardTopPostsSM } from "./CardTopPostsSM";
 import { FooterOrganism } from "../organismos/FooterOrganism";
 import { NewsOrganism } from "../organismos/NewsOrganism";
 import { TextAtom } from "../atomos/TextAtom";
+import api from "../../services/api";
+import React, { useEffect, useState } from "react";
 
 export function ClubPostsMolecule() {
+  const [destiny, setDestiny] = useState([]);
+  const [travel_tips, setTravel_tips] = useState([]);
+
+  async function getData() {
+    const response = await api.get("/blog/all");
+    setDestiny(response.data.categorized.Destinos);
+    setTravel_tips(response.data.categorized["Dicas de viagem"]);
+
+    // console.log(response.data.categorized.travel_tips);
+    console.log(response.data.categorized["Dicas de viagem"]);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex justify-center mb-[100px]">
@@ -33,9 +51,10 @@ export function ClubPostsMolecule() {
             text="Dicas de Viagem"
           />
           <div className="flex flex-wrap justify-between w-[60.625rem] ">
-            {clubPost.map((element, index) => (
+            {travel_tips.map((element, index) => (
               <CardClubPosts
-                subTitle={element.subTitle}
+                img={element.image}
+                categoy={element.category}
                 text={element.text}
                 title={element.title}
               />
@@ -48,9 +67,10 @@ export function ClubPostsMolecule() {
             text="Destinos"
           />
           <div className="flex flex-wrap justify-between w-[60.625rem] ">
-            {clubPost.map((element, index) => (
+            {destiny.map((element, index) => (
               <CardClubPosts
-                subTitle={element.subTitle}
+                img={element.image}
+                categoy={element.category}
                 text={element.text}
                 title={element.title}
               />
@@ -80,8 +100,6 @@ export function ClubPostsMolecule() {
           </div>
         </div>
       </div>
-      <NewsOrganism />
-      <FooterOrganism />
     </div>
   );
 }
