@@ -1,10 +1,12 @@
 import { IconType } from "react-icons"
-import { BsGraphUp } from "react-icons/bs";
-import { MdCardTravel } from "react-icons/md"
-import { HiOutlineCheckBadge } from "react-icons/hi2"
-import { AiFillSafetyCertificate } from "react-icons/ai";
-import { IoIosArrowForward } from "react-icons/io";
+import { TbMountain } from "react-icons/tb";
 import { FaQuoteLeft } from "react-icons/fa";
+import { MdCardTravel } from "react-icons/md"
+import { TfiMedallAlt } from "react-icons/tfi";
+import { HiOutlineCheckBadge } from "react-icons/hi2"
+import { AiFillSafetyCertificate, AiOutlinePlus } from "react-icons/ai";
+import { BsFillPersonFill, BsGraphUp } from "react-icons/bs";
+import { IoIosArrowForward, IoIosPeople } from "react-icons/io";
 
 export const navLinksAboutUs = [
   {
@@ -155,5 +157,39 @@ export const bigComment = [
     text2: 'Mauris tempor tellus ante, ut fermentum erat gravida vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec justo dui. Ut et consequat dui, a malesuada ipsum.',
     author: 'Siti Sarah',
     authorSubtitle: 'Founder ipsum',
+  }
+]
+
+export interface Statistics {
+  data: string;
+  icon: IconType;
+  dataType: string;
+  iconTopRight: IconType;
+}
+
+export const statistics = [
+  {
+    data: '126',
+    icon: IoIosPeople,
+    dataType: 'Satisfied Client',
+    iconTopRight: AiOutlinePlus,
+  },
+  {
+    data: '230',
+    icon: BsFillPersonFill, 
+    dataType: 'New Traveller',
+    iconTopRight: AiOutlinePlus,
+  },
+  {
+    data: '230',
+    icon: TbMountain, 
+    dataType: 'Destination',
+    iconTopRight: AiOutlinePlus,
+  },
+  {
+    data: '230',
+    icon: TfiMedallAlt, 
+    dataType: 'Award',
+    iconTopRight: AiOutlinePlus,
   }
 ]
