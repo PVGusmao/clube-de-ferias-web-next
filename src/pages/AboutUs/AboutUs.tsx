@@ -16,6 +16,7 @@ import { NewsOrganism } from "../../components/organismos/NewsOrganism";
 import { BackgroundImageAtom } from "../../components/atomos/BackgroundImageAtom";
 import { navigation } from "../../constants/AboutUs";
 import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommentAboutUsOrganism";
+import { StatisticsAboutUsOrganism } from "../../components/organismos/StatisticsAboutUsOrganism";
 
 export function AboutUs() {
 
@@ -36,7 +37,9 @@ export function AboutUs() {
 
           <BigCommentAboutUsOrganism />
 
-          <BlogOrganism className={"flex items-start h-full sm:mt-36 mb-4 flex-col"}/>
+          <StatisticsAboutUsOrganism className="flex sm:flex-row flex-col justify-around bg-gray w-full h-full sm:h-48 sm:mt-24" />
+
+          <BlogOrganism className={"flex items-start h-full sm:mt-24 mb-4 flex-col"}/>
 
           <NewsOrganism />
 
