@@ -18,7 +18,7 @@ export function WelcomeOrganism() {
         className={`h-128 sm:max-w-7xl`}
       >
         
-        <NavBarMolecule
+        {/* <NavBarMolecule
           className='flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20'
           pageId='home'
           textLinkProps={{
@@ -38,7 +38,7 @@ export function WelcomeOrganism() {
           burgerMenuProps={{
             color: 'white'
           }}
-        />
+        /> */}
 
         <WelcomeMolecule className="w-full" />
       
