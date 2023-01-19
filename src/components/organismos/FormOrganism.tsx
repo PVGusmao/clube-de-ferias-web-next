@@ -1,11 +1,5 @@
-import {
-  Checkbox,
-  FormControlLabel,
-  FormGroup,
-  TextField,
-} from "@mui/material";
+import { TextField } from "@mui/material";
 import React, { useState } from "react";
-import { GiConsoleController } from "react-icons/gi";
 import api from "../../services/api";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
@@ -25,7 +19,7 @@ export function FormOrganism() {
     };
 
     await api
-      .post("/pages/edit", body)
+      .post("/", body)
       .then((res) => {
         console.log(res.data);
       })
@@ -37,10 +31,10 @@ export function FormOrganism() {
   }
 
   return (
-    <div className="w-[771px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[222px] mt-[122px] ">
+    <div className="sm:w-[771px] w-[318px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[100px] sm:mb-[222px] mt-[50px] sm:mt-[122px] ">
       <div className="mb-4">
         <TextField
-          className="w-[572px] h-[60px]"
+          className="sm:w-[572px] w-[269px] h-[60px]"
           id="outlined-basic"
           label="Seu nome*"
           variant="outlined"
@@ -55,7 +49,7 @@ export function FormOrganism() {
       </div>
       <div className="mb-4">
         <TextField
-          className="w-[572px] h-[60px] "
+          className="sm:w-[572px] w-[269px] h-[60px] "
           id="outlined-basic"
           label="Seu e-mail*"
           variant="outlined"
@@ -71,7 +65,7 @@ export function FormOrganism() {
 
       <div className="mb-4">
         <TextField
-          className="w-[572px] h-[60px] "
+          className="sm:w-[572px] w-[269px] h-[60px] "
           id="outlined-basic"
           label="Telefone*"
           variant="outlined"
@@ -87,7 +81,7 @@ export function FormOrganism() {
 
       <div className="mb-4">
         <TextField
-          className="w-[572px] mb-4"
+          className="sm:w-[572px] w-[269px] "
           id="outlined-multiline-static "
           label="Mensagem"
           multiline
@@ -106,6 +100,7 @@ export function FormOrganism() {
       <ButtonMolecule
         onClick={handleSubmit}
         children
+        textClassName="font-bold text-[12px]"
         style={{
           backgroundColor: "red",
           marginTop: "51px",

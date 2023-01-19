@@ -10,7 +10,7 @@ export function TalkToUs() {
     <div className="flex flex-col items-center ">
       <TextAtom
         children
-        className="text-[44px] font-bold  mt-10"
+        className=" text-[25px] sm:text-[44px] font-bold  mt-10"
         text="Olá, aqui você pode tirar suas dúvidas:"
       />
       <FormOrganism />
