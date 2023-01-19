@@ -50,7 +50,7 @@ export function NewsOrganism() {
                 icon={FaGooglePlay}
                 size={30}
                 color="white"
-                className="mb-2"
+                className=""
               />
               <TextAtom children className="text-white ml-2 font-bold" text="App Store" />
             </div>
