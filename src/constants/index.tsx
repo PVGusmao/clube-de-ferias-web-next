@@ -16,18 +16,18 @@ import { IconType } from "react-icons";
 
 async function item() {
 
-  const response = await api.get('/pages/paulo');
-  console.log(response);
-  localStorage.setItem("texts", JSON.stringify(response));
+  const response = await api.get('/pages');
+  localStorage.setItem("home", JSON.stringify(response));
 }
 
 item();
 
-const data = JSON.parse(localStorage.getItem("texts"));
+const data = JSON.parse(localStorage.getItem("home"));
 
-const { content: { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
-  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } } = data?.data;
+const { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
+  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } = data?.data?.paulo;
 
+  
 export const navLinks = nav_links;
 
 export const home = homeData;
