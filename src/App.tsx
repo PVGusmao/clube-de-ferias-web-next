@@ -59,7 +59,7 @@ function App() {
             size: 24,
           }}
           burgerMenuProps={{
-            color: 'white'
+            color: 'black'
           }}
         />
 

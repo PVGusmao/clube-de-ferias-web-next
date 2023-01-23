@@ -24,9 +24,10 @@ item();
 
 const data = JSON.parse(localStorage.getItem("home"));
 
-const { nav_links, home: homeData, text_button, socialMedia: socialMediaData,
-  plans, clients, marks: marksData, card_blog, minor_card_blog, banner } = data?.data?.paulo;
+console.log(data);
 
+const { nav_links, home: homeData, text_button, plans2, clients,
+  marks: marksData, card_blog, minor_card_blog, banner } = data?.data?.paulo;
   
 export const navLinks = nav_links;
 
@@ -34,68 +35,66 @@ export const home = homeData;
 
 export const textButtonWelcome = text_button;
 
-export const planos = plans;
-
 export const planos2 = [
   {
     id: 1,
-    planName: 'Silver',
+    planName: plans2[0]?.planName,
     firstIcon: GiCommercialAirplane,
-    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
-    discount: 6,
-    discountText: 'de desconto na compra de Pacotes.',
+    firstText: plans2[0]?.firstText,
+    discount: plans2[0]?.discount,
+    discountText: plans2[0]?.discountText,
     thirdIcon: TbPig,
-    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    thirdText: plans2[0]?.thirdText,
     fourthIcon: FaRegBuilding,
-    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
-    priceTag: 199,
-    buttonName: 'Associe-se',
-    colorPlan: '#B8B8B8',
+    fourthText: plans2[0]?.fourthText,
+    priceTag: plans2[0]?.priceTag,
+    buttonName: plans2[0]?.buttonName,
+    colorPlan: plans2[0]?.colorPan,
   },
   {
     id: 2,
-    planName: 'Gold',
+    planName: plans2[1]?.planName,
     firstIcon: GiCommercialAirplane,
-    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
-    discount: 8,
-    discountText: 'de desconto na compra de Pacotes.',
+    firstText: plans2[1]?.firstText,
+    discount: plans2[1]?.discount,
+    discountText: plans2[1]?.discountText,
     thirdIcon: TbPig,
-    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    thirdText: plans2[1]?.thirdText,
     fourthIcon: FaRegBuilding,
-    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
-    priceTag: 499,
-    buttonName: 'Associe-se',
-    colorPlan: '#F6AB39',
+    fourthText: plans2[1]?.fourthText,
+    priceTag: plans2[1]?.priceTag,
+    buttonName: plans2[1]?.buttonName,
+    colorPlan: plans2[1]?.colorPlan,
   },
   {
     id: 3,
-    planName: 'Platinum',
+    planName: plans2[2]?.planName,
     firstIcon: GiCommercialAirplane,
-    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
-    discount: 11,
-    discountText: 'de desconto na compra de Pacotes.',
+    firstText: plans2[2]?.firstText,
+    discount: plans2[2]?.discount,
+    discountText: plans2[2]?.discountText,
     thirdIcon: TbPig,
-    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    thirdText: plans2[2]?.thirdText,
     fourthIcon: FaRegBuilding,
-    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
-    priceTag: 999,
-    buttonName: 'Associe-se',
-    colorPlan: '#515151',
+    fourthText: plans2[2]?.fourthText,
+    priceTag: plans2[2]?.priceTag,
+    buttonName: plans2[2]?.buttonName,
+    colorPlan: plans2[2]?.colorPlan,
   },
   {
     id: 4,
-    planName: 'Promo',
+    planName: plans2[3]?.planName,
     firstIcon: GiCommercialAirplane,
-    firstText: 'Ideal para quem planeja viagens semestrais ou anuais',
-    discount: 11,
-    discountText: 'de desconto na compra de Pacotes.',
+    firstText: plans2[3]?.firstText,
+    discount: plans2[3]?.discount,
+    discountText: plans2[3]?.discountText,
     thirdIcon: TbPig,
-    thirdText: 'sua mensalidade vira crédito para sua viagem',
+    thirdText: plans2[3]?.thirdText,
     fourthIcon: FaRegBuilding,
-    fourthText: 'você ainda garante 6% de desconto nos pacotes de hotelaria.',
-    priceTag: 999,
-    buttonName: 'Associe-se',
-    colorPlan: '#3F9D3A',
+    fourthText: plans2[3]?.fourthText,
+    priceTag: plans2[3]?.priceTag,
+    buttonName: plans2[3]?.buttonName,
+    colorPlan: plans2[3]?.colorPlan,
   },
 ] 
 
@@ -113,22 +112,22 @@ export const cards = [
   {
     id: 1,
     icon: TbPig,
-    content: data?.data?.content?.text_square?.text_1,
+    content: data?.data?.paulo?.text_square?.text_1,
   },
   {
     id: 2,
     icon: AiOutlineSafety,
-    content: data?.data?.content?.text_square?.text_2,
+    content: data?.data?.paulo?.text_square?.text_2,
   },
   {
     id: 3,
     icon: BsTelephoneInboundFill,
-    content: data?.data?.content?.text_square?.text_3,
+    content: data?.data?.paulo?.text_square?.text_3,
   },
   {
     id: 4,
     icon: RiMoneyDollarCircleFill,
-    content: data?.data?.content?.text_square?.text_4,
+    content: data?.data?.paulo?.text_square?.text_4,
   },
 ];
 

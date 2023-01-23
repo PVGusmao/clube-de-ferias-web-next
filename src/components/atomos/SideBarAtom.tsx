@@ -25,7 +25,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
         <div className={`${className}`}>
             <div className="flex flex-col h-screen p-3 bg-white shadow w-full bg-[#F20F0F]">
                 <div className="space-y-3 flex flex-col">
-                    <div className="flex items-center justify-between px-4">
+                    {/* <div className="flex items-center justify-between px-4">
                         <img
                             className="w-36"
                             src={logo}
@@ -36,7 +36,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                             onClick={() => {setShowMenu(!showMenu)}}
                             children
                         />
-                    </div>
+                    </div> */}
                     <div className="flex-1">
                         <ul className="pt-2 pb-4 space-y-1 text-sm">
                             <li className="rounded-sm">
