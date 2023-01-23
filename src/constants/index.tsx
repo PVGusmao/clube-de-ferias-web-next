@@ -1,3 +1,5 @@
+//a index.ts é a HOME.
+
 import { FaFacebook, FaInstagram, FaRegBuilding, FaTiktok } from "react-icons/fa";
 
 import { TbPig } from "react-icons/tb";
