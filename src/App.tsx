@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import styled from "styled-components";
 
 import { IMyContext, MyContext } from "./context/MyContext";
 
@@ -6,22 +7,26 @@ import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
 
+import { navLinks, socialMedia, navigation } from "./constants";
+
+import { FaWhatsappSquare } from "react-icons/fa";
+
 import Home from "./pages/Home";
 import { Blog } from "./pages/Blog/Blog";
 import { Plans } from "./pages/Plans/Plans";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
-
-import { RedirectPage } from "./components/atomos/RedirectPageAtom";
 import { TalkToUs } from "./pages/TalkToUs/TalkToUs";
 
-import api from "./services/api";
+import { RedirectPage } from "./components/atomos/RedirectPageAtom";
+
 import { NavBarMolecule } from "./components/moleculas/NavBarMolecule";
 
-import { navLinks, socialMedia, navigation } from "./constants";
+import { NewsOrganism } from "./components/organismos/NewsOrganism";
+import { FooterOrganism } from "./components/organismos/FooterOrganism";
+
+import api from "./services/api";
 
 import logo from "./assets/logo-red.png";
-import { FooterOrganism } from "./components/organismos/FooterOrganism";
-import { NewsOrganism } from "./components/organismos/NewsOrganism";
 
 function App() {
   const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
@@ -42,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       <NavBarMolecule
         className=" bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
         pageId="home"
@@ -96,8 +101,24 @@ function App() {
 
       <NewsOrganism />
       <FooterOrganism navigation={navigation} />
-    </>
+      
+      <Whatsapp className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]">
+        <FaWhatsappSquare
+          size={64}
+          color="#075e54"
+        />
+      </Whatsapp>
+      
+    </div>
   );
 }
 
 export default App;
+
+const Whatsapp = styled.div`
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1; // <Thing> when hovered
+  }
+`
