@@ -14,7 +14,6 @@ export function TalkToUs() {
         text="Olá, aqui você pode tirar suas dúvidas:"
       />
       <FormOrganism />
-      <NewsOrganism />
     </div>
   );
 }

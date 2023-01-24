@@ -18,43 +18,33 @@ export default function Home() {
 
   return (
     <main>
+      {!showMenu && (
+        <>
+          <WelcomeOrganism />
 
-      {
-        !showMenu
-          && <>
-            <WelcomeOrganism />
+          <BlogOrganism
+            className={"flex items-start h-full sm:mt-36 mb-4 mt-56 flex-col"}
+          />
 
-            <BlogOrganism className={"flex items-start h-full sm:mt-36 mb-4 mt-56 flex-col"} />
-      
-            {
-              bannerContent[0].enable && <BannerOrganism />
-            }
-      
-            <Plans2Organism />
+          {bannerContent[0].enable && <BannerOrganism />}
 
-            <SimulationOrganism />
-      
-            <ClientsOrganism />
-      
-            {
-              bannerContent[1].enable && <BannerOrganism />
-            }
+          <Plans2Organism />
 
-            <NewsOrganism />
-      
-            <FooterOrganism navigation={navigation} /> 
+          <SimulationOrganism />
 
-          </>
-      }
-    
-      {
-        showMenu
-        && <Sidebar
+          <ClientsOrganism />
+
+          {bannerContent[1].enable && <BannerOrganism />}
+        </>
+      )}
+
+      {showMenu && (
+        <Sidebar
           showMenu={showMenu}
           setShowMenu={setShowMenu}
           className="h-96"
         />
-      }
+      )}
     </main>
   );
 }

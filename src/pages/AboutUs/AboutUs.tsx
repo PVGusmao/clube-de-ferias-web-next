@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 
 import Sidebar from "../../components/atomos/SideBarAtom";
 
-import teste from '../../assets/imageBlog1.png'
+import teste from "../../assets/imageBlog1.png";
 
 import { IMyContext, MyContext } from "../../context/MyContext";
 
@@ -19,13 +19,11 @@ import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommen
 import { StatisticsAboutUsOrganism } from "../../components/organismos/StatisticsAboutUsOrganism";
 
 export function AboutUs() {
-
-  const {showMenu, setShowMenu} = useContext(MyContext) as IMyContext;
+  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   return (
     <>
-      {
-        !showMenu &&
+      {!showMenu && (
         <div>
           <HeaderAbout />
 
@@ -39,22 +37,19 @@ export function AboutUs() {
 
           <StatisticsAboutUsOrganism className="flex sm:flex-row flex-col justify-around bg-gray w-full h-full sm:h-48 sm:mt-24" />
 
-          <BlogOrganism className={"flex items-start h-full sm:mt-24 mb-4 flex-col"}/>
+          <BlogOrganism
+            className={"flex items-start h-full sm:mt-24 mb-4 flex-col"}
+          />
+        </div>
+      )}
 
-          <NewsOrganism />
-
-          <FooterOrganism navigation={navigation}/>
-        </div>    
-      }
-
-      {
-        showMenu
-        && <Sidebar
+      {showMenu && (
+        <Sidebar
           showMenu={showMenu}
           setShowMenu={setShowMenu}
           className="h-96"
         />
-      }
+      )}
     </>
-  )
+  );
 }

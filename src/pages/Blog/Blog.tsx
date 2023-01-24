@@ -7,7 +7,6 @@ export function Blog() {
     <div className="w-full">
       <SliderBlogMolecule />
       <ClubPostsMolecule />
-      <NewsOrganism />
     </div>
   );
 }
