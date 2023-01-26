@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { IMyContext, MyContext } from "./context/MyContext";
@@ -31,6 +31,8 @@ import logo from "./assets/logo-red.png";
 function App() {
   const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
 
+  const [linkWhatsApp, setLinkWhatsApp] = useState({});
+
   async function getAllSiteTexts() {
     try {
       const response = await api.get("/pages/paulo");
@@ -42,8 +44,20 @@ function App() {
     }
   }
 
+  async function getWhatsappLink() {
+    try {
+      const response = await api.get("/links")
+      console.log(response);
+
+      setLinkWhatsApp(response as any);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
     getAllSiteTexts();
+    getWhatsappLink();
   }, []);
 
   return (
@@ -102,7 +116,11 @@ function App() {
       <NewsOrganism />
       <FooterOrganism navigation={navigation} />
       
-      <Whatsapp className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]">
+      <Whatsapp
+        href={linkWhatsApp && linkWhatsApp?.data?.whatsapp}
+        target="_blank"
+        className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]"
+      >
         <FaWhatsappSquare
           size={64}
           color="#075e54"
@@ -115,7 +133,7 @@ function App() {
 
 export default App;
 
-const Whatsapp = styled.div`
+const Whatsapp = styled.a`
   opacity: 0.75;
 
   &:hover {
