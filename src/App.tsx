@@ -27,6 +27,7 @@ import { FooterOrganism } from "./components/organismos/FooterOrganism";
 import api from "./services/api";
 
 import logo from "./assets/logo-red.png";
+import { BlogPost } from "./pages/BlogPost";
 
 function App() {
   const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
@@ -91,6 +92,8 @@ function App() {
         <Route path="/sobre" element={<AboutUs />} />
         {/* <Route path="/planos" element={<Plans />} /> */}
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blogPost/" element={<BlogPost />} />
+
         <Route path="/fale-conosco" element={<TalkToUs />} />
 
         <Route

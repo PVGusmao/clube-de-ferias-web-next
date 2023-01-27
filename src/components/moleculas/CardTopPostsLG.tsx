@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import { useNavigate, useParams } from "react-router-dom";
 import { TextAtom } from "../atomos/TextAtom";
 
 type Props = {
@@ -8,6 +9,19 @@ type Props = {
 };
 
 export function CardTopPostsLG({ title, subtitle, text }: Props) {
+  const navigate = useNavigate();
+
+  function handleClick({ title, subtitle, text }: Props) {
+    navigate("/blogPost", {
+      // state: { title: title, subtitle: subtitle, text: text },
+      state: {
+        title: "meu",
+        subtitle: "pau",
+        text: "o home foi a lua e voltou",
+      },
+    });
+  }
+
   return (
     <div className="w-[35.688rem] h-[38.063rem] flex flex-col  shadow-md">
       <div className="w-full h-[23rem] bg-blue-500"></div>
@@ -21,6 +35,7 @@ export function CardTopPostsLG({ title, subtitle, text }: Props) {
         <TextAtom children className="text-left mb-7 text-sm" text={text} />
         <div className="flex justify-start">
           <Button
+            onClick={handleClick}
             style={{ backgroundColor: "black", fontSize: "12px" }}
             variant="contained"
             className="w-[6.938rem] h-[1.808rem]"
