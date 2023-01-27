@@ -22,28 +22,26 @@ export default function CardCommentsMolecule({
   ocupation,
   img,
 }: Props) {
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
-
   return (
-    <Card className="w-96 h-96 justify-between my-9">
+    <Card className="w-[370px] h-[420px] justify-between my-9">
       <CardBody className="">
         <div className="my-6">
           <img className="mb-4" src={logo} alt="logo" />
 
           <ReactStars
+            value={5}
             count={5}
-            onChange={ratingChanged}
+            edit={false}
+            // onChange={ratingChanged}
             size={24}
             activeColor="#ffd700"
           />
         </div>
         <TextAtom children className="text-sm text-black" text={content} />
       </CardBody>
-      <CardFooter className="flex items-center justify-between py-3">
+      <CardFooter className="flex items-center justify-between py-3 ">
         <AvatarAtom img={img} />
-        <div className="w-full ml-4 ">
+        <div className="w-full ml-4">
           <TextAtom
             children
             className="text-sm font-bold text-black text-left"

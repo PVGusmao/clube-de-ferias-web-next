@@ -46,7 +46,7 @@ function App() {
 
   async function getWhatsappLink() {
     try {
-      const response = await api.get("/links")
+      const response = await api.get("/links");
       console.log(response);
 
       setLinkWhatsApp(response as any);
@@ -89,7 +89,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<AboutUs />} />
-        <Route path="/planos" element={<Plans />} />
+        {/* <Route path="/planos" element={<Plans />} /> */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/fale-conosco" element={<TalkToUs />} />
 
@@ -115,18 +115,14 @@ function App() {
 
       <NewsOrganism />
       <FooterOrganism navigation={navigation} />
-      
+
       <Whatsapp
         href={linkWhatsApp && linkWhatsApp?.data?.whatsapp}
         target="_blank"
         className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]"
       >
-        <FaWhatsappSquare
-          size={64}
-          color="#075e54"
-        />
+        <FaWhatsappSquare size={64} color="#075e54" />
       </Whatsapp>
-      
     </div>
   );
 }
@@ -139,4 +135,4 @@ const Whatsapp = styled.a`
   &:hover {
     opacity: 1; // <Thing> when hovered
   }
-`
+`;
