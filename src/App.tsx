@@ -119,13 +119,13 @@ function App() {
       <NewsOrganism />
       <FooterOrganism navigation={navigation} />
 
-      <Whatsapp
+      {/* <Whatsapp
         href={linkWhatsApp && linkWhatsApp?.data?.whatsapp}
         target="_blank"
         className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]"
       >
         <FaWhatsappSquare size={64} color="#075e54" />
-      </Whatsapp>
+      </Whatsapp> */}
     </div>
   );
 }
