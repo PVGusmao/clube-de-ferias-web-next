@@ -15,28 +15,6 @@ type Props = {};
 export function HeaderAbout() {
   return (
     <>
-      {/* <NavBarMolecule
-        className={`bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20`}
-        pageId={'home'}
-        textLinkProps={{
-          textClassName: 'sm:block w-26 hover:text-[red] hover:border-b-2 font-semibold hidden text-[#9A9A9A]',
-          className: 'p-2 w-40 cursor-pointer text-white hover:text-black hover:text-black ',
-        }}
-        logoProps={{
-          logo: logo,
-          className: 'w-32',
-        }}
-        navLinks={navLinksAboutUs}
-        socialMediaProps={{
-          socialMedia: socialMedia,
-          color: '#9A9A9A',
-          size: 24,
-        }}
-        burgerMenuProps={{
-          color: "red"
-        }}
-      /> */}
-
       <BackgroundImageAtom
         className="flex pl-10 flex-col sm:flex-row justify-center sm:justify-start bg-auto sm:h-[500px] h-[500px] rounded-b-[80px] sm:items-center"
         image={headerImage}

@@ -12,14 +12,7 @@ export function CardTopPostsLG({ title, subtitle, text }: Props) {
   const navigate = useNavigate();
 
   function handleClick({ title, subtitle, text }: Props) {
-    navigate("/blogPost", {
-      // state: { title: title, subtitle: subtitle, text: text },
-      state: {
-        title: "meu",
-        subtitle: "pau",
-        text: "o home foi a lua e voltou",
-      },
-    });
+    navigate("/blogPost");
   }
 
   return (
@@ -28,7 +21,7 @@ export function CardTopPostsLG({ title, subtitle, text }: Props) {
       <div className="p-7">
         <TextAtom children className="text-left text-lg	 mb-1" text={title} />
         <TextAtom
-          children
+          children-
           className="text-left mb-5 font-medium text-xl"
           text={subtitle}
         />

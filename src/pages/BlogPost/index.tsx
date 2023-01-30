@@ -19,22 +19,9 @@ export function BlogPost() {
   return (
     <div>
       <HeaderAbout />
-      <div className="flex flex-row justify-center bg-blue-200">
-        <div className="w-[671px] h-[1000px] bg-blue-300">
-          <img
-            className="w-[675px] h-[533px] "
-            src="https://avatars.githubusercontent.com/u/81275678?v=4"
-            alt=""
-          />
-          <div className="bg-blue-700 ">
-            <CardTopPostsLG
-              title={props.state.title}
-              subtitle={props.state.subtitle}
-              text={props.state.text}
-            />
-          </div>
-        </div>
-        <div className="h-[800px] w-[270px] flex flex-col justify-center ml-[15px] bg-blue-400">
+      <div className="flex flex-row justify-center py-12">
+        <div className="w-[671px] h-full bg-blue-300"></div>
+        <div className="h-full w-[270px] flex flex-col justify-center ml-[15px]">
           <RecentsPostsOrganism />
           <CategoriesPostsOrganism />
           <SearchPostsOrganism />

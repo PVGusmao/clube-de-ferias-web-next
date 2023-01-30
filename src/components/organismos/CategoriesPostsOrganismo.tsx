@@ -1,21 +1,32 @@
 import { TextAtom } from "../atomos/TextAtom";
+import { CardCategoriesPostsMolecule } from "../moleculas/CardCategoriesPostsMolecule";
 
 export function CategoriesPostsOrganism() {
+  const data = [
+    {
+      category: "Viagens",
+    },
+    {
+      category: "Dicas",
+    },
+    {
+      category: "Destino",
+    },
+    {
+      category: "O App",
+    },
+  ];
+
   return (
-    <div className="bg-blue-700 h-[305px] w-[270px] ">
-      <TextAtom children text="Categories" />
-      <div className="flex h-[40px] ml-[15px]">
-        <p className="mr-[15px]">seta</p>
-        <p>Dicas</p>
-      </div>
-      <div className="flex h-[40px] ml-[15px]">
-        <p className="mr-[15px]">seta</p>
-        <p>Destino</p>
-      </div>
-      <div className="flex h-[40px] ml-[15px]">
-        <p className="mr-[15px]">seta</p>
-        <p>O App</p>
-      </div>
+    <div className="h-[371px] w-[270px] shadow-lg rounded-lg pr-3   ">
+      <TextAtom
+        children
+        className="text-[24px] my-10 font-bold text-left ml-3 "
+        text="Categories"
+      />
+      {data.map((element, index) => (
+        <CardCategoriesPostsMolecule category={element.category} />
+      ))}
     </div>
   );
 }
