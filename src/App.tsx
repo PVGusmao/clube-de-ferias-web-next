@@ -118,24 +118,8 @@ function App() {
 
       <NewsOrganism />
       <FooterOrganism navigation={navigation} />
-
-      {/* <Whatsapp
-        href={linkWhatsApp && linkWhatsApp?.data?.whatsapp}
-        target="_blank"
-        className="fixed rounded-xl bottom-20 hover:cursor-pointer right-80 bg-[white]"
-      >
-        <FaWhatsappSquare size={64} color="#075e54" />
-      </Whatsapp> */}
     </div>
   );
 }
 
 export default App;
-
-const Whatsapp = styled.a`
-  opacity: 0.75;
-
-  &:hover {
-    opacity: 1; // <Thing> when hovered
-  }
-`;
