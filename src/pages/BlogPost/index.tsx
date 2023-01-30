@@ -7,27 +7,39 @@ import { SocialNetworksOrganism } from "../../components/organismos/SocialNetwor
 
 import { useLocation } from "react-router-dom";
 import { CardTopPostsLG } from "../../components/moleculas/CardTopPostsLG";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
+import Sidebar from "../../components/atomos/SideBarAtom";
 
 export function BlogPost() {
-  const [post, setPost] = useState([]);
+  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+
   const location = useLocation();
 
-  let props = location;
-  // setPost(props);
-
   return (
-    <div>
-      <HeaderAbout />
-      <div className="flex flex-row justify-center py-12">
-        <div className="w-[671px] h-full bg-blue-300"></div>
-        <div className="h-full w-[270px] flex flex-col justify-center ml-[15px]">
-          <RecentsPostsOrganism />
-          <CategoriesPostsOrganism />
-          <SearchPostsOrganism />
-          <SocialNetworksOrganism />
+    <>
+      {!showMenu && (
+        <div>
+          <HeaderAbout />
+          <div className="flex flex-row justify-center py-12">
+            <div className="w-[671px] h-full bg-blue-300"></div>
+            <div className="h-full w-[270px] flex flex-col justify-center ml-[15px]">
+              <RecentsPostsOrganism />
+              <CategoriesPostsOrganism />
+              <SearchPostsOrganism />
+              <SocialNetworksOrganism />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+
+      {showMenu && (
+        <Sidebar
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+          className="h-96"
+        />
+      )}
+    </>
   );
 }
