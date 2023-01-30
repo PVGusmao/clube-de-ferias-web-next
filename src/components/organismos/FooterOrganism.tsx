@@ -18,7 +18,7 @@ export function FooterOrganism({ navigation }: Props) {
   return (
     <>
       <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
-        <div className="justify-items-start grid content-center sm:w-96 h-full mb-12">
+        <div className="justify-items-start grid  sm:w-96 h-full mb-12">
           <div className="justify-start">
             <a href=".">
               <img className="w-36" src={logo} alt="logo" />
@@ -31,8 +31,8 @@ export function FooterOrganism({ navigation }: Props) {
             Todos os direitos reservados`}
           />
         </div>
-        <div className="flex sm:flex-row flex-col justify-between sm:w-[42rem] content-center h-full ">
-          <div className="grid content-center justify-items-start sm:mb-0 mb-12	">
+        <div className="flex sm:flex-row flex-col justify-between sm:w-[42rem] content-center h-full  ">
+          <div className="gridsm:mb-0 mb-12	">
             <TextAtom
               children
               className="font-bold text-white text-2xl mb-3.5"
@@ -56,11 +56,11 @@ export function FooterOrganism({ navigation }: Props) {
               </div>
             ))}
           </div>
-          <div className="grid content-center justify-items-start sm:w-80	">
+          <div className="flex flex-col sm:w-80	">
             <TextAtom
               children
-              className="font-bold text-white text-2xl mb-8	"
-              text="CONTATO"
+              className="font-bold text-white text-left text-[16px] text-2xl mb-8	"
+              text="SIGA NOSSAS REDES"
             />
             <div className="flex flex-row">
               {socialMedia.map((element, index: number) => (
