@@ -7,8 +7,6 @@ import logo from "../../assets/logo.png";
 import { FaBloggerB } from "react-icons/fa";
 import { IoIosAirplane, IoIosCalculator } from "react-icons/io";
 import { MdPeople, MdOutlinePhoneCallback } from "react-icons/md";
-import { CloseButtonMolecule } from "../moleculas/CloseButtonMolecule";
-import { Button } from "@material-tailwind/react";
 
 import { navLinks, socialMedia } from "../../constants";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
@@ -25,18 +23,6 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
     <div className={`${className}`}>
       <div className="flex flex-col h-screen p-3 bg-white shadow w-full bg-[#F20F0F]">
         <div className="space-y-3 flex flex-col">
-          {/* <div className="flex items-center justify-between px-4">
-                        <img
-                            className="w-36"
-                            src={logo}
-                            alt="logo"
-                        />
-                        <CloseButtonMolecule
-                            color="white"
-                            onClick={() => {setShowMenu(!showMenu)}}
-                            children
-                        />
-                    </div> */}
           <div className="flex-1">
             <ul className="pt-2 pb-4 space-y-1 text-sm">
               <li className="rounded-sm">
@@ -56,21 +42,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                   <span className="text-lg font-bold">Quem somos</span>
                 </a>
               </li>
-              {/* <li className="rounded-sm">
-                                <a
-                                    href="#planos"
-                                    className="flex items-center text-white p-2 space-x-3 rounded-md"
-                                    onClick={() => {setShowMenu(!showMenu)}}
-                                >
-                                    <IconAtom
-                                        icon={IoIosAirplane}
-                                        color='white'
-                                        className=''
-                                        size={32}
-                                    />
-                                    <span className="text-lg font-bold">Planos</span>
-                                </a>
-                            </li> */}
+
               <li className="rounded-sm">
                 <a
                   href="#simulador"
@@ -90,7 +62,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
               </li>
               <li className="rounded-sm">
                 <a
-                  href="#blog"
+                  href="/blog"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
                   onClick={() => {
                     setShowMenu(!showMenu);

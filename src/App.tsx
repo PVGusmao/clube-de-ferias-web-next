@@ -28,9 +28,11 @@ import api from "./services/api";
 
 import logo from "./assets/logo-red.png";
 import { BlogPost } from "./pages/BlogPost";
+import Sidebar from "./components/atomos/SideBarAtom";
 
 function App() {
   const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
+  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 
@@ -39,7 +41,6 @@ function App() {
       const response = await api.get("/pages/paulo");
 
       setAllSiteTexts(response as any);
-      // console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -62,63 +63,79 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <NavBarMolecule
-        className=" bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
-        pageId="home"
-        textLinkProps={{
-          textClassName:
-            "sm:block hover:text-[red] font-semibold hidden text-[darkgray]",
-          className:
-            "w-32 cursor-pointer text-white hover:border-2 hover:border-b-[red]",
-        }}
-        logoProps={{
-          logo: logo,
-          className: "w-32",
-        }}
-        navLinks={navLinks}
-        socialMediaProps={{
-          socialMedia: socialMedia,
-          color: "red",
-          size: 24,
-        }}
-        burgerMenuProps={{
-          color: "black",
-        }}
-      />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<AboutUs />} />
-        {/* <Route path="/planos" element={<Plans />} /> */}
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blogPost/" element={<BlogPost />} />
-
-        <Route path="/fale-conosco" element={<TalkToUs />} />
-
-        <Route
-          path="/tik-tok"
-          element={<RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />}
+    <>
+      <div>
+        <NavBarMolecule
+          className=" bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
+          pageId="home"
+          textLinkProps={{
+            textClassName:
+              "sm:block hover:text-[red] font-semibold hidden text-[darkgray]",
+            className:
+              "w-32 cursor-pointer text-white hover:border-2 hover:border-b-[red]",
+          }}
+          logoProps={{
+            logo: logo,
+            className: "w-32",
+          }}
+          navLinks={navLinks}
+          socialMediaProps={{
+            socialMedia: socialMedia,
+            color: "red",
+            size: 24,
+          }}
+          burgerMenuProps={{
+            color: "black",
+          }}
         />
-        <Route
-          path="/facebook"
-          element={
-            <RedirectPage
-              to={"http://www.facebook.com/clubedeferiasstellabarros"}
-            />
-          }
-        />
-        <Route
-          path="/instagram"
-          element={
-            <RedirectPage to={"http://www.instagram.com/oclubedeferias"} />
-          }
-        />
-      </Routes>
+        {!showMenu && (
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/sobre" element={<AboutUs />} />
+              {/* <Route path="/planos" element={<Plans />} /> */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blogPost/:slug" element={<BlogPost />} />
 
-      <NewsOrganism />
-      <FooterOrganism navigation={navigation} />
-    </div>
+              <Route path="/fale-conosco" element={<TalkToUs />} />
+
+              <Route
+                path="/tik-tok"
+                element={
+                  <RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />
+                }
+              />
+              <Route
+                path="/facebook"
+                element={
+                  <RedirectPage
+                    to={"http://www.facebook.com/clubedeferiasstellabarros"}
+                  />
+                }
+              />
+              <Route
+                path="/instagram"
+                element={
+                  <RedirectPage
+                    to={"http://www.instagram.com/oclubedeferias"}
+                  />
+                }
+              />
+            </Routes>
+
+            <NewsOrganism />
+            <FooterOrganism navigation={navigation} />
+          </>
+        )}
+      </div>
+      {showMenu && (
+        <Sidebar
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+          className="h-96"
+        />
+      )}
+    </>
   );
 }
 

@@ -1,45 +1,43 @@
-import { TextAtom } from "../../components/atomos/TextAtom";
+import { useEffect, useState } from "react";
 import { CategoriesPostsOrganism } from "../../components/organismos/CategoriesPostsOrganismo";
-import { HeaderAbout } from "../../components/organismos/HeaderAbout";
 import { RecentsPostsOrganism } from "../../components/organismos/RecentsPostsOrganism";
 import { SearchPostsOrganism } from "../../components/organismos/SearchPostsOrganism";
 import { SocialNetworksOrganism } from "../../components/organismos/SocialNetworksOrganism";
 
-import { useLocation } from "react-router-dom";
-import { CardTopPostsLG } from "../../components/moleculas/CardTopPostsLG";
-import { useContext, useState } from "react";
-import { IMyContext, MyContext } from "../../context/MyContext";
-import Sidebar from "../../components/atomos/SideBarAtom";
+import ReactHtmlParser from "react-html-parser";
+
+import api from "../../services/api";
+import { useParams } from "react-router-dom";
+import { HeadeBlogOrganism } from "../../components/organismos/HeadeBlogOrganism";
 
 export function BlogPost() {
-  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const [data, setData] = useState("");
+  const params = useParams();
 
-  const location = useLocation();
+  async function getBlogPost() {
+    await api.get(`/posts/${params.slug}`).then((e) => setData(e.data));
+  }
+
+  useEffect(() => {
+    getBlogPost();
+  }, []);
 
   return (
     <>
-      {!showMenu && (
-        <div>
-          <HeaderAbout />
-          <div className="flex flex-row justify-center py-12">
-            <div className="w-[671px] h-full bg-blue-300"></div>
-            <div className="h-full w-[270px] flex flex-col justify-center ml-[15px]">
-              <RecentsPostsOrganism />
-              <CategoriesPostsOrganism />
-              <SearchPostsOrganism />
-              <SocialNetworksOrganism />
-            </div>
+      <div>
+        <HeadeBlogOrganism title={data.title} subtitle={data.subtitle} />
+        <div className="flex flex-row justify-center py-12">
+          <div className="w-[671px] h-full px-5 text-left">
+            {ReactHtmlParser(data.post_body)}
+          </div>
+          <div className="hidden  h-full w-[270px] flex flex-col justify-center ml-[50px]">
+            <RecentsPostsOrganism />
+            <CategoriesPostsOrganism />
+            <SearchPostsOrganism />
+            <SocialNetworksOrganism />
           </div>
         </div>
-      )}
-
-      {showMenu && (
-        <Sidebar
-          showMenu={showMenu}
-          setShowMenu={setShowMenu}
-          className="h-96"
-        />
-      )}
+      </div>
     </>
   );
 }

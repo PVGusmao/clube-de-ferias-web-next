@@ -3,23 +3,15 @@ import CardClubPosts from "./CardClubPosts";
 
 import { CardTopPostsLG } from "./CardTopPostsLG";
 import { CardTopPostsSM } from "./CardTopPostsSM";
-import { FooterOrganism } from "../organismos/FooterOrganism";
-import { NewsOrganism } from "../organismos/NewsOrganism";
 import { TextAtom } from "../atomos/TextAtom";
 import api from "../../services/api";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ClubPostsMolecule() {
-  const [destiny, setDestiny] = useState([]);
-  const [travel_tips, setTravel_tips] = useState([]);
+  const [post, setPost] = useState([]);
 
   async function getData() {
-    const response = await api.get("/blog/all");
-    setDestiny(response.data.categorized.Destinos);
-    setTravel_tips(response.data.categorized["Dicas de viagem"]);
-
-    // console.log(response.data.categorized.travel_tips);
-    console.log(response.data.categorized["Dicas de viagem"]);
+    await api.get("/posts").then((res) => setPost(res.data));
   }
 
   useEffect(() => {
@@ -47,54 +39,17 @@ export function ClubPostsMolecule() {
       <div>
         <div className="mb-[100px]">
           <TextAtom
-            className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
-            text="Dicas de Viagem"
-          />
-          <div className="flex flex-wrap justify-between w-[60.625rem] ">
-            {travel_tips.map((element, index) => (
-              <CardClubPosts
-                img={element.image}
-                categoy={element.category}
-                text={element.text}
-                title={element.title}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="mb-[100px]">
-          <TextAtom
-            className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
-            text="Destinos"
-          />
-          <div className="flex flex-wrap justify-between w-[60.625rem] ">
-            {destiny.map((element, index) => (
-              <CardClubPosts
-                img={element.image}
-                categoy={element.category}
-                text={element.text}
-                title={element.title}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="mb-[100px]">
-          <TextAtom
+            children
             className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
             text="Postagens do Clube"
           />
           <div className="flex flex-wrap justify-between w-[60.625rem] ">
-            {clubPost.map((element, index) => (
+            {post.map((element, index) => (
               <CardClubPosts
-                subTitle={element.subTitle}
-                text={element.text}
+                img={element.image_large}
                 title={element.title}
-              />
-            ))}
-            {clubPost.map((element, index) => (
-              <CardClubPosts
-                subTitle={element.subTitle}
-                text={element.text}
-                title={element.title}
+                subtitle={element.subtitle}
+                slug={element.slug}
               />
             ))}
           </div>
