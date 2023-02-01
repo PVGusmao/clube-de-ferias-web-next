@@ -55,7 +55,7 @@ export function ClubPostsMolecule() {
             ))}
           </div>
           <div className="sm:hidden w-full">
-            <Slide arrows={false} indicators transitionDuration={250}>
+            <Slide arrows={false} indicators>
               {post.map((element, index) => (
                 <div className="flex items-center h-full justify-center bg-blue-300 ">
                   <CardClubPosts
