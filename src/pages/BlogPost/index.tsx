@@ -30,7 +30,7 @@ export function BlogPost() {
           <div className="w-[671px] h-full px-5 text-left">
             {ReactHtmlParser(data.post_body)}
           </div>
-          <div className="hidden  h-full w-[270px] flex flex-col justify-center ml-[50px]">
+          <div className="sm:flex hidden h-full w-[270px] flex flex-col justify-center ml-[50px]">
             <RecentsPostsOrganism />
             <CategoriesPostsOrganism />
             <SearchPostsOrganism />

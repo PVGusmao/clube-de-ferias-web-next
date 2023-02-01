@@ -44,7 +44,7 @@ export function NavBarMolecule({
 
   return (
     <div id={pageId} className={`${className}`}>
-      <a href=".">
+      <a href="/">
         <img className={logoProps.className} src={logoProps.logo} alt="logo" />
       </a>
 

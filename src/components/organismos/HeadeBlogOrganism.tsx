@@ -27,6 +27,7 @@ export function HeadeBlogOrganism({ title, subtitle }: Props) {
             text={subtitle}
           />
         </div>
+        <div className="bg-blue w h-[500px]"></div>
       </BackgroundImageAtom>
     </>
   );

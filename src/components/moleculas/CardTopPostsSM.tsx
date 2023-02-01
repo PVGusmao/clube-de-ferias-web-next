@@ -9,7 +9,7 @@ type Props = {
 
 export function CardTopPostsSM({ title, subtitle, text }: Props) {
   return (
-    <div className="w-[23.125rem] h-[18.25rem] flex flex-col justify-center p-7	mb-6 shadow-md">
+    <div className="w-[318px] h-[271px] sm:w-[23.125rem] sm:h-[18.25rem] flex flex-col justify-center p-7	mb-6 shadow-md">
       <TextAtom children className="text-left mb-1" text={title} />
       <TextAtom
         children

@@ -32,10 +32,10 @@ export function FooterOrganism({ navigation }: Props) {
           />
         </div>
         <div className="flex sm:flex-row flex-col justify-between sm:w-[42rem] content-center h-full  ">
-          <div className="gridsm:mb-0 mb-12	">
+          <div className="grid sm:mb-0 mb-12	">
             <TextAtom
               children
-              className="font-bold text-white text-2xl mb-3.5"
+              className="font-bold text-left text-white text-2xl mb-3.5"
               text="NAVIGATION"
             />
             {navigation.map((element, index: number) => (

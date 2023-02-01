@@ -6,6 +6,7 @@ import { CardTopPostsSM } from "./CardTopPostsSM";
 import { TextAtom } from "../atomos/TextAtom";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
+import { Slide } from "react-slideshow-image";
 
 export function ClubPostsMolecule() {
   const [post, setPost] = useState([]);
@@ -20,8 +21,8 @@ export function ClubPostsMolecule() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex justify-center mb-[100px]">
-        <div className="flex flex-col mr-10">
+      <div className="sm:flex flex sm:flex-row flex-col items-center justify-center mb-[100px]">
+        <div className="sm:flex flex-col sm:mr-10">
           {clubTopPost.map((element, index) => (
             <CardTopPostsSM
               title={element.title}
@@ -43,7 +44,7 @@ export function ClubPostsMolecule() {
             className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
             text="Postagens do Clube"
           />
-          <div className="flex flex-wrap justify-between w-[60.625rem] ">
+          <div className="sm:flex justify-between hidden px-2 sm:w-[60.625rem] ">
             {post.map((element, index) => (
               <CardClubPosts
                 img={element.image_large}
@@ -52,6 +53,20 @@ export function ClubPostsMolecule() {
                 slug={element.slug}
               />
             ))}
+          </div>
+          <div className="sm:hidden w-full bg-blue-300">
+            <Slide arrows={false}>
+              {post.map((element, index) => (
+                <div className="each-slide-effect" key={index}>
+                  <CardClubPosts
+                    img={element.image_large}
+                    title={element.title}
+                    subtitle={element.subtitle}
+                    slug={element.slug}
+                  />
+                </div>
+              ))}
+            </Slide>
           </div>
         </div>
       </div>

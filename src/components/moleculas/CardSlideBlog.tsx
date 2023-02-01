@@ -8,7 +8,7 @@ type Props = {
 
 export function CardSlideBlog({ title, subtitle, text }: Props) {
   return (
-    <div>
+    <div className="my-[100px]">
       <TextAtom className="text-white text-left" text={subtitle} />
       <TextAtom
         className="font-bold text-3xl	text-white text-left"
