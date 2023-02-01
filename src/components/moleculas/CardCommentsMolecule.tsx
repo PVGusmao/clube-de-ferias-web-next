@@ -32,7 +32,6 @@ export default function CardCommentsMolecule({
             value={5}
             count={5}
             edit={false}
-            // onChange={ratingChanged}
             size={24}
             activeColor="#ffd700"
           />

@@ -54,10 +54,10 @@ export function ClubPostsMolecule() {
               />
             ))}
           </div>
-          <div className="sm:hidden w-full bg-blue-300">
-            <Slide arrows={false}>
+          <div className="sm:hidden w-full">
+            <Slide arrows={false} indicators transitionDuration={250}>
               {post.map((element, index) => (
-                <div className="each-slide-effect" key={index}>
+                <div className="flex items-center h-full justify-center bg-blue-300 ">
                   <CardClubPosts
                     img={element.image_large}
                     title={element.title}
