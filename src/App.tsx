@@ -128,13 +128,7 @@ function App() {
           </>
         )}
       </div>
-      {showMenu && (
-        <Sidebar
-          showMenu={showMenu}
-          setShowMenu={setShowMenu}
-          className="h-96"
-        />
-      )}
+      {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />}
     </>
   );
 }

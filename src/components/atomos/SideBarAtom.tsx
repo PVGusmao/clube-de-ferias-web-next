@@ -13,14 +13,13 @@ import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { TextAtom } from "./TextAtom";
 
 type Props = {
-  className: string;
   setShowMenu: Dispatch<SetStateAction<boolean>>;
   showMenu: boolean;
 };
 
-export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
+export default function Sidebar({ setShowMenu, showMenu }: Props) {
   return (
-    <div className={`${className}`}>
+    <div className="h-96">
       <div className="flex flex-col h-screen p-3 bg-white shadow w-full bg-[#F20F0F]">
         <div className="space-y-3 flex flex-col">
           <div className="flex-1">
@@ -60,7 +59,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                   <span className="text-lg font-bold">Simule sua viagem</span>
                 </a>
               </li>
-              {/* <li className="rounded-sm">
+              <li className="rounded-sm">
                 <a
                   href="/blog"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
@@ -76,7 +75,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                   />
                   <span className="text-lg font-bold">Blog</span>
                 </a>
-              </li> */}
+              </li>
               <li className="rounded-sm">
                 <a
                   href="/fale-conosco"
