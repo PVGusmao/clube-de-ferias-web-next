@@ -11,9 +11,7 @@ export default function Home() {
     <>
       <WelcomeOrganism />
 
-      <BlogOrganism
-        className={"flex items-start h-full sm:mt-36 mb-4 mt-56 flex-col"}
-      />
+      <BlogOrganism />
 
       {bannerContent[0].enable && <BannerOrganism />}
 

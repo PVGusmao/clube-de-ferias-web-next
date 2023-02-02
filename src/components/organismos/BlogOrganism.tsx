@@ -6,25 +6,18 @@ import { SlideShowBlogAtom } from "../atomos/SlideShowBlogAtom";
 import { TextAtom } from "../atomos/TextAtom";
 import { BlogCardMolecule } from "../moleculas/BlogCardMolecule";
 
-type Props = {
-  className: string;
-}
-export function BlogOrganism({className}: Props) {
+export function BlogOrganism() {
   return (
-    <div id="blog" className={className}>
+    <div id="blog" className="flex items-start h-full sm:mt-24 mb-4 flex-col">
       <TextAtom
         className="text-4xl font-semibold uppercase pl-6"
         children
         text="Blog"
       />
 
-      <BlogCardMolecule
-        className=""
-        image={cardBlog.image}
-      />
+      <BlogCardMolecule className="" image={cardBlog.image} />
 
-      <SlideShowBlogAtom className="sm:hidden w-full"/>
-
+      <SlideShowBlogAtom className="sm:hidden w-full" />
     </div>
-  )
+  );
 }

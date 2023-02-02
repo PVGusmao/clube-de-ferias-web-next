@@ -60,7 +60,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                   <span className="text-lg font-bold">Simule sua viagem</span>
                 </a>
               </li>
-              <li className="rounded-sm">
+              {/* <li className="rounded-sm">
                 <a
                   href="/blog"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
@@ -76,7 +76,7 @@ export default function Sidebar({ className, setShowMenu, showMenu }: Props) {
                   />
                   <span className="text-lg font-bold">Blog</span>
                 </a>
-              </li>
+              </li> */}
               <li className="rounded-sm">
                 <a
                   href="/fale-conosco"

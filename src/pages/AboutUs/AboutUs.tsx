@@ -20,11 +20,9 @@ export function AboutUs() {
 
         <BigCommentAboutUsOrganism />
 
-        <StatisticsAboutUsOrganism className="flex sm:flex-row flex-col justify-around bg-gray w-full h-full sm:h-48 sm:mt-24" />
+        <StatisticsAboutUsOrganism />
 
-        <BlogOrganism
-          className={"flex items-start h-full sm:mt-24 mb-4 flex-col"}
-        />
+        <BlogOrganism />
       </div>
     </>
   );
