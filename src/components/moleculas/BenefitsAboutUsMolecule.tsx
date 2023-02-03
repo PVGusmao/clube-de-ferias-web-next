@@ -10,7 +10,7 @@ type Props = {
 export function BenefitsAboutUsMolecule({className, element}: Props) {
   return (
     <div className={className}>
-      <IconAtom size={64} icon={element.icon} />
+      <IconAtom size={64} icon={element.icon} color='gray'/>
 
       <TextAtom className="mt-6 font-bold text-xl mb-2 text-black" text={element.title}> </TextAtom>
 

@@ -47,7 +47,7 @@ export function Plans2Organism({}) {
 
                 <div className="flex items-center justify-evenly w-full py-1">
                   <TextAtom
-                    className="text-2xl font-bold"
+                    className="text-2xl font-bold text-black"
                     text={`${element.discount}%`}
                     style={{
                       color: `${element.colorPlan}`,

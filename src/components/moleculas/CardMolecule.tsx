@@ -24,7 +24,7 @@ export function CardMolecule({ icon, text, className, color = 'black' }: Props) 
       />
       <TextAtom
         children
-        className="dark:text-white text-lg text-center justify-center mx-3.5"
+        className="text-black text-lg text-center justify-center mx-3.5"
         text={text}
       />
     </div>

@@ -14,18 +14,17 @@ export function BigCommentAboutUsOrganism() {
           source={imageTeste}
           alt='foto ilustrativa'
         />
+
+        <TextAtom className="ml-5 text-start text-2xl font-bold" text={bigComment[0].author}> </TextAtom>
+        <TextAtom className="ml-5 text-start text-sm" text={bigComment[0].authorSubtitle}> </TextAtom>
       </div>
 
-      <div className="sm:w-[30rem] py-6 px-10 sm:p-0 flex flex-col">
-        <IconAtom icon={bigComment[0].icon} size={42} />
+      <div className="sm:w-[300px] py-6 px-10 h-[380px] sm:mt-20 sm:p-0 flex flex-col">
+        <IconAtom icon={bigComment[0].icon} size={42} color='#E00718'/>
 
         <TextAtom className="text-start text-sm my-1 sm:my-4" text={bigComment[0].text1}> </TextAtom>
         
         <TextAtom className="text-start text-sm my-1 sm:my-4" text={bigComment[0].text2}> </TextAtom>
-        
-        <TextAtom className="text-start text-2xl font-bold" text={bigComment[0].author}> </TextAtom>
-        
-        <TextAtom className="text-start text-sm" text={bigComment[0].authorSubtitle}> </TextAtom>
       </div>
     </div>
   )

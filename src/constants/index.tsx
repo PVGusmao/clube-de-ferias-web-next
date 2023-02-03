@@ -24,8 +24,6 @@ item();
 
 const data = JSON.parse(localStorage.getItem("home"));
 
-console.log(data);
-
 const { nav_links, home: homeData, text_button, plans2, clients,
   marks: marksData, card_blog, minor_card_blog, banner } = data?.data?.paulo;
   
