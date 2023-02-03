@@ -10,10 +10,10 @@ export function HowItWorksAboutUsOrganism() {
   return (
     <div className="bg-[#E00718] w-full h-[900px] relative">
 
-      <div className="h-[33px] w-[752px] m-auto border-b-2 border-b-white border-r-2 border-r-white rounded-br-2xl" />
+      <div className="hidden sm:flex h-[33px] w-[752px] m-auto border-b-2 border-b-white border-r-2 border-r-white rounded-br-2xl" />
       
       <IconAtom
-        className="absolute rotate-180 left-[210px] top-[10px]"
+        className="hidden sm:block absolute rotate-180 left-[210px] top-[10px]"
         icon={IoAirplaneSharp}
         size={42}
         color='white'
@@ -22,10 +22,10 @@ export function HowItWorksAboutUsOrganism() {
       <ImageAtom
         source={image}
         alt='fotos telefone ilustrativa'
-        className="absolute right-[77px] top-[136px]"
+        className="hidden sm:block absolute right-[77px] top-[136px]"
       />
 
-      <div className="flex items-start flex-col mx-[175px] mt-[50px]">
+      <div className="flex items-start flex-col sm:mx-[175px] mx-5 mt-[50px]">
         <TextAtom
           className="text-[50px] text-white font-bold leading-[120%]"
           text="Como functiona?"
@@ -62,25 +62,25 @@ export function HowItWorksAboutUsOrganism() {
         > </TextAtom>
 
         <TextAtom
-          className="text-[18px] text-white font-medium leading-[180%]"
+          className="text-[18px] text-white text-start font-medium leading-[180%]"
           text="assinatura vira crédito para ir onde e quando quiser."
         > </TextAtom>
 
         <TablePlansAboutUsMolecule />
 
-        <div className="mt-[11px] flex justify-between w-[479px]">
+        <div className="mt-[11px] flex items-start w-full sm:w-[479px]">
         <TextAtom
-          className="text-[18px] text-white font-medium leading-[159%]"
+          className="text-[12px] sm:text-[18px] text-white font-medium leading-[159%]"
           text="+ Praticidade"
         > </TextAtom>
 
         <TextAtom
-          className="text-[18px] text-white font-medium leading-[159%]"
+          className="text-[12px] sm:text-[18px] ml-[20px] sm:ml-0 text-white font-medium leading-[159%]"
           text="+ Planejamento"
         > </TextAtom>
 
         <TextAtom
-          className="text-[18px] text-white font-medium leading-[159%]"
+          className="text-[12px] sm:text-[18px] ml-[20px] sm:ml-0 text-white font-medium leading-[159%]"
           text="+ Descontos Exclusivos"
         > </TextAtom>
         </div>

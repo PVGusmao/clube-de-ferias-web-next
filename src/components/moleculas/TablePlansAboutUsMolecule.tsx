@@ -4,7 +4,7 @@ import { TextAtom } from "../atomos/TextAtom";
 
 export function TablePlansAboutUsMolecule() {
   return (
-    <div className="bg-white w-[479px] h-[217px] rounded-2xl mt-[26px]">
+    <div className="bg-white w-full sm:w-[479px] h-[217px] rounded-2xl mt-[26px]">
       <div className="flex justify-between items-center mt-[11px]">
         <TextAtom
           className="ml-[48px] font-bold text-[16px] text-black leading-[18px]"
@@ -43,7 +43,7 @@ export function TablePlansAboutUsMolecule() {
         </div>
 
         <TextAtom
-          className="font-bold text-[16px] text-[#888989] leading-[18px] w-[100px] text-start mr-[7px]"
+          className="font-bold text-[16px] text-[#888989] leading-[18px] sm:w-[100px] text-start mr-[7px]"
           text="R$ 199"
         > </TextAtom>
 
@@ -69,7 +69,7 @@ export function TablePlansAboutUsMolecule() {
         </div>
 
         <TextAtom
-          className="font-bold text-[16px] text-[#F6AB39] leading-[18px] w-[100px] text-start"
+          className="font-bold text-[16px] text-[#F6AB39] leading-[18px] sm:w-[100px] text-start"
           text="R$ 499"
         > </TextAtom>
 
@@ -95,7 +95,7 @@ export function TablePlansAboutUsMolecule() {
         </div>
 
         <TextAtom
-          className="font-bold text-[16px] text-[#1D1D1B] leading-[18px] w-[100px] mr-[32px] text-start"
+          className="font-bold text-[16px] text-[#1D1D1B] leading-[18px] sm:w-[100px] mr-[32px] text-start"
           text="R$ 999"
         > </TextAtom>
 
@@ -121,7 +121,7 @@ export function TablePlansAboutUsMolecule() {
         </div>
 
         <TextAtom
-          className="font-bold text-[16px] text-[#0C9C39] w-[120px] mr-[42px] leading-[18px] text-start"
+          className="font-bold text-[16px] text-[#0C9C39] sm:w-[120px] sm:mr-[42px] leading-[18px] text-start"
           text="R$ 999"
         > </TextAtom>
 
