@@ -4,15 +4,17 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { MdCardTravel } from "react-icons/md"
 import { TfiMedallAlt } from "react-icons/tfi";
 import { HiOutlineCheckBadge } from "react-icons/hi2"
-import { AiFillSafetyCertificate, AiOutlinePlus } from "react-icons/ai";
-import { BsFillPersonFill, BsGraphUp } from "react-icons/bs";
+import { AiFillSafetyCertificate, AiOutlinePlus, AiOutlineSafetyCertificate } from "react-icons/ai";
+import { BsFillPersonFill, BsGraphUp, BsMap } from "react-icons/bs";
 import { IoIosArrowForward, IoIosPeople } from "react-icons/io";
 
 import api from "../services/api";
+import { IoMedalOutline } from "react-icons/io5";
 
 async function item() {
 
   const response = await api.get('/pages');
+  console.log(response);
   localStorage.setItem("about", JSON.stringify(response));
 }
 
@@ -91,19 +93,19 @@ export interface Benefits {
 export const benefits = [
   {
     id: 1,
-    icon: HiOutlineCheckBadge,
+    icon: BsMap,
     title: ben[0].title,
     bodyText: ben[0].bodyText
   },
   {
     id: 2,
-    icon: BsGraphUp,
+    icon: AiOutlineSafetyCertificate,
     title: ben[1].title,
     bodyText: ben[1].bodyText
   },
   {
     id: 3,
-    icon: AiFillSafetyCertificate,
+    icon: IoMedalOutline,
     title: ben[2].title,
     bodyText: ben[2].bodyText
   }

@@ -5,6 +5,7 @@ import { BenefitsAboutUsOrganism } from "../../components/organismos/BenefitsAbo
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommentAboutUsOrganism";
 import { StatisticsAboutUsOrganism } from "../../components/organismos/StatisticsAboutUsOrganism";
+import { HowItWorksAboutUsOrganism } from "../../components/organismos/HowItWorksAboutUsOrganism";
 
 export function AboutUs() {
   return (
@@ -14,13 +15,15 @@ export function AboutUs() {
 
         <NewWayTravelAboutUsOrganism />
 
-        <PlanningAboutUsOrganism />
+        {/* <PlanningAboutUsOrganism /> */}
 
         <BenefitsAboutUsOrganism />
 
+        <HowItWorksAboutUsOrganism />
+
         <BigCommentAboutUsOrganism />
 
-        <StatisticsAboutUsOrganism />
+        {/* <StatisticsAboutUsOrganism /> */}
 
         <BlogOrganism />
       </div>
