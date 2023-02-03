@@ -12,9 +12,9 @@ export function BenefitsAboutUsMolecule({className, element}: Props) {
     <div className={className}>
       <IconAtom size={64} icon={element.icon} color='gray'/>
 
-      <TextAtom className="mt-6 font-bold text-xl mb-2 text-black" text={element.title}> </TextAtom>
+      <TextAtom className="mt-6 font-bold text-xl mb-2 text-[red]" text={element.title}> </TextAtom>
 
-      <TextAtom className="text-[#878787]" text={element.bodyText}> </TextAtom>
+      <TextAtom className="text-black" text={element.bodyText}> </TextAtom>
     </div>
   )
 }
