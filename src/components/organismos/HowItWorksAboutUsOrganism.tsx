@@ -5,6 +5,7 @@ import image from '../../assets/aboutusComoFuncionaImage.png';
 import { ImageAtom } from "../atomos/ImageAtome";
 import { IconAtom } from "../atomos/IconAtom";
 import { IoAirplaneSharp } from "react-icons/io5";
+import { midSection } from "../../constants/AboutUs";
 
 export function HowItWorksAboutUsOrganism() {
   return (
@@ -28,45 +29,45 @@ export function HowItWorksAboutUsOrganism() {
       <div className="flex items-start flex-col sm:mx-[175px] mx-5 mt-[50px]">
         <TextAtom
           className="text-[50px] text-white font-bold leading-[120%]"
-          text="Como functiona?"
+          text={midSection.big_title}
         > </TextAtom>
 
         <TextAtom
           className="text-[25px] text-white font-medium leading-[120%] mt-[11px]"
-          text="É simples!"
+          text={midSection.subtitle}
         > </TextAtom>
 
         <TextAtom
           className="text-[20px] text-white font-medium leading-[180%] mt-[33px]"
-          text="1. Baixe o aplicativo!"
+          text={midSection.steps[0].text}
         > </TextAtom>
 
         <TextAtom
           className="text-[20px] text-white font-medium leading-[180%]"
-          text="2. Cadastre-se!"
+          text={midSection.steps[1].text}
         > </TextAtom>
 
         <TextAtom
           className="text-[20px] text-white font-medium leading-[180%]"
-          text="3. Escolha o plano"
+          text={midSection.steps[2].text}
         > </TextAtom>
 
         <TextAtom
           className="text-[30px] text-white font-bold leading-[120%] mt-[53px]"
-          text="É fácil e prático!"
+          text={midSection.mid_title}
         > </TextAtom>
 
         <TextAtom
           className="text-[18px] text-white font-medium leading-[180%] mt-[7px]"
-          text="Você escolhe o seu plano e a sua"
+          text={midSection.mid_subtitle1}
         > </TextAtom>
 
         <TextAtom
           className="text-[18px] text-white text-start font-medium leading-[180%]"
-          text="assinatura vira crédito para ir onde e quando quiser."
+          text={midSection.mid_subtitle2}
         > </TextAtom>
 
-        <TablePlansAboutUsMolecule />
+        <TablePlansAboutUsMolecule midSection={midSection} />
 
         <div className="mt-[11px] flex items-start w-full sm:w-[479px]">
         <TextAtom
@@ -87,7 +88,7 @@ export function HowItWorksAboutUsOrganism() {
 
         <TextAtom
           className="text-[30px] mt-[38px] text-white font-medium leading-[120%]"
-          text="E aí, bora com o Clube?"
+          text={midSection.last_text}
         > </TextAtom>
 
       </div>

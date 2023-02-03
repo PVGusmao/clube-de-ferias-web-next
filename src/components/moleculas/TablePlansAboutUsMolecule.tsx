@@ -2,7 +2,11 @@ import { AiFillStar } from "react-icons/ai";
 import { IconAtom } from "../atomos/IconAtom";
 import { TextAtom } from "../atomos/TextAtom";
 
-export function TablePlansAboutUsMolecule() {
+type Props = {
+  midSection: any;
+}
+
+export function TablePlansAboutUsMolecule({midSection}: Props) {
   return (
     <div className="bg-white w-full sm:w-[479px] h-[217px] rounded-2xl mt-[26px]">
       <div className="flex justify-between items-center mt-[11px]">
@@ -38,18 +42,18 @@ export function TablePlansAboutUsMolecule() {
           />
           <TextAtom
             className="ml-[10px] text-[#888989] font-bold text-[16px] leading-[18px]"
-            text="Silver"
+            text={midSection.plans[0].plan}
           > </TextAtom>
         </div>
 
         <TextAtom
           className="font-bold text-[16px] text-[#888989] leading-[18px] sm:w-[100px] text-start mr-[7px]"
-          text="R$ 199"
+          text={midSection.plans[0].value}
         > </TextAtom>
 
         <TextAtom
           className="mr-[24px] w-[72px] text-start font-bold text-[16px] text-[#888989] leading-[18px]"
-          text="6%"
+          text={midSection.plans[0].discount}
         > </TextAtom>
       </div>
 
@@ -64,18 +68,18 @@ export function TablePlansAboutUsMolecule() {
           />
           <TextAtom
             className="ml-[10px] text-[#F6AB39] font-bold text-[16px] leading-[18px]"
-            text="Gold"
+            text={midSection.plans[1].plan}
           > </TextAtom>
         </div>
 
         <TextAtom
           className="font-bold text-[16px] text-[#F6AB39] leading-[18px] sm:w-[100px] text-start"
-          text="R$ 499"
+          text={midSection.plans[1].value}
         > </TextAtom>
 
         <TextAtom
           className="mr-[24px] w-[72px] text-start font-bold text-[16px] text-[#F6AB39] leading-[18px]"
-          text="8%"
+          text={midSection.plans[1].discount}
         > </TextAtom>
       </div>
 
@@ -90,18 +94,18 @@ export function TablePlansAboutUsMolecule() {
           />
           <TextAtom
             className="ml-[10px] text-[#1D1D1B] font-bold text-[16px] leading-[18px]"
-            text="Platinum"
+            text={midSection.plans[2].plan}
           > </TextAtom>
         </div>
 
         <TextAtom
           className="font-bold text-[16px] text-[#1D1D1B] leading-[18px] sm:w-[100px] mr-[32px] text-start"
-          text="R$ 999"
+          text={midSection.plans[2].value}
         > </TextAtom>
 
         <TextAtom
           className="mr-[24px] w-[72px] text-start font-bold text-[16px] text-[#1D1D1B] leading-[18px]"
-          text="11%"
+          text={midSection.plans[2].discount}
         > </TextAtom>
       </div>
 
@@ -116,18 +120,18 @@ export function TablePlansAboutUsMolecule() {
           />
           <TextAtom
             className="ml-[10px] text-[#0C9C39] font-bold text-[16px] leading-[18px]"
-            text="Plano Promo"
+            text={midSection.plans[3].plan}
           > </TextAtom>
         </div>
 
         <TextAtom
           className="font-bold text-[16px] text-[#0C9C39] sm:w-[120px] sm:mr-[42px] leading-[18px] text-start"
-          text="R$ 999"
+          text={midSection.plans[3].value}
         > </TextAtom>
 
         <TextAtom
           className="mr-[24px] w-[72px] text-start font-bold text-[16px] text-[#0C9C39] leading-[18px]"
-          text="11%"
+          text={midSection.plans[3].discount}
         > </TextAtom>
       </div>
 

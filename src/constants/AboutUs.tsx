@@ -12,15 +12,22 @@ import api from "../services/api";
 import { IoMedalOutline } from "react-icons/io5";
 
 async function item() {
-
   const response = await api.get('/pages');
-  console.log(response);
+  // console.log(response);
   localStorage.setItem("about", JSON.stringify(response));
 }
 
+async function item2() {
+  const response = await api.get('/pages/quemsomos');
+  console.log(response);
+  localStorage.setItem("about2", JSON.stringify(response));
+}
+
 item();
+item2();
 
 const data = JSON.parse(localStorage.getItem("about"));
+const data2 = JSON.parse(localStorage.getItem("about2"));
 
 const {
   benefits: ben,
@@ -32,9 +39,27 @@ const {
   statistics: st
 } = data?.data?.sobre
 
-export const headerTexts = ht;
+console.log(data2?.data?.content);
 
-export const NewWayTravel = newWayTravel;
+const {
+  client,
+  contact,
+  first_section,
+  header,
+  landscape_card_blog,
+  mid_section,
+  minor_card_blog,
+  nav_links,
+  portrait_card_blog,
+  socialMedia,
+  squares
+} = data2?.data?.content;
+
+
+
+export const headerTexts = header;
+
+export const NewWayTravel = first_section;
 
 export interface PlansDescriptions {
   id: number;
@@ -94,20 +119,20 @@ export const benefits = [
   {
     id: 1,
     icon: BsMap,
-    title: ben[0].title,
-    bodyText: ben[0].bodyText
+    title: squares[0].title,
+    bodyText: squares[0].subtitle
   },
   {
     id: 2,
     icon: AiOutlineSafetyCertificate,
-    title: ben[1].title,
-    bodyText: ben[1].bodyText
+    title: squares[1].title,
+    bodyText: squares[1].subtitle
   },
   {
     id: 3,
     icon: IoMedalOutline,
-    title: ben[2].title,
-    bodyText: ben[2].bodyText
+    title: squares[2].title,
+    bodyText: squares[2].subtitle
   }
 ]
 
@@ -138,10 +163,10 @@ export const navigation = [
 export const bigComment = [
   {
     icon: FaQuoteLeft,
-    text1: bc[0].text1,
-    text2: bc[0].text2,
-    author: bc[0].author,
-    authorSubtitle: bc[0].authorSubtitle,
+    text1: client?.content,
+    image: client?.img,
+    author: client?.name,
+    authorSubtitle: client?.travelTo,
   }
 ]
 
@@ -178,3 +203,5 @@ export const statistics = [
     iconTopRight: AiOutlinePlus,
   }
 ]
+
+export const midSection = mid_section;

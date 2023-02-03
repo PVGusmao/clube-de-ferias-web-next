@@ -3,15 +3,13 @@ import { IconAtom } from "../atomos/IconAtom";
 import { ImageAtom } from "../atomos/ImageAtome";
 import { TextAtom } from "../atomos/TextAtom";
 
-import imageTeste from '../../assets/fotoTesteBigComment.jpg';
-
 export function BigCommentAboutUsOrganism() {
   return (
     <div className="flex sm:flex-row flex-col items-center justify-center">
       <div className="sm:mr-10 mt-10 mx-4">
         <ImageAtom
           className="w-[400px] rounded-3xl"
-          source={imageTeste}
+          source={bigComment[0].image}
           alt='foto ilustrativa'
         />
 
@@ -24,7 +22,7 @@ export function BigCommentAboutUsOrganism() {
 
         <TextAtom className="text-start text-sm my-1 sm:my-4" text={bigComment[0].text1}> </TextAtom>
         
-        <TextAtom className="text-start text-sm my-1 sm:my-4" text={bigComment[0].text2}> </TextAtom>
+        {/* <TextAtom className="text-start text-sm my-1 sm:my-4" text={bigComment[0].text2}> </TextAtom> */}
       </div>
     </div>
   )
