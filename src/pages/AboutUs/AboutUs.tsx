@@ -1,11 +1,9 @@
 import { HeaderAbout } from "../../components/organismos/HeaderAbout";
-import { PlanningAboutUsOrganism } from "../../components/organismos/PlanningAboutUsOrganism";
-import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
 import { BenefitsAboutUsOrganism } from "../../components/organismos/BenefitsAboutUsOrganism";
-import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommentAboutUsOrganism";
-import { StatisticsAboutUsOrganism } from "../../components/organismos/StatisticsAboutUsOrganism";
 import { HowItWorksAboutUsOrganism } from "../../components/organismos/HowItWorksAboutUsOrganism";
+import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
+import { StellaBarrosContextAboutUsOrganism } from "../../components/organismos/StellaBarrosContextAboutUsOrganism";
 
 export function AboutUs() {
   return (
@@ -23,9 +21,11 @@ export function AboutUs() {
 
         <BigCommentAboutUsOrganism />
 
+        <StellaBarrosContextAboutUsOrganism />
+
         {/* <StatisticsAboutUsOrganism /> */}
 
-        <BlogOrganism />
+        {/* <BlogOrganism /> */}
       </div>
     </>
   );

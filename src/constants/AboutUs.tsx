@@ -52,7 +52,8 @@ const {
   nav_links,
   portrait_card_blog,
   socialMedia,
-  squares
+  squares,
+  stellaBranding
 } = data2?.data?.content;
 
 
@@ -205,3 +206,5 @@ export const statistics = [
 ]
 
 export const midSection = mid_section;
+
+export const stellaBarros = stellaBranding;
