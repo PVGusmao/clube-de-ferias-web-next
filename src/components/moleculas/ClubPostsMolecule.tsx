@@ -7,6 +7,7 @@ import { TextAtom } from "../atomos/TextAtom";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
+import { SlideShowBlogPostAtom } from "../atomos/SlideShowBlogPostAtom";
 
 export function ClubPostsMolecule() {
   const [post, setPost] = useState([]);
@@ -38,7 +39,7 @@ export function ClubPostsMolecule() {
         />
       </div>
       <div>
-        <div className="mb-[100px]">
+        <div className="mb-[20px]">
           <TextAtom
             children
             className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
@@ -54,22 +55,9 @@ export function ClubPostsMolecule() {
               />
             ))}
           </div>
-          <div className="sm:hidden w-full">
-            <Slide arrows={false} indicators>
-              {post.map((element, index) => (
-                <div className="flex items-center h-full justify-center bg-blue-300 ">
-                  <CardClubPosts
-                    img={element.image_large}
-                    title={element.title}
-                    subtitle={element.subtitle}
-                    slug={element.slug}
-                  />
-                </div>
-              ))}
-            </Slide>
-          </div>
         </div>
       </div>
+      <SlideShowBlogPostAtom className="w-full" />
     </div>
   );
 }
