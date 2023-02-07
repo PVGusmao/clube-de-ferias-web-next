@@ -11,16 +11,19 @@ import { useParams } from "react-router-dom";
 import { HeadeBlogOrganism } from "../../components/organismos/HeadeBlogOrganism";
 
 export function BlogPost() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState({});
+  const [post, setPost] = useState({});
+  const [recents, setRecents] = useState({});
+
   const params = useParams();
 
   async function getBlogPost() {
-    await api.get(`/posts/${params.slug}`).then((e) => setData(e.data));
+    await api.get(`/posts/${params.slug}`).then((e) => setData(e.data.post));
   }
 
   useEffect(() => {
     getBlogPost();
-  }, []);
+  }, [getBlogPost]);
 
   return (
     <>

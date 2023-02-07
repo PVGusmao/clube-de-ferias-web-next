@@ -6,38 +6,20 @@ import { CardTopPostsSM } from "./CardTopPostsSM";
 import { TextAtom } from "../atomos/TextAtom";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
-import { Slide } from "react-slideshow-image";
-import { SlideShowBlogPostAtom } from "../atomos/SlideShowBlogPostAtom";
+import "react-slideshow-image/dist/styles.css";
 
 export function ClubPostsMolecule() {
   const [post, setPost] = useState([]);
 
   async function getData() {
-    await api.get("/posts").then((res) => setPost(res.data));
+    await api.get("/posts").then((e) => setPost(e.data.posts));
   }
-
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="sm:flex flex sm:flex-row flex-col items-center justify-center mb-[100px]">
-        <div className="sm:flex flex-col sm:mr-10">
-          {clubTopPost.map((element, index) => (
-            <CardTopPostsSM
-              title={element.title}
-              subtitle={element.subtitle}
-              text={element.text}
-            />
-          ))}
-        </div>
-        <CardTopPostsLG
-          title="Stories | Tips"
-          subtitle="Destinos em alta para o verão!"
-          text="Seja no Brasil ou fora, o verão é a época preferida para viagens. A tão falada “alta temporada” é conhecida assim não é à toa e, pra mostrar que o verão pode ser ainda melhor se você souber onde ir, preparamos uma lista com destinos em alta"
-        />
-      </div>
       <div>
         <div className="mb-[20px]">
           <TextAtom
@@ -45,19 +27,20 @@ export function ClubPostsMolecule() {
             className="text-[#FF0000] text-[28px] font-medium flex justify-start mb-[12px]"
             text="Postagens do Clube"
           />
-          <div className="sm:flex justify-between hidden px-2 sm:w-[60.625rem] ">
+          <div className="sm:flex justify-between flex-wrap px-2 sm:w-[60.625rem] ">
             {post.map((element, index) => (
-              <CardClubPosts
-                img={element.image_large}
-                title={element.title}
-                subtitle={element.subtitle}
-                slug={element.slug}
-              />
+              <div className="mr-4">
+                <CardClubPosts
+                  img={element.image_large}
+                  title={element.title}
+                  subtitle={element.subtitle}
+                  slug={element.slug}
+                />
+              </div>
             ))}
           </div>
         </div>
       </div>
-      <SlideShowBlogPostAtom className="w-full" />
     </div>
   );
 }

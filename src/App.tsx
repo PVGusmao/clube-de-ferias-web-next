@@ -49,7 +49,6 @@ function App() {
   async function getWhatsappLink() {
     try {
       const response = await api.get("/links");
-      console.log(response);
 
       setLinkWhatsApp(response as any);
     } catch (error) {

@@ -5,6 +5,7 @@ import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 interface Props {
   title: string;
   subtitle: string;
+  img: string;
 }
 
 export function HeadeBlogOrganism({ title, subtitle }: Props) {

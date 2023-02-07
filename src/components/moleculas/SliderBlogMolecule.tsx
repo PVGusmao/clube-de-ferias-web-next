@@ -8,8 +8,8 @@ import { headerPost } from "../../constants";
 export function SliderBlogMolecule() {
   return (
     <div>
-      <div className="flex justify-between items-center sm:h-[32.625rem] w-full sm:w-[80rem] sm:rounded-b-[78px] mb-20	 ">
-        <div className="flex flex-col justify-center bg-[#FF0000]  w-full sm:w-[44.625rem] h-full pl-5 sm:pl-32 rounded-b-[50px]	sm:rounded-bl-[78px]">
+      <div className="flex justify-between items-center sm:h-[32.625rem] w-full sm:w-[80rem] sm:rounded-b-[78px] mb-20">
+        <div className="flex flex-col justify-center bg-[#FF0000]  w-full sm:w-[44.625rem] h-full pl-5 sm:pl-32 sm:rounded-b-[0px] rounded-b-[50px]	sm:rounded-bl-[78px]">
           <Slide arrows={false} indicators>
             {headerPost.map((element, index) => (
               <CardSlideBlog
@@ -20,7 +20,7 @@ export function SliderBlogMolecule() {
             ))}
           </Slide>
         </div>
-        <div className="hidden w-[35.375rem] h-[32.563rem] bg-blue-700 rounded-br-[78px]"></div>
+        <div className="hidden  sm:w-[35.375rem] sm:h-[32.563rem] bg-blue-700 rounded-br-[78px]"></div>
       </div>
     </div>
   );

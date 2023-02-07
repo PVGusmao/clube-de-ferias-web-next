@@ -19,7 +19,6 @@ async function item() {
 
 async function item2() {
   const response = await api.get('/pages/quemsomos');
-  console.log(response);
   localStorage.setItem("about2", JSON.stringify(response));
 }
 
@@ -38,8 +37,6 @@ const {
   plansDescriptions: pd,
   statistics: st
 } = data?.data?.sobre
-
-console.log(data2?.data?.content);
 
 const {
   client,
