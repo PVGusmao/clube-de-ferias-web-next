@@ -55,16 +55,18 @@ export function Plans2Organism({}) {
 
               <div className="flex items-center justify-evenly w-full py-1">
                 <TextAtom
+                  children
                   className="text-2xl font-bold text-black"
                   text={`${element.discount}%`}
                   style={{
                     color: `${element.colorPlan}`,
                   }}
-                ></TextAtom>
+                />
                 <TextAtom
+                  children
                   className="w-40 text-left text-black"
                   text={element.discountText}
-                ></TextAtom>
+                />
               </div>
 
               <div
@@ -82,6 +84,7 @@ export function Plans2Organism({}) {
                   size={42}
                 />
                 <TextAtom
+                  children
                   className="w-40 text-left text-black"
                   text={element.thirdText}
                 ></TextAtom>
