@@ -8,7 +8,10 @@ import { BlogCardMolecule } from "../moleculas/BlogCardMolecule";
 
 export function BlogOrganism() {
   return (
-    <div id="blog" className="flex items-start h-full sm:mt-24 mb-4 flex-col">
+    <div
+      id="blog"
+      className="flex items-start h-full sm:mt-[200px] mb-4 flex-col"
+    >
       <TextAtom
         className="text-4xl font-semibold uppercase pl-6 mt-56 sm:mt-0"
         children

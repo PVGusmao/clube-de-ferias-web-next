@@ -50,11 +50,11 @@ export function WelcomeMolecule({ className }: Props) {
         />
       </div>
 
-      <div className="flex w-full flex-wrap items-center justify-evenly mt-16 sm:mt-80">
+      <div className="flex w-full flex-wrap items-center justify-center mt-16 sm:mt-80">
         {cards.map((element, index) => (
           <CardMolecule
             color="red"
-            className="flex justify-center flex-col h-52 rounded-2xl bg-white hidden sm:flex block shadow-md w-52 text-black"
+            className="flex justify-center flex-col h-52 rounded-2xl mx-[20px] bg-white hidden sm:flex block shadow-md w-52 text-black"
             key={index}
             icon={element.icon}
             text={element.content}

@@ -36,7 +36,11 @@ export default function CardCommentsMolecule({
             activeColor="#ffd700"
           />
         </div>
-        <TextAtom children className="text-sm text-black" text={content} />
+        <TextAtom
+          children
+          className="text-sm text-black text-left "
+          text={content}
+        />
       </CardBody>
       <CardFooter className="flex items-center justify-between py-3 ">
         <AvatarAtom img={img} />

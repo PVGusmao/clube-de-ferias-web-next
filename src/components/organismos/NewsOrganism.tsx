@@ -9,7 +9,10 @@ import { IconAtom } from "../atomos/IconAtom";
 
 export function NewsOrganism() {
   return (
-    <div id='baixe-o-app' className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]">
+    <div
+      id="baixe-o-app"
+      className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]"
+    >
       <div className="grid content-center">
         <TextAtom
           children
@@ -33,17 +36,21 @@ export function NewsOrganism() {
         />
 
         <div className="flex my-10">
-            <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
-              <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
-                <IconAtom
-                  icon={AiFillApple}
-                  size={30}
-                  color="white"
-                  className="mb-2"
-                />
-                <TextAtom children className="text-white ml-2 font-bold" text="App Store" />
-              </div>
-            </a>
+          <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
+            <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
+              <IconAtom
+                icon={AiFillApple}
+                size={30}
+                color="white"
+                className="mb-2"
+              />
+              <TextAtom
+                children
+                className="text-white ml-2 font-bold"
+                text="App Store"
+              />
+            </div>
+          </a>
           <a href="https://play.google.com/store/apps/details?id=com.stellabarros.clubedeferias">
             <div className="flex h-[3.4375rem] w-[11rem] mb-5 bg-[#252525] items-center justify-center rounded-lg">
               <IconAtom
@@ -52,7 +59,11 @@ export function NewsOrganism() {
                 color="white"
                 className=""
               />
-              <TextAtom children className="text-white ml-2 font-bold" text="App Store" />
+              <TextAtom
+                children
+                className="text-white ml-2 font-bold"
+                text="App Store"
+              />
             </div>
           </a>
         </div>
@@ -69,26 +80,30 @@ export function NewsOrganism() {
           disableUnderline
         />
 
-        <div className="mt-10">
-          <div className="flex items-center">
-            <Checkbox />
-            <TextAtom children className="text-black" text="Eu concordo em receber comunicação" />
-          </div>
+        <div className="flex items-center ml-[170px] w-full mt-[50px]">
+          <Checkbox />
           <TextAtom
             children
-            className="font-light text-black"
+            className="text-black"
+            text="Eu concordo em receber comunicação"
+          />
+        </div>
+        <div className="">
+          <TextAtom
+            children
+            className="font-light text-black text-left"
             text="Ao informar meus dados, estou ciente"
           />
           <TextAtom
             children
-            className="font-light text-black"
+            className="font-light text-black text-left"
             text="das diretrizes da Política de Privacidade"
           />
 
           <ButtonMolecule
             children
             className="w-[13.375rem] h-[3.5rem] rounded-full bg-[#636363] mt-5 text-black"
-            textClassName="text-white"
+            textClassName="text-white text-[23px] font-bold"
             title={"Enviar"}
           />
         </div>

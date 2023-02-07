@@ -101,7 +101,7 @@ export function SimulationOrganism() {
         <ButtonMolecule
           children
           className="w-[20.375rem] h-[3.25rem] justify-self-center bg-[#F20F0F]"
-          textClassName="text-[#FFFFFF]"
+          textClassName="text-[#FFFFFF font-bold"
           title="Conheça nossos produtos"
         />
       </div>
