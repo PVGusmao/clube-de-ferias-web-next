@@ -77,3 +77,10 @@ button {
   }
 }
 
+.react-slideshow-container  {
+  width: 1000px;
+}
+
+.indicators {
+  width: auto;
+}
