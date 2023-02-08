@@ -9,17 +9,21 @@ import api from "../../services/api";
 export function SliderBlogMolecule() {
   const [img, setImg] = useState("");
   const [data, setData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   async function getData() {
-    api.get("/posts").then((e) => setImg(e.data.featured));
-
-    api.get("/posts").then((e) => setData(e.data.featured));
-
-    console.log(data);
+    const response = await api.get("/posts");
+    // console.log(response.data.featured);
+    localStorage.setItem("post", JSON.stringify(response.data.featured));
+    const teste = JSON.parse(localStorage.getItem("post"));
+    console.log(teste[currentIndex]);
   }
 
+  getData();
+
   useEffect(() => {
-    getData();
-  }, []);
+    // setImg(data[currentIndex].image_large);
+  }, [currentIndex]);
 
   const slides = [
     {
@@ -39,8 +43,6 @@ export function SliderBlogMolecule() {
       url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
     },
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -78,7 +80,7 @@ export function SliderBlogMolecule() {
 
         <div className="sm:h-[32.563rem] sm:w-[35.375rem] rounded-br-[78px] relative group">
           <img
-            // src={`${img[currentIndex].image_large}`}
+            src={`${img}`}
             className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
           ></img>
           {/* Left Arrow */}

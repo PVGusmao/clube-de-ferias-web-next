@@ -34,7 +34,7 @@ export function PostMainMolecule() {
             />
           ))}
         </div>
-        {/* <CardTopPostsLG /> */}
+        <CardTopPostsLG />
       </div>
     </div>
   );
