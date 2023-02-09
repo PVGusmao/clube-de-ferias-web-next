@@ -1,6 +1,11 @@
 //a index.ts é a HOME.
 
-import { FaFacebook, FaInstagram, FaRegBuilding, FaTiktok } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaRegBuilding,
+  FaTiktok,
+} from "react-icons/fa";
 
 import { TbPig } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
@@ -15,8 +20,7 @@ import api from "../services/api";
 import { IconType } from "react-icons";
 
 async function item() {
-
-  const response = await api.get('/pages');
+  const response = await api.get("/pages");
   localStorage.setItem("home", JSON.stringify(response));
 }
 
@@ -24,9 +28,21 @@ item();
 
 const data = JSON.parse(localStorage.getItem("home"));
 
-const { nav_links, home: homeData, text_button, plans2, clients,
-  marks: marksData, card_blog, minor_card_blog, banner } = data?.data?.paulo;
-  
+const {
+  nav_links,
+  home: homeData,
+  text_button,
+  plans2,
+  clients,
+  marks: marksData,
+  card_blog,
+  minor_card_blog,
+  banner,
+  banners,
+} = data?.data?.paulo;
+
+export const { mobile, desktop } = banners;
+
 export const navLinks = nav_links;
 
 export const home = homeData;
@@ -94,7 +110,7 @@ export const planos2 = [
     buttonName: plans2[3]?.buttonName,
     colorPlan: plans2[3]?.colorPlan,
   },
-] 
+];
 
 export const clientes = clients;
 

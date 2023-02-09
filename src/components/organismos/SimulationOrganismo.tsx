@@ -60,7 +60,7 @@ export function SimulationOrganism() {
       <TextAtom
         children
         text="Simule agora o seu melhor pacote"
-        className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-10 px-5 text-black"
+        className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-[80px] px-5 text-black"
       />
       <TextAtom
         children

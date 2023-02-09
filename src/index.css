@@ -70,15 +70,15 @@ button {
 }
 
 .react-slideshow-container  {
-  width: 1000px;
+  /* width: 1000px; */
 }
 
 @media (max-width: 600px) {  
   .react-slideshow-container  {
-    width: 375px;
+    /* width: 375px; */
   }
 }
 
 .indicators {
-  width: 100px;
+  width: auto; 
 }

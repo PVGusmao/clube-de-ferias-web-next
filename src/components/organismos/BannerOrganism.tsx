@@ -1,43 +1,20 @@
-import { ButtonMolecule } from "../moleculas/ButtonMolecule";
-import { TextAtom } from "../atomos/TextAtom";
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
-import cashback_promo from "../../assets/cashback_promo.png";
+import { desktop, mobile } from "../../constants";
 
 export function BannerOrganism() {
   return (
-    <BackgroundImageAtom
-      image={cashback_promo}
-      className="h-48 rounded-2xl my-[141px] bg-contain"
-    >
-      {/* <div */}
-      {/* // className={`sm:mb-6 flex flex-col sm:items-stretch sm:w-full h-96 sm:h-36 sm:px-16 pt-12 sm:p-0 sm:rounded-lg bg-[#F20F0F]`} */}
-      {/* > */}
-      {/* <div className="flex flex-col h-full sm:flex-row sm:justify-around"> */}
-      {/* <div className="self-center sm:mr-10">
-            <TextAtom
-              children
-              text="PROMOÇÃO"
-              className="text-3xl text-white sm:text-left font-bold"
-            />
-            <TextAtom
-              children
-              text="ESPECIAL"
-              className="text-3xl text-center text-white sm:text-left font-bold sm:ml-2 "
-            />
-          </div> */}
-      {/* <TextAtom
-            children
-            className="text-center self-center px-6 text-white sm:w-[33.9375rem] my-9 sm:text-left"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus mattis, pulvinar dapibus leo."
-          />
-          <ButtonMolecule
-            className="bg-white h-11 self-center w-48 text-black  "
-            children
-            title="BAIXE O APP"
-            textClassName="text-sm font-bold text-[red]"
-          /> */}
-      {/* </div> */}
-      {/* </div> */}
-    </BackgroundImageAtom>
+    <>
+      <BackgroundImageAtom
+        children
+        image={desktop}
+        backgroundSize={"100%"}
+        className="hidden sm:flex h-48 rounded-2xl my-[141px] bg-contain"
+      />
+      <BackgroundImageAtom
+        children
+        image={mobile}
+        className="sm:hidden h-[240px] rounded-2xl sm:my-[141px] bg-contain"
+      />
+    </>
   );
 }

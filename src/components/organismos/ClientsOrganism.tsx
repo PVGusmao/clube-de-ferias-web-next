@@ -11,7 +11,7 @@ export function ClientsOrganism() {
       <h1 className="text-black text-5xl mb-1 text-center">
         Nossos Clientes recomendam!
       </h1>
-      <Slide arrows={false} indicators slidesToShow={3} transitionDuration={10}>
+      <Slide arrows={false} slidesToShow={3} transitionDuration={10}>
         {clientes.map((element, index: number) => (
           <div className="hidden sm:flex justify-center flex-row justify-evenly">
             <CardCommentsMolecule

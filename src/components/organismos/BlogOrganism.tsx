@@ -10,7 +10,7 @@ export function BlogOrganism() {
   return (
     <div
       id="blog"
-      className="flex items-start h-full sm:mt-[200px] mb-4 flex-col"
+      className="flex items-start h-full sm:mt-[200px] mb-4 flex-col mt-[70px]"
     >
       <TextAtom
         className="text-4xl font-semibold uppercase pl-6 mt-56 sm:mt-0"
