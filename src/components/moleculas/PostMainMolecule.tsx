@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
-import { clubTopPost } from "../../constants";
-import api from "../../services/api";
 import { TextAtom } from "../atomos/TextAtom";
 import { CardTopPostsLG } from "./CardTopPostsLG";
 import { CardTopPostsSM } from "./CardTopPostsSM";
 
+import { featured } from "../../constants/Blog";
+
 export function PostMainMolecule() {
-  const [post, setPost] = useState([]);
-  const [postLG, setPostLG] = useState([]);
-
-  async function getData() {
-    await api.get("/posts").then((e) => setPost(e.data.featured));
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <div>
       <TextAtom
@@ -26,7 +14,7 @@ export function PostMainMolecule() {
       />
       <div className="sm:flex flex sm:flex-row flex-col items-center justify-center mb-[100px]">
         <div className="sm:flex flex-col sm:mr-10">
-          {post.map((element, index) => (
+          {featured.map((element, index) => (
             <CardTopPostsSM
               title={element.title}
               subtitle={element.subtitle}

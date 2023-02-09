@@ -80,7 +80,7 @@ export function NewsOrganism() {
           disableUnderline
         />
 
-        <div className="flex items-center ml-[170px] w-full mt-[50px]">
+        <div className="flex items-center sm:ml-[170px] w-full mt-[50px]">
           <Checkbox />
           <TextAtom
             children
