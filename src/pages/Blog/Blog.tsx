@@ -5,7 +5,7 @@ import { PostMainMolecule } from "../../components/moleculas/PostMainMolecule";
 export function Blog() {
   return (
     <>
-      <div>
+      <div className="w-full">
         <SliderBlogMolecule />
         <PostMainMolecule />
         <ClubPostsMolecule />
