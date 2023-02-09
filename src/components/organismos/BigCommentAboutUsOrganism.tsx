@@ -6,7 +6,7 @@ import { TextAtom } from "../atomos/TextAtom";
 export function BigCommentAboutUsOrganism() {
   return (
     <div className="flex sm:flex-row flex-col items-center justify-center">
-      <div className="sm:mr-10 mt-10 mx-4">
+      <div className="sm:mr-[100px] mt-10 mx-4">
         <ImageAtom
           className="w-[224px] rounded-3xl"
           source={bigComment[0].image}
@@ -25,7 +25,7 @@ export function BigCommentAboutUsOrganism() {
         />
       </div>
 
-      <div className="sm:w-[300px] py-6 px-10 h-[380px] sm:mt-[180px] sm:p-0 flex flex-col">
+      <div className="sm:w-[300px] py-6 px-10 h-[380px] sm:mt-[180px] sm:p-0 flex flex-col ">
         <IconAtom icon={bigComment[0].icon} size={42} color="#E00718" />
 
         <TextAtom

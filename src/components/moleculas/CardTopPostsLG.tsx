@@ -28,10 +28,11 @@ export function CardTopPostsLG() {
         />
         <div className="flex justify-start">
           <Link
+            style={{ backgroundColor: "black", fontSize: "12px" }}
             to={`/blogPost/${featured1.slug}`}
             className="w-[6.938rem] h-[1.808rem] flex justify-center items-center rounded-lg"
           >
-            Leia Mais
+            <p className="text-white">Leia Mais</p>
           </Link>
         </div>
       </div>

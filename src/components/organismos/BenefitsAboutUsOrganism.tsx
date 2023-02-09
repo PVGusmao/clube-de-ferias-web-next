@@ -8,7 +8,7 @@ export function BenefitsAboutUsOrganism() {
         {benefits.map((element) => (
           <BenefitsAboutUsMolecule
             element={element}
-            className="flex flex-col items-center w-64 my-4"
+            className="flex flex-col items-center w-64"
           />
         ))}
       </div>
