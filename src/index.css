@@ -54,14 +54,6 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  /* border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s; */
 }
 
 @media (prefers-color-scheme: light) {
@@ -79,6 +71,12 @@ button {
 
 .react-slideshow-container  {
   width: 1000px;
+}
+
+@media (max-width: 600px) {  
+  .react-slideshow-container  {
+    width: 375px;
+  }
 }
 
 .indicators {
