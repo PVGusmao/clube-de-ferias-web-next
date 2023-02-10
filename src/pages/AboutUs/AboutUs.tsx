@@ -13,8 +13,6 @@ export function AboutUs() {
 
         <NewWayTravelAboutUsOrganism />
 
-        {/* <PlanningAboutUsOrganism /> */}
-
         <BenefitsAboutUsOrganism />
 
         <HowItWorksAboutUsOrganism />
@@ -22,10 +20,6 @@ export function AboutUs() {
         <BigCommentAboutUsOrganism />
 
         <StellaBarrosContextAboutUsOrganism />
-
-        {/* <StatisticsAboutUsOrganism /> */}
-
-        {/* <BlogOrganism /> */}
       </div>
     </>
   );

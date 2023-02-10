@@ -1,11 +1,12 @@
-import { TextAtom } from "../atomos/TextAtom";
-import { TablePlansAboutUsMolecule } from "../moleculas/TablePlansAboutUsMolecule";
-
-import image from "../../assets/aboutusComoFuncionaImage.png";
-import { ImageAtom } from "../atomos/ImageAtome";
-import { IconAtom } from "../atomos/IconAtom";
 import { IoAirplaneSharp } from "react-icons/io5";
+
+import { TextAtom } from "../atomos/TextAtom";
+import { IconAtom } from "../atomos/IconAtom";
+import { ImageAtom } from "../atomos/ImageAtome";
 import { midSection } from "../../constants/AboutUs";
+
+import HowItWorkPlansImage from "../../assets/plansAboutUs.png";
+import HowItWorkImage from "../../assets/aboutusComoFuncionaImage.png";
 
 export function HowItWorksAboutUsOrganism() {
   return (
@@ -20,7 +21,7 @@ export function HowItWorksAboutUsOrganism() {
       />
 
       <ImageAtom
-        source={image}
+        source={HowItWorkImage}
         alt="fotos telefone ilustrativa"
         className="hidden sm:block absolute right-[77px] top-[136px]"
       />
@@ -73,7 +74,11 @@ export function HowItWorksAboutUsOrganism() {
           text={midSection.mid_subtitle2}
         />
 
-        <TablePlansAboutUsMolecule midSection={midSection} />
+        <ImageAtom
+          className="mt-10"
+          source={HowItWorkPlansImage}
+          alt='plans'
+        />
 
         <div className="mt-[11px] flex items-start w-full sm:w-[479px]">
           <TextAtom
