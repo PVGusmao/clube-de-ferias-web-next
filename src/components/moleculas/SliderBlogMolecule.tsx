@@ -14,7 +14,7 @@ export function SliderBlogMolecule() {
           {featured?.map((element, index) => (
             <div className="flex w-full rounded-br-[50px] ">
               <div
-                className=" flex flex-col bg-[red] w-full h-[350px] p-10 items-start justify-center rounded-bl-[50px]"
+                className=" flex flex-col bg-[red] w-[800px] h-[350px] p-10 items-start justify-center rounded-bl-[50px]"
                 key={index}
               >
                 <TextAtom
@@ -35,7 +35,7 @@ export function SliderBlogMolecule() {
                   text={element?.subtitle}
                 />
               </div>
-              <div className="w-full" key={index}>
+              <div className="w-[480px]" key={index}>
                 <img
                   className="rounded-br-[50px] h-[350px]"
                   style={{ width: "100%" }}
