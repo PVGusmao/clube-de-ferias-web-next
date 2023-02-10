@@ -98,7 +98,9 @@ export function Plans2Organism({}) {
                 <TextAtom
                   className="w-40 text-left text-black"
                   text={element.fourthText}
-                > </TextAtom>
+                >
+                  {" "}
+                </TextAtom>
               </div>
 
               <div
@@ -116,7 +118,9 @@ export function Plans2Organism({}) {
                   style={{
                     color: "black",
                   }}
-                > </TextAtom>
+                >
+                  {" "}
+                </TextAtom>
               </div>
               <div
                 className={`h-[6px] bg-[rgba(0,0,0,0.2)] w-[75%]`}
@@ -142,7 +146,7 @@ export function Plans2Organism({}) {
                   }`,
                   color: "black",
                 }}
-                className={`mt-[30px] flex items-center w-[183px] justify-center rounded-full`}
+                className={`mt-[30px] flex items-center w-[183px] justify-center h-[36px] rounded-full`}
                 textClassName={`font-bold text-white`}
                 title={element.buttonName}
               />

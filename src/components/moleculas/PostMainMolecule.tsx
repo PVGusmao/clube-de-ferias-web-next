@@ -6,7 +6,7 @@ import { featured } from "../../constants/Blog";
 
 export function PostMainMolecule() {
   return (
-    <div>
+    <div className="mt-[100px]">
       <TextAtom
         children
         className="text-[#FF0000] text-[28px] sm:ml-[150px] font-medium text-left mb-[40px]"

@@ -23,19 +23,13 @@ export function SliderBlogMolecule() {
               >
                 <TextAtom
                   children
-                  className="text-white font-bold text-[20px] text-start leading-[50px]"
-                  text={element?.seo_title}
-                />
-
-                <TextAtom
-                  children
-                  className="text-white font-bold text-[16px] text-start leading-[20px]"
+                  className="text-white font-bold text-[30px] text-start leading-[35px] w-[450px]"
                   text={element?.title}
                 />
 
                 <TextAtom
                   children
-                  className="text-white font-bold text-[16px] text-start leading-[20px] mt-[10px]"
+                  className="text-white text-[16px] text-start leading-[20px] mt-[10px] w-[450px]"
                   text={element?.subtitle}
                 />
               </div>

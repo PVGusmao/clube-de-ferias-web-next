@@ -19,9 +19,9 @@ type Props = {
 export const SlideShowPlansAtom = ({ className }: Props) => {
   return (
     <div className={`px-8 ${className}`}>
-      <Slide arrows={false} transitionDuration={250}>
+      <Slide arrows={true} transitionDuration={250}>
         {planos2.map((element, index) => (
-          <div className="flex flex-col items-center h-[650px] bg-white rounded-2xl shadow-lg m-1">
+          <div className="flex flex-col items-center''213''' h-[550px] bg-white rounded-2xl shadow-lg m-1">
             <div
               className="h-full flex items-center justify-center flex-col"
               key={index}
@@ -32,29 +32,11 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                   className={`text-4xl font-bold pt-4`}
                   text={element.planName}
                   style={{
-                    color: `${element.colorPlan}`,
-                  }}
-                />
-
-                <div className="flex items-center justify-evenly w-full py-1">
-                  <IconAtom
-                    className=""
-                    color={element.colorPlan}
-                    icon={element.firstIcon}
-                    size={42}
-                  />
-                  <TextAtom
-                    children
-                    className="w-40 text-left"
-                    text={element.firstText}
-                  />
-                </div>
-
-                <div
-                  className={`h-1 w-[75%]`}
-                  style={{
-                    backgroundColor: `${element.colorPlan}`,
-                    opacity: 0.4,
+                    color: `${
+                      element.colorPlan === undefined
+                        ? "#BFBFBF"
+                        : element.colorPlan
+                    }`,
                   }}
                 />
 
@@ -65,11 +47,15 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                     style={{
                       color: `${element.colorPlan}`,
                     }}
-                  > </TextAtom>
+                  >
+                    {" "}
+                  </TextAtom>
                   <TextAtom
                     className="w-40 text-left"
                     text={element.discountText}
-                  > </TextAtom>
+                  >
+                    {" "}
+                  </TextAtom>
                 </div>
 
                 <div
@@ -122,22 +108,39 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
 
                 <div className="flex items-center justify-between">
                   <TextAtom
+                    children
                     className={`text-4xl font-bold py-1`}
                     text={`R$ ${element.priceTag}/mês`}
                     style={{
                       color: "black",
                     }}
-                  ></TextAtom>
+                  />
                 </div>
+                <div
+                  className={`h-[6px] bg-[rgba(0,0,0,0.2)] w-[75%]`}
+                  style={{
+                    backgroundColor: `${
+                      element.colorPlan === undefined
+                        ? "#BFBFBF"
+                        : element.colorPlan
+                    }`,
+                    opacity: 0.4,
+                  }}
+                />
               </div>
 
               <div>
                 <ButtonMolecule
+                  children
                   style={{
-                    backgroundColor: `${element.colorPlan}`,
+                    backgroundColor: `${
+                      element.colorPlan === undefined
+                        ? "#BFBFBF"
+                        : element.colorPlan
+                    }`,
                     color: "black",
                   }}
-                  className={`mt-4 flex items-center`}
+                  className={`mt-4 flex items-center justify-center h-[36px] w-[183px] rounded-full`}
                   textClassName={`font-bold text-white`}
                   title={element.buttonName}
                 ></ButtonMolecule>

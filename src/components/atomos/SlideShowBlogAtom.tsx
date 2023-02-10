@@ -26,7 +26,7 @@ export const SlideShowBlogAtom = ({ className }: Props) => {
             >
               <TextAtom
                 children
-                className="w-full text-white font-bold text-2xl"
+                className="w-full text-white font-bold text-2xl text-[30px]"
                 text={element.title}
               />
             </BackgroundImageAtom>

@@ -100,7 +100,7 @@ export function FormOrganism() {
       <ButtonMolecule
         onClick={handleSubmit}
         children
-        textClassName="font-bold text-[12px]"
+        textClassName="font-bold text-[12px] text-white"
         style={{
           backgroundColor: "red",
           marginTop: "51px",
