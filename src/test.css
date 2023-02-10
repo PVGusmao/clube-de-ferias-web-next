@@ -1,0 +1,14 @@
+
+.react-slideshow-container  {
+  width: 1000px;
+}
+
+@media (max-width: 600px) {  
+  .react-slideshow-container  {
+    width: 375px;
+  }
+}
+
+.indicators {
+  width: auto; 
+}
