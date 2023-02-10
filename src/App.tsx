@@ -65,7 +65,7 @@ function App() {
     <>
       <div>
         <NavBarMolecule
-          className=" bg-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
+          className="text-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
           pageId="home"
           textLinkProps={{
             textClassName:

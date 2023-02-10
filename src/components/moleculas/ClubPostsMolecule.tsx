@@ -6,7 +6,7 @@ import { posts } from "../../constants/Blog";
 
 export function ClubPostsMolecule() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mb-[116px]">
       <div>
         <div className="mb-[20px]">
           <TextAtom
