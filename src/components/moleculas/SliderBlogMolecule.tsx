@@ -51,7 +51,7 @@ export function SliderBlogMolecule() {
         </Fade>
       </div>
 
-      <div className="sm:hidden flex items-center justify-center mb-10">
+      <div className="sm:hidden sm:flex items-center justify-center mb-10">
         <Slide arrows={false} transitionDuration={200} duration={2000}>
           {featured?.map((element, index) => (
             <Link

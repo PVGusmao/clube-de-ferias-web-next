@@ -16,7 +16,7 @@ type Props = {
 
 export const SlideShowBlogAtom = ({ className }: Props) => {
   return (
-    <div className={`${className} ml-3`}>
+    <div className={`${className}`}>
       <Slide arrows={false} transitionDuration={250}>
         {minorCardBlog.map((element, index) => (
           <div className="each-slide-effect" key={index}>

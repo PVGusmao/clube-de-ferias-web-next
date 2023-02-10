@@ -75,7 +75,7 @@ button {
 
 @media (max-width: 600px) {  
   .react-slideshow-container  {
-    width: 380px;
+    width: auto;
   }
 }
 
