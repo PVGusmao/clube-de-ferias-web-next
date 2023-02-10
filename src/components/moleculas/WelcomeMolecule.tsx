@@ -7,6 +7,7 @@ import { CardMolecule } from "../moleculas/CardMolecule";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 import { SlideShowWelcomeAtom } from "../atomos/SlideShowWelcomeAtom";
+import { Link } from "react-router-dom";
 
 type Props = {
   className: string;
@@ -35,12 +36,10 @@ export function WelcomeMolecule({ className }: Props) {
             className="mb-4 sm:my-4 font-medium text-white text-sm"
           />
 
-          <ButtonMolecule
-            className="flex mb-6 sm:mb-4 mt-10  items-center justify-center w-48 bg-[#F20F0F] h-12 shadow-2xl"
-            textClassName="text-lg font-medium text-white"
-            children
-            title={textButtonWelcome}
-          />
+          <Link
+            className="flex text-white font-bold rounded-xl items-center mb-10 sm:mb-0 mt-6 sm:mt-0 justify-center w-48 bg-[#F20F0F]"
+            to='/sobre'
+          >Ler Mais</Link>
         </div>
         <VideoAtom
           className="rounded-xl flex items-center justify-center sm:w-108 w-[80%] sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0"

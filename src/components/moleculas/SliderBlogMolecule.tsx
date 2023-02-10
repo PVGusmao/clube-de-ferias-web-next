@@ -1,4 +1,4 @@
-import "../../test.css";
+import "../../index.css";
 import "react-slideshow-image/dist/styles.css";
 import { Fade, Slide } from "react-slideshow-image";
 

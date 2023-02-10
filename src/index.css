@@ -68,3 +68,17 @@ button {
     background-color: #f9f9f9;
   }
 }
+
+.react-slideshow-container  {
+  width: 1280px;
+}
+
+@media (max-width: 600px) {  
+  .react-slideshow-container  {
+    width: 380px;
+  }
+}
+
+.indicators {
+  width: auto; 
+}

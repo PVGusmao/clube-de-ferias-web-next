@@ -90,7 +90,7 @@ export function Plans2Organism({}) {
                 <TextAtom
                   className="w-40 text-left text-black"
                   text={element.fourthText}
-                ></TextAtom>
+                > </TextAtom>
               </div>
 
               <div
@@ -108,7 +108,7 @@ export function Plans2Organism({}) {
                   style={{
                     color: "black",
                   }}
-                ></TextAtom>
+                > </TextAtom>
               </div>
             </div>
 
