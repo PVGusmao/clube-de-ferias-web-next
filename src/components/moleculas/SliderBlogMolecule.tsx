@@ -5,6 +5,7 @@ import { Fade, Slide } from "react-slideshow-image";
 import { TextAtom } from "../atomos/TextAtom";
 
 import { featured } from "../../constants/Blog";
+import { Link } from "react-router-dom";
 
 export function SliderBlogMolecule() {
   return (
@@ -12,7 +13,10 @@ export function SliderBlogMolecule() {
       <div className="hidden sm:flex justify-center w-full mb-10">
         <Fade arrows={false} duration={2000}>
           {featured?.map((element, index) => (
-            <div className="flex w-full rounded-br-[50px] ">
+            <Link
+              to={`/blogPost/${element.slug}`}
+              className="flex w-full rounded-br-[50px] "
+            >
               <div
                 className=" flex flex-col bg-[red] w-[800px] h-[350px] p-10 items-start justify-center rounded-bl-[50px]"
                 key={index}
@@ -42,7 +46,7 @@ export function SliderBlogMolecule() {
                   src={element?.image_large}
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </Fade>
       </div>
@@ -50,7 +54,10 @@ export function SliderBlogMolecule() {
       <div className="sm:hidden flex items-center justify-center mb-10">
         <Slide arrows={false} transitionDuration={200} duration={2000}>
           {featured?.map((element, index) => (
-            <div className="flex w-full rounded-br-[50px] ">
+            <Link
+              to={`/blogPost/${element.slug}`}
+              className="flex w-full rounded-br-[50px] "
+            >
               <div
                 className=" flex flex-col bg-[red] w-full h-[350px] p-10 items-start justify-center rounded-bl-[50px] rounded-br-[50px]"
                 key={index}
@@ -73,7 +80,7 @@ export function SliderBlogMolecule() {
                   text={element?.subtitle}
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </Slide>
       </div>

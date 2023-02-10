@@ -59,13 +59,18 @@ export function SimulationOrganism() {
     >
       <TextAtom
         children
-        text="Simule agora o seu melhor pacote"
-        className="sm:text-6xl text-2xl	font-bold mb-3 mt-4.5 pt-[80px] px-5 text-black"
+        text="Vamos simular uma viagem ?"
+        className="sm:text-6xl text-2xl	font-bold mb-[25px] mt-4.5 pt-[80px] px-5 text-black"
+      />
+      <TextAtom
+        children
+        className="sm:text-xl px-4 text-black"
+        text="Escolha o plano que mais combina com você e veja quantos meses"
       />
       <TextAtom
         children
         className="sm:text-xl mb-3 mb-10 px-4 text-black"
-        text="Faça uma simulação das viagens dos seus sonhos e começe a investir agora!"
+        text="precisa acumular para planejar a viagem dos seus sonhos."
       />
       <SimulationMolecule
         totalValue={totalValue}
@@ -97,14 +102,14 @@ export function SimulationOrganism() {
         <SlideShowSimulationAtom className="sm:hidden w-full" />
       )}
 
-      <div className="py-16">
+      {/* <div className="py-16">
         <ButtonMolecule
           children
           className="w-[20.375rem] h-[3.25rem] justify-self-center bg-[#F20F0F]"
           textClassName="text-[#FFFFFF font-bold"
           title="Conheça nossos produtos"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

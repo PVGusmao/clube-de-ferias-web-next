@@ -20,7 +20,7 @@ export function BlogOrganism() {
 
       <BlogCardMolecule className="" image={cardBlog.image} />
 
-      <SlideShowBlogAtom className="sm:hidden w-full" />
+      <SlideShowBlogAtom className="sm:hidden w-full sm:my-0 mt-[20px] mb-[60px]" />
     </div>
   );
 }

@@ -94,7 +94,7 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
                 // target="_blank"
                 classNameIcon="m-2 sm:block"
                 color="white"
-                size={32}
+                size={20}
                 icon={element.icon}
               />
             ))}

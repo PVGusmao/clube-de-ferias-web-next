@@ -12,17 +12,22 @@ import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 export function Plans2Organism({}) {
   return (
-    <div id="planos" className="bg-[#F4F4F4] justify-center sm:py-24">
-      <TextAtom
-        children
-        className="text-center sm:text-5xl text-3xl sm:pt-0 pt-[70px] font-bold text-black"
-        text="Assine agora"
-      />
-      <TextAtom
-        children
-        className="text-center sm:text-5xl text-3xl sm:pt-0 pb-[50px] font-bold text-black"
-        text="um dos nossos 4 planos"
-      />
+    <div
+      id="planos"
+      className="bg-[#F4F4F4] justify-center sm:py-24 mt-[100px]"
+    >
+      <div className="sm:flex justify-center">
+        <TextAtom
+          children
+          className="text-center sm:text-5xl text-3xl sm:pt-0 pt-[70px] font-bold text-black sm:mr-2 "
+          text="Assine agora"
+        />
+        <TextAtom
+          children
+          className="text-center sm:text-5xl text-3xl sm:pt-0 pb-[50px] font-bold text-black"
+          text="um dos nossos 4 planos"
+        />
+      </div>
       <div className="sm:flex hidden flex-row justify-evenly mt-[70px] w-full">
         {planos2.map((element, index: number) => (
           <div className="flex flex-col items-center h-[580px] bg-white rounded-2xl shadow-lg">
@@ -32,7 +37,10 @@ export function Plans2Organism({}) {
                 className={`text-4xl font-bold mt-10 mb-9 text-black`}
                 text={element.planName}
                 style={{
-                  color: `${element.colorPlan}`,
+                  color:
+                    element.colorPlan === undefined
+                      ? "#BFBFBF"
+                      : element.colorPlan,
                 }}
               />
 
@@ -110,13 +118,28 @@ export function Plans2Organism({}) {
                   }}
                 > </TextAtom>
               </div>
+              <div
+                className={`h-[6px] bg-[rgba(0,0,0,0.2)] w-[75%]`}
+                style={{
+                  backgroundColor: `${
+                    element.colorPlan === undefined
+                      ? "#BFBFBF"
+                      : element.colorPlan
+                  }`,
+                  opacity: 0.4,
+                }}
+              />
             </div>
 
             <div>
               <ButtonMolecule
                 children
                 style={{
-                  backgroundColor: `${element.colorPlan}`,
+                  backgroundColor: `${
+                    element.colorPlan === undefined
+                      ? "#BFBFBF"
+                      : element.colorPlan
+                  }`,
                   color: "black",
                 }}
                 className={`mt-[30px] flex items-center w-[183px] justify-center rounded-full`}

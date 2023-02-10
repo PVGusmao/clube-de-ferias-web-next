@@ -27,7 +27,7 @@ export function NewsOrganism() {
         <TextAtom
           children
           className="font-light	sm:text-left sm:text-2xl text-black"
-          text="Assine nossa news e receba novidades toda semana"
+          text="Assine nossa news e receba"
         />
         <TextAtom
           children
@@ -35,37 +35,42 @@ export function NewsOrganism() {
           text="novidades toda semana"
         />
 
-        <div className="flex my-10">
-          <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
-            <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
-              <IconAtom
-                icon={AiFillApple}
-                size={30}
-                color="white"
-                className="mb-2"
-              />
-              <TextAtom
-                children
-                className="text-white ml-2 font-bold"
-                text="App Store"
-              />
-            </div>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.stellabarros.clubedeferias">
-            <div className="flex h-[3.4375rem] w-[11rem] mb-5 bg-[#252525] items-center justify-center rounded-lg">
-              <IconAtom
-                icon={FaGooglePlay}
-                size={30}
-                color="white"
-                className=""
-              />
-              <TextAtom
-                children
-                className="text-white ml-2 font-bold"
-                text="App Store"
-              />
-            </div>
-          </a>
+        <div className="flex flex-col my-10">
+          <p className="text-left mb-[20px] text-[20px] font-bold">
+            Baixe nosso aplicativo
+          </p>
+          <div className="flex flex-row">
+            <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
+              <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
+                <IconAtom
+                  icon={AiFillApple}
+                  size={30}
+                  color="white"
+                  className="mb-2"
+                />
+                <TextAtom
+                  children
+                  className="text-white ml-2 font-bold"
+                  text="App Store"
+                />
+              </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.stellabarros.clubedeferias">
+              <div className="flex h-[3.4375rem] w-[11rem] mb-5 bg-[#252525] items-center justify-center rounded-lg">
+                <IconAtom
+                  icon={FaGooglePlay}
+                  size={30}
+                  color="white"
+                  className=""
+                />
+                <TextAtom
+                  children
+                  className="text-white ml-2 font-bold"
+                  text="App Store"
+                />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex items-center flex-col justify-center ">
@@ -80,7 +85,7 @@ export function NewsOrganism() {
           disableUnderline
         />
 
-        <div className="flex items-center sm:ml-[170px] w-full mt-[50px]">
+        <div className="flex items-center sm:ml-[170px] w-full mt-[20px]">
           <Checkbox />
           <TextAtom
             children
