@@ -43,7 +43,7 @@ export function NavBarMolecule({
   const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   return (
-    <div id={pageId} className={`${className}`}>
+    <div id={pageId} className={`${className} `}>
       <a href="/">
         <img className={logoProps.className} src={logoProps.logo} alt="logo" />
       </a>

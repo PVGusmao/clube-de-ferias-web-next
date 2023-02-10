@@ -20,10 +20,10 @@ type Props = {
 export default function Sidebar({ setShowMenu, showMenu }: Props) {
   return (
     <div className="h-96">
-      <div className="flex flex-col h-screen p-3 bg-white shadow w-full bg-[#F20F0F]">
+      <div className="flex flex-col h-screen bg-white shadow w-full bg-[#F20F0F]">
         <div className="space-y-3 flex flex-col">
           <div className="flex-1">
-            <ul className="pt-2 pb-4 space-y-1 text-sm">
+            <ul className="pt-2 pb-4 space-y-1 text-sm my-[100px] h-[250px] flex flex-col justify-between items-center">
               <li className="rounded-sm">
                 <a
                   href="/sobre"
@@ -32,12 +32,6 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
                     setShowMenu(!showMenu);
                   }}
                 >
-                  <IconAtom
-                    icon={MdPeople}
-                    color="white"
-                    className=""
-                    size={32}
-                  />
                   <span className="text-lg font-bold">Quem somos</span>
                 </a>
               </li>
@@ -50,12 +44,6 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
                     setShowMenu(!showMenu);
                   }}
                 >
-                  <IconAtom
-                    icon={IoIosCalculator}
-                    color="white"
-                    className=""
-                    size={32}
-                  />
                   <span className="text-lg font-bold">Simule sua viagem</span>
                 </a>
               </li>
@@ -67,12 +55,6 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
                     setShowMenu(!showMenu);
                   }}
                 >
-                  <IconAtom
-                    icon={FaBloggerB}
-                    color="white"
-                    className=""
-                    size={32}
-                  />
                   <span className="text-lg font-bold">Blog</span>
                 </a>
               </li>
@@ -84,12 +66,6 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
                     setShowMenu(!showMenu);
                   }}
                 >
-                  <IconAtom
-                    icon={MdOutlinePhoneCallback}
-                    color="white"
-                    className=""
-                    size={32}
-                  />
                   <span className="text-lg font-bold">Fale Conosco</span>
                 </a>
               </li>
