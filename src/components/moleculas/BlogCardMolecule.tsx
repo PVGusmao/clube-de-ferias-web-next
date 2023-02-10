@@ -8,9 +8,9 @@ import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 type Props = {
   className: string;
   image: string;
-}
+};
 
-export function BlogCardMolecule({ className, image}: Props) {
+export function BlogCardMolecule({ className, image }: Props) {
   return (
     <div className="sm:h-108 flex sm:flex-row flex-col">
       <BackgroundImageAtom
@@ -37,23 +37,20 @@ export function BlogCardMolecule({ className, image}: Props) {
       </BackgroundImageAtom>
 
       <div className="sm:flex hidden flex-row w-auto sm:flex-col justify-between">
-        {
-          minorCardBlog.map((element, index) => (
-            <BackgroundImageAtom
-              className={`flex items-center text-center rounded-xl m-2 justify-between h-32 sm:w-96 ${className}`}
-              image={element.image}
-              key={index}
-            >
-              <TextAtom
-                children
-                className="w-full text-white font-bold text-2xl"
-                text={element.title}
-              />
-            </BackgroundImageAtom>
-          ))
-        }
+        {minorCardBlog.map((element, index) => (
+          <BackgroundImageAtom
+            className={`flex items-center  text-left pl-[15px] rounded-xl m-2 justify-between h-32 sm:w-96 ${className}`}
+            image={element.image}
+            key={index}
+          >
+            <TextAtom
+              children
+              className="w-full text-white font-bold text-[30px] w-[150px] leading-[30px]"
+              text={element.title}
+            />
+          </BackgroundImageAtom>
+        ))}
       </div>
-
     </div>
-  )
+  );
 }
