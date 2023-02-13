@@ -9,6 +9,7 @@ import ReactHtmlParser from "react-html-parser";
 import api from "../../services/api";
 import { useParams } from "react-router-dom";
 import { HeadeBlogOrganism } from "../../components/organismos/HeadeBlogOrganism";
+import { HeadeBlogPostOrganism } from "../../components/organismos/HeadeBlogPostOrganism";
 
 export function BlogPost() {
   const [data, setData] = useState({});
@@ -28,7 +29,11 @@ export function BlogPost() {
   return (
     <>
       <div>
-        <HeadeBlogOrganism title={data.title} subtitle={data.subtitle} />
+        <HeadeBlogPostOrganism
+          capa={data.capa}
+          title={data.title}
+          subtitle={data.subtitle}
+        />
         <div className="flex flex-row justify-center py-12">
           <div className="w-[671px] h-full px-5 text-left">
             {ReactHtmlParser(data.post_body)}
