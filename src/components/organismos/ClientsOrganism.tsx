@@ -7,7 +7,7 @@ import { Slide } from "react-slideshow-image";
 
 export function ClientsOrganism() {
   return (
-    <div className="py-[150px] px-2">
+    <div className="py-[120px] px-2">
       <h1 className="text-black text-5xl mb-1 text-center">
         Nossos Clientes recomendam!
       </h1>

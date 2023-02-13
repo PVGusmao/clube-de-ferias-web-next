@@ -37,15 +37,25 @@ export function WelcomeMolecule({ className }: Props) {
           />
 
           <Link
-            className="flex text-white font-bold rounded-xl items-center mb-10 sm:mb-0 mt-6 sm:mt-0 justify-center w-48 bg-[#F20F0F]"
-            to='/sobre'
-          >Ler Mais</Link>
+            className="flex hidden text-white font-bold rounded-xl items-center mb-10 sm:mb-0 mt-6 sm:mt-0 justify-center w-48 bg-[#F20F0F]"
+            to="/sobre"
+          >
+            Ler Mais
+          </Link>
         </div>
         <VideoAtom
           className="rounded-xl flex items-center justify-center sm:w-108 w-[80%] sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0"
           videoLink={home.video}
           videoImage={home.image_video}
         />
+        <div className="flex sm:hidden justify-center mt-[20px]">
+          <Link
+            className="text-white font-bold rounded-xl mb-10 sm:mb-0 mt-6 sm:mt-0 justify-center w-[222px] h-[53px] flex items-center bg-[#F20F0F]"
+            to="/sobre"
+          >
+            <p className="text-[20px]">Ler Mais</p>
+          </Link>
+        </div>
       </div>
 
       <div className="flex w-full flex-wrap items-center justify-center mt-16 sm:mt-80">

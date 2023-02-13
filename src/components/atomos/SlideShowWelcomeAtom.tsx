@@ -18,7 +18,10 @@ export const SlideShowWelcomeAtom = ({ className }: Props) => {
     <div className={`${className}`}>
       <Slide arrows={false} transitionDuration={250}>
         {cards.map((element, index) => (
-          <div className="h-48 flex items-center justify-center" key={index}>
+          <div
+            className="h-[230px] flex items-center justify-center"
+            key={index}
+          >
             <CardMolecule
               color="red"
               className="flex justify-center flex-col h-52 rounded-2xl bg-white sm:hidden shadow-lg sm:flex w-72"

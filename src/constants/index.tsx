@@ -4,13 +4,14 @@ import {
   FaFacebook,
   FaInstagram,
   FaRegBuilding,
+  FaRegComments,
   FaTiktok,
 } from "react-icons/fa";
 
 import { TbPig } from "react-icons/tb";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdOutlineMonetizationOn } from "react-icons/md";
 import { AiOutlineSafety } from "react-icons/ai";
-import { HiLocationMarker } from "react-icons/hi";
+import { HiLocationMarker, HiOutlineBadgeCheck } from "react-icons/hi";
 import { IoIosArrowForward } from "react-icons/io";
 import { GiCommercialAirplane } from "react-icons/gi";
 import { BsTelephoneInboundFill } from "react-icons/bs";
@@ -130,17 +131,17 @@ export const cards = [
   },
   {
     id: 2,
-    icon: AiOutlineSafety,
+    icon: HiOutlineBadgeCheck,
     content: data?.data?.paulo?.text_square?.text_2,
   },
   {
     id: 3,
-    icon: BsTelephoneInboundFill,
+    icon: FaRegComments,
     content: data?.data?.paulo?.text_square?.text_3,
   },
   {
     id: 4,
-    icon: RiMoneyDollarCircleFill,
+    icon: MdOutlineMonetizationOn,
     content: data?.data?.paulo?.text_square?.text_4,
   },
 ];

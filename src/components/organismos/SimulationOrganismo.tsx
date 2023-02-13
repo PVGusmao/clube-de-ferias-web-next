@@ -103,15 +103,6 @@ export function SimulationOrganism() {
       {packages.length && (
         <SlideShowSimulationAtom className="sm:hidden w-full" />
       )}
-
-      {/* <div className="py-16">
-        <ButtonMolecule
-          children
-          className="w-[20.375rem] h-[3.25rem] justify-self-center bg-[#F20F0F]"
-          textClassName="text-[#FFFFFF font-bold"
-          title="Conheça nossos produtos"
-        />
-      </div> */}
     </div>
   );
 }

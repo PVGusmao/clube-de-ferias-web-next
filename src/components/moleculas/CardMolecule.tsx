@@ -11,15 +11,18 @@ type Props = {
   color: string;
 };
 
-export function CardMolecule({ icon, text, className, color = 'black' }: Props) {
+export function CardMolecule({
+  icon,
+  text,
+  className,
+  color = "black",
+}: Props) {
   return (
-    <div
-      className={`${className}`}
-    >
+    <div className={`${className}`}>
       <IconAtom
         className="w-full justify-center mb-4"
         icon={icon}
-        size={36}
+        size={50}
         color={color}
       />
       <TextAtom

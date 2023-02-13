@@ -21,7 +21,7 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
     <div className={`px-8 ${className}`}>
       <Slide arrows={true} transitionDuration={250}>
         {planos2.map((element, index) => (
-          <div className="flex flex-col items-center''213''' h-[550px] bg-white rounded-2xl shadow-lg m-1">
+          <div className="flex flex-col items-cente h-[550px] bg-white rounded-2xl shadow-lg m-1">
             <div
               className="h-full flex items-center justify-center flex-col"
               key={index}
@@ -106,7 +106,7 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                   }}
                 />
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-[50px] ">
                   <TextAtom
                     children
                     className={`text-4xl font-bold py-1`}
