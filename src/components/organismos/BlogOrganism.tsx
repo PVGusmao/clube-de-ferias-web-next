@@ -18,9 +18,9 @@ export function BlogOrganism() {
         text="Blog"
       />
 
-      <BlogCardMolecule className="" image={cardBlog.image} />
+      <BlogCardMolecule />
 
-      <SlideShowBlogAtom className="sm:hidden w-full sm:my-0 mt-[20px] mb-[60px]" />
+      <SlideShowBlogAtom />
     </div>
   );
 }

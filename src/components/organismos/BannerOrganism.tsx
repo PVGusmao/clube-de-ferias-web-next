@@ -8,7 +8,7 @@ export function BannerOrganism() {
         children
         image={desktop}
         backgroundSize={"100%"}
-        className="hidden sm:flex h-48 rounded-2xl my-[141px] bg-contain"
+        className="hidden sm:flex h-48 rounded-2xl my-[141px] bg-cover"
       />
       <BackgroundImageAtom
         children
