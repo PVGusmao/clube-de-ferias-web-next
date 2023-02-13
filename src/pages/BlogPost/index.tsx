@@ -40,8 +40,8 @@ export function BlogPost() {
           </div>
           <div className="sm:flex hidden h-full w-[270px] flex flex-col justify-center ml-[50px]">
             <RecentsPostsOrganism />
-            <CategoriesPostsOrganism />
-            <SearchPostsOrganism />
+            {/* <CategoriesPostsOrganism />
+            <SearchPostsOrganism /> */}
             <SocialNetworksOrganism />
           </div>
         </div>
