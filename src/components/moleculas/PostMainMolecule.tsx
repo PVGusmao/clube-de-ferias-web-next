@@ -9,10 +9,15 @@ export function PostMainMolecule() {
     <div className="mt-[100px]">
       <TextAtom
         children
-        className="text-[#FF0000] text-[28px] sm:ml-[150px] font-medium text-left mb-[40px]"
+        className="sm:flex hidden text-[#FF0000] text-[20px] sm:text-[28px] sm:ml-[150px] font-medium text-left mb-[40px]"
         text="Nossas principais postagens"
       />
       <div className="sm:flex flex sm:flex-row flex-col items-center justify-center mb-[100px]">
+        <TextAtom
+          children
+          className="flex sm:hidden text-[#FF0000] text-[23px] sm:text-[28px] sm:ml-[150px] font-medium text-left mb-[40px]"
+          text="Nossas principais postagens"
+        />
         <div className="sm:flex flex-col sm:mr-10 sm:justify-between h-[38.063rem]">
           {featured.map((element, index) => (
             <CardTopPostsSM

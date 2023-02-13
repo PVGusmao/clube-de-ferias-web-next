@@ -62,13 +62,13 @@ export function FooterOrganism({ navigation }: Props) {
               className="font-bold text-white text-left text-[16px] text-2xl mb-8	"
               text="SIGA NOSSAS REDES"
             />
-            <div className="flex flex-row">
+            <div className="flex flex-row h-12">
               {socialMedia.map((element, index: number) => (
                 <IconButtonMolecule
                   target="_blank"
                   key={index}
                   to={element.rota}
-                  classNameIcon="m-2 sm:block hidden"
+                  classNameIcon="m-2 sm:block"
                   color="white"
                   size={24}
                   icon={element.icon}

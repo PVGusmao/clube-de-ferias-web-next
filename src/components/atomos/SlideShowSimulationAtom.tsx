@@ -19,7 +19,10 @@ export const SlideShowSimulationAtom = ({ className }: Props) => {
     <div className={`${className}`}>
       <Slide arrows={true} transitionDuration={100}>
         {packages.map((element, index) => (
-          <div className="h-full flex items-center justify-center" key={index}>
+          <div
+            className="h-[500px] flex items-center justify-center"
+            key={index}
+          >
             <CardSimulationMolecule
               key={index}
               subname={element.subname}
