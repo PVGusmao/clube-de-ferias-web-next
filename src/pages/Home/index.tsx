@@ -11,13 +11,13 @@ export default function Home() {
     <>
       <WelcomeOrganism />
 
-      <BlogOrganism />
-
-      {bannerContent[0].enable && <BannerOrganism />}
-
       <Plans2Organism />
 
       <SimulationOrganism />
+
+      {bannerContent[0].enable && <BannerOrganism />}
+
+      <BlogOrganism />
 
       <ClientsOrganism />
 

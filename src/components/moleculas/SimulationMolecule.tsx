@@ -90,7 +90,7 @@ export function SimulationMolecule({
             value={sliderValue}
             onChange={handleSliderChange}
             aria-label="Default"
-            valueLabelDisplay="auto"
+            // valueLabelDisplay="auto"
             step={3}
             marks={marks}
           />

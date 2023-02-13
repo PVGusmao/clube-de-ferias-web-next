@@ -10,7 +10,7 @@ export function Plans2Organism({}) {
   return (
     <div
       id="planos"
-      className="bg-[#F4F4F4] h-[1300px] justify-center sm:py-24 mt-[100px]"
+      className="bg-[#F4F4F4] h-[1300px] justify-center sm:py-24  mt-[270px] sm:mt-[170px]"
     >
       <div className="sm:flex justify-center">
         <TextAtom
@@ -158,51 +158,69 @@ export function Plans2Organism({}) {
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[0].text1}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[0].text2}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[0].text3}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
         </div>
 
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[1].text1}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[1].text2}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[1].text3}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
         </div>
 
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[2].text1}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[2].text2}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
             text={subPlanText[2].text3}
-          > </TextAtom>
+          >
+            {" "}
+          </TextAtom>
         </div>
       </div>
     </div>

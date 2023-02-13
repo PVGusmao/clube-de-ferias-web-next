@@ -20,12 +20,6 @@ export function WelcomeMolecule({ className }: Props) {
         <div className="flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0">
           <TextAtom
             children
-            text={home.subtitle}
-            className="mb-4 sm:mb-4 font-medium text-white sm:text-lg text-md"
-          />
-
-          <TextAtom
-            children
             text={home.title}
             className="mb-4 sm:mb-4 font-medium text-white sm:text-5xl text-2xl"
           />
@@ -44,7 +38,7 @@ export function WelcomeMolecule({ className }: Props) {
           </Link>
         </div>
         <VideoAtom
-          className="rounded-xl flex items-center justify-center sm:w-108 w-[80%] sm:h-auto h-64 sm:h-80 mx-auto sm:mx-0"
+          className="rounded-xl flex items-center justify-center sm:w-108 w-[80%] h-64 sm:h-80 mx-auto sm:mx-0"
           videoLink={home.video}
           videoImage={home.image_video}
         />

@@ -19,12 +19,6 @@ export function HeaderAbout() {
         <div className="flex flex-col items-start sm:items-start sm:ml-48 w-[250px] sm:w-[350px]">
           <TextAtom
             children
-            className="text-white font-medium text-lg font-ubuntu"
-            text={headerTexts.title}
-          />
-
-          <TextAtom
-            children
             className="text-white text-start font-medium text-3xl font-ubuntu mt-6"
             text={headerTexts.subtitle}
           />

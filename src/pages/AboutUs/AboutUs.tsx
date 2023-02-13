@@ -3,7 +3,6 @@ import { BenefitsAboutUsOrganism } from "../../components/organismos/BenefitsAbo
 import { BigCommentAboutUsOrganism } from "../../components/organismos/BigCommentAboutUsOrganism";
 import { HowItWorksAboutUsOrganism } from "../../components/organismos/HowItWorksAboutUsOrganism";
 import { NewWayTravelAboutUsOrganism } from "../../components/organismos/NewWayTravelAboutUsOrganism";
-import { StellaBarrosContextAboutUsOrganism } from "../../components/organismos/StellaBarrosContextAboutUsOrganism";
 
 export function AboutUs() {
   return (
@@ -18,8 +17,6 @@ export function AboutUs() {
         <HowItWorksAboutUsOrganism />
 
         <BigCommentAboutUsOrganism />
-
-        <StellaBarrosContextAboutUsOrganism />
       </div>
     </>
   );

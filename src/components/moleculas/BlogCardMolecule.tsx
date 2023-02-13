@@ -9,7 +9,7 @@ export function BlogCardMolecule() {
   return (
     <div className="sm:h-108 flex sm:flex-row flex-col">
       <BackgroundImageAtom
-        className="sm:pl-6 h-80 sm:h-auto sm:px-0 sm:mr-0 px-1 m-2 sm:mr-6 flex flex-col justify-end text-start rounded-xl bg-cover bg-cover"
+        className="sm:pl-6 h-[400px] sm:h-80 sm:h-auto sm:px-0 sm:mr-0 px-1 m-2 sm:mr-6 flex flex-col justify-end text-start rounded-xl bg-cover bg-cover"
         image={cardBlog.image}
       >
         <TextAtom
@@ -40,7 +40,7 @@ export function BlogCardMolecule() {
           >
             <TextAtom
               children
-              className="w-full text-white font-bold text-[20px] w-[200px] leading-[30px]"
+              className="w-full text-white font-bold text-[20px] w-[200px] leading-[30px] "
               text={element.title}
             />
           </BackgroundImageAtom>

@@ -65,12 +65,12 @@ export function SimulationOrganism() {
       <div className="flex flex-col items-center">
         <TextAtom
           children
-          className="sm:text-xl px-4 text-black sm:w-full w-[300px]"
+          className="sm:text-xl px-4 text-black font-medium sm:w-full w-[300px]"
           text="Escolha o plano que mais combina com você e veja quantos meses"
         />
         <TextAtom
           children
-          className="sm:text-xl mb-3 mb-10 px-4 text-black sm:w-full w-[300px]"
+          className="sm:text-xl font-medium mb-3 mb-10 px-4 text-black sm:w-full w-[300px]"
           text="precisa acumular para planejar a viagem dos seus sonhos."
         />
       </div>
@@ -83,11 +83,6 @@ export function SimulationOrganism() {
         handleSliderChange={handleSliderChange}
       />
 
-      <TextAtom
-        children
-        text="Quanto tempo deixaria o seu dinheiro investido?"
-        className="mt-14 sm:text-xl mb-10 px-4 text-black"
-      />
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
         {packages.map((element: CardSimulationProps, index: number) => (
           <CardSimulationMolecule
