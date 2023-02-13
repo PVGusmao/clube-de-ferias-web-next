@@ -11,7 +11,7 @@ export function SliderBlogMolecule() {
   return (
     <div className="">
       <div className="hidden sm:flex justify-center w-full mb-10">
-        <Fade arrows={false} duration={2000}>
+        <Fade arrows={false} duration={7000}>
           {featured?.map((element, index) => (
             <Link
               to={`/blogPost/${element.slug}`}
