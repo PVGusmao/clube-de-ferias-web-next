@@ -14,7 +14,7 @@ export function BlogCardMolecule() {
       >
         <TextAtom
           children
-          className="font-bold text-6xl mb-2 text-white tracking-widest uppercase"
+          className="font-bold text-6xl mb-2 text-white w-[700px] tracking-widest uppercase"
           text={cardBlog.title}
         />
 
@@ -40,7 +40,7 @@ export function BlogCardMolecule() {
           >
             <TextAtom
               children
-              className="w-full text-white font-bold text-[20px] w-[150px] leading-[30px]"
+              className="w-full text-white font-bold text-[20px] w-[200px] leading-[30px]"
               text={element.title}
             />
           </BackgroundImageAtom>
