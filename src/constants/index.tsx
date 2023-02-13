@@ -39,6 +39,7 @@ const {
   minor_card_blog,
   banner,
   banners,
+  sub_plans_text,
 } = data?.data?.paulo;
 
 export const { mobile, desktop } = banners;
@@ -256,3 +257,5 @@ export const headerPost = [
     text: "Descubra o que fazer em qualquer lugar do mundo!",
   },
 ];
+
+export const subPlanText = sub_plans_text;
