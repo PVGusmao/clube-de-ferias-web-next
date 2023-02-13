@@ -10,7 +10,7 @@ export function Plans2Organism({}) {
   return (
     <div
       id="planos"
-      className="bg-[#F4F4F4] h-[1300px] justify-center sm:py-24  mt-[270px] sm:mt-[170px]"
+      className="bg-[#F4F4F4] sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[170px]"
     >
       <div className="sm:flex justify-center">
         <TextAtom
@@ -153,7 +153,7 @@ export function Plans2Organism({}) {
 
       <SlideShowPlansAtom className="w-full sm:hidden h-[600px]" />
 
-      <div className="flex flex-col sm:flex-row h-24 items-center justify-evenly mt-[220px] sm:mt-[120px]">
+      <div className="bg-white flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px]">
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
@@ -177,6 +177,8 @@ export function Plans2Organism({}) {
           </TextAtom>
         </div>
 
+        <div className="sm:w-1 bg-[red] sm:h-[70%] w-[70%] h-1" />
+
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
@@ -199,6 +201,8 @@ export function Plans2Organism({}) {
             {" "}
           </TextAtom>
         </div>
+
+        <div className="sm:w-1 bg-[red] sm:h-[70%] w-[70%] h-1" />
 
         <div className="my-10 sm:my-0">
           <TextAtom
