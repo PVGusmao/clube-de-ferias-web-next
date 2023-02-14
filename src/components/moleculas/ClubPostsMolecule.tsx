@@ -3,8 +3,6 @@ import { TextAtom } from "../atomos/TextAtom";
 import "react-slideshow-image/dist/styles.css";
 import { posts } from "../../constants/Blog";
 
-console.log(posts);
-
 export function ClubPostsMolecule() {
   return (
     <div className="flex flex-col justify-center items-center mb-[116px]">

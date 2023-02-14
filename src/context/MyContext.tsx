@@ -1,14 +1,15 @@
 import { createContext, useState } from 'react';
 import { CardSimulationProps } from '../components/moleculas/CardSimulationMolecule';
+import { HeadeBlogPostOrganismInterface } from '../components/organismos/HeadeBlogPostOrganism';
 
 export type IMyContext = {
   showMenu: boolean;
-  data: Object;
+  data: HeadeBlogPostOrganismInterface;
   link: string;
   packages: CardSimulationProps[];
   allSiteTexts: string;
   location: string;
-  setData: React.Dispatch<React.SetStateAction<Object>>;
+  setData: React.Dispatch<React.SetStateAction<HeadeBlogPostOrganismInterface>>;
   setLocation: React.Dispatch<React.SetStateAction<string>>;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
   setLink: React.Dispatch<React.SetStateAction<string>>;
@@ -31,7 +32,12 @@ export function MyProvider({ children }: Props) {
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
   const [allSiteTexts, setAllSiteTexts] = useState<string>('');
   const [location, setLocation] = useState<string>('');
-  const [data, setData] = useState<Object>({});
+  const [data, setData] = useState<HeadeBlogPostOrganismInterface>({
+    capa: '',
+    title: '',
+    subtitle: '',
+    img: ''
+  });
 
   return (
     <MyContext.Provider value={{
