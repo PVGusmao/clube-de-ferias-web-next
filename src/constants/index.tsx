@@ -40,6 +40,12 @@ const {
 
 export const { mobile, desktop } = banners;
 
+export interface NavLinksInterface {
+  id: string;
+  route: string;
+  title: string;
+}
+
 export const navLinks = nav_links;
 
 export const home = homeData;
@@ -109,11 +115,23 @@ export const planos2 = [
   },
 ];
 
+export interface ClientsInterface {
+  content: string;
+  img: string;
+  name: string;
+  travelTo:string;
+}
+
 export const clientes = clients;
 
 export const marks = marksData;
 
 export const cardBlog = card_blog;
+
+export interface MinorCardBlogInterface {
+  image: string;
+  title: string;
+}
 
 export const minorCardBlog = minor_card_blog;
 
@@ -165,6 +183,12 @@ export const navigation = [
     route: "#blog",
   },
 ];
+
+export interface SocialMediaInterface {
+  id: string;
+  icon: IconType;
+  rota: string;  
+}
 
 export const socialMedia = [
   {
