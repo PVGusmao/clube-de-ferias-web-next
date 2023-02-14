@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
 
 import { IMyContext, MyContext } from "./context/MyContext";
+
+import logo from "./assets/logo-red.png";
 
 import "./App.css";
 
@@ -9,37 +10,28 @@ import { Route, Routes } from "react-router-dom";
 
 import { navLinks, socialMedia, navigation } from "./constants";
 
-import { FaWhatsappSquare } from "react-icons/fa";
-
 import Home from "./pages/Home";
 import { Blog } from "./pages/Blog/Blog";
-import { Plans } from "./pages/Plans/Plans";
+import { BlogPost } from "./pages/BlogPost";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { TalkToUs } from "./pages/TalkToUs/TalkToUs";
 
-import { RedirectPage } from "./components/atomos/RedirectPageAtom";
-
-import { NavBarMolecule } from "./components/moleculas/NavBarMolecule";
-
+import Sidebar from "./components/atomos/SideBarAtom";
 import { NewsOrganism } from "./components/organismos/NewsOrganism";
+import { RedirectPage } from "./components/atomos/RedirectPageAtom";
+import { NavBarMolecule } from "./components/moleculas/NavBarMolecule";
 import { FooterOrganism } from "./components/organismos/FooterOrganism";
 
 import api from "./services/api";
 
-import logo from "./assets/logo-red.png";
-import { BlogPost } from "./pages/BlogPost";
-import Sidebar from "./components/atomos/SideBarAtom";
-
 function App() {
-  const { setAllSiteTexts } = useContext(MyContext) as IMyContext;
-  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 
   async function getAllSiteTexts() {
     try {
       const response = await api.get("/pages/paulo");
-
       setAllSiteTexts(response as any);
     } catch (error) {
       console.log(error);
@@ -92,10 +84,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/sobre" element={<AboutUs />} />
-              {/* <Route path="/planos" element={<Plans />} /> */}
               <Route path="/blog" element={<Blog />} />
               <Route path="/blogPost/:slug" element={<BlogPost />} />
-
               <Route path="/fale-conosco" element={<TalkToUs />} />
 
               <Route

@@ -17,9 +17,9 @@ type Props = {
     logo: string;
     className: string;
   };
-  navLinks: NavLinksInterface;
+  navLinks: NavLinksInterface[];
   socialMediaProps: {
-    socialMedia: SocialMediaInterface;
+    socialMedia: SocialMediaInterface[];
     color: string;
     size: number;
   };
@@ -50,7 +50,7 @@ export function NavBarMolecule({
       </a>
 
       <div className="sm:flex hidden w-auto">
-        {navLinks.map((element, index: number) => (
+        {navLinks.map((element: NavLinksInterface, index: number) => (
           <TextButtonMolecule
             textClassName={`${textLinkProps.textClassName}`}
             className={`${textLinkProps.className}`}
@@ -84,7 +84,7 @@ export function NavBarMolecule({
       </div>
 
       <div className="hidden sm:flex">
-        {socialMediaProps.socialMedia.map((element, index: number) => (
+        {socialMediaProps.socialMedia.map((element: SocialMediaInterface, index: number) => (
           <IconButtonMolecule
             target="_blank"
             key={index}
