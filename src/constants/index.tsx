@@ -1,5 +1,3 @@
-//a index.ts é a HOME.
-
 import {
   FaFacebook,
   FaInstagram,
@@ -10,12 +8,9 @@ import {
 
 import { TbPig } from "react-icons/tb";
 import { MdEmail, MdOutlineMonetizationOn } from "react-icons/md";
-import { AiOutlineSafety } from "react-icons/ai";
 import { HiLocationMarker, HiOutlineBadgeCheck } from "react-icons/hi";
 import { IoIosArrowForward } from "react-icons/io";
 import { GiCommercialAirplane } from "react-icons/gi";
-import { BsTelephoneInboundFill } from "react-icons/bs";
-import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 import api from "../services/api";
 import { IconType } from "react-icons";

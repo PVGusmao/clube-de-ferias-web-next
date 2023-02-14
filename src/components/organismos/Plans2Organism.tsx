@@ -177,7 +177,7 @@ export function Plans2Organism({}) {
           </TextAtom>
         </div>
 
-        <div className="sm:w-1 bg-[red] sm:h-[70%] w-[70%] h-1" />
+        <div className="sm:w-1 bg-[lightgray] sm:h-[70%] w-[70%] h-1" />
 
         <div className="my-10 sm:my-0">
           <TextAtom
@@ -202,7 +202,7 @@ export function Plans2Organism({}) {
           </TextAtom>
         </div>
 
-        <div className="sm:w-1 bg-[red] sm:h-[70%] w-[70%] h-1" />
+        <div className="sm:w-1 bg-[lightgray] sm:h-[70%] w-[70%] h-1" />
 
         <div className="my-10 sm:my-0">
           <TextAtom
