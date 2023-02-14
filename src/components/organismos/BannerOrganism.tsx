@@ -13,7 +13,7 @@ export function BannerOrganism() {
       <BackgroundImageAtom
         children
         image={mobile}
-        className="sm:hidden h-[240px] rounded-2xl bg-contain"
+        className="sm:hidden h-[252px] rounded-2xl bg-cover"
       />
     </>
   );
