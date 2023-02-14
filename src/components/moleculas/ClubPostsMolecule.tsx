@@ -1,7 +1,9 @@
-import CardClubPosts from "./CardClubPosts";
+import CardClubPosts, { CardClubPostsInterface } from "./CardClubPosts";
 import { TextAtom } from "../atomos/TextAtom";
 import "react-slideshow-image/dist/styles.css";
 import { posts } from "../../constants/Blog";
+
+console.log(posts);
 
 export function ClubPostsMolecule() {
   return (
@@ -14,10 +16,10 @@ export function ClubPostsMolecule() {
             text="Postagens do Clube"
           />
           <div className="sm:flex justify-between flex-wrap px-2 sm:w-[60.625rem] ">
-            {posts.map((element, index) => (
+            {posts.map((element: CardClubPostsInterface, index: number) => (
               <div className="mr-4">
                 <CardClubPosts
-                  img={element.image_large}
+                  image_large={element.image_large}
                   title={element.title}
                   subtitle={element.subtitle}
                   slug={element.slug}

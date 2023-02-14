@@ -1,15 +1,15 @@
-import headerImage from "../../assets/headerImageAboutUs.png";
 import { TextAtom } from "../atomos/TextAtom";
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 
-interface Props {
+export interface HeadeBlogPostOrganismInterface {
+  [x: string]: string;
   title: string;
   subtitle: string;
   img: string;
   capa: string;
 }
 
-export function HeadeBlogPostOrganism({ title, subtitle, capa }: Props) {
+export function HeadeBlogPostOrganism({ title, subtitle, capa }: HeadeBlogPostOrganismInterface) {
   return (
     <>
       <BackgroundImageAtom

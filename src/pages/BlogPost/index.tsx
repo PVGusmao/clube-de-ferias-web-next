@@ -1,28 +1,26 @@
 import api from "../../services/api";
-import { debounce } from "lodash";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ReactHtmlParser from "react-html-parser";
 import { RecentsPostsOrganism } from "../../components/organismos/RecentsPostsOrganism";
-import { HeadeBlogPostOrganism } from "../../components/organismos/HeadeBlogPostOrganism";
+import { HeadeBlogPostOrganism, HeadeBlogPostOrganismInterface } from "../../components/organismos/HeadeBlogPostOrganism";
 import { SocialNetworksOrganism } from "../../components/organismos/SocialNetworksOrganism";
 
 export function BlogPost() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState<HeadeBlogPostOrganismInterface>({
+    capa: '',
+    title: '',
+    subtitle: '',
+    img: ''
+  });
   const params = useParams();
 
   function getBlogPost() {
     api.get(`/posts/${params.slug}`).then((e) => setData(e.data.post));
-    // setData(response.data.post);
   }
-
-  // const debouncedFetchData = debounce(getBlogPost, 5000);
 
   useEffect(() => {
     getBlogPost();
   }, [data]);
-
-  // console.log(data);
 
   return (
     <>
@@ -31,6 +29,7 @@ export function BlogPost() {
           capa={data.capa}
           title={data.title}
           subtitle={data.subtitle}
+          img={""}
         />
         <div className="flex flex-row justify-center py-12">
           <div

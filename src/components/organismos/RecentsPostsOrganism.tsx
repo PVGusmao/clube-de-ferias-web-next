@@ -1,6 +1,6 @@
 import { featured } from "../../constants/Blog";
 import { TextAtom } from "../atomos/TextAtom";
-import { CardRecentsPosts } from "../moleculas/CardRecentsPosts";
+import { CardRecentsPosts, CardRecentsPostsInterface } from "../moleculas/CardRecentsPosts";
 
 export function RecentsPostsOrganism() {
   return (
@@ -10,10 +10,10 @@ export function RecentsPostsOrganism() {
         className="text-left text-[24px] font-bold w-full ml-[30px] my-[20px]"
         text="Recents"
       />
-      {featured.map((element, index) => (
+      {featured.map((element: CardRecentsPostsInterface, index: number) => (
         <CardRecentsPosts
           title={element.title}
-          img={element.image_thumbnail}
+          image_thumbnail={element.image_thumbnail}
           data={element.data}
           slug={element.slug}
         />
