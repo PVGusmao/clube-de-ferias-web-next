@@ -21,7 +21,7 @@ export default function Home() {
 
       <ClientsOrganism />
 
-      {/* {bannerContent[1].enable && <BannerOrganism />} */}
+      {bannerContent[1].enable && <BannerOrganism />}
     </>
   );
 }
