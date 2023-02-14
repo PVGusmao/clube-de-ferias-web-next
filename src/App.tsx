@@ -69,7 +69,7 @@ function App() {
           pageId="home"
           textLinkProps={{
             textClassName:
-              "sm:block hover:text-[darkgray] font-semibold hidden text-[red]",
+              "sm:block hover:text-[darkgray] font-semibold hidden text-[#F20F0F]",
             className:
               "w-32 cursor-pointer text-white hover:border-2 hover:border-b-[darkgray]",
           }}
