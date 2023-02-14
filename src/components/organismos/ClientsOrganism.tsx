@@ -12,8 +12,8 @@ export function ClientsOrganism() {
         Nossos Clientes recomendam!
       </h1>
       <Slide arrows={false} slidesToShow={3} transitionDuration={10}>
-        {clientes.map((element, index: number) => (
-          <div className="hidden sm:flex justify-center flex-row justify-evenly">
+        {clientes.map((element: any, index: number) => (
+          <div key={index} className="hidden sm:flex justify-center flex-row justify-evenly">
             <CardCommentsMolecule
               key={index}
               content={element.content}

@@ -10,7 +10,7 @@ export function RecentsPostsOrganism() {
         className="text-left text-[24px] font-bold w-full ml-[30px] my-[20px]"
         text="Recents"
       />
-      {featured.map((element, index) => (
+      {featured.map((element: any, index: number) => (
         <CardRecentsPosts
           title={element.title}
           img={element.image_thumbnail}

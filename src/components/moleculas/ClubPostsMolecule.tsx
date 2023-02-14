@@ -14,7 +14,7 @@ export function ClubPostsMolecule() {
             text="Postagens do Clube"
           />
           <div className="sm:flex justify-between flex-wrap px-2 sm:w-[60.625rem] ">
-            {posts.map((element, index) => (
+            {posts.map((element: any, index: number) => (
               <div className="mr-4">
                 <CardClubPosts
                   img={element.image_large}

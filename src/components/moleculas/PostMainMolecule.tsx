@@ -19,11 +19,12 @@ export function PostMainMolecule() {
           text="Nossas principais postagens"
         />
         <div className="sm:flex flex-col sm:mr-10 sm:justify-between h-[38.063rem]">
-          {featured.map((element, index) => (
+          {featured.map((element: any, index: number) => (
             <CardTopPostsSM
               title={element.title}
               subtitle={element.subtitle}
               slug={element.slug}
+              text={""}
             />
           ))}
         </div>

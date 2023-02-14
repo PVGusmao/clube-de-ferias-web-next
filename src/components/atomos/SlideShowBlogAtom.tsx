@@ -18,7 +18,7 @@ export const SlideShowBlogAtom = () => {
       }
     >
       <Slide arrows={false} transitionDuration={250}>
-        {minorCardBlog.map((element, index) => (
+        {minorCardBlog.map((element: any, index: number) => (
           <div className="each-slide-effect" key={index}>
             <BackgroundImageAtom
               className={`flex items-center px-100 text-center rounded-xl mx-1 bg-cover justify-between h-36 w-96`}

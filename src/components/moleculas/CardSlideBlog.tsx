@@ -9,12 +9,18 @@ type Props = {
 export function CardSlideBlog({ title, subtitle, text }: Props) {
   return (
     <div className="my-[100px]">
-      <TextAtom className="text-white text-left" text={subtitle} />
+      <TextAtom
+        className="text-white text-left"
+        text={subtitle}
+      > </TextAtom>
       <TextAtom
         className="font-bold text-3xl	text-white text-left"
         text={subtitle}
-      />
-      <TextAtom className="text-xl text-white text-left " text={text} />
+      > </TextAtom>
+      <TextAtom
+        className="text-xl text-white text-left "
+        text={text}
+      > </TextAtom>
     </div>
   );
 }

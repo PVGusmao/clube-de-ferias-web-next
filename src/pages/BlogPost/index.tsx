@@ -31,6 +31,7 @@ export function BlogPost() {
           capa={data.capa}
           title={data.title}
           subtitle={data.subtitle}
+          img={""}
         />
         <div className="flex flex-row justify-center py-12">
           <div

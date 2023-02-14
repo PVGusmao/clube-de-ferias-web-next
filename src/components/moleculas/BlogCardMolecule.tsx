@@ -32,7 +32,7 @@ export function BlogCardMolecule() {
       </BackgroundImageAtom>
 
       <div className="sm:flex hidden flex-row w-auto sm:flex-col justify-between">
-        {minorCardBlog.map((element, index) => (
+        {minorCardBlog.map((element: any, index: number) => (
           <BackgroundImageAtom
             className={`flex items-center  text-left pl-[15px] rounded-xl m-2 justify-between h-32 sm:w-96 bg-cover`}
             image={element.image}
