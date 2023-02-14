@@ -5,6 +5,7 @@ import { TextAtom } from "../atomos/TextAtom";
 import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom";
 
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
+import { useContext } from "react";
 
 export function Plans2Organism({}) {
   return (
@@ -26,7 +27,7 @@ export function Plans2Organism({}) {
       </div>
       <div className="sm:flex hidden flex-row justify-evenly mt-[70px] w-full">
         {planos2.map((element, index: number) => (
-          <div className="flex flex-col items-center h-[640px] bg-white rounded-2xl shadow-lg">
+          <div key={index} className="flex flex-col items-center h-[640px] bg-white rounded-2xl shadow-lg">
             <div className={`flex items-center flex-col w-72 space-y-3`}>
               <TextAtom
                 children

@@ -3,11 +3,13 @@ import { CardSimulationProps } from '../components/moleculas/CardSimulationMolec
 
 export type IMyContext = {
   showMenu: boolean;
+  data: Object;
   link: string;
   packages: CardSimulationProps[];
   allSiteTexts: string;
   location: string;
-  setLocation:React.Dispatch<React.SetStateAction<string>>;
+  setData: React.Dispatch<React.SetStateAction<Object>>;
+  setLocation: React.Dispatch<React.SetStateAction<string>>;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
   setLink: React.Dispatch<React.SetStateAction<string>>;
   setPackages: React.Dispatch<React.SetStateAction<CardSimulationProps[]>>;
@@ -29,6 +31,7 @@ export function MyProvider({ children }: Props) {
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
   const [allSiteTexts, setAllSiteTexts] = useState<string>('');
   const [location, setLocation] = useState<string>('');
+  const [data, setData] = useState<Object>({});
 
   return (
     <MyContext.Provider value={{
@@ -36,7 +39,8 @@ export function MyProvider({ children }: Props) {
       link, setLink,
       packages, setPackages,
       allSiteTexts, setAllSiteTexts,
-      location, setLocation
+      location, setLocation,
+      data, setData,
     } as IMyContext}>
       {children}
     </MyContext.Provider>

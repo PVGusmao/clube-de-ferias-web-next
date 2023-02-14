@@ -21,7 +21,7 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
     <div className={`px-8 ${className}`}>
       <Slide arrows={true} transitionDuration={250}>
         {planos2.map((element, index) => (
-          <div className="flex flex-col items-cente h-[570px] bg-white rounded-2xl shadow-lg m-1">
+          <div key={index} className="flex flex-col items-cente h-[570px] bg-white rounded-2xl shadow-lg m-1">
             <div
               className="h-full flex items-center justify-center flex-col"
               key={index}

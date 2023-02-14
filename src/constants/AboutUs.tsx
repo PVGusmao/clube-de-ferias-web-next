@@ -13,7 +13,6 @@ import { IoMedalOutline } from "react-icons/io5";
 
 async function item() {
   const response = await api.get('/pages');
-  // console.log(response);
   localStorage.setItem("about", JSON.stringify(response));
 }
 
