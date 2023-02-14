@@ -85,13 +85,13 @@ export function SimulationMolecule({
         <div className="mt-[30px] px-12">
           <Slider
             defaultValue={6}
-            max={15}
+            max={18}
             min={6}
             value={sliderValue}
             onChange={handleSliderChange}
             aria-label="Default"
-            // valueLabelDisplay="auto"
-            step={6}
+            valueLabelDisplay="auto"
+            step={3}
             marks={marks}
           />
         </div>
