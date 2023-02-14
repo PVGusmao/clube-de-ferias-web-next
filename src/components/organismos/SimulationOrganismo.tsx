@@ -20,7 +20,7 @@ export function SimulationOrganism() {
   const { packages, setPackages } = useContext(MyContext) as IMyContext;
 
   const [tabValue, setTabValue] = React.useState(199);
-  const [sliderValue, setSliderValue] = React.useState(3);
+  const [sliderValue, setSliderValue] = React.useState(6);
   const [totalValue, setTotalValue] = React.useState(1194);
 
   let url = `/pacotes?price=${totalValue}`;
