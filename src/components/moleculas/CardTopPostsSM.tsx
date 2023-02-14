@@ -2,14 +2,14 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { TextAtom } from "../atomos/TextAtom";
 
-type Props = {
+export interface CardTopPostsInterface {
   title: string;
   subtitle: string;
   slug: string;
   text: string;
 };
 
-export function CardTopPostsSM({ title, subtitle, slug }: Props) {
+export function CardTopPostsSM({ title, subtitle, slug }: CardTopPostsInterface) {
   return (
     <div className="w-[318px] h-[271px] sm:w-[23.125rem] sm:h-[18.25rem] flex flex-col justify-center p-7	sm:mb-0 mb-6 shadow-md">
       <TextAtom
