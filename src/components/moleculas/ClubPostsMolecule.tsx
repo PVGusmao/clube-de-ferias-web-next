@@ -14,7 +14,9 @@ export function ClubPostsMolecule() {
             text="Postagens do Clube"
           />
           <div className="sm:flex justify-between flex-wrap px-2 sm:w-[60.625rem] ">
+
             {posts.map((element: CardClubPostsInterface, index: number) => (
+
               <div className="mr-4">
                 <CardClubPosts
                   image_large={element.image_large}

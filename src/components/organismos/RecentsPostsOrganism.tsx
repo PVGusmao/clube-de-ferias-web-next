@@ -10,6 +10,7 @@ export function RecentsPostsOrganism() {
         className="text-left text-[24px] font-bold w-full ml-[30px] my-[20px]"
         text="Recents"
       />
+
       {featured.map((element: CardRecentsPostsInterface, index: number) => (
         <CardRecentsPosts
           title={element.title}
