@@ -1,7 +1,6 @@
 import CardClubPosts from "./CardClubPosts";
 import { TextAtom } from "../atomos/TextAtom";
 import "react-slideshow-image/dist/styles.css";
-
 import { posts } from "../../constants/Blog";
 
 export function ClubPostsMolecule() {
