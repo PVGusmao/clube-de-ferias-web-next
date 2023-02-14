@@ -8,6 +8,7 @@ import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 import { IMyContext, MyContext } from "../../context/MyContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { NavLinksInterface, SocialMediaInterface } from "../../constants";
 
 type Props = {
   className: string;
@@ -16,9 +17,9 @@ type Props = {
     logo: string;
     className: string;
   };
-  navLinks: any;
+  navLinks: NavLinksInterface;
   socialMediaProps: {
-    socialMedia: any;
+    socialMedia: SocialMediaInterface;
     color: string;
     size: number;
   };

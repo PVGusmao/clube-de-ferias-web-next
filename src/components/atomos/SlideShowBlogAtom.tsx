@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
 
-import { minorCardBlog } from "../../constants";
+import { minorCardBlog, MinorCardBlogInterface } from "../../constants";
 
 import { TextAtom } from "./TextAtom";
 import { BackgroundImageAtom } from "./BackgroundImageAtom";
@@ -18,7 +18,7 @@ export const SlideShowBlogAtom = () => {
       }
     >
       <Slide arrows={false} transitionDuration={250}>
-        {minorCardBlog.map((element: any, index: number) => (
+        {minorCardBlog.map((element: MinorCardBlogInterface, index: number) => (
           <div className="each-slide-effect" key={index}>
             <BackgroundImageAtom
               className={`flex items-center px-100 text-center rounded-xl mx-1 bg-cover justify-between h-36 w-96`}

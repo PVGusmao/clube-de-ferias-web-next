@@ -26,8 +26,6 @@ export function FormOrganism() {
       .catch((err) => {
         console.error("ops! ocorreu um erro" + JSON.stringify(err.response));
       });
-
-    console.log(body);
   }
 
   return (

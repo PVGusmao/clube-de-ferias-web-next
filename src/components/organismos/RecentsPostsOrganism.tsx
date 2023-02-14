@@ -6,8 +6,6 @@ import { CardRecentsPosts, CardRecentsPostsInterface } from "../moleculas/CardRe
 export function RecentsPostsOrganism() {
   const { recents } = useContext(MyContext) as IMyContext;
 
-  console.log(recents)
-
   return (
     <div className="w-[270px] h-[467px] flex items-center rounded-lg shadow-md flex-col mb-[39px]">
       <TextAtom

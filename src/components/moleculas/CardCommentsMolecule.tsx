@@ -12,14 +12,14 @@ import logo from "../../assets/logo-s-red.png";
 type Props = {
   content: string;
   name: string;
-  ocupation: string;
+  travelTo: string;
   img: string;
 };
 
 export default function CardCommentsMolecule({
   content,
   name,
-  ocupation,
+  travelTo,
   img,
 }: Props) {
   return (
@@ -53,7 +53,7 @@ export default function CardCommentsMolecule({
           <TextAtom
             children
             className="text-sm text-left text-[#B4B7C9] font-bold"
-            text={ocupation}
+            text={travelTo}
           />
         </div>
       </CardFooter>
