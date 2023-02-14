@@ -91,7 +91,7 @@ export function SimulationMolecule({
             onChange={handleSliderChange}
             aria-label="Default"
             // valueLabelDisplay="auto"
-            step={3}
+            step={6}
             marks={marks}
           />
         </div>
