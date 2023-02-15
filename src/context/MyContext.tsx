@@ -9,7 +9,7 @@ export type IMyContext = {
   recents: CardRecentsPostsInterface[];
   link: string;
   packages: CardSimulationProps[];
-  allSiteTexts: string;
+  allSiteTexts: undefined;
   location: string;
   setRecents: React.Dispatch<React.SetStateAction<CardRecentsPostsInterface[]>>;
   setData: React.Dispatch<React.SetStateAction<HeadeBlogPostOrganismInterface>>;
@@ -17,7 +17,7 @@ export type IMyContext = {
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
   setLink: React.Dispatch<React.SetStateAction<string>>;
   setPackages: React.Dispatch<React.SetStateAction<CardSimulationProps[]>>;
-  setAllSiteTexts: React.Dispatch<React.SetStateAction<string>>;
+  setAllSiteTexts: React.Dispatch<React.SetStateAction<undefined>>;
 }
 
 export const MyContext = createContext<IMyContext | null>(null);
@@ -33,7 +33,7 @@ export function MyProvider({ children }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [link, setLink] = useState<string>('');
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
-  const [allSiteTexts, setAllSiteTexts] = useState<string>('');
+  const [allSiteTexts, setAllSiteTexts] = useState<undefined>(undefined);
   const [location, setLocation] = useState<string>('');
   const [recents, setRecents] = useState<CardRecentsPostsInterface[]>([]);
   const [data, setData] = useState<HeadeBlogPostOrganismInterface>({

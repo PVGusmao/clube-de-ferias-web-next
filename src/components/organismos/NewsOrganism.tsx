@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 import { TextAtom } from "../atomos/TextAtom";
 import { Checkbox, Input } from "@mui/material";
@@ -6,6 +6,7 @@ import { Checkbox, Input } from "@mui/material";
 import { FaGooglePlay } from "react-icons/fa";
 import { AiFillApple } from "react-icons/ai";
 import { IconAtom } from "../atomos/IconAtom";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function NewsOrganism() {
   return (

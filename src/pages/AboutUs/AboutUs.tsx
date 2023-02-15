@@ -8,7 +8,7 @@ export function AboutUs() {
   return (
     <>
       <div>
-        <HeaderAbout />
+        {/* <HeaderAbout />
 
         <NewWayTravelAboutUsOrganism />
 
@@ -16,7 +16,7 @@ export function AboutUs() {
 
         <HowItWorksAboutUsOrganism />
 
-        <BigCommentAboutUsOrganism />
+        <BigCommentAboutUsOrganism /> */}
       </div>
     </>
   );

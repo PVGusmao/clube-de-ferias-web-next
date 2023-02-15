@@ -17,7 +17,6 @@ type Props = {
     logo: string;
     className: string;
   };
-  navLinks: NavLinksInterface[];
   socialMediaProps: {
     socialMedia: SocialMediaInterface[];
     color: string;
@@ -35,13 +34,12 @@ type Props = {
 export function NavBarMolecule({
   className,
   logoProps,
-  navLinks,
   socialMediaProps,
   textLinkProps,
   burgerMenuProps,
   pageId,
 }: Props) {
-  const { showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const { showMenu, setShowMenu, allSiteTexts } = useContext(MyContext) as IMyContext;
 
   return (
     <div id={pageId} className={`${className} `}>
@@ -50,7 +48,7 @@ export function NavBarMolecule({
       </a>
 
       <div className="sm:flex hidden w-auto">
-        {navLinks.map((element: NavLinksInterface, index: number) => (
+        {allSiteTexts?.data?.paulo?.nav_links.map((element: NavLinksInterface, index: number) => (
           <TextButtonMolecule
             textClassName={`${textLinkProps.textClassName}`}
             className={`${textLinkProps.className}`}

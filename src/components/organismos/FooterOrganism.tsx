@@ -1,20 +1,43 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IconAtom } from "../atomos/IconAtom";
 
 import { TextAtom } from "../atomos/TextAtom";
 
 import logo from "../../assets/logo.png";
 
-import { socialMedia, contato, Navigation } from "../../constants";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
+import { IMyContext, MyContext } from "../../context/MyContext";
+import { IoIosArrowForward } from "react-icons/io";
+import { SocialMediaInterface } from "../../constants";
 
 interface Props {
-  navigation: Navigation[];
+  socialMedia: SocialMediaInterface;
 }
 
-export function FooterOrganism({ navigation }: Props) {
+export function FooterOrganism({ socialMedia }: Props) {
+  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+
   const dataAtual = new Date();
   const anoAtual = dataAtual.getFullYear();
+
+  const navigation = [
+    {
+      icon: IoIosArrowForward,
+      content: "Home",
+      route: "#home",
+    },
+    {
+      icon: IoIosArrowForward,
+      content: "Planos",
+      route: "#planos",
+    },
+    {
+      icon: IoIosArrowForward,
+      content: "Blog",
+      route: "#blog",
+    },
+  ];
+
   return (
     <>
       <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
@@ -63,7 +86,7 @@ export function FooterOrganism({ navigation }: Props) {
               text="SIGA NOSSAS REDES"
             />
             <div className="flex flex-row h-12">
-              {socialMedia.map((element, index: number) => (
+              {socialMedia.map((element: SocialMediaInterface, index: number) => (
                 <IconButtonMolecule
                   target="_blank"
                   key={index}

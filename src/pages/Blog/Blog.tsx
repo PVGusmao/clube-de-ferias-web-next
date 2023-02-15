@@ -6,9 +6,9 @@ export function Blog() {
   return (
     <>
       <div className="w-full">
-        <SliderBlogMolecule />
+        {/* <SliderBlogMolecule />
         <PostMainMolecule />
-        <ClubPostsMolecule />
+        <ClubPostsMolecule /> */}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../index.css";
 
 import { Slide } from "react-slideshow-image";
@@ -9,8 +9,11 @@ import { minorCardBlog, MinorCardBlogInterface } from "../../constants";
 
 import { TextAtom } from "./TextAtom";
 import { BackgroundImageAtom } from "./BackgroundImageAtom";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export const SlideShowBlogAtom = () => {
+  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+
   return (
     <div
       className={
@@ -18,7 +21,7 @@ export const SlideShowBlogAtom = () => {
       }
     >
       <Slide arrows={false} transitionDuration={250}>
-        {minorCardBlog.map((element: MinorCardBlogInterface, index: number) => (
+        {allSiteTexts?.data?.paulo?.minor_card_blog.map((element: MinorCardBlogInterface, index: number) => (
           <div className="each-slide-effect" key={index}>
             <BackgroundImageAtom
               className={`flex items-center px-100 text-center rounded-xl mx-1 bg-cover justify-between h-36 w-96`}

@@ -1,11 +1,8 @@
-import React from "react";
 import "../../index.css";
 
 import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
-
-import { planos, planos2 } from "../../constants";
 
 import { CardPlanosMolecule } from "../moleculas/CardPlanosMolecule";
 import { TextAtom } from "./TextAtom";
@@ -14,13 +11,14 @@ import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 type Props = {
   className?: string;
+  planos2: any;
 };
 
-export const SlideShowPlansAtom = ({ className }: Props) => {
+export const SlideShowPlansAtom = ({ className, planos2 }: Props) => {
   return (
     <div className={`px-8 ${className}`}>
       <Slide arrows={true} transitionDuration={250}>
-        {planos2.map((element, index) => (
+        {planos2.map((element: any, index: number) => (
           <div key={index} className="flex flex-col items-cente h-[570px] bg-white rounded-2xl shadow-lg m-1">
             <div
               className="h-full flex items-center justify-center flex-col"
