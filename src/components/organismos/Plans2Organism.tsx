@@ -11,7 +11,7 @@ export function Plans2Organism({}) {
   return (
     <div
       id="planos"
-      className="bg-[#F4F4F4] sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[200px]"
+      className="bg-[#F4F4F4] sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[300px]"
     >
       <div className="sm:flex justify-center">
         <TextAtom
