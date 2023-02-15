@@ -8,8 +8,6 @@ import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
 
-import { navLinks, socialMedia, navigation } from "./constants/Home";
-
 import Home from "./pages/Home";
 import { Blog } from "./pages/Blog/Blog";
 import { BlogPost } from "./pages/BlogPost";
@@ -23,21 +21,17 @@ import { NavBarMolecule } from "./components/moleculas/NavBarMolecule";
 import { FooterOrganism } from "./components/organismos/FooterOrganism";
 
 import api from "./services/api";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 function App() {
-  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(
-    MyContext
-  ) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 
-  async function getAllSiteTexts() {
-    try {
-      const response = await api.get("/pages/paulo");
-      setAllSiteTexts(response as any);
-    } catch (error) {
-      console.log(error);
-    }
+  async function item() {
+    const response = await api.get("/pages");
+    localStorage.setItem("home", JSON.stringify(response));
+    setAllSiteTexts(response as any);
   }
 
   async function getWhatsappLink() {
@@ -51,9 +45,27 @@ function App() {
   }
 
   useEffect(() => {
-    getAllSiteTexts();
+    item();
     getWhatsappLink();
   }, []);
+
+  const socialMedia = [
+    {
+      id: "instagram",
+      icon: FaInstagram,
+      rota: "/instagram",
+    },
+    {
+      id: "facebook",
+      icon: FaFacebook,
+      rota: "/facebook",
+    },
+    {
+      id: "tik-tok",
+      icon: FaTiktok,
+      rota: "/tik-tok",
+    },
+  ];
 
   return (
     <>
@@ -71,7 +83,6 @@ function App() {
             logo: logo,
             className: "w-32",
           }}
-          navLinks={navLinks}
           socialMediaProps={{
             socialMedia: socialMedia,
             color: "red",
@@ -81,45 +92,48 @@ function App() {
             color: "black",
           }}
         />
-        {!showMenu && (
+        {!showMenu &&(
           <>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/sobre" element={<AboutUs />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blogPost/:slug" element={<BlogPost />} />
-              <Route path="/fale-conosco" element={<TalkToUs />} />
+            {
+              allSiteTexts && 
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/sobre" element={<AboutUs />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blogPost/:slug" element={<BlogPost />} />
+                  <Route path="/fale-conosco" element={<TalkToUs />} />
 
-              <Route
-                path="/tik-tok"
-                element={
-                  <RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />
-                }
-              />
-              <Route
-                path="/facebook"
-                element={
-                  <RedirectPage
-                    to={"http://www.facebook.com/clubedeferiasstellabarros"}
+                  <Route
+                    path="/tik-tok"
+                    element={
+                      <RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />
+                    }
                   />
-                }
-              />
-              <Route
-                path="/instagram"
-                element={
-                  <RedirectPage
-                    to={"http://www.instagram.com/oclubedeferias"}
+                  <Route
+                    path="/facebook"
+                    element={
+                      <RedirectPage
+                        to={"http://www.facebook.com/clubedeferiasstellabarros"}
+                      />
+                    }
                   />
-                }
-              />
-            </Routes>
+                  <Route
+                    path="/instagram"
+                    element={
+                      <RedirectPage
+                        to={"http://www.instagram.com/oclubedeferias"}
+                      />
+                    }
+                  />
+                </Routes>
+            }
 
             <NewsOrganism />
-            <FooterOrganism navigation={navigation} />
+            <FooterOrganism socialMedia={socialMedia} />
           </>
         )}
       </div>
-      {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />}
+      {/* {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />} */}
     </>
   );
 }

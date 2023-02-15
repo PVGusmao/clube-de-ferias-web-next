@@ -1,13 +1,81 @@
-import { planos2, subPlanText } from "../../constants/Home";
-
 import { IconAtom } from "../atomos/IconAtom";
 import { TextAtom } from "../atomos/TextAtom";
 import { SlideShowPlansAtom } from "../atomos/SlideShowPlanosAtom";
 
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
-import { useContext } from "react";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { TbPig } from "react-icons/tb";
+import { FaRegBuilding } from "react-icons/fa";
 
-export function Plans2Organism({}) {
+type Props = {
+  data?: any;
+}
+
+export function Plans2Organism({data}: Props) {
+
+  const planos2 = [
+    {
+      id: 1,
+      planName: data.data.paulo.plans2[0]?.planName,
+      firstIcon: GiCommercialAirplane,
+      firstText: data.data.paulo.plans2[0]?.firstText,
+      discount: data.data.paulo.plans2[0]?.discount,
+      discountText: data.data.paulo.plans2[0]?.discountText,
+      thirdIcon: TbPig,
+      thirdText: data.data.paulo.plans2[0]?.thirdText,
+      fourthIcon: FaRegBuilding,
+      fourthText: data.data.paulo.plans2[0]?.fourthText,
+      priceTag: data.data.paulo.plans2[0]?.priceTag,
+      buttonName: data.data.paulo.plans2[0]?.buttonName,
+      colorPlan: data.data.paulo.plans2[0]?.colorPan,
+    },
+    {
+      id: 2,
+      planName: data?.data?.paulo?.plans2[1]?.planName,
+      firstIcon: GiCommercialAirplane,
+      firstText: data.data.paulo.plans2[1]?.firstText,
+      discount: data.data.paulo.plans2[1]?.discount,
+      discountText: data.data.paulo.plans2[1]?.discountText,
+      thirdIcon: TbPig,
+      thirdText: data.data.paulo.plans2[1]?.thirdText,
+      fourthIcon: FaRegBuilding,
+      fourthText: data.data.paulo.plans2[1]?.fourthText,
+      priceTag: data.data.paulo.plans2[1]?.priceTag,
+      buttonName: data.data.paulo.plans2[1]?.buttonName,
+      colorPlan: data.data.paulo.plans2[1]?.colorPlan,
+    },
+    {
+      id: 3,
+      planName: data.data.paulo.plans2[2]?.planName,
+      firstIcon: GiCommercialAirplane,
+      firstText: data.data.paulo.plans2[2]?.firstText,
+      discount: data.data.paulo.plans2[2]?.discount,
+      discountText: data.data.paulo.plans2[2]?.discountText,
+      thirdIcon: TbPig,
+      thirdText: data.data.paulo.plans2[2]?.thirdText,
+      fourthIcon: FaRegBuilding,
+      fourthText: data.data.paulo.plans2[2]?.fourthText,
+      priceTag: data.data.paulo.plans2[2]?.priceTag,
+      buttonName: data.data.paulo.plans2[2]?.buttonName,
+      colorPlan: data.data.paulo.plans2[2]?.colorPlan,
+    },
+    {
+      id: 4,
+      planName: data.data.paulo.plans2[3]?.planName,
+      firstIcon: GiCommercialAirplane,
+      firstText: data.data.paulo.plans2[3]?.firstText,
+      discount: data.data.paulo.plans2[3]?.discount,
+      discountText: data.data.paulo.plans2[3]?.discountText,
+      thirdIcon: TbPig,
+      thirdText: data.data.paulo.plans2[3]?.thirdText,
+      fourthIcon: FaRegBuilding,
+      fourthText: data.data.paulo.plans2[3]?.fourthText,
+      priceTag: data.data.paulo.plans2[3]?.priceTag,
+      buttonName: data.data.paulo.plans2[3]?.buttonName,
+      colorPlan: data.data.paulo.plans2[3]?.colorPlan,
+    },
+  ];
+
   return (
     <div
       id="planos"
@@ -155,52 +223,27 @@ export function Plans2Organism({}) {
         ))}
       </div>
 
-      <SlideShowPlansAtom className="w-full sm:hidden h-[600px]" />
+      <SlideShowPlansAtom planos2={planos2} className="w-full sm:hidden h-[600px]" />
 
       <div className="bg-white flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px]">
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[0].text1}
+            text={data.data.paulo.sub_plans_text[0].text1}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[0].text2}
+            text={data.data.paulo.sub_plans_text[0].text2}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[0].text3}
-          >
-            {" "}
-          </TextAtom>
-        </div>
-
-        <div className="sm:w-1 bg-[lightgray] sm:h-[70%] w-[70%] h-1" />
-
-        <div className="my-10 sm:my-0">
-          <TextAtom
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[1].text1}
-          >
-            {" "}
-          </TextAtom>
-
-          <TextAtom
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[1].text2}
-          >
-            {" "}
-          </TextAtom>
-
-          <TextAtom
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[1].text3}
+            text={data.data.paulo.sub_plans_text[0].text3}
           >
             {" "}
           </TextAtom>
@@ -211,21 +254,46 @@ export function Plans2Organism({}) {
         <div className="my-10 sm:my-0">
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[2].text1}
+            text={data.data.paulo.sub_plans_text[1].text1}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[2].text2}
+            text={data.data.paulo.sub_plans_text[1].text2}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
             className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
-            text={subPlanText[2].text3}
+            text={data.data.paulo.sub_plans_text[1].text3}
+          >
+            {" "}
+          </TextAtom>
+        </div>
+
+        <div className="sm:w-1 bg-[lightgray] sm:h-[70%] w-[70%] h-1" />
+
+        <div className="my-10 sm:my-0">
+          <TextAtom
+            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            text={data.data.paulo.sub_plans_text[2].text1}
+          >
+            {" "}
+          </TextAtom>
+
+          <TextAtom
+            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            text={data.data.paulo.sub_plans_text[2].text2}
+          >
+            {" "}
+          </TextAtom>
+
+          <TextAtom
+            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            text={data.data.paulo.sub_plans_text[2].text3}
           >
             {" "}
           </TextAtom>

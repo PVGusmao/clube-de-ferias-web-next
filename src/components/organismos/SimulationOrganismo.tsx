@@ -1,6 +1,4 @@
-import React, { useContext, useState } from "react";
-
-import { marks } from "../../constants/Home";
+import React, { useContext } from "react";
 
 import { TextAtom } from "../atomos/TextAtom";
 import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
@@ -14,7 +12,11 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 import api from "../../services/api";
 import { SimulationMolecule } from "../moleculas/SimulationMolecule";
 
-export function SimulationOrganism() {
+type Props = {
+  data: any;
+}
+
+export function SimulationOrganism({ data }: Props) {
   const { packages, setPackages } = useContext(MyContext) as IMyContext;
 
   const [tabValue, setTabValue] = React.useState(199);
@@ -77,7 +79,7 @@ export function SimulationOrganism() {
         tabValue={tabValue}
         handleTabsChange={handleTabsChange}
         sliderValue={sliderValue}
-        marks={marks}
+        marks={data.data.paulo.marks}
         handleSliderChange={handleSliderChange}
       />
 

@@ -1,4 +1,6 @@
-import { bannerContent } from "../../constants/Home";
+import { useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
+
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
@@ -7,21 +9,23 @@ import { SimulationOrganism } from "../../components/organismos/SimulationOrgani
 import { Plans2Organism } from "../../components/organismos/Plans2Organism";
 
 export default function Home() {
+  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+
   return (
     <>
-      <WelcomeOrganism />
+      <WelcomeOrganism data={allSiteTexts} />
 
-      <Plans2Organism />
+      <Plans2Organism data={allSiteTexts} />
 
-      <SimulationOrganism />
+      <SimulationOrganism data={allSiteTexts} />
 
-      {bannerContent[0].enable && <BannerOrganism />}
+      {allSiteTexts?.data.paulo.banner[0].enable && <BannerOrganism data={allSiteTexts}/>}
 
       <BlogOrganism />
 
       <ClientsOrganism />
 
-      {bannerContent[1].enable && <BannerOrganism />}
+      {allSiteTexts?.data.paulo.banner[1].enable && <BannerOrganism data={allSiteTexts}/>}
     </>
   );
 }
