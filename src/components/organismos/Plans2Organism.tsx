@@ -11,7 +11,7 @@ export function Plans2Organism({}) {
   return (
     <div
       id="planos"
-      className="bg-[#F4F4F4] sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[170px]"
+      className="bg-[#F4F4F4] sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[200px]"
     >
       <div className="sm:flex justify-center">
         <TextAtom
@@ -27,7 +27,10 @@ export function Plans2Organism({}) {
       </div>
       <div className="sm:flex hidden flex-row justify-evenly mt-[70px] w-full">
         {planos2.map((element, index: number) => (
-          <div key={index} className="flex flex-col items-center h-[640px] bg-white rounded-2xl shadow-lg">
+          <div
+            key={index}
+            className="flex flex-col items-center h-[640px] bg-white rounded-2xl shadow-lg"
+          >
             <div className={`flex items-center flex-col w-72 space-y-3`}>
               <TextAtom
                 children
