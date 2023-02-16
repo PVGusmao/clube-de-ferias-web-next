@@ -1,4 +1,4 @@
-import { planos2, subPlanText } from "../../constants";
+import { planos2, subPlanText } from "../../constants/Home";
 
 import { IconAtom } from "../atomos/IconAtom";
 import { TextAtom } from "../atomos/TextAtom";

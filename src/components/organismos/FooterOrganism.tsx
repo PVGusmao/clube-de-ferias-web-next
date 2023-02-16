@@ -5,7 +5,7 @@ import { TextAtom } from "../atomos/TextAtom";
 
 import logo from "../../assets/logo.png";
 
-import { socialMedia, contato, Navigation } from "../../constants";
+import { socialMedia, contato, Navigation } from "../../constants/Home";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 
 interface Props {

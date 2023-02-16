@@ -1,12 +1,10 @@
-import { Slider, Tab, Tabs, makeStyles } from "@mui/material";
 import React, { useContext, useState } from "react";
 
-import { marks } from "../../constants";
+import { marks } from "../../constants/Home";
 
 import { TextAtom } from "../atomos/TextAtom";
 import { SlideShowSimulationAtom } from "../atomos/SlideShowSimulationAtom";
 
-import { ButtonMolecule } from "../../components/moleculas/ButtonMolecule";
 import CardSimulationMolecule, {
   CardSimulationProps,
 } from "../../components/moleculas/CardSimulationMolecule";

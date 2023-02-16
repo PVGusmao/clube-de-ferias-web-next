@@ -1,6 +1,6 @@
 import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
 
-import { cards } from "../../constants";
+import { cards } from "../../constants/Home";
 
 import { CardMolecule } from "./CardMolecule";
 
@@ -12,22 +12,29 @@ type Props = {
   setSlideShow: Dispatch<SetStateAction<number>>;
   slideShow: number;
   colorIcon: string;
-}
+};
 
-export function SlideShowCardMolecule({ className, children, slideShow, setSlideShow, colorIcon = 'white' }: Props) {
-  
+export function SlideShowCardMolecule({
+  className,
+  children,
+  slideShow,
+  setSlideShow,
+  colorIcon = "white",
+}: Props) {
   function leftArrowSlider() {
     slideShow === 0 ? setSlideShow(0) : setSlideShow(slideShow - 1);
   }
 
   function rightArrowSlider() {
-    slideShow < cards.length - 1 ? setSlideShow(slideShow + 1) : setSlideShow(cards.length - 1);
+    slideShow < cards.length - 1
+      ? setSlideShow(slideShow + 1)
+      : setSlideShow(cards.length - 1);
   }
 
   return (
     <div className={className}>
       <BsArrowLeftCircle
-        className='sm:hidden ml-2'
+        className="sm:hidden ml-2"
         color={colorIcon}
         size={48}
         onClick={() => {
@@ -38,7 +45,7 @@ export function SlideShowCardMolecule({ className, children, slideShow, setSlide
       {children}
 
       <BsArrowRightCircle
-        className='sm:hidden mr-2'
+        className="sm:hidden mr-2"
         size={48}
         color={colorIcon}
         onClick={() => {
@@ -46,5 +53,5 @@ export function SlideShowCardMolecule({ className, children, slideShow, setSlide
         }}
       />
     </div>
-    )
+  );
 }

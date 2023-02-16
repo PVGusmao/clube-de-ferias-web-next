@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
 
-import { planos, planos2 } from "../../constants";
+import { planos, planos2 } from "../../constants/Home";
 
 import { CardPlanosMolecule } from "../moleculas/CardPlanosMolecule";
 import { TextAtom } from "./TextAtom";
@@ -21,7 +21,10 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
     <div className={`px-8 ${className}`}>
       <Slide arrows={true} transitionDuration={250}>
         {planos2.map((element, index) => (
-          <div key={index} className="flex flex-col items-cente h-[570px] bg-white rounded-2xl shadow-lg m-1">
+          <div
+            key={index}
+            className="flex flex-col items-cente h-[570px] bg-white rounded-2xl shadow-lg m-1"
+          >
             <div
               className="h-full flex items-center justify-center flex-col"
               key={index}
@@ -72,10 +75,9 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                     icon={element.thirdIcon}
                     size={42}
                   />
-                  <TextAtom
-                    className="w-40 text-left"
-                    text={element.thirdText}
-                  > </TextAtom>
+                  <TextAtom className="w-40 text-left" text={element.thirdText}>
+                    {" "}
+                  </TextAtom>
                 </div>
 
                 <div
@@ -95,7 +97,9 @@ export const SlideShowPlansAtom = ({ className }: Props) => {
                   <TextAtom
                     className="w-40 text-left"
                     text={element.fourthText}
-                  > </TextAtom>
+                  >
+                    {" "}
+                  </TextAtom>
                 </div>
 
                 <div

@@ -1,4 +1,4 @@
-import { cardBlog, minorCardBlog } from "../../constants";
+import { cardBlog, minorCardBlog } from "../../constants/Home";
 
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 import { SlideShowBlogAtom } from "../atomos/SlideShowBlogAtom";

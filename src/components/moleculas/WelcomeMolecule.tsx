@@ -1,4 +1,4 @@
-import { cards, home, textButtonWelcome } from "../../constants";
+import { cards, home, textButtonWelcome } from "../../constants/Home";
 
 import { TextAtom } from "../atomos/TextAtom";
 import { VideoAtom } from "../atomos/VideoAtom";

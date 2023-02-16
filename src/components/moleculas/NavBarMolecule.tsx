@@ -8,7 +8,7 @@ import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 import { IMyContext, MyContext } from "../../context/MyContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavLinksInterface, SocialMediaInterface } from "../../constants";
+import { NavLinksInterface, SocialMediaInterface } from "../../constants/Home";
 
 type Props = {
   className: string;
@@ -84,17 +84,19 @@ export function NavBarMolecule({
       </div>
 
       <div className="hidden sm:flex">
-        {socialMediaProps.socialMedia.map((element: SocialMediaInterface, index: number) => (
-          <IconButtonMolecule
-            target="_blank"
-            key={index}
-            to={element.rota}
-            classNameIcon="m-2 sm:block hidden"
-            color={socialMediaProps.color}
-            size={socialMediaProps.size}
-            icon={element.icon}
-          />
-        ))}
+        {socialMediaProps.socialMedia.map(
+          (element: SocialMediaInterface, index: number) => (
+            <IconButtonMolecule
+              target="_blank"
+              key={index}
+              to={element.rota}
+              classNameIcon="m-2 sm:block hidden"
+              color={socialMediaProps.color}
+              size={socialMediaProps.size}
+              icon={element.icon}
+            />
+          )
+        )}
       </div>
     </div>
   );

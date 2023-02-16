@@ -1,7 +1,7 @@
 import React from "react";
 import CardCommentsMolecule from "../moleculas/CardCommentsMolecule";
 
-import { clientes, ClientsInterface } from "../../constants";
+import { clientes, ClientsInterface } from "../../constants/Home";
 import { SlideShowClientsAtom } from "../atomos/SlideShowClientsAtom";
 import { Slide } from "react-slideshow-image";
 
@@ -13,7 +13,10 @@ export function ClientsOrganism() {
       </h1>
       <Slide arrows={false} slidesToShow={3} transitionDuration={10}>
         {clientes.map((element: ClientsInterface, index: number) => (
-          <div key={index} className="hidden sm:flex justify-center flex-row justify-evenly">
+          <div
+            key={index}
+            className="hidden sm:flex justify-center flex-row justify-evenly"
+          >
             <CardCommentsMolecule
               key={index}
               content={element.content}

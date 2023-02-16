@@ -1,4 +1,4 @@
-import { home } from "../../constants";
+import { home } from "../../constants/Home";
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
 import { WelcomeMolecule } from "../moleculas/WelcomeMolecule";
 

@@ -51,7 +51,7 @@ export function NewsOrganism() {
                 <TextAtom
                   children
                   className="text-white ml-2 font-bold"
-                  text="App Store"
+                  text="Apple Store"
                 />
               </div>
             </a>
@@ -66,7 +66,7 @@ export function NewsOrganism() {
                 <TextAtom
                   children
                   className="text-white ml-2 font-bold"
-                  text="App Store"
+                  text="Google Play"
                 />
               </div>
             </a>

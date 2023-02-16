@@ -1,6 +1,10 @@
 import React from "react";
 
-import { cardBlog, minorCardBlog, MinorCardBlogInterface } from "../../constants";
+import {
+  cardBlog,
+  minorCardBlog,
+  MinorCardBlogInterface,
+} from "../../constants/Home";
 
 import { TextAtom } from "../atomos/TextAtom";
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";

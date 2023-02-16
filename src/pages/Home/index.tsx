@@ -1,4 +1,4 @@
-import { bannerContent } from "../../constants";
+import { bannerContent } from "../../constants/Home";
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
 import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";

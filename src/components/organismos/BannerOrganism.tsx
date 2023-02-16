@@ -1,5 +1,5 @@
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
-import { desktop, mobile } from "../../constants";
+import { desktop, mobile } from "../../constants/Home";
 
 export function BannerOrganism() {
   return (

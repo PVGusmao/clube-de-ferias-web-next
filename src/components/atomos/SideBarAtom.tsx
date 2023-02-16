@@ -8,7 +8,7 @@ import { FaBloggerB } from "react-icons/fa";
 import { IoIosAirplane, IoIosCalculator } from "react-icons/io";
 import { MdPeople, MdOutlinePhoneCallback } from "react-icons/md";
 
-import { navLinks, socialMedia } from "../../constants";
+import { navLinks, socialMedia } from "../../constants/Home";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { TextAtom } from "./TextAtom";
 

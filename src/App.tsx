@@ -8,7 +8,7 @@ import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
 
-import { navLinks, socialMedia, navigation } from "./constants";
+import { navLinks, socialMedia, navigation } from "./constants/Home";
 
 import Home from "./pages/Home";
 import { Blog } from "./pages/Blog/Blog";
@@ -25,7 +25,9 @@ import { FooterOrganism } from "./components/organismos/FooterOrganism";
 import api from "./services/api";
 
 function App() {
-  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(
+    MyContext
+  ) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 

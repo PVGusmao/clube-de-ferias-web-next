@@ -119,7 +119,7 @@ export interface ClientsInterface {
   content: string;
   img: string;
   name: string;
-  travelTo:string;
+  travelTo: string;
 }
 
 export const clientes = clients;
@@ -187,7 +187,7 @@ export const navigation = [
 export interface SocialMediaInterface {
   id: string;
   icon: IconType;
-  rota: string;  
+  rota: string;
 }
 
 export const socialMedia = [

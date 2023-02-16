@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
 
-import { clientes } from "../../constants";
+import { clientes } from "../../constants/Home";
 
 import CardCommentsMolecule from "../moleculas/CardCommentsMolecule";
 
