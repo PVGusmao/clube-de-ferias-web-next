@@ -1,9 +1,21 @@
-import { bigComment } from "../../constants/AboutUs";
+import { useContext } from "react";
+import { FaQuoteLeft } from "react-icons/fa";
+import { IMyContext, MyContext } from "../../context/MyContext";
 import { IconAtom } from "../atomos/IconAtom";
 import { ImageAtom } from "../atomos/ImageAtome";
 import { TextAtom } from "../atomos/TextAtom";
 
 export function BigCommentAboutUsOrganism() {
+  const { aboutUsTexts } = useContext(MyContext) as IMyContext;
+  const bigComment = [
+  {
+    icon: FaQuoteLeft,
+    text1: aboutUsTexts.client?.content,
+    image: aboutUsTexts.client?.img,
+    author: aboutUsTexts.client?.name,
+    authorSubtitle: aboutUsTexts.client?.travelTo,
+  }
+]
   return (
     <div className="flex sm:flex-row flex-col items-center justify-center">
       <div className="sm:mr-[100px] mt-10 mx-4">

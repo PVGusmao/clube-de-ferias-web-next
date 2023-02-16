@@ -9,7 +9,7 @@ import { DiApple } from "react-icons/di";
 
 import logo from "../../assets/logo-s-red.png";
 
-type Props = {
+export interface ClientInterface {
   content: string;
   name: string;
   travelTo: string;
@@ -21,7 +21,7 @@ export default function CardCommentsMolecule({
   name,
   travelTo,
   img,
-}: Props) {
+}: ClientInterface) {
   return (
     <Card className="w-[370px] h-[420px] justify-between my-9">
       <CardBody className="">
