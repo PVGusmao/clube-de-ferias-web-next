@@ -9,8 +9,12 @@ import Aviao from "../../../src/assets/quem-somos-aviao.png";
 
 import HowItWorkPlansImage from "../../assets/plansAboutUs.png";
 import HowItWorkImage from "../../assets/aboutusComoFuncionaImage.png";
+import { useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function HowItWorksAboutUsOrganism() {
+  const { aboutUsTexts } = useContext(MyContext) as IMyContext;
+
   return (
     <div className="bg-[#E00718] w-full sm:h-[930px] h-[900px] relative">
       <img src={Aviao} className="ml-[100px] hidden sm:flex" />
@@ -25,48 +29,48 @@ export function HowItWorksAboutUsOrganism() {
         <TextAtom
           children
           className="sm:text-[50px] text-[30px] text-white my-[10px] font-bold leading-[120%]"
-          text={midSection.big_title}
+          text={aboutUsTexts.mid_section.big_title}
         />
 
         <TextAtom
           children
           className="text-[25px] text-white font-medium leading-[120%] mt-[11px]"
-          text={midSection.subtitle}
+          text={aboutUsTexts.mid_section.subtitle}
         />
 
         <TextAtom
           children
           className="text-[20px] text-white font-medium leading-[180%] mt-[23px]"
-          text={midSection.steps[0].text}
+          text={aboutUsTexts.mid_section.steps[0].text}
         />
 
         <TextAtom
           children
           className="text-[20px] text-white font-medium leading-[180%]"
-          text={midSection.steps[1].text}
+          text={aboutUsTexts.mid_section.steps[1].text}
         />
 
         <TextAtom
           children
           className="text-[20px] text-white font-medium leading-[180%]"
-          text={midSection.steps[2].text}
+          text={aboutUsTexts.mid_section.steps[2].text}
         />
 
         <TextAtom
           children
           className="text-[30px] text-white font-bold leading-[120%] mt-[53px]"
-          text={midSection.mid_title}
+          text={aboutUsTexts.mid_section.mid_title}
         />
 
         <TextAtom
           children
           className="text-[18px] text-white font-medium leading-[180%] mt-[7px]"
-          text={midSection.mid_subtitle1}
+          text={aboutUsTexts.mid_section.mid_subtitle1}
         />
         <TextAtom
           children
           className="text-[18px] text-white text-start font-medium leading-[180%]"
-          text={midSection.mid_subtitle2}
+          text={aboutUsTexts.mid_section.mid_subtitle2}
         />
 
         <ImageAtom className="mt-10" source={HowItWorkPlansImage} alt="plans" />
@@ -94,7 +98,7 @@ export function HowItWorksAboutUsOrganism() {
         <TextAtom
           children
           className="text-[30px] mt-[20px] text-white font-medium leading-[120%]"
-          text={midSection.last_text}
+          text={aboutUsTexts.mid_section.last_text}
         />
       </div>
       <img src={Aviao} className="rotate-180 ml-[100px] hidden sm:flex" />

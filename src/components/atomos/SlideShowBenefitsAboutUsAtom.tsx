@@ -5,17 +5,21 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 import { BenefitsAboutUsMolecule } from "../moleculas/BenefitsAboutUsMolecule";
-import { benefits } from "../../constants/AboutUs";
+import { SquaresInterface } from "../../constants/AboutUs";
+import { useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 type Props = {
   className?: string;
 };
 
 export const SlideShowBenefitsAboutUsAtom = ({ className }: Props) => {
+  const { aboutUsTexts } = useContext(MyContext) as IMyContext;
+
   return (
     <div className={`${className} mt-10`}>
       <Slide arrows={false} transitionDuration={250}>
-        {benefits.map((element, index) => (
+        {aboutUsTexts.squares.map((element: SquaresInterface, index: number) => (
           <div className="h-30 flex items-center justify-center" key={index}>
             <BenefitsAboutUsMolecule
               element={element}

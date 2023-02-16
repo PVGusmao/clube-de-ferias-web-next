@@ -8,7 +8,6 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function BlogCardMolecule() {
   const { allSiteTexts } = useContext(MyContext) as IMyContext;
-  console.log(allSiteTexts?.data?.paulo?.minor_card_blog)
   
   return (
     <div className="sm:h-108 flex sm:flex-row flex-col">

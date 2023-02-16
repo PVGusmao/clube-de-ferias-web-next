@@ -6,17 +6,14 @@ import { TextAtom } from "../atomos/TextAtom";
 import logo from "../../assets/logo.png";
 
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
-import { IMyContext, MyContext } from "../../context/MyContext";
 import { IoIosArrowForward } from "react-icons/io";
 import { SocialMediaInterface } from "../../constants";
 
 interface Props {
-  socialMedia: SocialMediaInterface;
+  socialMedia: SocialMediaInterface[];
 }
 
 export function FooterOrganism({ socialMedia }: Props) {
-  const { allSiteTexts } = useContext(MyContext) as IMyContext;
-
   const dataAtual = new Date();
   const anoAtual = dataAtual.getFullYear();
 

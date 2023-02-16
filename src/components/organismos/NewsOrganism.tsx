@@ -6,7 +6,6 @@ import { Checkbox, Input } from "@mui/material";
 import { FaGooglePlay } from "react-icons/fa";
 import { AiFillApple } from "react-icons/ai";
 import { IconAtom } from "../atomos/IconAtom";
-import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function NewsOrganism() {
   return (
