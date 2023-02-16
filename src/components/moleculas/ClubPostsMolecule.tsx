@@ -1,9 +1,15 @@
-import CardClubPosts, { CardClubPostsInterface } from "./CardClubPosts";
+import { useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
+
+import CardClubPosts from "./CardClubPosts";
+
 import { TextAtom } from "../atomos/TextAtom";
+
 import "react-slideshow-image/dist/styles.css";
-import { posts } from "../../constants/Blog";
 
 export function ClubPostsMolecule() {
+  const { blogPostsContent } = useContext(MyContext) as IMyContext;
+
   return (
     <div className="flex flex-col justify-center items-center mb-[116px]">
       <div>
@@ -15,7 +21,7 @@ export function ClubPostsMolecule() {
           />
           <div className="sm:flex justify-between flex-wrap px-2 sm:w-[60.625rem] ">
 
-            {posts.map((element: CardClubPostsInterface, index: number) => (
+            {blogPostsContent.map((element, index: number) => (
 
               <div className="mr-4">
                 <CardClubPosts

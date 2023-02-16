@@ -1,16 +1,9 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
-import { IconAtom } from "./IconAtom";
-
-import logo from "../../assets/logo.png";
-
-import { FaBloggerB } from "react-icons/fa";
-import { IoIosAirplane, IoIosCalculator } from "react-icons/io";
-import { MdPeople, MdOutlinePhoneCallback } from "react-icons/md";
-
-import { navLinks, socialMedia } from "../../constants/Home";
-import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { TextAtom } from "./TextAtom";
+
+import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 
 type Props = {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
@@ -18,6 +11,8 @@ type Props = {
 };
 
 export default function Sidebar({ setShowMenu, showMenu }: Props) {
+  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+
   return (
     <div className="h-96">
       <div className="flex flex-col h-screen bg-white shadow w-full bg-[#F20F0F]">
@@ -87,11 +82,10 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
             </TextAtom>
           </a>
           <div className="flex">
-            {socialMedia.map((element, index) => (
+            {allSiteTexts?.data.paulo.socialMedia.map((element, index) => (
               <IconButtonMolecule
                 key={index}
                 to={element.rota}
-                // target="_blank"
                 classNameIcon="m-2 sm:block"
                 color="white"
                 size={20}

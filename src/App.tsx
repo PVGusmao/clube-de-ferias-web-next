@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-
 import { IMyContext, MyContext } from "./context/MyContext";
 
 import logo from "./assets/logo-red.png";
@@ -133,7 +132,7 @@ function App() {
           </>
         )}
       </div>
-      {/* {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />} */}
+      {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />}
     </>
   );
 }
