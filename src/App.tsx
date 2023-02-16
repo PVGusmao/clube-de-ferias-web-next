@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-
 import { IMyContext, MyContext } from "./context/MyContext";
 
 import logo from "./assets/logo-red.png";
@@ -24,7 +23,7 @@ import api from "./services/api";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 function App() {
-  const { setAllSiteTexts, allSiteTexts, showMenu } = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 
@@ -133,7 +132,7 @@ function App() {
           </>
         )}
       </div>
-      {/* {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />} */}
+      {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />}
     </>
   );
 }

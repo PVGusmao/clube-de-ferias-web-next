@@ -4,15 +4,18 @@ import { Fade, Slide } from "react-slideshow-image";
 
 import { TextAtom } from "../atomos/TextAtom";
 
-import { featured } from "../../constants/Blog";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function SliderBlogMolecule() {
+  const { blogFeaturedContent } = useContext(MyContext) as IMyContext;
+
   return (
     <div className="">
       <div className="hidden sm:flex justify-center w-full mb-10">
         <Fade arrows={false} duration={7000}>
-          {featured?.map((element: any, index: number) => (
+          {blogFeaturedContent.map((element: any, index: number) => (
             <Link
               to={`/blogPost/${element.slug}`}
               className="flex w-full rounded-br-[50px] "
@@ -47,7 +50,7 @@ export function SliderBlogMolecule() {
 
       <div className="sm:hidden sm:flex items-center justify-center mb-10">
         <Slide arrows={false} transitionDuration={300} duration={2000}>
-          {featured?.map((element: any, index: number) => (
+          {blogFeaturedContent?.map((element: any, index: number) => (
             <Link
               to={`/blogPost/${element.slug}`}
               className="flex w-full rounded-br-[50px] "
