@@ -80,7 +80,12 @@ export interface StellaBrandingInterface {
   secondText: string;
 }
 
+export interface BenefitsInterface {
+  photo_url: string;
+}
+
 export interface AboutUsTextsInterface {
+  benefits: BenefitsInterface[];
   client: ClientInterface;
   contact: ContactInterface;
   first_section: FirstSectionInterface;

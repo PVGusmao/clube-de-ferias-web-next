@@ -12,9 +12,9 @@ export function BenefitsAboutUsOrganism() {
   return (
     <>
       <div className="hidden sm:flex mb-[200px] items-start justify-evenly">
-        <ImageAtom className="mt-10 w-[350px]" source={Missao} alt="plans" />
-        <ImageAtom className="mt-10 w-[350px]" source={Visao} alt="plans" />
-        <ImageAtom className="mt-10 w-[350px]" source={Valores} alt="plans" />
+        <ImageAtom className="mt-0 w-[350px]" source={Missao} alt="plans" />
+        <ImageAtom className="mt-6 w-[350px]" source={Visao} alt="plans" />
+        <ImageAtom className="mt-6 w-[350px]" source={Valores} alt="plans" />
       </div>
       <SlideShowBenefitsAboutUsAtom className="sm:hidden" />
     </>

@@ -66,7 +66,7 @@ export function MyProvider({ children }: Props) {
       aboutUsTexts, setAboutUsTexts,
       blogPostsContent, setBlogPostsContent,
       blogFeaturedContent, setBlogFeaturedContent,
-    } as IMyContext}>
+    } as unknown as IMyContext}>
       {children}
     </MyContext.Provider>
   );
