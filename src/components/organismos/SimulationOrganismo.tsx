@@ -11,6 +11,7 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 
 import api from "../../services/api";
 import { SimulationMolecule } from "../moleculas/SimulationMolecule";
+import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 type Props = {
   data: any;
@@ -18,7 +19,7 @@ type Props = {
 
 export function SimulationOrganism({ data }: Props) {
   const { packages, setPackages } = useContext(MyContext) as IMyContext;
-
+ 
   const [tabValue, setTabValue] = React.useState(199);
   const [sliderValue, setSliderValue] = React.useState(6);
   const [totalValue, setTotalValue] = React.useState(1194);
@@ -95,6 +96,18 @@ export function SimulationOrganism({ data }: Props) {
           />
         ))}
       </div>
+      
+      <a className="mt-10" href="#baixe-o-app">
+        <ButtonMolecule
+          className="w-[400px] h-[70px] rounded-2xl bg-[red]"
+          textClassName="text-white font-bold text-xl"
+          children
+          title='Baixar o app'
+          onPress={() => {
+          }}
+        />
+      </a>
+
       {packages.length && (
         <SlideShowSimulationAtom className="sm:hidden w-full" />
       )}

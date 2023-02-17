@@ -68,13 +68,13 @@ export default function CardSimulationMolecule({
                 className="text-xs text-left"
               />
             </div>
-            <div>
+            {/* <div>
               <TextAtom
                 children
                 text="Comprar"
                 className="mt-10 bg-[#F20F0F] h-10 w-20 flex justify-center items-center rounded-lg text-white text-sm font-bold"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </CardBody>
