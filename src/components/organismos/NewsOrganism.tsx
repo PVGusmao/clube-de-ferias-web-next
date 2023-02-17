@@ -6,6 +6,9 @@ import { Checkbox, Input } from "@mui/material";
 import { FaGooglePlay } from "react-icons/fa";
 import { AiFillApple } from "react-icons/ai";
 import { IconAtom } from "../atomos/IconAtom";
+import { ImageAtom } from "../atomos/ImageAtome";
+
+import QRCODE from '../../assets/QRCodeApp.png'
 
 export function NewsOrganism() {
   return (
@@ -37,7 +40,7 @@ export function NewsOrganism() {
 
         <div className="flex flex-col my-10">
           <p className="text-left mb-[20px] text-[20px] font-bold">
-            Baixe nosso aplicativo
+            Baixe nosso aplicativo clicando no botão abaixo.
           </p>
           <div className="flex flex-row">
             <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
@@ -71,6 +74,15 @@ export function NewsOrganism() {
               </div>
             </a>
           </div>
+          <p className="text-left mb-[20px] text-[20px] font-bold">
+            Ou utilizando nosso QR Code
+          </p>
+
+          <ImageAtom
+            className='w-[120px]'
+            alt="qr code loja app"
+            source={QRCODE}
+          />
         </div>
       </div>
       <div className="flex items-center flex-col justify-center ">
