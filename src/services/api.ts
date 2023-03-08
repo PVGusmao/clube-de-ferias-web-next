@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://10.0.1.137/api",
+  baseURL: "https://cdf-api-site.herokuapp.com/api",
 });
 
 export default api;
