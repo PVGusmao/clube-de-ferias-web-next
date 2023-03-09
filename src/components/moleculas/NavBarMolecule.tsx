@@ -8,7 +8,7 @@ import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
 import { IMyContext, MyContext } from "../../context/MyContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavLinksInterface, SocialMediaInterface } from "../../constants/Home";
+import { NavLinksInterface, SocialMediaInterface } from "../../constants";
 
 type Props = {
   className: string;
@@ -39,7 +39,9 @@ export function NavBarMolecule({
   burgerMenuProps,
   pageId,
 }: Props) {
-  const { showMenu, setShowMenu, allSiteTexts } = useContext(MyContext) as IMyContext;
+  const { showMenu, setShowMenu, allSiteTexts } = useContext(
+    MyContext
+  ) as IMyContext;
 
   return (
     <div id={pageId} className={`${className} `}>
@@ -48,15 +50,17 @@ export function NavBarMolecule({
       </a>
 
       <div className="sm:flex hidden w-auto">
-        {allSiteTexts?.data?.paulo?.nav_links.map((element: NavLinksInterface, index: number) => (
-          <TextButtonMolecule
-            textClassName={`${textLinkProps.textClassName}`}
-            className={`${textLinkProps.className}`}
-            key={index}
-            text={element.title}
-            to={element.route}
-          />
-        ))}
+        {allSiteTexts?.data?.paulo?.nav_links.map(
+          (element: NavLinksInterface, index: number) => (
+            <TextButtonMolecule
+              textClassName={`${textLinkProps.textClassName}`}
+              className={`${textLinkProps.className}`}
+              key={index}
+              text={element.title}
+              to={element.route}
+            />
+          )
+        )}
       </div>
 
       <div className="sm:hidden">

@@ -15,11 +15,11 @@ import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 type Props = {
   data: any;
-}
+};
 
 export function SimulationOrganism({ data }: Props) {
   const { packages, setPackages } = useContext(MyContext) as IMyContext;
- 
+
   const [tabValue, setTabValue] = React.useState(199);
   const [sliderValue, setSliderValue] = React.useState(6);
   const [totalValue, setTotalValue] = React.useState(1194);
@@ -96,21 +96,30 @@ export function SimulationOrganism({ data }: Props) {
           />
         ))}
       </div>
-      
-      <a className="mt-10" href="#baixe-o-app">
+
+      <a className="hidden sm:flex mt-10 justify-center " href="#baixe-o-app">
         <ButtonMolecule
           className="w-[400px] h-[70px] rounded-2xl bg-[red]"
           textClassName="text-white font-bold text-xl"
           children
-          title='Baixar o app'
-          onPress={() => {
-          }}
+          title="Baixar o app"
+          onPress={() => {}}
         />
       </a>
 
       {packages.length && (
         <SlideShowSimulationAtom className="sm:hidden w-full" />
       )}
+
+      <a className="sm:hidden mt-10" href="#baixe-o-app">
+        <ButtonMolecule
+          className="w-[200px] h-[70px] my-[50px] rounded-2xl bg-[red]"
+          textClassName="text-white font-bold text-xl"
+          children
+          title="Baixar o app"
+          onPress={() => {}}
+        />
+      </a>
     </div>
   );
 }
