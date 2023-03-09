@@ -4,6 +4,8 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 import { TextAtom } from "./TextAtom";
 
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 
 type Props = {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
@@ -68,8 +70,20 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
           </div>
         </div>
         <div className="w-full h-full flex flex-col items-center justify-center">
+          <div className="flex flex-row justify-between items-center w-[100px]">
+            <a href="https://www.facebook.com/clubedeferiasstellabarros">
+              <BsFacebook size={25} color="white" />
+            </a>
+            <a href="https://www.instagram.com/oclubedeferias/">
+              <BsInstagram size={25} color="white" />
+            </a>
+            <a href="https://www.tiktok.com/@clubedeferias">
+              <FaTiktok size={25} color="white" />
+            </a>
+          </div>
           <a
             href="#baixe-o-app"
+            className="mt-[50px]"
             onClick={() => {
               setShowMenu(!showMenu);
             }}
@@ -81,18 +95,6 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
               Baixe o App
             </TextAtom>
           </a>
-          <div className="flex">
-            {allSiteTexts?.data.paulo.socialMedia.map((element, index) => (
-              <IconButtonMolecule
-                key={index}
-                to={element.rota}
-                classNameIcon="m-2 sm:block"
-                color="white"
-                size={20}
-                icon={element.icon}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </div>
