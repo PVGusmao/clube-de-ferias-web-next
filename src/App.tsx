@@ -23,7 +23,9 @@ import api from "./services/api";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 function App() {
-  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(
+    MyContext
+  ) as IMyContext;
 
   const [linkWhatsApp, setLinkWhatsApp] = useState({});
 
@@ -91,41 +93,40 @@ function App() {
             color: "black",
           }}
         />
-        {!showMenu &&(
+        {!showMenu && (
           <>
-            {
-              allSiteTexts && 
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/sobre" element={<AboutUs />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blogPost/:slug" element={<BlogPost />} />
-                  <Route path="/fale-conosco" element={<TalkToUs />} />
+            {allSiteTexts && (
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/sobre" element={<AboutUs />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blogPost/:slug" element={<BlogPost />} />
+                <Route path="/fale-conosco" element={<TalkToUs />} />
 
-                  <Route
-                    path="/tik-tok"
-                    element={
-                      <RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />
-                    }
-                  />
-                  <Route
-                    path="/facebook"
-                    element={
-                      <RedirectPage
-                        to={"http://www.facebook.com/clubedeferiasstellabarros"}
-                      />
-                    }
-                  />
-                  <Route
-                    path="/instagram"
-                    element={
-                      <RedirectPage
-                        to={"http://www.instagram.com/oclubedeferias"}
-                      />
-                    }
-                  />
-                </Routes>
-            }
+                <Route
+                  path="/tik-tok"
+                  element={
+                    <RedirectPage to={"http://www.tiktok.com/@clubedeferias"} />
+                  }
+                />
+                <Route
+                  path="/facebook"
+                  element={
+                    <RedirectPage
+                      to={"http://www.facebook.com/clubedeferiasstellabarros"}
+                    />
+                  }
+                />
+                <Route
+                  path="/instagram"
+                  element={
+                    <RedirectPage
+                      to={"http://www.instagram.com/oclubedeferias"}
+                    />
+                  }
+                />
+              </Routes>
+            )}
 
             <NewsOrganism />
             <FooterOrganism socialMedia={socialMedia} />

@@ -55,7 +55,7 @@ export function SimulationMolecule({
             <Tab value={199} label="SILVER" />
             <Tab value={499} label="GOLD" />
             <Tab value={999} label="PLATINUM" />
-            <Tab value={999.001} label="PLANO PROMO" />
+            <Tab value={999.001} label="PLANO COPA" />
           </Tabs>
         </div>
         <div className="flex justify-around sm:justify-between mt-[50px] bg-blue">

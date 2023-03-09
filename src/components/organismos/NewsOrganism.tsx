@@ -39,10 +39,10 @@ export function NewsOrganism() {
         />
 
         <div className="flex flex-col my-10">
-          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] ">
+          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] sm:mx-0 ">
             Baixe nosso aplicativo clicando no botão abaixo.
           </p>
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center ">
             <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
               <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
                 <IconAtom
@@ -74,7 +74,7 @@ export function NewsOrganism() {
               </div>
             </a>
           </div>
-          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px]">
+          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] sm:mx-0">
             Ou utilizando nosso QR Code
           </p>
           <div className="flex justify-center">
@@ -86,7 +86,7 @@ export function NewsOrganism() {
           </div>
         </div>
       </div>
-      <div className="flex items-center flex-col justify-center ">
+      <div className="flex  items-center flex-col justify-center">
         <Input
           placeholder="Nome"
           className="bg-[#D9D9D98A] w-[19.875rem] sm:w-[29.375rem] rounded-full p-3 mb-4"
@@ -98,7 +98,7 @@ export function NewsOrganism() {
           disableUnderline
         />
 
-        <div className="flex justify-center items-center sm:ml-[170px] w-full mt-[20px]">
+        <div className="flex sm:justify-center items-center mt-[20px]">
           <Checkbox />
           <TextAtom
             children
