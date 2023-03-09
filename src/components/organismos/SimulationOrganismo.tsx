@@ -111,9 +111,9 @@ export function SimulationOrganism({ data }: Props) {
         <SlideShowSimulationAtom className="sm:hidden w-full" />
       )}
 
-      <a className="sm:hidden mt-10" href="#baixe-o-app">
+      <a className="sm:hidden " href="#baixe-o-app">
         <ButtonMolecule
-          className="w-[200px] h-[70px] my-[50px] rounded-2xl bg-[red]"
+          className="w-[200px] h-[70px] mt-[20px] mb-[100px] rounded-2xl bg-[red]"
           textClassName="text-white font-bold text-xl"
           children
           title="Baixar o app"

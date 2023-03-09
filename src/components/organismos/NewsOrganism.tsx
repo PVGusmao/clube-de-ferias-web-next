@@ -8,15 +8,15 @@ import { AiFillApple } from "react-icons/ai";
 import { IconAtom } from "../atomos/IconAtom";
 import { ImageAtom } from "../atomos/ImageAtome";
 
-import QRCODE from '../../assets/QRCodeApp.png'
+import QRCODE from "../../assets/QRCodeApp.png";
 
 export function NewsOrganism() {
   return (
     <div
       id="baixe-o-app"
-      className="sm:flex grid content-center h-[53.875rem] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]"
+      className="sm:flex grid content-center mt-[100px] h-[1000px] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]"
     >
-      <div className="grid content-center">
+      <div className="grid content-center mt-[50px]">
         <TextAtom
           children
           className="sm:text-5xl text-3xl	font-bold text-[#F20F0F] sm:text-left"
@@ -39,10 +39,10 @@ export function NewsOrganism() {
         />
 
         <div className="flex flex-col my-10">
-          <p className="text-left mb-[20px] text-[20px] font-bold">
+          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] ">
             Baixe nosso aplicativo clicando no botão abaixo.
           </p>
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center">
             <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
               <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
                 <IconAtom
@@ -74,15 +74,16 @@ export function NewsOrganism() {
               </div>
             </a>
           </div>
-          <p className="text-left mb-[20px] text-[20px] font-bold">
+          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px]">
             Ou utilizando nosso QR Code
           </p>
-
-          <ImageAtom
-            className='w-[120px]'
-            alt="qr code loja app"
-            source={QRCODE}
-          />
+          <div className="flex justify-center">
+            <ImageAtom
+              className="w-[120px] justify-center "
+              alt="qr code loja app"
+              source={QRCODE}
+            />
+          </div>
         </div>
       </div>
       <div className="flex items-center flex-col justify-center ">
@@ -97,7 +98,7 @@ export function NewsOrganism() {
           disableUnderline
         />
 
-        <div className="flex items-center sm:ml-[170px] w-full mt-[20px]">
+        <div className="flex justify-center items-center sm:ml-[170px] w-full mt-[20px]">
           <Checkbox />
           <TextAtom
             children
@@ -105,7 +106,7 @@ export function NewsOrganism() {
             text="Eu concordo em receber comunicação"
           />
         </div>
-        <div className="">
+        <div className="mb-[100px]">
           <TextAtom
             children
             className="font-light text-black text-left"
