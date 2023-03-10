@@ -6,6 +6,7 @@ import { TextAtom } from "./TextAtom";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 type Props = {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
@@ -22,49 +23,49 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
           <div className="flex-1">
             <ul className="pt-2 pb-4 space-y-1 text-sm my-[100px] h-[250px] flex flex-col justify-between items-center">
               <li className="rounded-sm">
-                <a
-                  href="/sobre"
+                <Link
+                  to="/sobre"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
                   onClick={() => {
                     setShowMenu(!showMenu);
                   }}
                 >
                   <span className="text-lg font-bold">Quem somos</span>
-                </a>
+                </Link>
               </li>
 
               <li className="rounded-sm">
-                <a
-                  href="#simulador"
+                <Link
+                  to="/#simulador"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
                   onClick={() => {
                     setShowMenu(!showMenu);
                   }}
                 >
                   <span className="text-lg font-bold">Simule sua viagem</span>
-                </a>
+                </Link>
               </li>
               <li className="rounded-sm">
-                <a
-                  href="/blog"
+                <Link
+                  to="/blog"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
                   onClick={() => {
                     setShowMenu(!showMenu);
                   }}
                 >
                   <span className="text-lg font-bold">Blog</span>
-                </a>
+                </Link>
               </li>
               <li className="rounded-sm">
-                <a
-                  href="/fale-conosco"
+                <Link
+                  to="/fale-conosco"
                   className="flex items-center text-white p-2 space-x-3 rounded-md"
                   onClick={() => {
                     setShowMenu(!showMenu);
                   }}
                 >
                   <span className="text-lg font-bold">Fale Conosco</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
