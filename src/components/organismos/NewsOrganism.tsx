@@ -39,7 +39,7 @@ export function NewsOrganism() {
         />
 
         <div className="flex flex-col my-10">
-          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] sm:mx-0 ">
+          <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0 ">
             Baixe nosso aplicativo clicando no botão abaixo.
           </p>
           <div className="flex flex-row justify-center ">
@@ -74,7 +74,7 @@ export function NewsOrganism() {
               </div>
             </a>
           </div>
-          <p className="text-left mb-[20px] text-[20px] font-bold mx-[10px] sm:mx-0">
+          <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0">
             Ou utilizando nosso QR Code
           </p>
           <div className="flex justify-center">
