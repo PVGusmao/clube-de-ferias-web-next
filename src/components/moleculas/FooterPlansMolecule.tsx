@@ -7,7 +7,7 @@ type Props = {
 export function FooterPlansMolecule({ data }: Props) {
   return (
     <>
-      <div className="bg-white flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px]">
+      <div className="bg-white flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px] border border-[lightgray]	shadow-md">
         <div className="my-10 sm:my-0">
           <TextAtom
             children

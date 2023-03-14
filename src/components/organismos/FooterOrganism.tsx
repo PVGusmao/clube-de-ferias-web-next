@@ -1,4 +1,3 @@
-import React, { useContext, useState } from "react";
 import { IconAtom } from "../atomos/IconAtom";
 
 import { TextAtom } from "../atomos/TextAtom";
@@ -8,12 +7,9 @@ import logo from "../../assets/logo.png";
 import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { IoIosArrowForward } from "react-icons/io";
 import { SocialMediaInterface } from "../../constants";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
-interface Props {
-  socialMedia: SocialMediaInterface[];
-}
-
-export function FooterOrganism({ socialMedia }: Props) {
+export function FooterOrganism() {
   const dataAtual = new Date();
   const anoAtual = dataAtual.getFullYear();
 
@@ -32,6 +28,24 @@ export function FooterOrganism({ socialMedia }: Props) {
       icon: IoIosArrowForward,
       content: "Blog",
       route: "#blog",
+    },
+  ];
+
+  const socialMedia = [
+    {
+      id: "instagram",
+      icon: FaInstagram,
+      rota: "/instagram",
+    },
+    {
+      id: "facebook",
+      icon: FaFacebook,
+      rota: "/facebook",
+    },
+    {
+      id: "tik-tok",
+      icon: FaTiktok,
+      rota: "/tik-tok",
     },
   ];
 
@@ -83,17 +97,19 @@ export function FooterOrganism({ socialMedia }: Props) {
               text="SIGA NOSSAS REDES"
             />
             <div className="flex flex-row h-12">
-              {socialMedia.map((element: SocialMediaInterface, index: number) => (
-                <IconButtonMolecule
-                  target="_blank"
-                  key={index}
-                  to={element.rota}
-                  classNameIcon="m-2 sm:block"
-                  color="white"
-                  size={24}
-                  icon={element.icon}
-                />
-              ))}
+              {socialMedia.map(
+                (element: SocialMediaInterface, index: number) => (
+                  <IconButtonMolecule
+                    target="_blank"
+                    key={index}
+                    to={element.rota}
+                    classNameIcon="m-2 sm:block"
+                    color="white"
+                    size={24}
+                    icon={element.icon}
+                  />
+                )
+              )}
             </div>
           </div>
         </div>

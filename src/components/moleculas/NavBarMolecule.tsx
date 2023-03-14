@@ -13,51 +13,34 @@ import { IconAtom } from "../atomos/IconAtom";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 
-type Props = {
-  className: string;
-  pageId: string;
-  logoProps: {
-    logo: string;
-    className: string;
-  };
-  socialMediaProps: {
-    socialMedia: SocialMediaInterface[];
-    color: string;
-    size: number;
-  };
-  textLinkProps: {
-    textClassName: string;
-    className: string;
-  };
-  burgerMenuProps: {
-    color: string;
-  };
-};
+import logo from "../../assets/logo-red.png";
 
-export function NavBarMolecule({
-  className,
-  logoProps,
-  socialMediaProps,
-  textLinkProps,
-  burgerMenuProps,
-  pageId,
-}: Props) {
+export function NavBarMolecule() {
   const { showMenu, setShowMenu, allSiteTexts } = useContext(
     MyContext
   ) as IMyContext;
 
   return (
-    <div id={pageId} className={`${className} `}>
+    <div
+      id={"home"}
+      className={
+        "text-white flex items-center w-full justify-between px-8 sm:px-0 sm:justify-evenly h-20"
+      }
+    >
       <a href="/">
-        <img className={logoProps.className} src={logoProps.logo} alt="logo" />
+        <img className={"w-32"} src={logo} alt="logo" />
       </a>
 
       <div className="sm:flex hidden w-auto">
         {allSiteTexts?.data?.paulo?.nav_links.map(
           (element: NavLinksInterface, index: number) => (
             <TextButtonMolecule
-              textClassName={`${textLinkProps.textClassName}`}
-              className={`${textLinkProps.className}`}
+              textClassName={
+                "sm:block hover:text-[darkgray] font-semibold hidden text-[#F20F0F]"
+              }
+              className={
+                "w-32 cursor-pointer text-white hover:border-2 hover:border-b-[darkgray]"
+              }
               key={index}
               text={element.title}
               to={element.route}
@@ -73,7 +56,7 @@ export function NavBarMolecule({
             onClick={() => {
               setShowMenu(!showMenu);
             }}
-            color={burgerMenuProps.color}
+            color={"red"}
             icon={AiOutlineClose}
           />
         ) : (
@@ -82,7 +65,7 @@ export function NavBarMolecule({
             onClick={() => {
               setShowMenu(!showMenu);
             }}
-            color={burgerMenuProps.color}
+            color={"red"}
             icon={GiHamburgerMenu}
           />
         )}
