@@ -7,6 +7,7 @@ import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { SocialMediaMolecule } from "../moleculas/SocialMediaMolecule";
 
 type Props = {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
@@ -71,17 +72,7 @@ export default function Sidebar({ setShowMenu, showMenu }: Props) {
           </div>
         </div>
         <div className="w-full h-full flex flex-col items-center justify-center">
-          <div className="flex flex-row justify-between items-center w-[100px]">
-            <a href="https://www.facebook.com/clubedeferiasstellabarros">
-              <BsFacebook size={25} color="white" />
-            </a>
-            <a href="https://www.instagram.com/oclubedeferias/">
-              <BsInstagram size={25} color="white" />
-            </a>
-            <a href="https://www.tiktok.com/@clubedeferias">
-              <FaTiktok size={25} color="white" />
-            </a>
-          </div>
+          <SocialMediaMolecule color="white" />
           <a
             href="#baixe-o-app"
             className="mt-[50px]"

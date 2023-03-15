@@ -14,6 +14,7 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 
 import logo from "../../assets/logo-red.png";
+import { SocialMediaMolecule } from "./SocialMediaMolecule";
 
 export function NavBarMolecule() {
   const { showMenu, setShowMenu, allSiteTexts } = useContext(
@@ -71,30 +72,7 @@ export function NavBarMolecule() {
         )}
       </div>
 
-      <div className="hidden sm:flex justify-between items-center w-[100px]">
-        <a href="https://www.facebook.com/clubedeferiasstellabarros">
-          <BsFacebook size={25} color="red" />
-        </a>
-        <a href="https://www.instagram.com/oclubedeferias/">
-          <BsInstagram size={25} color="red" />
-        </a>
-        <a href="https://www.tiktok.com/@clubedeferias">
-          <FaTiktok size={25} color="red" />
-        </a>
-        {/* {socialMediaProps.socialMedia.map(
-          (element: SocialMediaInterface, index: number) => (
-            <IconButtonMolecule
-              target="_blank"
-              key={index}
-              to={element.rota}
-              classNameIcon="m-2 sm:block hidden"
-              color={socialMediaProps.color}
-              size={socialMediaProps.size}
-              icon={element.icon}
-            />
-          )
-        )} */}
-      </div>
+      <SocialMediaMolecule color="red" />
     </div>
   );
 }

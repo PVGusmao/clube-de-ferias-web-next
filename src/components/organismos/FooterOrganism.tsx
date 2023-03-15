@@ -8,6 +8,7 @@ import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { IoIosArrowForward } from "react-icons/io";
 import { SocialMediaInterface } from "../../constants";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { SocialMediaMolecule } from "../moleculas/SocialMediaMolecule";
 
 export function FooterOrganism() {
   const dataAtual = new Date();
@@ -96,7 +97,8 @@ export function FooterOrganism() {
               className="font-bold text-white text-left text-[16px] text-2xl mb-8	"
               text="SIGA NOSSAS REDES"
             />
-            <div className="flex flex-row h-12">
+            <SocialMediaMolecule color="white" />
+            {/* <div className="flex flex-row h-12">
               {socialMedia.map(
                 (element: SocialMediaInterface, index: number) => (
                   <IconButtonMolecule
@@ -110,7 +112,7 @@ export function FooterOrganism() {
                   />
                 )
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
