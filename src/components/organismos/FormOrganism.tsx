@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import api from "../../services/api";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
+import { useForm } from "react-hook-form";
+
 export function FormOrganism() {
   const [form, setForm] = useState({
     name: "",
@@ -11,102 +13,103 @@ export function FormOrganism() {
     mensagem: "",
   });
 
-  async function handleSubmit() {
-    // e.preventDefault();
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const body = {
-      form,
-    };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = async (data) => {
+    console.log(data);
     await api
-      .post("/", body)
+      .post("/contactus", data)
       .then((res) => {
         console.log(res.data);
+        alert("Mensagem enviada com sucesso!");
+        reset();
+        setIsSubmitted(true);
       })
       .catch((err) => {
-        console.error("ops! ocorreu um erro" + JSON.stringify(err.response));
+        console.error(
+          "ops! ocorreu um erro " + JSON.stringify(err.response.data.message)
+        );
       });
-  }
+  };
 
   return (
-    <div className="sm:w-[771px] w-[318px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[100px] sm:mb-[222px] mt-[50px] sm:mt-[122px] ">
-      <div className="mb-4">
-        <TextField
-          className="sm:w-[572px] w-[269px] h-[60px]"
-          id="outlined-basic"
-          label="Seu nome*"
-          variant="outlined"
-          // value={name}
-          onChange={(e) =>
-            setForm({
-              ...form,
-              name: e.target.value,
-            })
-          }
-        />
-      </div>
-      <div className="mb-4">
-        <TextField
-          className="sm:w-[572px] w-[269px] h-[60px] "
-          id="outlined-basic"
-          label="Seu e-mail*"
-          variant="outlined"
-          value={form.email}
-          onChange={(e) =>
-            setForm({
-              ...form,
-              email: e.target.value,
-            })
-          }
-        />
-      </div>
+    <div>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="sm:w-[771px] w-[318px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[100px] sm:mb-[222px] mt-[50px] sm:mt-[122px] "
+      >
+        <div className="mb-4 flex flex-col  ">
+          <TextField
+            className="sm:w-[572px] w-[269px] h-[60px]"
+            id="name"
+            label="Seu nome*"
+            variant="outlined"
+            {...register("name", { required: true })}
+          />
+          {errors.name && (
+            <span className="text-start text-[#FF0000]">Digite seu nome</span>
+          )}
+        </div>
+        <div className="mb-4 flex flex-col">
+          <TextField
+            className="sm:w-[572px] w-[269px] h-[60px] "
+            id="email"
+            label="Seu e-mail*"
+            variant="outlined"
+            {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+          />
+          {errors.email && (
+            <span className="text-start text-[#FF0000]">Digite seu email</span>
+          )}
+        </div>
 
-      <div className="mb-4">
-        <TextField
-          className="sm:w-[572px] w-[269px] h-[60px] "
-          id="outlined-basic"
-          label="Telefone*"
-          variant="outlined"
-          value={form.telefone}
-          onChange={(e) =>
-            setForm({
-              ...form,
-              telefone: e.target.value,
-            })
-          }
-        />
-      </div>
+        <div className="mb-4 flex flex-col">
+          <TextField
+            className="sm:w-[572px] w-[269px] h-[60px] "
+            id="phone"
+            label="Telefone*"
+            variant="outlined"
+            {...register("phone", { required: true })}
+          />
+          {errors.telefone && (
+            <span className="text-start text-[#FF0000]">
+              Digite seu telefone
+            </span>
+          )}
+        </div>
 
-      <div className="mb-4">
-        <TextField
-          className="sm:w-[572px] w-[269px] "
-          id="outlined-multiline-static "
-          label="Mensagem"
-          multiline
-          rows={4}
-          defaultValue="Default Value"
-          value={form.mensagem}
-          onChange={(e) =>
-            setForm({
-              ...form,
-              mensagem: e.target.value,
-            })
-          }
-        />
-      </div>
+        <div className="mb-4 flex flex-col">
+          <TextField
+            className="sm:w-[572px] w-[269px] "
+            id="message"
+            label="Mensagem"
+            multiline
+            rows={4}
+            variant="outlined"
+            {...register("message")}
+          />
+        </div>
 
-      <ButtonMolecule
-        onClick={handleSubmit}
-        children
-        textClassName="font-bold text-[12px] text-white"
-        style={{
-          backgroundColor: "red",
-          marginTop: "51px",
-          width: "252px",
-          height: "52px",
-        }}
-        title={"Enviar agora"}
-      />
+        <ButtonMolecule
+          type="submit"
+          children
+          textClassName="font-bold text-[12px] text-white"
+          style={{
+            backgroundColor: "red",
+            marginTop: "51px",
+            width: "252px",
+            height: "52px",
+          }}
+          title={"Enviar agora"}
+        />
+      </form>
     </div>
   );
 }
