@@ -18,42 +18,51 @@ import { FooterOrganism } from "./components/organismos/FooterOrganism";
 
 import api from "./services/api";
 
-function App() {
-  const { setAllSiteTexts, allSiteTexts, showMenu, setShowMenu } = useContext(
-    MyContext
-  ) as IMyContext;
+import logo from './assets/logo-aviao-grande.png';
+import { ImageAtom } from "./components/atomos/ImageAtome";
 
-  async function item() {
-    const response = await api.get("/pages");
-    localStorage.setItem("home", JSON.stringify(response));
-    setAllSiteTexts(response as any);
+function App() {
+  const { setAllHeaderTexts, loading, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+
+  async function getTextsForHome() {
+    const response = await api.get("/pages/header");
+    localStorage.setItem("header", JSON.stringify(response));
+    setAllHeaderTexts(response as any);
   }
 
   useEffect(() => {
-    item();
+    getTextsForHome();
   }, []);
+
 
   return (
     <>
-      <div>
-        <NavBarMolecule />
+      {
+        !loading
+          && <ImageAtom className='relative w-[300px] left-[480px] top-[240px]' source={logo} alt='logo loading' />    
+      }
+      {
+        loading && <NavBarMolecule />
+      }
         {!showMenu && (
           <>
-            {allSiteTexts && (
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre" element={<AboutUs />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blogPost/:slug" element={<BlogPost />} />
-                <Route path="/fale-conosco" element={<TalkToUs />} />
-              </Routes>
-            )}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/sobre" element={<AboutUs />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blogPost/:slug" element={<BlogPost />} />
+              <Route path="/fale-conosco" element={<TalkToUs />} />
+            </Routes>
+            
+            {
+              loading && <NewsOrganism />
+            }
 
-            <NewsOrganism />
-            <FooterOrganism />
+            {
+              loading && <FooterOrganism />
+            }
           </>
         )}
-      </div>
       {showMenu && <Sidebar showMenu={showMenu} setShowMenu={setShowMenu} />}
     </>
   );

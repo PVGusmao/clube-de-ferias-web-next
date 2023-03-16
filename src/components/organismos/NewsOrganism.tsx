@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 import { TextAtom } from "../atomos/TextAtom";
 import { Checkbox, Input } from "@mui/material";

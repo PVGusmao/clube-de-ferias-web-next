@@ -2,22 +2,21 @@ import { useContext } from "react";
 
 import { TextButtonMolecule } from "./TextButtonMolecule";
 
-import { IconButtonMolecule } from "./IconButtonMolecule";
-
 import { MenuHamburguerMolecule } from "./MenuHamburguerMolecule";
+
 import { IMyContext, MyContext } from "../../context/MyContext";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavLinksInterface, SocialMediaInterface } from "../../constants";
-import { IconAtom } from "../atomos/IconAtom";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
-import { FaTiktok } from "react-icons/fa";
+
+import { NavLinksInterface } from "../../constants";
 
 import logo from "../../assets/logo-red.png";
+
 import { SocialMediaMolecule } from "./SocialMediaMolecule";
 
 export function NavBarMolecule() {
-  const { showMenu, setShowMenu, allSiteTexts } = useContext(
+  const { showMenu, setShowMenu, allHeaderTexts } = useContext(
     MyContext
   ) as IMyContext;
 
@@ -33,7 +32,7 @@ export function NavBarMolecule() {
       </a>
 
       <div className="sm:flex hidden w-auto">
-        {allSiteTexts?.data?.paulo?.nav_links.map(
+        {allHeaderTexts?.data?.content?.nav_links.map(
           (element: NavLinksInterface, index: number) => (
             <TextButtonMolecule
               textClassName={

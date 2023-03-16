@@ -1,14 +1,11 @@
 import { IconAtom } from "../atomos/IconAtom";
-
 import { TextAtom } from "../atomos/TextAtom";
 
-import logo from "../../assets/logo.png";
-
-import { IconButtonMolecule } from "../moleculas/IconButtonMolecule";
 import { IoIosArrowForward } from "react-icons/io";
-import { SocialMediaInterface } from "../../constants";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { SocialMediaMolecule } from "../moleculas/SocialMediaMolecule";
+
+import logo from "../../assets/logo.png";
 
 export function FooterOrganism() {
   const dataAtual = new Date();

@@ -7,20 +7,29 @@ import { SocialNetworksOrganism } from "../../components/organismos/SocialNetwor
 import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function BlogPost() {
-  const {data, setData, setRecents} = useContext(MyContext) as IMyContext;
+  const { data, setData, setRecents, setLoading, loading } = useContext(MyContext) as IMyContext;
 
   const params = useParams();
 
   function getBlogPost() {
     api.get(`/posts/${params.slug}`).then((e) => {setData(e.data.post); setRecents(e.data.recents)});
+    setLoading(true);
   }
 
   useEffect(() => {
     getBlogPost();
   }, []);
 
+  useEffect(() => {
+    return () => {
+      setLoading(false);
+    };
+  }, []);
+
   return (
     <>
+    {
+      loading &&
       <div>
         <HeadeBlogPostOrganism
           capa={data.capa}
@@ -39,6 +48,7 @@ export function BlogPost() {
           </div>
         </div>
       </div>
+    }
     </>
   );
 }

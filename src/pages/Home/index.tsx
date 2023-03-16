@@ -1,35 +1,59 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { IMyContext, MyContext } from "../../context/MyContext";
 
+import api from "../../services/api";
+
 import { BlogOrganism } from "../../components/organismos/BlogOrganism";
+import { PlansOrganism } from "../../components/organismos/PlansOrganism";
 import { BannerOrganism } from "../../components/organismos/BannerOrganism";
 import { ClientsOrganism } from "../../components/organismos/ClientsOrganism";
 import { WelcomeOrganism } from "../../components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "../../components/organismos/SimulationOrganismo";
-import { PlansOrganism } from "../../components/organismos/PlansOrganism";
 
 export default function Home() {
-  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+  const { setAllSiteTexts, allSiteTexts, setLoading, loading } = useContext(MyContext) as IMyContext;
 
+  async function getTextsForHome() {
+    const response = await api.get("/pages");
+    localStorage.setItem("home", JSON.stringify(response));
+    setAllSiteTexts(response as any);
+    setLoading(true);
+  }
+
+  useEffect(() => {
+    getTextsForHome();
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      setLoading(false);
+    };
+  }, []);
+  
   return (
     <>
-      <WelcomeOrganism data={allSiteTexts} />
+    {
+      allSiteTexts && loading &&
+      <>
+        <WelcomeOrganism data={allSiteTexts} />
 
-      <PlansOrganism data={allSiteTexts} />
+        <PlansOrganism data={allSiteTexts} />
 
-      <SimulationOrganism data={allSiteTexts} />
+        <SimulationOrganism data={allSiteTexts} />
 
-      {allSiteTexts?.data.paulo.banner[0].enable && (
-        <BannerOrganism data={allSiteTexts} />
-      )}
+        {allSiteTexts?.data.paulo.banner[0].enable && (
+          <BannerOrganism data={allSiteTexts} />
+        )}
 
-      <BlogOrganism />
+        <BlogOrganism />
 
-      <ClientsOrganism />
+        <ClientsOrganism />
 
-      {allSiteTexts?.data.paulo.banner[1].enable && (
-        <BannerOrganism data={allSiteTexts} />
-      )}
+        {allSiteTexts?.data.paulo.banner[1].enable && (
+          <BannerOrganism data={allSiteTexts} />
+        )}
+      </>
+    }
     </>
   );
 }
