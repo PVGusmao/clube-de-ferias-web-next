@@ -12,10 +12,12 @@ export type IMyContext = {
   link: string;
   packages: CardSimulationProps[];
   allSiteTexts: undefined;
+  allHeaderTexts: undefined;
   aboutUsTexts: AboutUsTextsInterface;
   blogPostsContent: FeaturedAndPostInterface[];
   blogFeaturedContent: FeaturedAndPostInterface[];
   location: string;
+  loading: boolean;
   setRecents: React.Dispatch<React.SetStateAction<CardRecentsPostsInterface[]>>;
   setData: React.Dispatch<React.SetStateAction<HeadeBlogPostOrganismInterface>>;
   setLocation: React.Dispatch<React.SetStateAction<string>>;
@@ -24,6 +26,8 @@ export type IMyContext = {
   setPackages: React.Dispatch<React.SetStateAction<CardSimulationProps[]>>;
   setAboutUsTexts: React.Dispatch<React.SetStateAction<AboutUsTextsInterface>>;
   setAllSiteTexts: React.Dispatch<React.SetStateAction<undefined>>;
+  setAllHeaderTexts: React.Dispatch<React.SetStateAction<undefined>>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setBlogPostsContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
   setBlogFeaturedContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
 }
@@ -39,9 +43,11 @@ type Props = {
 export function MyProvider({ children }: Props) {
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [link, setLink] = useState<string>('');
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
   const [allSiteTexts, setAllSiteTexts] = useState<undefined>(undefined);
+  const [allHeaderTexts, setAllHeaderTexts] = useState<undefined>(undefined);
   const [aboutUsTexts, setAboutUsTexts] = useState<AboutUsTextsInterface>();
   const [blogPostsContent, setBlogPostsContent] = useState<FeaturedAndPostInterface>();
   const [blogFeaturedContent, setBlogFeaturedContent] = useState<FeaturedAndPostInterface>();
@@ -56,11 +62,13 @@ export function MyProvider({ children }: Props) {
 
   return (
     <MyContext.Provider value={{
+      loading, setLoading,
       showMenu, setShowMenu,
       recents, setRecents,
       link, setLink,
       packages, setPackages,
       allSiteTexts, setAllSiteTexts,
+      allHeaderTexts, setAllHeaderTexts,
       location, setLocation,
       data, setData,
       aboutUsTexts, setAboutUsTexts,

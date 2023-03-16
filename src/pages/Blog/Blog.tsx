@@ -8,21 +8,29 @@ import { SliderBlogMolecule } from "../../components/moleculas/SliderBlogMolecul
 import api from "../../services/api";
 
 export function Blog() {
-  const { blogPostsContent, setBlogPostsContent, setBlogFeaturedContent } = useContext(MyContext) as IMyContext;
+  const { blogPostsContent, setBlogPostsContent, setBlogFeaturedContent, setLoading, loading } = useContext(MyContext) as IMyContext;
 
   async function getData() {
     const response = await api.get("/posts");
     setBlogPostsContent(response.data.posts);
     setBlogFeaturedContent(response.data.featured);
+    setLoading(true);
   }
   
   useEffect(() => {
     getData();
   }, [])
+
+  useEffect(() => {
+    return () => {
+      setLoading(false);
+    };
+  }, []);
+  
   return (
     <>
       {
-        blogPostsContent &&
+        blogPostsContent && loading &&
           <div className="w-full">
             <SliderBlogMolecule />
             
