@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useContext } from "react";
+import { Dispatch, SetStateAction, useContext, useEffect } from "react";
 import { IMyContext, MyContext } from "../../context/MyContext";
 
 import { TextAtom } from "./TextAtom";
@@ -15,7 +15,11 @@ type Props = {
 };
 
 export default function Sidebar({ setShowMenu, showMenu }: Props) {
-  const { allSiteTexts } = useContext(MyContext) as IMyContext;
+  const { allSiteTexts, loading, setLoading } = useContext(MyContext) as IMyContext;
+
+  useEffect(() => {
+    setLoading(true);
+  }, [])
 
   return (
     <div className="h-96">
