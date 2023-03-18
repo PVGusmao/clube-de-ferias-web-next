@@ -39,7 +39,7 @@ function App() {
     <>
       {
         !loading
-          && <ImageAtom className='relative w-[300px] left-[480px] top-[240px]' source={logo} alt='logo loading' />    
+          && <ImageAtom className='w-[200px] left-[100px] top-[200px] sm:flex relative sm:w-[300px] sm:left-[480px] sm:top-[240px]' source={logo} alt='logo loading' />    
       }
       {
         loading && <NavBarMolecule />
