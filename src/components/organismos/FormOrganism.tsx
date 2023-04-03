@@ -1,11 +1,14 @@
 import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import api from "../../services/api";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 import { useForm } from "react-hook-form";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function FormOrganism() {
+  const { showModal, setShowModal, setBodyTextModal, setButtonTextModal } = useContext(MyContext) as IMyContext;
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,14 +31,16 @@ export function FormOrganism() {
       .post("/contactus", data)
       .then((res) => {
         console.log(res.data);
-        alert("Mensagem enviada com sucesso!");
         reset();
         setIsSubmitted(true);
+        setShowModal(!showModal);
+        setBodyTextModal(res.data[0]);
+        setButtonTextModal('Voltar');
       })
       .catch((err) => {
-        console.error(
-          "ops! ocorreu um erro " + JSON.stringify(err.response.data.message)
-        );
+        setShowModal(!showModal);
+        setBodyTextModal(err.response.data.message);
+        setButtonTextModal('Voltar');
       });
   };
 
