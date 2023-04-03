@@ -20,9 +20,11 @@ import api from "./services/api";
 
 import logo from './assets/logo-aviao-grande.png';
 import { ImageAtom } from "./components/atomos/ImageAtome";
+import { ModalAlert } from "./components/moleculas/ModalMolecule";
 
 function App() {
-  const { setAllHeaderTexts, loading, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
+  const { setAllHeaderTexts, loading, showMenu, setShowMenu, showModal, setShowModal,
+    bodyTextModal, buttonTextModal } = useContext(MyContext) as IMyContext;
 
   async function getTextsForHome() {
     const response = await api.get("/pages/header");
@@ -37,6 +39,15 @@ function App() {
 
   return (
     <>
+      {
+        showModal
+        && <ModalAlert
+          bodyText={bodyTextModal}
+          buttonText={buttonTextModal}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+      }
       {
         !loading
           && <ImageAtom className='w-[200px] left-[100px] top-[200px] sm:flex relative sm:w-[300px] sm:left-[480px] sm:top-[240px]' source={logo} alt='logo loading' />    
