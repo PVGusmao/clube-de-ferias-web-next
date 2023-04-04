@@ -16,7 +16,7 @@ export function ModalAlert({ bodyText, buttonText, showModal, setShowModal }: Pr
   return (
     <>
       <div className="fade-in-modal bg-black w-[100%] h-[100%] fixed left-0 opacity-50 z-10" />
-      <div className="flex flex-col justify-between bg-[white] w-[80%] h-[25%] sm:w-[500px] sm:h-[350px] z-20 fixed left-[10%] sm:left-[35%] top-[15%] rounded-3xl">
+      <div className="flex flex-col justify-between bg-[white] w-[80%] h-[auto] sm:w-[500px] sm:h-[350px] z-20 fixed left-[10%] sm:left-[35%] top-[15%] rounded-3xl">
         <div className="flex items-center justify-between">
           <TextAtom
             className="ml-5 mt-5 text-xl font-bold"
@@ -28,7 +28,7 @@ export function ModalAlert({ bodyText, buttonText, showModal, setShowModal }: Pr
 
         <div>
           <TextAtom
-            className="text-xl"
+            className="text-xl mt-10 mb-10"
             text={bodyText}
           > </TextAtom>
         </div>
