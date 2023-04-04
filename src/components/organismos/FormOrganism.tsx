@@ -26,11 +26,9 @@ export function FormOrganism() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     await api
       .post("/contactus", data)
       .then((res) => {
-        console.log(res.data);
         reset();
         setIsSubmitted(true);
         setShowModal(!showModal);
@@ -83,7 +81,7 @@ export function FormOrganism() {
             variant="outlined"
             {...register("phone", { required: true })}
           />
-          {errors.telefone && (
+          {errors.phone && (
             <span className="text-start text-[#FF0000]">
               Digite seu telefone
             </span>
@@ -98,8 +96,13 @@ export function FormOrganism() {
             multiline
             rows={4}
             variant="outlined"
-            {...register("message")}
+            {...register("message", { required: true })}
           />
+          {errors.message && (
+            <span className="text-start text-[#FF0000]">
+              Digite a mensagem que deseja enviar
+            </span>
+          )}
         </div>
 
         <ButtonMolecule
