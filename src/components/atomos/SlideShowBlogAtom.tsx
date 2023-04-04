@@ -22,7 +22,7 @@ export const SlideShowBlogAtom = () => {
     >
       <Slide arrows={false} transitionDuration={250}>
         {allSiteTexts?.data?.paulo?.minor_card_blog.map((element: MinorCardBlogInterface, index: number) => (
-          <div className="each-slide-effect" key={index}>
+          <div className="each-slide-effect pl-[10px]" key={index}>
             <BackgroundImageAtom
               className={`flex items-center px-100 text-center rounded-xl mx-1 bg-cover justify-between h-36 w-96`}
               image={element.image}
