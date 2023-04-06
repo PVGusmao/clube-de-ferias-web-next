@@ -7,7 +7,7 @@ type Props = {
 
 export function BannerOrganism({ data }: Props) {
   return (
-    <>
+    <div className="mx-[10px]">
       <BackgroundImageAtom
         children
         image={data.data.paulo.banners.desktop}
@@ -19,6 +19,6 @@ export function BannerOrganism({ data }: Props) {
         image={data.data.paulo.banners.mobile}
         className="sm:hidden h-[252px] rounded-2xl bg-cover"
       />
-    </>
+    </div>
   );
 }

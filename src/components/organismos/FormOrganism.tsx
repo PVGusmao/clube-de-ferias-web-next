@@ -1,11 +1,14 @@
 import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import api from "../../services/api";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
 
 import { useForm } from "react-hook-form";
+import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function FormOrganism() {
+  const { showModal, setShowModal, setBodyTextModal, setButtonTextModal } = useContext(MyContext) as IMyContext;
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,19 +26,19 @@ export function FormOrganism() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     await api
       .post("/contactus", data)
       .then((res) => {
-        console.log(res.data);
-        alert("Mensagem enviada com sucesso!");
         reset();
         setIsSubmitted(true);
+        setShowModal(!showModal);
+        setBodyTextModal(res.data[0]);
+        setButtonTextModal('Voltar');
       })
       .catch((err) => {
-        console.error(
-          "ops! ocorreu um erro " + JSON.stringify(err.response.data.message)
-        );
+        setShowModal(!showModal);
+        setBodyTextModal(err.response.data.message);
+        setButtonTextModal('Voltar');
       });
   };
 
@@ -78,7 +81,7 @@ export function FormOrganism() {
             variant="outlined"
             {...register("phone", { required: true })}
           />
-          {errors.telefone && (
+          {errors.phone && (
             <span className="text-start text-[#FF0000]">
               Digite seu telefone
             </span>
@@ -93,8 +96,13 @@ export function FormOrganism() {
             multiline
             rows={4}
             variant="outlined"
-            {...register("message")}
+            {...register("message", { required: true })}
           />
+          {errors.message && (
+            <span className="text-start text-[#FF0000]">
+              Digite a mensagem que deseja enviar
+            </span>
+          )}
         </div>
 
         <ButtonMolecule

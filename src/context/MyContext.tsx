@@ -30,6 +30,13 @@ export type IMyContext = {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setBlogPostsContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
   setBlogFeaturedContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
+
+  showModal: boolean;
+  bodyTextModal: string;
+  buttonTextModal: string;
+  setButtonTextModal: React.Dispatch<React.SetStateAction<string>>; 
+  setBodyTextModal: React.Dispatch<React.SetStateAction<string>>;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const MyContext = createContext<IMyContext | null>(null);
@@ -60,6 +67,10 @@ export function MyProvider({ children }: Props) {
     img: ''
   });
 
+  const [showModal, setShowModal] = useState(false);
+  const [bodyTextModal, setBodyTextModal] = useState('');
+  const [buttonTextModal, setButtonTextModal] = useState('');
+
   return (
     <MyContext.Provider value={{
       loading, setLoading,
@@ -74,6 +85,9 @@ export function MyProvider({ children }: Props) {
       aboutUsTexts, setAboutUsTexts,
       blogPostsContent, setBlogPostsContent,
       blogFeaturedContent, setBlogFeaturedContent,
+      showModal, setShowModal,
+      bodyTextModal, setBodyTextModal,
+      buttonTextModal, setButtonTextModal,
     } as unknown as IMyContext}>
       {children}
     </MyContext.Provider>
