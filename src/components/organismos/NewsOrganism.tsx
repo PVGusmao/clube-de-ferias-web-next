@@ -41,7 +41,7 @@ export function NewsOrganism() {
           <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0 ">
             Baixe nosso aplicativo clicando abaixo.
           </p>
-          <div className="flex flex-row">
+          <div className="flex flex-row sm:justify-start justify-center">
             <a target="_blank" href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
               <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
                 <IconAtom
@@ -76,7 +76,7 @@ export function NewsOrganism() {
           <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0">
             Ou utilizando nosso QR Code
           </p>
-          <div className="flex">
+          <div className="flex sm:justify-start justify-center">
             <ImageAtom
               className="w-[120px] justify-center "
               alt="qr code loja app"

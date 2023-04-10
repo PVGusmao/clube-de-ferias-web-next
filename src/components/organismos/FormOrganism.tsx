@@ -25,7 +25,7 @@ export function FormOrganism() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     await api
       .post("/contactus", data)
       .then((res) => {
@@ -46,7 +46,7 @@ export function FormOrganism() {
     <div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="sm:w-[771px] w-[318px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[100px] sm:mb-[222px] mt-[50px] sm:mt-[122px] "
+        className="sm:w-[771px] w-[318px] h-[707px] flex flex-col justify-center items-center rounded-lg shadow-lg mb-[10px] sm:mb-[20px] sm:mt-[10px] "
       >
         <div className="mb-4 flex flex-col  ">
           <TextField
