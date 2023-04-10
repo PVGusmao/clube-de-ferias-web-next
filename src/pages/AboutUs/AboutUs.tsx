@@ -20,7 +20,7 @@ export function AboutUs() {
   useEffect(() => {
     gettextsForAboutUs();
   }, [])
-
+  
   useEffect(() => {
     return () => {
       setLoading(false);

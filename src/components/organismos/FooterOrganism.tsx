@@ -29,28 +29,10 @@ export function FooterOrganism() {
     },
   ];
 
-  const socialMedia = [
-    {
-      id: "instagram",
-      icon: FaInstagram,
-      rota: "/instagram",
-    },
-    {
-      id: "facebook",
-      icon: FaFacebook,
-      rota: "/facebook",
-    },
-    {
-      id: "tik-tok",
-      icon: FaTiktok,
-      rota: "/tik-tok",
-    },
-  ];
-
   return (
     <>
-      <div className="sm:h-[26.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
-        <div className="justify-items-start grid  sm:w-96 h-full mb-12">
+      <div className="sm:h-[16.313rem] w-full bg-[#F20F0F] sm:flex sm:flex-row flex-col px-12 sm:justify-between py-12 sm:items-center">
+        <div className="justify-items-start grid sm:w-96 h-full mb-12">
           <div className="justify-start">
             <a href=".">
               <img className="w-36" src={logo} alt="logo" />
@@ -58,7 +40,7 @@ export function FooterOrganism() {
           </div>
           <TextAtom
             children
-            className="text-left mb-7 text-base font-light text-white	"
+            className="text-left mb-7 text-base font-light text-white"
             text={`© ${anoAtual} Clube de Férias Stella Barros Turismo 
             Todos os direitos reservados`}
           />
@@ -68,16 +50,16 @@ export function FooterOrganism() {
             <TextAtom
               children
               className="font-bold text-left text-white text-2xl mb-3.5"
-              text="NAVIGATION"
+              text="Navegação"
             />
             {navigation.map((element, index: number) => (
               <div key={index} className="flex flex-row mb-4">
-                <a className="flex" href={element.route}>
+                <a className="flex justify-center items-center" href={element.route}>
                   <IconAtom
                     icon={element.icon}
                     size={20}
                     color="white"
-                    className="mr-3."
+                    className="mr-1"
                   />
                   <TextAtom
                     children
@@ -92,7 +74,7 @@ export function FooterOrganism() {
             <TextAtom
               children
               className="font-bold text-white text-left text-[16px] text-2xl mb-8	"
-              text="SIGA NOSSAS REDES"
+              text="Siga nossas redes"
             />
             <SocialMediaMolecule color="white" />
             {/* <div className="flex flex-row h-12">
@@ -113,11 +95,11 @@ export function FooterOrganism() {
           </div>
         </div>
       </div>
-      <div className="h-[83px] w-full bg-[#636363] flex justify-center items-center ">
+      <div className="h-[15px] w-full bg-[#636363] flex justify-center items-center ">
         <TextAtom
           children
           className="text-[13px] font-bold text-white"
-          text="CLUBE DE FÉRIAS"
+          text=""
         />
       </div>
     </>

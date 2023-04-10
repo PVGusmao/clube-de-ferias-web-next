@@ -30,6 +30,7 @@ export function PlansOrganism({ data }: Props) {
       priceTag: data.data.paulo.plans2[0]?.priceTag,
       buttonName: data.data.paulo.plans2[0]?.buttonName,
       colorPlan: data.data.paulo.plans2[0]?.colorPan,
+      fifthText: data.data.paulo.plans2[0]?.fifthText,
     },
     {
       id: 2,
@@ -45,6 +46,7 @@ export function PlansOrganism({ data }: Props) {
       priceTag: data.data.paulo.plans2[1]?.priceTag,
       buttonName: data.data.paulo.plans2[1]?.buttonName,
       colorPlan: data.data.paulo.plans2[1]?.colorPlan,
+      fifthText: data.data.paulo.plans2[1]?.fifthText,
     },
     {
       id: 3,
@@ -60,6 +62,7 @@ export function PlansOrganism({ data }: Props) {
       priceTag: data.data.paulo.plans2[2]?.priceTag,
       buttonName: data.data.paulo.plans2[2]?.buttonName,
       colorPlan: data.data.paulo.plans2[2]?.colorPlan,
+      fifthText: data.data.paulo.plans2[2]?.fifthText,
     },
     {
       id: 4,
@@ -75,13 +78,14 @@ export function PlansOrganism({ data }: Props) {
       priceTag: data.data.paulo.plans2[3]?.priceTag,
       buttonName: data.data.paulo.plans2[3]?.buttonName,
       colorPlan: data.data.paulo.plans2[3]?.colorPlan,
+      fifthText: data.data.paulo.plans2[3]?.fifthText,
     },
   ];
 
   return (
     <div
       id="planos"
-      className="sm:h-[1250px] justify-center sm:py-24 pb-10 sm:pb-0 mt-[270px] sm:mt-[200px]"
+      className="sm:h-[1100px] justify-center sm:py-12 pb-10 sm:pb-0 mt-[270px] sm:mt-[150px]"
     >
       <div className="sm:flex justify-center">
         <TextAtom
@@ -95,7 +99,7 @@ export function PlansOrganism({ data }: Props) {
           text="um dos nossos 4 planos"
         />
       </div>
-      <div className="sm:flex hidden flex-row justify-evenly mt-[70px] w-full">
+      <div className="sm:flex hidden flex-row justify-evenly mt-[10px] w-full">
         {planos2.map((element, index: number) => (
           <div
             key={index}
@@ -112,6 +116,7 @@ export function PlansOrganism({ data }: Props) {
               fourthText={element.fourthText}
               priceTag={element.priceTag}
               buttonName={element.buttonName}
+              fifthText={element.fifthText}
             />
           </div>
         ))}

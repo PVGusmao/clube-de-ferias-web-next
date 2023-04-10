@@ -7,22 +7,22 @@ type Props = {
 export function FooterPlansMolecule({ data }: Props) {
   return (
     <>
-      <div className="bg-white flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px] border border-[lightgray]	shadow-md">
+      <div className="bg-[#FF0111] flex flex-col sm:flex-row sm:h-48 rounded-2xl mx-12 items-center justify-evenly sm:mt-[80px] border border-[lightgray] shadow-md">
         <div className="my-10 sm:my-0">
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[0].text1}
           />
 
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[0].text2}
           />
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[0].text3}
           />
         </div>
@@ -32,19 +32,19 @@ export function FooterPlansMolecule({ data }: Props) {
         <div className="my-10 sm:my-0">
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[1].text1}
           />
 
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[1].text2}
           />
 
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[1].text3}
           />
         </div>
@@ -54,19 +54,19 @@ export function FooterPlansMolecule({ data }: Props) {
         <div className="my-10 sm:my-0">
           <TextAtom
             children
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[2].text1}
           />
 
           <TextAtom
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[2].text2}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
-            className="text-[#4B4B4B] font-bold text-[20px] leading-[151%] tracking-[0.11em]"
+            className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
             text={data.data.paulo.sub_plans_text[2].text3}
           >
             {" "}

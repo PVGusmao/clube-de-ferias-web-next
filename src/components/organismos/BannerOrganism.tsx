@@ -1,5 +1,4 @@
 import { BackgroundImageAtom } from "../atomos/BackgroundImageAtom";
-import { desktop, mobile } from "../../constants/Home";
 
 type Props = {
   data: any;
@@ -12,7 +11,7 @@ export function BannerOrganism({ data }: Props) {
         children
         image={data.data.paulo.banners.desktop}
         backgroundSize={"100%"}
-        className="hidden sm:flex h-48 rounded-2xl my-[141px] bg-cover"
+        className="hidden sm:flex h-48 rounded-2xl my-[10px] bg-cover"
       />
       <BackgroundImageAtom
         children

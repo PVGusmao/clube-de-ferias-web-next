@@ -2,6 +2,7 @@ import { IconType } from "react-icons/lib";
 import { IconAtom } from "../atomos/IconAtom";
 import { TextAtom } from "../atomos/TextAtom";
 import { ButtonMolecule } from "./ButtonMolecule";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Props {
   planName: string;
@@ -14,6 +15,7 @@ interface Props {
   fourthText: string;
   priceTag: string;
   buttonName: string;
+  fifthText: string;
 }
 
 export function CardPlansMolecule({
@@ -27,13 +29,15 @@ export function CardPlansMolecule({
   fourthText,
   priceTag,
   buttonName,
+  fifthText,
 }: Props) {
+  const navigation = useNavigate();
   return (
     <>
       <div className={`flex items-center flex-col w-72 space-y-3`}>
         <TextAtom
           children
-          className={`text-4xl font-bold mt-10 mb-9 text-black`}
+          className={`text-4xl font-bold mt-10 mb-1 text-black`}
           text={planName}
           style={{
             color: colorPlan === undefined ? "#BFBFBF" : colorPlan,
@@ -81,6 +85,7 @@ export function CardPlansMolecule({
           }}
         />
 
+
         <div className="flex items-center justify-evenly w-full py-1">
           <IconAtom color={colorPlan} icon={fourthIcon} size={42} />
           <TextAtom
@@ -98,10 +103,18 @@ export function CardPlansMolecule({
           }}
         />
 
+        <div className="flex items-center justify-evenly w-full">
+          <TextAtom
+            children
+            className="w-[200px] text-left text-[12px] text-black"
+            text={fifthText}
+          />
+        </div>
+
         <div className="flex items-center justify-between">
           <TextAtom
             children
-            className={`text-4xl font-bold pt-[40px] text-black`}
+            className={`text-4xl font-bold ${fifthText ? 'pt-[0px]' : 'pt-[45px]' } text-black`}
             text={`R$ ${priceTag}/mês`}
             style={{
               color: "black",
@@ -117,22 +130,24 @@ export function CardPlansMolecule({
             opacity: 0.4,
           }}
         />
-      </div>
+        </div>
 
-      <div>
-        <ButtonMolecule
-          children
-          style={{
-            backgroundColor: `${
-              colorPlan === undefined ? "#BFBFBF" : colorPlan
-            }`,
-            color: "black",
-          }}
-          className={`mt-[30px] flex items-center w-[183px] justify-center h-[36px] rounded-full`}
-          textClassName={`font-bold text-white`}
-          title={buttonName}
-        />
-      </div>
+        <a href="/#baixe-o-app">
+          <div>
+            <ButtonMolecule
+              children
+              style={{
+                backgroundColor: `${
+                  colorPlan === undefined ? "#BFBFBF" : colorPlan
+                }`,
+                color: "black",
+              }}
+              className={`mt-[40px] flex items-center w-[183px] justify-center h-[36px] rounded-full`}
+              textClassName={`font-bold text-white`}
+              title={buttonName}
+            />
+          </div>
+        </a>
     </>
   );
 }

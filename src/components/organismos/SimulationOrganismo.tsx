@@ -61,7 +61,7 @@ export function SimulationOrganism({ data }: Props) {
       <TextAtom
         children
         text="Vamos simular uma viagem ?"
-        className="sm:text-6xl text-2xl	font-bold mb-[25px] mt-4.5 pt-[80px] px-5 text-black"
+        className="sm:text-6xl text-2xl	font-bold mb-[25px] mt-4.5 pt-[10px] px-5 text-black"
       />
       <div className="flex flex-col items-center">
         <TextAtom

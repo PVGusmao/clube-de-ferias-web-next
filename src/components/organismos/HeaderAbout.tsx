@@ -7,8 +7,6 @@ import { ImageAtom } from "../atomos/ImageAtome";
 import { useContext } from "react";
 import { IMyContext, MyContext } from "../../context/MyContext";
 
-type Props = {};
-
 export function HeaderAbout() {
   const { aboutUsTexts } = useContext(MyContext) as IMyContext;
 
@@ -27,7 +25,7 @@ export function HeaderAbout() {
 
           <TextAtom
             children
-            className="text-white text-start font-medium text-xl font-ubuntu mt-6"
+            className="text-white text-start font-medium text-xl font-ubuntu mt-2"
             text={aboutUsTexts?.header?.content}
           />
         </div>

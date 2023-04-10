@@ -24,7 +24,7 @@ export function NewsOrganism() {
         <TextAtom
           children
           className="sm:text-5xl text-3xl	font-bold text-[#F20F0F] sm:text-left mb-5"
-          text="o clube de ferias?"
+          text="o clube de Férias?"
         />
         <TextAtom
           children
@@ -39,10 +39,10 @@ export function NewsOrganism() {
 
         <div className="flex flex-col my-10">
           <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0 ">
-            Baixe nosso aplicativo clicando no botão abaixo.
+            Baixe nosso aplicativo clicando abaixo.
           </p>
-          <div className="flex flex-row justify-center ">
-            <a href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
+          <div className="flex flex-row">
+            <a target="_blank" href="https://apps.apple.com/us/app/clube-de-f%C3%A9rias/id1627026529">
               <div className="flex h-[3.4375rem] w-[10.75rem] mb-5 bg-[#252525] items-center justify-center rounded-lg mr-5">
                 <IconAtom
                   icon={AiFillApple}
@@ -57,7 +57,7 @@ export function NewsOrganism() {
                 />
               </div>
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.stellabarros.clubedeferias">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.stellabarros.clubedeferias">
               <div className="flex h-[3.4375rem] w-[11rem] mb-5 bg-[#252525] items-center justify-center rounded-lg">
                 <IconAtom
                   icon={FaGooglePlay}
@@ -76,7 +76,7 @@ export function NewsOrganism() {
           <p className="text-left mb-[20px] text-[20px] text-black font-bold mx-[10px] sm:mx-0">
             Ou utilizando nosso QR Code
           </p>
-          <div className="flex justify-center">
+          <div className="flex">
             <ImageAtom
               className="w-[120px] justify-center "
               alt="qr code loja app"

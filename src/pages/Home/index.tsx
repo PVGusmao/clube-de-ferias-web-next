@@ -15,6 +15,7 @@ export default function Home() {
 
   async function getTextsForHome() {
     const response = await api.get("/pages");
+    console.log(response);
     localStorage.setItem("home", JSON.stringify(response));
     setAllSiteTexts(response as any);
     setLoading(true);
