@@ -13,7 +13,7 @@ export function NewsOrganism() {
   return (
     <div
       id="baixe-o-app"
-      className="sm:flex grid content-center mt-[100px] h-[1000px] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]"
+      className="sm:flex grid content-center mt-[20px] h-[1000px] sm:h-[25.5rem] sm:h-[35.5rem] w-full justify-evenly bg-[#F3F3F3]"
     >
       <div className="grid content-center mt-[50px]">
         <TextAtom

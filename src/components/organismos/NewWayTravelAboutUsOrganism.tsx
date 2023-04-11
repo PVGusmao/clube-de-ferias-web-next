@@ -5,7 +5,7 @@ import { TextAtom } from "../atomos/TextAtom";
 export function NewWayTravelAboutUsOrganism() {
   const { aboutUsTexts } = useContext(MyContext) as IMyContext;
   return (
-    <div className="flex flex-col items-start sm:ml-36 mx-auto sm:my-24">
+    <div className="flex flex-col items-start sm:ml-36 mx-auto sm:my-6">
       <TextAtom
         children
         className="text-[red] text-start font-ubuntu text-2xl sm:text-5xl font-bold sm:w-[70%] px-6 sm:px-0 mt-10 mb-10"
