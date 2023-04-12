@@ -1,14 +1,14 @@
 import { createContext, useState } from 'react';
-// import { CardRecentsPostsInterface } from '@components/moleculas/CardRecentsPosts';
 import { CardSimulationProps } from '../components/moleculas/CardSimulationMolecule';
-// import { HeadeBlogPostOrganismInterface } from '../components/organismos/HeadeBlogPostOrganism';
 import { FeaturedAndPostInterface } from '../constants/Blog'; 
 import { AboutUsTextsInterface } from '@/constants/AboutUs';
+import { CardRecentsPostsInterface } from '@/components/moleculas/CardRecentsPosts';
+import { HeadeBlogPostOrganismInterface } from '@/components/organismos/HeadeBlogPostOrganism';
 
 export type IMyContext = {
   showMenu: boolean;
-  // data: HeadeBlogPostOrganismInterface;
-  // recents: CardRecentsPostsInterface[];
+  data: HeadeBlogPostOrganismInterface;
+  recents: CardRecentsPostsInterface[];
   link: string;
   packages: CardSimulationProps[];
   allSiteTexts: undefined;
@@ -17,8 +17,8 @@ export type IMyContext = {
   blogFeaturedContent: FeaturedAndPostInterface[];
   location: string;
   loading: boolean;
-  // setRecents: React.Dispatch<React.SetStateAction<CardRecentsPostsInterface[]>>;
-  // setData: React.Dispatch<React.SetStateAction<HeadeBlogPostOrganismInterface>>;
+  setRecents: React.Dispatch<React.SetStateAction<CardRecentsPostsInterface[]>>;
+  setData: React.Dispatch<React.SetStateAction<HeadeBlogPostOrganismInterface>>;
   setLocation: React.Dispatch<React.SetStateAction<string>>;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
   setLink: React.Dispatch<React.SetStateAction<string>>;
@@ -49,23 +49,23 @@ export function MyProvider({ children }: Props) {
   const [blogPostsContent, setBlogPostsContent] = useState<FeaturedAndPostInterface>();
   const [blogFeaturedContent, setBlogFeaturedContent] = useState<FeaturedAndPostInterface>();
   const [location, setLocation] = useState<string>('');
-  // const [recents, setRecents] = useState<CardRecentsPostsInterface[]>([]);
-  // const [data, setData] = useState<HeadeBlogPostOrganismInterface>({
-  //   capa: '',
-  //   title: '',
-  //   subtitle: '',
-  //   img: ''
-  // });
+  const [recents, setRecents] = useState<CardRecentsPostsInterface[]>([]);
+  const [data, setData] = useState<HeadeBlogPostOrganismInterface>({
+    capa: '',
+    title: '',
+    subtitle: '',
+    img: ''
+  });
 
   return (
     <MyContext.Provider value={{
       showMenu, setShowMenu,
-      // recents, setRecents,
+      recents, setRecents,
       link, setLink,
       packages, setPackages,
       allSiteTexts, setAllSiteTexts,
       location, setLocation,
-      // data, setData,
+      data, setData,
       aboutUsTexts, setAboutUsTexts,
       loading, setLoading,
       blogPostsContent, setBlogPostsContent,

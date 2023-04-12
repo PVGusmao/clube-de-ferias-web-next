@@ -10,8 +10,6 @@ import { IMyContext, MyContext } from "@/context/MyContext";
 export default function Blog() {
   const { blogPostsContent, setBlogPostsContent, setBlogFeaturedContent, setLoading, loading } = useContext(MyContext) as IMyContext;
 
-  console.log(loading)
-
   async function getData() {
     const response = await api.get("/posts");
     setBlogPostsContent(response.data.posts);
