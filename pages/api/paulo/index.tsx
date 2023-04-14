@@ -11,11 +11,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
-const getDataPages = async (req: NextApiRequest, res: NextApiResponse) => {
+const getDataPages = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
     const result = await prisma.pages.findMany();
-    const data = JSON.parse(result[0]?.content);
-    return res.status(200).json(data);
+    
+    const paulo = result.find((element) => element.name === 'paulo');
+    const quemsomos = result.find((element) => element.name === 'quemsomos');
+
+    const obj = {
+      paulo: JSON.parse(paulo?.content),
+      quemsomos: JSON.parse(quemsomos?.content),
+    }
+    
+    return res.status(200).json(obj);
   } catch (err) {
     return res.status(200).json(err);
   }

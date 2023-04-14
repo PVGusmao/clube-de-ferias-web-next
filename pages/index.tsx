@@ -9,16 +9,22 @@ import { BannerOrganism } from "@/components/organismos/BannerOrganism";
 import { ClientsOrganism } from "@/components/organismos/ClientsORganism";
 import { WelcomeOrganism } from "@/components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "@/components/organismos/SimulationOrganism";
+import axios from "axios";
 
 export default function Home() {
   const { setAllSiteTexts, allSiteTexts, setLoading, loading } = useContext(MyContext) as IMyContext;
 
   async function getTextsForHome() {
-    const response = await api.get("/pages");
-    console.log(response);
-    localStorage.setItem("home", JSON.stringify(response));
-    setAllSiteTexts(response as any);
-    setLoading(true);
+    try {
+      // const response = await api.get("/pages");
+      const response = await api.get('/paulo');
+      console.log(response);
+      localStorage.setItem("home", JSON.stringify(response));
+      setAllSiteTexts(response as any);
+      setLoading(true);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
