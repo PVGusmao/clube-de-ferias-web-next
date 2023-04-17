@@ -23,7 +23,6 @@ export function SliderBlogMolecule() {
             >
               <div
                 className=" flex flex-col bg-[red] w-[800px] h-[350px] p-10 items-start justify-center rounded-bl-[50px]"
-                key={index}
               >
                 <TextAtom
                   className="text-white font-bold text-[30px] text-start leading-[35px] w-[450px]"

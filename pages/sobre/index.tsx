@@ -9,16 +9,13 @@ import { NewWayTravelAboutUsOrganism } from "@/components/organismos/NewWayTrave
 import api from "../../services/api";
 
 import { IMyContext, MyContext } from "../../context/MyContext";
-import axios from "axios";
 
 export default function Sobre() {
   const { aboutUsTexts, setAboutUsTexts, setLoading, loading } = useContext(MyContext) as IMyContext;
 
   async function getTextsForAboutUs() {
     try {
-      // const response = await api.get('/pages/quemsomos');
       const response = await api.get('/quemsomos');
-  
       setAboutUsTexts(response.data.content as any);
       setLoading(true);
       localStorage.setItem("about2", JSON.stringify(response));

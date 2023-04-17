@@ -20,22 +20,22 @@ export function WelcomeMolecule({ className, data }: Props) {
     {
       id: 1,
       icon: TbPig,
-      content: data?.data?.paulo?.text_square?.text_1,
+      content: data?.paulo?.text_square?.text_1,
     },
     {
       id: 2,
       icon: HiOutlineBadgeCheck,
-      content: data?.data?.paulo?.text_square?.text_2,
+      content: data?.paulo?.text_square?.text_2,
     },
     {
       id: 3,
       icon: FaRegComments,
-      content: data?.data?.paulo?.text_square?.text_3,
+      content: data?.paulo?.text_square?.text_3,
     },
     {
       id: 4,
       icon: MdOutlineMonetizationOn,
-      content: data?.data?.paulo?.text_square?.text_4,
+      content: data?.paulo?.text_square?.text_4,
     },
   ];
 
@@ -45,13 +45,13 @@ export function WelcomeMolecule({ className, data }: Props) {
         <div className="flex flex-col sm:mr-24 items-center sm:items-start sm:text-start justify-between sm:w-108 w-full px-10 sm:px-0">
           <TextAtom
             children
-            text={data?.data?.paulo?.home?.title}
+            text={data?.paulo?.home?.title}
             className="mb-4 sm:mb-4 font-medium text-white sm:text-5xl text-2xl"
           />
 
           <TextAtom
             children
-            text={data?.data?.paulo?.home?.content}
+            text={data?.paulo?.home?.content}
             className="mb-4 sm:my-4 font-medium text-white text-sm"
           />
 
@@ -64,8 +64,8 @@ export function WelcomeMolecule({ className, data }: Props) {
         </div>
         <VideoAtom
           className="rounded-xl flex items-center justify-center sm:w-108 w-[80%] h-64 sm:h-80 mx-auto sm:mx-0"
-          videoLink={data?.data?.paulo?.home?.video}
-          videoImage={data?.data?.paulo?.home?.image_video}
+          videoLink={data?.paulo?.home?.video}
+          videoImage={data?.paulo?.home?.image_video}
         />
         <div className="flex sm:hidden justify-center mt-[20px]">
           <Link

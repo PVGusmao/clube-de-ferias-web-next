@@ -12,18 +12,18 @@ export function FooterPlansMolecule({ data }: Props) {
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[0].text1}
+            text={data.paulo.sub_plans_text[0].text1}
           />
 
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[0].text2}
+            text={data.paulo.sub_plans_text[0].text2}
           />
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[0].text3}
+            text={data.paulo.sub_plans_text[0].text3}
           />
         </div>
 
@@ -33,19 +33,19 @@ export function FooterPlansMolecule({ data }: Props) {
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[1].text1}
+            text={data.paulo.sub_plans_text[1].text1}
           />
 
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[1].text2}
+            text={data.paulo.sub_plans_text[1].text2}
           />
 
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[1].text3}
+            text={data.paulo.sub_plans_text[1].text3}
           />
         </div>
 
@@ -55,19 +55,19 @@ export function FooterPlansMolecule({ data }: Props) {
           <TextAtom
             children
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[2].text1}
+            text={data.paulo.sub_plans_text[2].text1}
           />
 
           <TextAtom
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[2].text2}
+            text={data.paulo.sub_plans_text[2].text2}
           >
             {" "}
           </TextAtom>
 
           <TextAtom
             className="text-[white] font-bold text-[20px] leading-[151%] tracking-wide"
-            text={data.data.paulo.sub_plans_text[2].text3}
+            text={data.paulo.sub_plans_text[2].text3}
           >
             {" "}
           </TextAtom>

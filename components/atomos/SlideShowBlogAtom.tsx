@@ -5,7 +5,7 @@ import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
 
-import { minorCardBlog, MinorCardBlogInterface } from "../../constants/Home";
+import { MinorCardBlogInterface } from "@/constants/AboutUs";
 
 import { TextAtom } from "./TextAtom";
 import { BackgroundImageAtom } from "./BackgroundImageAtom";

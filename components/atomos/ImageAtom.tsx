@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image"
 
 type Props = {
-  source: StaticImageData | string,
+  source: any,
   alt: string,
   className: string,
   width?: number,

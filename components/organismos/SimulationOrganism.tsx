@@ -9,7 +9,7 @@ import CardSimulationMolecule, { CardSimulationProps } from "../moleculas/CardSi
 
 import { IMyContext, MyContext } from "../../context/MyContext";
 
-import api from "../../services/api";
+import axios from "axios";
 
 type Props = {
   data: any;
@@ -43,7 +43,7 @@ export function SimulationOrganism({ data }: Props) {
 
   async function loadPackages() {
     try {
-      const response = await api.get(url);
+      const response = await axios.get(`http://cdf-api-site.herokuapp.com/api${url}`);
       const total = response.data.packages;
       setPackages(total);
     } catch (err) {
@@ -78,7 +78,7 @@ export function SimulationOrganism({ data }: Props) {
         tabValue={tabValue}
         handleTabsChange={handleTabsChange}
         sliderValue={sliderValue}
-        marks={data.data.paulo.marks}
+        marks={data.paulo.marks}
         handleSliderChange={handleSliderChange}
       />
 

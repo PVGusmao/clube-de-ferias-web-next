@@ -13,24 +13,12 @@ import { NavLinksInterface } from "../../constants";
 
 import logo from "../../public/logo-red.png";
 
-import api from "@/services/api";
-
 import { IMyContext, MyContext } from "../../context/MyContext";
 
 export function NavBarMolecule() {
-  const { setAllSiteTexts, showMenu, setShowMenu, allSiteTexts } = useContext(
+  const { showMenu, setShowMenu, allSiteTexts } = useContext(
     MyContext
   ) as IMyContext;
-
-  async function getAllData() {
-    const response = await api.get("/pages");
-    localStorage.setItem("home", JSON.stringify(response));
-    setAllSiteTexts(response as any);
-  }
-
-  useEffect(() => {
-    getAllData();
-  }, []);
 
   return (
     <div
@@ -44,7 +32,7 @@ export function NavBarMolecule() {
       </a>
 
       <div className="sm:flex hidden w-auto">
-        {allSiteTexts?.data?.paulo?.nav_links.map(
+        {allSiteTexts?.paulo?.nav_links.map(
           (element: NavLinksInterface, index: number) => (
             <TextButtonMolecule
               textClassName={

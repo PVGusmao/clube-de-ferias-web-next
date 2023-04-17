@@ -8,7 +8,7 @@ type Props = {
 export function WelcomeOrganism({data}: Props) {
   return (
     <>
-      <BackgroundImageAtom image={data?.data?.paulo?.home?.image} className={`h-128 sm:max-w-7xl`}>
+      <BackgroundImageAtom image={data?.paulo?.home?.image} className={`h-128 sm:max-w-7xl`}>
         <WelcomeMolecule data={data} className="w-full" />
       </BackgroundImageAtom>
     </>

@@ -9,18 +9,22 @@ import { BannerOrganism } from "@/components/organismos/BannerOrganism";
 import { ClientsOrganism } from "@/components/organismos/ClientsORganism";
 import { WelcomeOrganism } from "@/components/organismos/WelcomeOrganism";
 import { SimulationOrganism } from "@/components/organismos/SimulationOrganism";
-import axios from "axios";
+import { IPaulo } from "@/constants";
+import { AboutUsTextsInterface } from "@/constants/AboutUs";
+
+export interface IAllSiteTexts {
+  paulo: IPaulo;
+  quemsomos: AboutUsTextsInterface;
+}
 
 export default function Home() {
   const { setAllSiteTexts, allSiteTexts, setLoading, loading } = useContext(MyContext) as IMyContext;
 
   async function getTextsForHome() {
     try {
-      // const response = await api.get("/pages");
       const response = await api.get('/paulo');
-      console.log(response);
       localStorage.setItem("home", JSON.stringify(response));
-      setAllSiteTexts(response as any);
+      setAllSiteTexts(response.data);
       setLoading(true);
     } catch (error) {
       console.log(error);
@@ -48,7 +52,7 @@ export default function Home() {
 
         <SimulationOrganism data={allSiteTexts} />
 
-        {allSiteTexts?.data.paulo.banner[0].enable && (
+        {allSiteTexts?.paulo.banner[0].enable && (
           <BannerOrganism data={allSiteTexts} />
         )}
 
@@ -56,7 +60,7 @@ export default function Home() {
 
         <ClientsOrganism />
 
-        {allSiteTexts?.data.paulo.banner[1].enable && (
+        {allSiteTexts?.paulo.banner[1].enable && (
           <BannerOrganism data={allSiteTexts} />
         )}
       </div>

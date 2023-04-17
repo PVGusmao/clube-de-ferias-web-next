@@ -9,6 +9,6 @@ type Props = InputProps & {
 export function InputAtom({ ...rest }: Props) {
   
   return (
-    <Input { ...rest } />
+    <Input { ...rest as any } />
   )
 }

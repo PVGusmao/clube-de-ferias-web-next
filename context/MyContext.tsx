@@ -4,6 +4,7 @@ import { FeaturedAndPostInterface } from '../constants/Blog';
 import { AboutUsTextsInterface } from '@/constants/AboutUs';
 import { CardRecentsPostsInterface } from '@/components/moleculas/CardRecentsPosts';
 import { HeadeBlogPostOrganismInterface } from '@/components/organismos/HeadeBlogPostOrganism';
+import { IAllSiteTexts } from '@/pages';
 
 export type IMyContext = {
   showMenu: boolean;
@@ -11,7 +12,7 @@ export type IMyContext = {
   recents: CardRecentsPostsInterface[];
   link: string;
   packages: CardSimulationProps[];
-  allSiteTexts: undefined;
+  allSiteTexts: IAllSiteTexts;
   aboutUsTexts: AboutUsTextsInterface;
   blogPostsContent: FeaturedAndPostInterface[];
   blogFeaturedContent: FeaturedAndPostInterface[];
@@ -25,7 +26,7 @@ export type IMyContext = {
   setPackages: React.Dispatch<React.SetStateAction<CardSimulationProps[]>>;
   setAboutUsTexts: React.Dispatch<React.SetStateAction<AboutUsTextsInterface>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  setAllSiteTexts: React.Dispatch<React.SetStateAction<undefined>>;
+  setAllSiteTexts: React.Dispatch<React.SetStateAction<IAllSiteTexts>>;
   setBlogPostsContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
   setBlogFeaturedContent: React.Dispatch<React.SetStateAction<FeaturedAndPostInterface[]>>;
 }
@@ -44,7 +45,7 @@ export function MyProvider({ children }: Props) {
   const [loading, setLoading] = useState<boolean>(false);
   const [link, setLink] = useState<string>('');
   const [packages, setPackages] = useState<CardSimulationProps[]>([]);
-  const [allSiteTexts, setAllSiteTexts] = useState<undefined>(undefined);
+  const [allSiteTexts, setAllSiteTexts] = useState<IAllSiteTexts>();
   const [aboutUsTexts, setAboutUsTexts] = useState<AboutUsTextsInterface>();
   const [blogPostsContent, setBlogPostsContent] = useState<FeaturedAndPostInterface>();
   const [blogFeaturedContent, setBlogFeaturedContent] = useState<FeaturedAndPostInterface>();
