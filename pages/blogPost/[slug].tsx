@@ -8,7 +8,7 @@ import { SocialNetworksOrganism } from "@/components/organismos/SocialNetworksOr
 
 import { IMyContext, MyContext } from "../../context/MyContext";
 
-import api from "../../services/api";
+import axios from 'axios';
 
 export default function BlogPost() {
   const { data, setData, setRecents, setLoading, loading } = useContext(MyContext) as IMyContext;
@@ -20,7 +20,7 @@ export default function BlogPost() {
   const { slug } = router.query;
 
   function getBlogPost() {
-    api.get(`/posts/${slug}`).then((e) => {setData(e.data.post); setRecents(e.data.recents)});
+    axios.get(`https://site-api.clubedeferias.com/api/posts/${slug}`).then((e) => {setData(e.data.post); setRecents(e.data.recents)});
     setLoading(true);
   }
 
@@ -33,8 +33,6 @@ export default function BlogPost() {
       setLoading(false);
     };
   }, []);
-
-  console.log(data);
 
   return (
     <>

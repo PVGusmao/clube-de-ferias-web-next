@@ -4,7 +4,6 @@ import { Slide } from "react-slideshow-image";
 
 import "react-slideshow-image/dist/styles.css";
 
-import { CardPlanosMolecule } from "../moleculas/CardPlanosMolecule";
 import { TextAtom } from "./TextAtom";
 import { IconAtom } from "./IconAtom";
 import { ButtonMolecule } from "../moleculas/ButtonMolecule";
@@ -133,9 +132,9 @@ export const SlideShowPlansAtom = ({ className, planos2 }: Props) => {
                   children
                   style={{
                     backgroundColor: `${
-                      element.colorPlan === undefined
+                      element?.colorPlan === undefined
                         ? "#BFBFBF"
-                        : element.colorPlan
+                        : element?.colorPlan
                     }`,
                     color: "black",
                   }}

@@ -18,7 +18,7 @@ export const SlideShowSimulationAtom = ({ className }: Props) => {
   return (
     <div className={`${className}`}>
       <Slide arrows={true} transitionDuration={100}>
-        {packages.map((element, index) => (
+        {packages.map((element: any, index: number) => (
           <div
             className="h-[500px] flex items-center justify-center"
             key={index}
@@ -28,7 +28,7 @@ export const SlideShowSimulationAtom = ({ className }: Props) => {
               subname={element.subname}
               img={element.img}
               name={element.name}
-              price={element.latest_information.total_amount_people}
+              price={element?.latest_information?.total_amount_people}
               date={element.date.display}
             />
           </div>

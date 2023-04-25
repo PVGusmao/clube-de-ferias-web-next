@@ -83,7 +83,7 @@ export function SimulationOrganism({ data }: Props) {
       />
 
       <div className="hidden sm:flex flex-row flex-wrap justify-evenly">
-        {packages.map((element: CardSimulationProps, index: number) => (
+        {packages.map((element: any, index: number) => (
           <CardSimulationMolecule
             key={index}
             subname={element.subname}

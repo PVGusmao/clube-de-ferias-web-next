@@ -6,10 +6,11 @@ import { TextAtom } from "../atomos/TextAtom";
 import Link from "next/link";
 import Image from "next/image";
 import { IMyContext, MyContext } from "@/context/MyContext";
-import image from '../../public/exemplo1.jpg'
 
 export function SliderBlogMolecule() {
   const { blogFeaturedContent } = useContext(MyContext) as IMyContext;
+
+  console.log(blogFeaturedContent);
 
   return (
     <div className="">
@@ -39,9 +40,9 @@ export function SliderBlogMolecule() {
                   width={500}
                   height={100}
                   className="rounded-br-[50px] h-[350px]"
-                  // style={{ width: "100%" }}
-                  src={image}
+                  src={element?.image_large}
                   alt='foto aleatoria'
+                  loader={() => element?.image_large}
                 />
               </div>
             </Link>

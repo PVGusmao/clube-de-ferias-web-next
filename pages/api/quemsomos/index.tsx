@@ -19,7 +19,7 @@ const getDataPages = async (_req: NextApiRequest, res: NextApiResponse) => {
     
     const obj = {
       ...quemsomos,
-      content: JSON.parse(quemsomos.content),
+      content: JSON.parse(quemsomos?.content as string),
     }
     return res.status(200).json(obj);
   } catch (err) {

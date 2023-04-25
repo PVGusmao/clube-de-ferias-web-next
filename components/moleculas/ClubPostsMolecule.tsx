@@ -24,7 +24,7 @@ export function ClubPostsMolecule() {
 
               <div className="mr-4" key={index}>
                 <CardClubPosts
-                  image_large={element.image_large}
+                  img={element.image_large}
                   title={element.title}
                   subtitle={element.subtitle}
                   slug={element.slug}

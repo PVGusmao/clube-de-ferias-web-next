@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import "../../index.css";
 
 import { Slide } from "react-slideshow-image";
 
@@ -13,6 +12,7 @@ import { IMyContext, MyContext } from "../../context/MyContext";
 
 export const SlideShowBlogAtom = () => {
   const { allSiteTexts } = useContext(MyContext) as IMyContext;
+  console.log(allSiteTexts.paulo.minor_card_blog);
 
   return (
     <div
@@ -21,7 +21,7 @@ export const SlideShowBlogAtom = () => {
       }
     >
       <Slide arrows={false} transitionDuration={250}>
-        {allSiteTexts?.data?.paulo?.minor_card_blog.map((element: MinorCardBlogInterface, index: number) => (
+        {allSiteTexts?.paulo?.minor_card_blog?.map((element: any, index: number) => (
           <div className="each-slide-effect" key={index}>
             <BackgroundImageAtom
               className={`flex items-center px-100 text-center rounded-xl mx-1 bg-cover justify-between h-36 w-96`}

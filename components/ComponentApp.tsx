@@ -12,7 +12,12 @@ import type { AppProps } from 'next/app'
 import logo from '../public/logo-aviao-grande.png';
 import Image from 'next/image';
 
-export default function ComponentApp({ Component, pageProps }: AppProps) {
+type Props = AppProps | {
+  Component: any,
+  pageProps: any,
+}
+
+export default function ComponentApp({ Component, pageProps }: Props) {
   const { loading, showMenu, setShowMenu } = useContext(MyContext) as IMyContext;
   return (
     <>

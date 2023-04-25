@@ -15,10 +15,12 @@ type Props = {
 export const SlideShowClientsAtom = ({ className }: Props) => {
   const { allSiteTexts } = useContext(MyContext) as IMyContext;
 
+  console.log(allSiteTexts?.paulo?.clients)
+
   return (
     <div className={`${className}`}>
       <Slide arrows={false} transitionDuration={250}>
-        {allSiteTexts?.data?.paulo?.clients.map((element: ClientInterface, index: number) => (
+        {allSiteTexts?.paulo?.clients?.map((element: ClientInterface, index: number) => (
           <div className="h-full flex items-center justify-center" key={index}>
             <CardCommentsMolecule
               content={element.content}

@@ -13,6 +13,7 @@ export function BackgroundImageAtom({
   className,
   backgroundSize,
 }: Props) {
+  console.log(image);
   return (
     <div
       className={className}

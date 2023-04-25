@@ -8,12 +8,12 @@ import { IMyContext, MyContext } from "@/context/MyContext";
 import axios from "axios";
 
 export default function Blog() {
-  const { blogPostsContent, setBlogPostsContent, setBlogFeaturedContent, setLoading, loading } = useContext(MyContext) as IMyContext;
+  const { blogPostsContent, setBlogPostsContent, setBlogFeaturedContent, setLoading } = useContext(MyContext) as IMyContext;
 
   async function getData() {
-    const response = await axios.get("http://cdf-api-site.herokuapp.com/api/posts");
-    setBlogPostsContent(response.data.posts);
-    setBlogFeaturedContent(response.data.featured);
+    const response = await axios.get("https://site-api.clubedeferias.com/api/posts");
+    setBlogPostsContent(response?.data?.posts);
+    setBlogFeaturedContent(response?.data?.featured);
     setLoading(true);
   }
   

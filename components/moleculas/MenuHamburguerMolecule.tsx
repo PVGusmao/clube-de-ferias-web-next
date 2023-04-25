@@ -14,6 +14,6 @@ export function MenuHamburguerMolecule({ color, icon, ...rest }: Props) {
       className="bg-inherit shadow-none border-none bg-none text-inherit border-none"
       title={<IconAtom icon={icon} color={color} size={32} />}
       {...rest}
-    />
+    > </ButtonMolecule>
   );
 }

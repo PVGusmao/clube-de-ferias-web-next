@@ -1,12 +1,12 @@
-import ComponentApp from './ComponentApp';
+import ComponentApp from '../components/ComponentApp';
 
 import { MyProvider } from '@/context/MyContext';
 
 import { ThemeProvider } from "@material-tailwind/react";
 
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

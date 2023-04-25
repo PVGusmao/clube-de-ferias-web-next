@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useContext } from "react";
 
 import { TextAtom } from "../atomos/TextAtom";
-import image from '../../public/exemplo1.jpg'
 
 export function CardTopPostsLG() {
   const { blogFeaturedContent } = useContext(MyContext) as IMyContext;
@@ -13,8 +12,11 @@ export function CardTopPostsLG() {
     <div className=" w-[317px] h-[512px] sm:w-[35.688rem] sm:h-[38.063rem] flex flex-col shadow-md">
       <Image
         className="w-full h-[250px] sm:h-[23rem]"
-        src={image}
+        src={blogFeaturedContent[0].image_large}
         alt={'teste'}
+        width={100}
+        height={100}
+        loader={() => blogFeaturedContent[0].image_large}
       />
       <div className="p-7">
         <TextAtom

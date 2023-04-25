@@ -103,7 +103,7 @@ export interface IPaulo {
   banner: BannerInterface[],
   banners: Banners,
   card_blog: CardBlogInterface, 
-  clients: ClientsInterface, 
+  clients: ClientsInterface[], 
   contact: ContactInterface, 
   home: HomeInterface, 
   marks: MarksInterface[], 

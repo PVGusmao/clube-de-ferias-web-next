@@ -19,8 +19,8 @@ const getDataPages = async (_req: NextApiRequest, res: NextApiResponse) => {
     const quemsomos = result.find((element) => element.name === 'quemsomos');
 
     const obj = {
-      paulo: JSON.parse(paulo?.content),
-      quemsomos: JSON.parse(quemsomos?.content),
+      paulo: JSON.parse(paulo?.content as string),
+      quemsomos: JSON.parse(quemsomos?.content as string),
     }
     
     return res.status(200).json(obj);

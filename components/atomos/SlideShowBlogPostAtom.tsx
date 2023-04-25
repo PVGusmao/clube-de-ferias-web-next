@@ -27,7 +27,7 @@ export const SlideShowBlogPostAtom = ({ className}: Props) => {
       <div className={`${className}`}>
           <Slide arrows={false} indicators transitionDuration={250}>
               {
-                  post.map((element, index) => (
+                  post.map((element: any, index) => (
                     <div className="h-[500px] flex items-center justify-center" key={index} >
                       <CardClubPosts
                         img={element?.image_large}
